@@ -1,0 +1,130 @@
+package api
+
+import (
+	"database/sql"
+	"encoding/json"
+	"fmt"
+	"log"
+	"net/http"
+ 	_ "github.com/go-sql-driver/mysql"
+ 
+)
+func getTables(w http.ResponseWriter, r *http.Request) {
+	// ctx := context.Background()
+	mariaDB, err := sql.Open("mysql", "root:1234@tcp(localhost:3306)/scribe_server")
+	if err != nil {
+		log.Fatal("Failed to connect to scribe_server database:", err)
+	}
+	defer mariaDB.Close()
+
+	// Query to get all table names
+	rows, err := mariaDB.Query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE()")
+	if err != nil {
+		http.Error(w, fmt.Sprintf("Failed to query tables: %v", err), http.StatusInternalServerError)
+		return
+	}
+	defer rows.Close()
+
+	// Collect table names
+	var tables []string
+	for rows.Next() {
+		var tableName string
+		if err := rows.Scan(&tableName); err != nil {
+			http.Error(w, fmt.Sprintf("Failed to scan table name: %v", err), http.StatusInternalServerError)
+			return
+		}
+		tables = append(tables, tableName)
+	}
+
+	// Check for any errors during iteration
+	if err := rows.Err(); err != nil {
+		http.Error(w, fmt.Sprintf("Error during rows iteration: %v", err), http.StatusInternalServerError)
+		return
+	}
+
+	// Set content type and return JSON
+	w.Header().Set("Content-Type", "application/json")
+	if err := json.NewEncoder(w).Encode(tables); err != nil {
+		http.Error(w, fmt.Sprintf("Failed to encode JSON: %v", err), http.StatusInternalServerError)
+		return
+	}
+}
+
+func getarabicadjectives(w http.ResponseWriter, r *http.Request) {
+	// Get the context from the request.
+	ctx := r.Context()
+
+	// Open a new database connection (consider reusing a connection or pool in production).
+	mariaDB, err := sql.Open("mysql", "root:1234@tcp(localhost:3306)/scribe_server")
+	if err != nil {
+		http.Error(w, "Database connection error", http.StatusInternalServerError)
+		log.Printf("Failed to connect to scribe_server database: %v", err)
+		return
+	}
+	defer mariaDB.Close()
+
+	// Execute the raw query to fetch all rows from AR_arabic_db_adjectives table.
+	query := "SELECT * FROM AR_arabic_db_adjectives"
+	rows, err := mariaDB.QueryContext(ctx, query)
+	if err != nil {
+		http.Error(w, "Failed to execute query", http.StatusInternalServerError)
+		log.Printf("Error executing query: %v", err)
+		return
+	}
+	defer rows.Close() 
+
+	columns, err := rows.Columns()
+	if err != nil {
+		http.Error(w, "Failed to get columns from result", http.StatusInternalServerError)
+		log.Printf("Error getting columns: %v", err)
+		return
+	} 
+	result := make([]map[string]interface{}, 0)
+ 
+	for rows.Next() {
+		// Create a slice to hold column values.
+		values := make([]interface{}, len(columns))
+		// Create a slice of pointers for scanning the row.
+		pointers := make([]interface{}, len(columns))
+		for i := range values {
+			pointers[i] = &values[i]
+		}
+ 
+		if err := rows.Scan(pointers...); err != nil {
+			log.Printf("Error scanning row: %v", err)
+			continue  
+		}
+ 
+		rowMap := make(map[string]interface{})
+		for i, colName := range columns {
+			rawValue := values[i]
+			var v interface{}
+			if b, ok := rawValue.([]byte); ok {
+				v = string(b)
+			} else {
+				v = rawValue
+			}
+			 
+			if v == nil {
+				continue
+			}
+ 
+			if s, ok := v.(string); ok && s == "" {
+				continue
+			}
+			rowMap[colName] = v
+		}
+		result = append(result, rowMap)
+	} 
+	if err := rows.Err(); err != nil {
+		http.Error(w, "Error iterating rows", http.StatusInternalServerError)
+		log.Printf("Rows iteration error: %v", err)
+		return
+	} 
+	w.Header().Set("Content-Type", "application/json")
+	if err := json.NewEncoder(w).Encode(result); err != nil {
+		http.Error(w, "Failed to encode adjectives", http.StatusInternalServerError)
+		log.Printf("Error encoding adjectives: %v", err)
+		return
+	}
+}
