@@ -8,6342 +8,6342 @@ import (
 	"database/sql"
 )
 
-type ArArabicDbAdjective struct {
+type ArAdjective struct {
 	Wdlexemeid                            sql.NullString
-	Pausalfemininesingular                sql.NullString
-	Genitivemasculinedefiniteplural       sql.NullString
-	Nominativemasculinesingular           sql.NullString
-	Genitivemasculineindefinitesingular   sql.NullString
-	Nominativemasculineindefinitedual     sql.NullString
-	Femininesingular                      sql.NullString
-	Nominativefemininedefinitesingular    sql.NullString
+	Pausalmasculineindefinitesingular     sql.NullString
 	Pausalmasculineindefiniteplural       sql.NullString
-	Femininedual                          sql.NullString
-	Genitivemasculineindefinitedual       sql.NullString
-	Pausalfeminine                        sql.NullString
-	Pausalmasculineplural                 sql.NullString
-	Accusativemasculineplural             sql.NullString
-	Accusativemasculineindefiniteplural   sql.NullString
-	Pausalfeminineindefinitesingular      sql.NullString
+	Genitivemasculineindefiniteplural     sql.NullString
+	Nominativefemininedefinitesingular    sql.NullString
+	Pausalindefiniteplural                sql.NullString
+	Nominativemasculinedefiniteplural     sql.NullString
+	Nominativemasculineindefinitedual     sql.NullString
+	Accusativefeminineindefinitedual      sql.NullString
+	Masculinesingular                     sql.NullString
+	Genitivefeminineindefiniteplural      sql.NullString
+	Pausalmasculinedefinitesingular       sql.NullString
+	Masculine                             sql.NullString
+	Nominativefemininesingular            sql.NullString
+	Genitivemasculinedefinitedual         sql.NullString
+	Genitivemasculinesingular             sql.NullString
+	Pausalfeminineindefiniteplural        sql.NullString
+	Nominativefemininedefiniteplural      sql.NullString
+	Genitivefeminineplural                sql.NullString
 	Masculinedual                         sql.NullString
-	Accusativefeminineindefinitesingular  sql.NullString
+	Accusativefemininedefiniteplural      sql.NullString
+	Genitivefeminineindefinitesingular    sql.NullString
 	Pausalfemininedefiniteplural          sql.NullString
+	Pausalfeminineplural                  sql.NullString
+	Genitivemasculinedefinitesingular     sql.NullString
+	Pausalmasculinesingular               sql.NullString
+	Accusativemasculinedefiniteplural     sql.NullString
+	Nominativefeminineindefiniteplural    sql.NullString
+	Femininesingular                      sql.NullString
+	Accusativemasculinesingular           sql.NullString
+	Nominativemasculinedefinitesingular   sql.NullString
+	Genitivefemininedefinitesingular      sql.NullString
+	Accusativemasculineindefinitedual     sql.NullString
+	Accusativefeminineindefiniteplural    sql.NullString
+	Genitivemasculinedefiniteplural       sql.NullString
+	Nominativemasculineplural             sql.NullString
+	Accusativemasculinedefinitedual       sql.NullString
+	Feminine                              sql.NullString
+	Accusativefeminineplural              sql.NullString
 	Genitivefemininedefiniteplural        sql.NullString
 	Lastmodified                          sql.NullString
-	Genitivemasculineplural               sql.NullString
-	Masculine                             sql.NullString
-	Accusativemasculinedefiniteplural     sql.NullString
-	Genitivefeminineindefiniteplural      sql.NullString
-	Accusativemasculinedefinitedual       sql.NullString
-	Accusativemasculineindefinitedual     sql.NullString
-	Accusativemasculineindefinitesingular sql.NullString
-	Genitivefemininedefinitesingular      sql.NullString
-	Accusativefeminineplural              sql.NullString
-	Nominativemasculineindefiniteplural   sql.NullString
-	Genitivefemininesingular              sql.NullString
-	Genitivefeminineindefinitedual        sql.NullString
-	Accusativemasculinesingular           sql.NullString
-	Pausalmasculinesingular               sql.NullString
-	Masculineplural                       sql.NullString
-	Genitivefeminineplural                sql.NullString
-	Nominativefeminineindefiniteplural    sql.NullString
-	Accusativefeminineindefiniteplural    sql.NullString
-	Pausalfeminineplural                  sql.NullString
-	Accusativemasculinedefinitesingular   sql.NullString
-	Feminine                              sql.NullString
-	Nominativemasculineindefinitesingular sql.NullString
-	Feminineplural                        sql.NullString
-	Nominativemasculinedefiniteplural     sql.NullString
-	Nominativefeminineindefinitesingular  sql.NullString
-	Genitivefemininedefinitedual          sql.NullString
-	Accusativefeminineindefinitedual      sql.NullString
-	Nominativemasculinedefinitesingular   sql.NullString
-	Genitivemasculinedefinitesingular     sql.NullString
-	Pausalfemininedefinitesingular        sql.NullString
-	Genitivefeminineindefinitesingular    sql.NullString
-	Pausalmasculinedefiniteplural         sql.NullString
-	Accusativefemininesingular            sql.NullString
-	Plural                                sql.NullString
-	Accusativefemininedefinitedual        sql.NullString
-	Pausalindefiniteplural                sql.NullString
-	Pausalmasculineindefinitesingular     sql.NullString
-	Pausalmasculineindefinitedual         sql.NullString
-	Pausalfeminineindefiniteplural        sql.NullString
-	Accusativefemininedefiniteplural      sql.NullString
-	Nominativefeminineplural              sql.NullString
-	Nominativefeminineindefinitedual      sql.NullString
-	Nominativefemininedefiniteplural      sql.NullString
-	Pausalmasculinedefinitesingular       sql.NullString
-	Nominativefemininesingular            sql.NullString
-	Genitivemasculineindefiniteplural     sql.NullString
-	Nominativemasculineplural             sql.NullString
-	Pausalfeminineindefinitedual          sql.NullString
-	Genitivemasculinedefinitedual         sql.NullString
-	Gerund                                sql.NullString
 	Accusativefemininedefinitesingular    sql.NullString
-	Masculinesingular                     sql.NullString
-	Genitivemasculinesingular             sql.NullString
+	Nominativefeminineindefinitedual      sql.NullString
+	Accusativemasculineindefiniteplural   sql.NullString
+	Accusativefemininedefinitedual        sql.NullString
+	Accusativemasculinedefinitesingular   sql.NullString
+	Plural                                sql.NullString
+	Pausalmasculinedefiniteplural         sql.NullString
+	Genitivefeminineindefinitedual        sql.NullString
+	Feminineplural                        sql.NullString
+	Genitivemasculineindefinitesingular   sql.NullString
+	Accusativefemininesingular            sql.NullString
+	Pausalmasculineplural                 sql.NullString
+	Genitivemasculineplural               sql.NullString
+	Pausalfeminine                        sql.NullString
+	Genitivemasculineindefinitedual       sql.NullString
+	Femininedual                          sql.NullString
+	Nominativemasculinesingular           sql.NullString
+	Nominativefeminineplural              sql.NullString
 	Pausalmasculine                       sql.NullString
+	Nominativefeminineindefinitesingular  sql.NullString
+	Masculineplural                       sql.NullString
+	Accusativemasculineindefinitesingular sql.NullString
+	Pausalmasculineindefinitedual         sql.NullString
+	Genitivefemininedefinitedual          sql.NullString
+	Pausalfeminineindefinitedual          sql.NullString
+	Genitivefemininesingular              sql.NullString
+	Accusativefeminineindefinitesingular  sql.NullString
+	Pausalfeminineindefinitesingular      sql.NullString
+	Pausalfemininedefinitesingular        sql.NullString
+	Nominativemasculineindefiniteplural   sql.NullString
+	Nominativemasculineindefinitesingular sql.NullString
+	Accusativemasculineplural             sql.NullString
+	Gerund                                sql.NullString
+	Pausalfemininesingular                sql.NullString
 }
 
-type ArArabicDbAdverb struct {
+type ArAdverb struct {
 	Wdlexemeid                            sql.NullString
 	Lastmodified                          sql.NullString
 	Accusativemasculineindefinitesingular sql.NullString
 }
 
-type ArArabicDbConjunction struct {
+type ArConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type ArArabicDbNoun struct {
+type ArNoun struct {
 	Wdlexemeid                            sql.NullString
-	Pausalfemininesingular                sql.NullString
-	Accusativemasculine                   sql.NullString
-	Genitivemasculineindefinitesingular   sql.NullString
-	Pausaldefinitesingular                sql.NullString
-	Nominativefemininedefinitesingular    sql.NullString
-	Genitivemasculineindefinitedual       sql.NullString
-	Pausalconstructsingular               sql.NullString
-	Nominativemasculineindefinite         sql.NullString
-	Pausalfeminine                        sql.NullString
-	Nominativeindefiniteplural            sql.NullString
-	Definitesingular                      sql.NullString
-	Pausalfemininedefiniteplural          sql.NullString
-	Genitivefemininedefiniteplural        sql.NullString
-	Genitiveindefiniteplural              sql.NullString
-	Accusativemasculineindefinitedual     sql.NullString
-	Nominativefeminine                    sql.NullString
-	Pausalmasculinesingular               sql.NullString
 	Accusativemasculinedefinite           sql.NullString
-	Accusativefeminineindefiniteplural    sql.NullString
-	Pausalindefinitesingular              sql.NullString
-	Accusativemasculinedefinitesingular   sql.NullString
-	Genitivemasculine                     sql.NullString
-	Accusativedefiniteplural              sql.NullString
-	Feminineplural                        sql.NullString
-	Genitivemasculinedefinitesingular     sql.NullString
-	Pausalsingular                        sql.NullString
-	Indefinite                            sql.NullString
-	Plural                                sql.NullString
-	Pausalmasculineindefinitesingular     sql.NullString
-	Pausalmasculinedefinite               sql.NullString
-	Nominativefemininedefiniteplural      sql.NullString
-	Nominativefeminineconstructdual       sql.NullString
-	Genitivemasculineconstructdual        sql.NullString
-	Nominativemasculineconstructsingular  sql.NullString
-	Nominativedual                        sql.NullString
 	Indefinitesingular                    sql.NullString
-	Fiilmudari                            sql.NullString
-	Definite                              sql.NullString
-	Accusativegenitivemasculinedual       sql.NullString
-	Nominativeplural                      sql.NullString
-	Accusativemasculineconstructdual      sql.NullString
-	Accusativemasculinedefinitedual       sql.NullString
-	Genitivefemininedefinitesingular      sql.NullString
-	Genitiveconstructplural               sql.NullString
-	Nominativemasculineindefiniteplural   sql.NullString
-	Masculineplural                       sql.NullString
-	Genitiveindefinitesingular            sql.NullString
-	Indefiniteplural                      sql.NullString
-	Nominativemasculinedefinitesingular   sql.NullString
-	Accusativeindefinitesingular          sql.NullString
-	Pausalfemininedefinitesingular        sql.NullString
-	Pausalmasculinedefinitedual           sql.NullString
-	Nominativemasculinedefinite           sql.NullString
-	Nominativeconstructsingular           sql.NullString
-	Pausalmasculineindefinitedual         sql.NullString
-	Accusativedual                        sql.NullString
-	Accusativemasculineconstructsingular  sql.NullString
-	Dual                                  sql.NullString
-	Pausalmasculine                       sql.NullString
-	Nominativemasculineindefinitedual     sql.NullString
-	Genitivefeminineconstructsingular     sql.NullString
-	Nominativesingular                    sql.NullString
-	Pausalmasculineindefiniteplural       sql.NullString
-	Nominativedefinitesingular            sql.NullString
-	Accusativefeminineconstructdual       sql.NullString
-	Pausalfeminineindefinitesingular      sql.NullString
-	Accusativefeminineindefinitesingular  sql.NullString
-	Lastmodified                          sql.NullString
-	Genitivefeminineindefiniteplural      sql.NullString
-	Accusativemasculineindefinitesingular sql.NullString
-	Accusativeindefiniteplural            sql.NullString
-	Accusativeconstructsingular           sql.NullString
+	Nominativedual                        sql.NullString
+	Masculinesingular                     sql.NullString
+	Pausalmasculinedefinitesingular       sql.NullString
 	Feminineconstructsingular             sql.NullString
-	Nominativefeminineindefiniteplural    sql.NullString
-	Feminineindefinitesingular            sql.NullString
-	Pausaldefiniteplural                  sql.NullString
-	Genitivemasculineconstructsingular    sql.NullString
-	Pausalfeminineplural                  sql.NullString
+	Masculinedual                         sql.NullString
+	Accusativedual                        sql.NullString
+	Pausalmasculinedefinite               sql.NullString
+	Accusativemasculineindefinitedual     sql.NullString
 	Past                                  sql.NullString
-	Nominativemasculineindefinitesingular sql.NullString
+	Indefiniteplural                      sql.NullString
+	Accusativemasculinedefinitedual       sql.NullString
 	Feminine                              sql.NullString
+	Pausalplural                          sql.NullString
+	Lastmodified                          sql.NullString
+	Accusativeconstructplural             sql.NullString
+	Genitivedefinitesingular              sql.NullString
+	Pausalfeminine                        sql.NullString
+	Genitivemasculine                     sql.NullString
 	Nominativefeminineindefinitesingular  sql.NullString
+	Masculinedefinitesingular             sql.NullString
+	Accusativemasculineindefinitesingular sql.NullString
+	Accusativefeminineindefinitesingular  sql.NullString
+	Accusativegenitivemasculinedual       sql.NullString
+	Singular                              sql.NullString
+	Accusativesingular                    sql.NullString
+	Fiilmudari                            sql.NullString
+	Masculineplural                       sql.NullString
+	Nominativemasculineindefinite         sql.NullString
+	Genitivesingular                      sql.NullString
+	Nominativedefiniteplural              sql.NullString
+	Nominativefemininedefiniteplural      sql.NullString
+	Genitiveconstructsingular             sql.NullString
+	Feminineindefinitesingular            sql.NullString
+	Accusativemasculine                   sql.NullString
+	Nominativemasculineconstructsingular  sql.NullString
+	Nominativeconstructplural             sql.NullString
+	Accusativefemininedefiniteplural      sql.NullString
+	Accusativefeminineconstructsingular   sql.NullString
+	Pausalfeminineplural                  sql.NullString
+	Genitiveindefinitesingular            sql.NullString
+	Pausaldefiniteplural                  sql.NullString
+	Nominativemasculinedefinitedual       sql.NullString
+	Nominativedefinitesingular            sql.NullString
+	Accusativeconstructsingular           sql.NullString
+	Definiteplural                        sql.NullString
+	Feminineplural                        sql.NullString
+	Nominativefeminine                    sql.NullString
+	Pausalindefinitesingular              sql.NullString
+	Accusativedefiniteplural              sql.NullString
+	Definite                              sql.NullString
+	Pausalfeminineindefinitesingular      sql.NullString
+	Nominativemasculineindefiniteplural   sql.NullString
+	Genitivefeminine                      sql.NullString
+	Indefinite                            sql.NullString
+	Gerund                                sql.NullString
+	Definitesingular                      sql.NullString
+	Pausalmasculineindefinitesingular     sql.NullString
+	Nominativemasculineindefinitedual     sql.NullString
+	Pausalmasculineindefiniteplural       sql.NullString
+	Nominativefemininedefinitesingular    sql.NullString
+	Pausalindefiniteplural                sql.NullString
+	Pausalmasculinedefinitedual           sql.NullString
+	Nominativemasculine                   sql.NullString
+	Genitivefeminineindefiniteplural      sql.NullString
+	Nominativeconstructsingular           sql.NullString
+	Genitivemasculinedefinitedual         sql.NullString
 	Nominativefeminineconstructplural     sql.NullString
 	Nominativemasculineconstructdual      sql.NullString
-	Definiteplural                        sql.NullString
-	Genitivedefiniteplural                sql.NullString
-	Nominativeindefinite                  sql.NullString
-	Nominativedefiniteplural              sql.NullString
-	Nominativefemininedefinitedual        sql.NullString
-	Pausalmasculinedefinitesingular       sql.NullString
-	Accusativefeminineconstructsingular   sql.NullString
-	Nominativeindefinitesingular          sql.NullString
-	Singular                              sql.NullString
-	Accusativedefinitesingular            sql.NullString
-	Nominativemasculine                   sql.NullString
-	Pausalfeminineindefinitedual          sql.NullString
-	Genitivemasculinedefinitedual         sql.NullString
-	Gerund                                sql.NullString
-	Masculinedefiniteplural               sql.NullString
-	Masculinedefinitesingular             sql.NullString
-	Femininesingular                      sql.NullString
-	Accusativeconstructplural             sql.NullString
-	Genitivesingular                      sql.NullString
-	Pausalindefinite                      sql.NullString
-	Genitivedefinitesingular              sql.NullString
-	Nominativefeminineconstructsingular   sql.NullString
-	Genitivefeminine                      sql.NullString
-	Accusativemasculineindefinite         sql.NullString
-	Accusativesingular                    sql.NullString
-	Masculinedual                         sql.NullString
-	Pausalmasculinedual                   sql.NullString
-	Nominativeconstructplural             sql.NullString
-	Nominativemasculinedefinitedual       sql.NullString
-	Accusativefeminineindefinitedual      sql.NullString
-	Genitivefeminineindefinitesingular    sql.NullString
-	Femininedefinitesingular              sql.NullString
-	Genitivefeminineconstructplural       sql.NullString
-	Pausalplural                          sql.NullString
-	Accusativefemininedefinitedual        sql.NullString
-	Pausalindefiniteplural                sql.NullString
-	Nominativefeminineindefinitedual      sql.NullString
-	Pausalfeminineindefiniteplural        sql.NullString
-	Accusativefemininedefiniteplural      sql.NullString
-	Accusativefeminine                    sql.NullString
-	Masculineindefinitesingular           sql.NullString
+	Genitiveconstructplural               sql.NullString
+	Accusativeindefinitesingular          sql.NullString
+	Nominativemasculinedefinite           sql.NullString
+	Genitivemasculinedefinitesingular     sql.NullString
+	Genitivemasculineconstructdual        sql.NullString
+	Pausalmasculinesingular               sql.NullString
+	Nominativefeminineindefiniteplural    sql.NullString
+	Accusativemasculineconstructsingular  sql.NullString
+	Dual                                  sql.NullString
 	Accusativefeminineconstructplural     sql.NullString
-	Accusativefemininedefinitesingular    sql.NullString
-	Masculinesingular                     sql.NullString
+	Pausalindefinite                      sql.NullString
+	Genitivefeminineconstructplural       sql.NullString
+	Masculinedefiniteplural               sql.NullString
+	Accusativemasculineindefinite         sql.NullString
+	Nominativefeminineindefinitedual      sql.NullString
+	Plural                                sql.NullString
+	Genitivefeminineconstructsingular     sql.NullString
+	Genitiveindefiniteplural              sql.NullString
+	Genitivemasculineindefinitesingular   sql.NullString
+	Genitivemasculineconstructsingular    sql.NullString
+	Genitivemasculineindefinitedual       sql.NullString
+	Accusativemasculineconstructdual      sql.NullString
+	Accusativedefinitesingular            sql.NullString
+	Nominativesingular                    sql.NullString
+	Pausaldefinitesingular                sql.NullString
+	Pausalmasculineindefinitedual         sql.NullString
+	Nominativeplural                      sql.NullString
+	Nominativefemininedefinitedual        sql.NullString
 	Genitivenominativesingular            sql.NullString
-	Genitiveconstructsingular             sql.NullString
+	Nominativemasculineindefinitesingular sql.NullString
+	Nominativeindefiniteplural            sql.NullString
+	Pausalfemininesingular                sql.NullString
+	Accusativefeminineindefinitedual      sql.NullString
+	Genitivedefiniteplural                sql.NullString
+	Pausalfeminineindefiniteplural        sql.NullString
+	Masculineindefinitesingular           sql.NullString
+	Genitivefeminineindefinitesingular    sql.NullString
+	Pausalfemininedefiniteplural          sql.NullString
+	Nominativefeminineconstructsingular   sql.NullString
+	Femininesingular                      sql.NullString
+	Genitivefemininedefinitesingular      sql.NullString
+	Nominativemasculinedefinitesingular   sql.NullString
+	Nominativeindefinitesingular          sql.NullString
+	Accusativefeminine                    sql.NullString
+	Accusativefeminineindefiniteplural    sql.NullString
+	Pausalsingular                        sql.NullString
+	Genitivefemininedefiniteplural        sql.NullString
+	Accusativefemininedefinitesingular    sql.NullString
+	Accusativefemininedefinitedual        sql.NullString
+	Accusativemasculinedefinitesingular   sql.NullString
+	Nominativefeminineconstructdual       sql.NullString
+	Pausalmasculine                       sql.NullString
+	Accusativeindefiniteplural            sql.NullString
+	Pausalfeminineindefinitedual          sql.NullString
+	Femininedefinitesingular              sql.NullString
+	Pausalmasculinedual                   sql.NullString
+	Pausalfemininedefinitesingular        sql.NullString
+	Accusativefeminineconstructdual       sql.NullString
+	Nominativeindefinite                  sql.NullString
+	Pausalconstructsingular               sql.NullString
 }
 
-type ArArabicDbPersonalPronoun struct {
+type ArPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type ArArabicDbPreposition struct {
+type ArPreposition struct {
 	Wdlexemeid   sql.NullString
-	Nominative   sql.NullString
+	Accusative   sql.NullString
 	Lastmodified sql.NullString
 	Genitive     sql.NullString
-	Accusative   sql.NullString
+	Nominative   sql.NullString
 }
 
-type ArArabicDbProperNoun struct {
+type ArProperNoun struct {
 	Wdlexemeid                        sql.NullString
-	Pausalfemininesingular            sql.NullString
-	Nominativemasculinesingular       sql.NullString
-	Femininesingular                  sql.NullString
-	Pausaldefinitesingular            sql.NullString
-	Nominativedefinitesingular        sql.NullString
-	Genitivedefinitesingular          sql.NullString
-	Pausalfeminineindefinitesingular  sql.NullString
-	Lastmodified                      sql.NullString
+	Pausalmasculineindefinitesingular sql.NullString
 	Pausalfemininedual                sql.NullString
+	Nominativefemininesingular        sql.NullString
+	Genitivemasculinesingular         sql.NullString
+	Genitive                          sql.NullString
+	Pausalmasculinesingular           sql.NullString
+	Femininesingular                  sql.NullString
+	Accusativemasculinesingular       sql.NullString
+	Pausalsingular                    sql.NullString
+	Nominativedefinitesingular        sql.NullString
+	Lastmodified                      sql.NullString
+	Genitivedefinitesingular          sql.NullString
+	Accusativefemininesingular        sql.NullString
+	Nominativemasculinesingular       sql.NullString
+	Accusativedefinitesingular        sql.NullString
+	Pausaldefinitesingular            sql.NullString
 	Accusative                        sql.NullString
 	Genitivefemininesingular          sql.NullString
-	Accusativemasculinesingular       sql.NullString
-	Pausalmasculinesingular           sql.NullString
-	Pausalsingular                    sql.NullString
-	Accusativefemininesingular        sql.NullString
+	Pausalfeminineindefinitesingular  sql.NullString
 	Nominative                        sql.NullString
-	Genitive                          sql.NullString
-	Pausalmasculineindefinitesingular sql.NullString
-	Nominativefemininesingular        sql.NullString
-	Accusativedefinitesingular        sql.NullString
-	Genitivemasculinesingular         sql.NullString
+	Pausalfemininesingular            sql.NullString
 }
 
-type ArArabicDbVerb struct {
+type ArVerb struct {
 	Wdlexemeid                                              sql.NullString
-	Masculinepastthirdpersonindefinitesingular              sql.NullString
-	Activesecondpersonfiilmudaripluralsubjunctive           sql.NullString
-	Masculineactivesecondpersonplural                       sql.NullString
-	Activefirstpersonfiilmudariplural                       sql.NullString
-	Masculineperformativethirdpersonsingular                sql.NullString
-	Feminineactiveperformativethirdpersonplural             sql.NullString
-	Feminineactiveperformativesecondpersonsingular          sql.NullString
-	Activeperformativefirstpersonplural                     sql.NullString
-	Feminineactivesecondpersonfiilmudarisingular            sql.NullString
-	Feminineactiveindicativesecondpersonfiilmudariplural    sql.NullString
-	Masculineactiveimperativesecondpersonplural             sql.NullString
-	Feminineactivethirdpersonfiilmudariplural               sql.NullString
-	Activefirstpersonfiilmudaripluralsubjunctive            sql.NullString
-	Activepastfirstpersonsingular                           sql.NullString
-	Masculineactiveimperativesecondpersonsingular           sql.NullString
-	Masculineactivethirdpersonfiilmudarisingularsubjunctive sql.NullString
-	Feminineactivepastsecondpersonplural                    sql.NullString
-	Feminineplural                                          sql.NullString
-	Masculineactivesecondpersonfiilmudarisingular           sql.NullString
-	Masculinethirdpersonsingular                            sql.NullString
-	Feminineactivethirdpersondualfiilmudari                 sql.NullString
-	Plural                                                  sql.NullString
-	Feminineactiveimperativesecondpersonsingular            sql.NullString
-	Activesecondpersondualfiilmudari                        sql.NullString
-	Masculineactivesecondpersonfiilmudaripluralsubjunctive  sql.NullString
-	Activefirstpersonfiilmudarisingularsubjunctive          sql.NullString
-	Masculineactivepast                                     sql.NullString
-	Masculineactivethirdpersonfiilmudaripluralsubjunctive   sql.NullString
-	Masculineactivepastsecondpersonplural                   sql.NullString
-	Activeindicativefirstpersonfiilmudarisingular           sql.NullString
-	Activeperfectfirstpersonsingular                        sql.NullString
-	Commonactivepastsecondpersondual                        sql.NullString
-	Masculineactivethirdpersonfiilmudariplural              sql.NullString
-	Masculineindicativeperformativethirdpersonsingular      sql.NullString
-	Feminineactiveperfectsecondpersonsingular               sql.NullString
-	Masculineactivepastdual                                 sql.NullString
-	Activeperformativesecondpersondual                      sql.NullString
-	Masculineactiveperformativesecondpersonplural           sql.NullString
-	Masculineactiveperformativethirdpersonplural            sql.NullString
-	Indicativefirstpersonfiilmudarisingular                 sql.NullString
-	Firstpersonfiilmudarisingular                           sql.NullString
-	Passiveperformativefirstpersonsingular                  sql.NullString
-	Masculineplural                                         sql.NullString
-	Masculinepassiveperformativesecondpersonsingular        sql.NullString
-	Activepastfirstpersonplural                             sql.NullString
-	Feminineactiveperformativesecondpersonplural            sql.NullString
-	Masculineactiveperfectsecondpersonsingular              sql.NullString
-	Dual                                                    sql.NullString
-	Masculineactivethirdpersondualfiilmudarisubjunctive     sql.NullString
-	Feminineactivepastthirdpersonsingular                   sql.NullString
-	Feminineactivesecondpersonfiilmudarisingularsubjunctive sql.NullString
-	Activeindicativepluperfectthirdpersonsingular           sql.NullString
-	Masculineactiveindicativethirdpersonfiilmudarisingular  sql.NullString
-	Femininepassiveperformativesecondpersonsingular         sql.NullString
-	Masculinepastsingular                                   sql.NullString
-	Activeindicativesecondpersondualfiilmudari              sql.NullString
-	Feminineactiveindicativesecondpersonfiilmudarisingular  sql.NullString
-	Feminineactiveperformativethirdpersonsingular           sql.NullString
-	Passiveparticiple                                       sql.NullString
-	Lastmodified                                            sql.NullString
-	Feminineactivethirdpersonfiilmudarisingular             sql.NullString
-	Masculineactiveperformativethirdpersonsingular          sql.NullString
-	Masculineactivepastsecondpersonsingular                 sql.NullString
-	Feminineactiveperformativethirdpersondual               sql.NullString
-	Feminineactivethirdpersonfiilmudarisingularsubjunctive  sql.NullString
-	Past                                                    sql.NullString
-	Masculineactivepastthirdpersonplural                    sql.NullString
-	Masculineactivethirdpersondualfiilmudari                sql.NullString
-	Activeimperativesecondpersondual                        sql.NullString
-	Feminineactiveindicativethirdpersonfiilmudarisingular   sql.NullString
-	Activefirstpersonfiilmudarisingular                     sql.NullString
-	Performativefirstpersonsingular                         sql.NullString
-	Feminineactiveindicativethirdpersondualfiilmudari       sql.NullString
-	Feminineactivepastsecondpersonsingular                  sql.NullString
-	Feminineactivepastthirdpersondual                       sql.NullString
-	Singular                                                sql.NullString
-	Feminineactivesecondpersonfiilmudaripluralsubjunctive   sql.NullString
-	Masculineactiveperformativethirdpersondual              sql.NullString
-	Masculineactivethirdpersonfiilmudarisingular            sql.NullString
 	Masculineactivepastthirdpersondual                      sql.NullString
+	Activesecondpersonfiilmudaripluralsubjunctive           sql.NullString
+	Activeindicativesecondpersondualfiilmudari              sql.NullString
+	Feminineactiveperfectsecondpersonsingular               sql.NullString
+	Feminineactivethirdpersonfiilmudarisingular             sql.NullString
+	Past                                                    sql.NullString
+	Lastmodified                                            sql.NullString
+	Feminineactiveperformativesecondpersonplural            sql.NullString
+	Masculinepastthirdpersonindefinitesingular              sql.NullString
+	Masculineactivesecondpersonplural                       sql.NullString
+	Feminineactiveindicativethirdpersondualfiilmudari       sql.NullString
+	Feminineactivethirdpersondualfiilmudari                 sql.NullString
+	Firstpersonfiilmudarisingular                           sql.NullString
+	Indicativefirstpersonfiilmudarisingular                 sql.NullString
+	Femininepastthirdpersonsingular                         sql.NullString
+	Singular                                                sql.NullString
+	Activeperformativefirstpersonsingular                   sql.NullString
+	Masculineactivethirdpersonfiilmudarisingular            sql.NullString
 	Masculinepastthirdpersonsingular                        sql.NullString
-	Feminineactivethirdpersonfiilmudaripluralsubjunctive    sql.NullString
+	Masculineplural                                         sql.NullString
+	Masculineactiveperformativethirdpersonsingular          sql.NullString
+	Masculineindicativeperformativethirdpersonsingular      sql.NullString
+	Activeimperativesecondpersondual                        sql.NullString
+	Masculineactivepast                                     sql.NullString
+	Masculineactiveperformativesecondpersonplural           sql.NullString
+	Performativefirstpersonsingular                         sql.NullString
+	Masculinepassiveperformativesecondpersonsingular        sql.NullString
+	Feminineactiveindicativesecondpersonfiilmudariplural    sql.NullString
+	Masculineactivepastsecondpersonplural                   sql.NullString
+	Masculineactivesecondpersonfiilmudaripluralsubjunctive  sql.NullString
+	Masculineactivethirdpersonfiilmudaripluralsubjunctive   sql.NullString
+	Masculineactivethirdpersondualfiilmudarisubjunctive     sql.NullString
 	Activesecondpersondualfiilmudarisubjunctive             sql.NullString
-	Masculineactiveindicativesecondpersonfiilmudariplural   sql.NullString
-	Activeindicativefirstpersonfiilmudariplural             sql.NullString
+	Feminineactivesecondpersonfiilmudarisingular            sql.NullString
+	Feminineactivepastthirdpersonsingular                   sql.NullString
+	Masculineactiveperfectsecondpersonsingular              sql.NullString
+	Passiveparticiple                                       sql.NullString
+	Activeperformativesecondpersondual                      sql.NullString
+	Feminineplural                                          sql.NullString
+	Activefirstpersonfiilmudaripluralsubjunctive            sql.NullString
+	Passiveperformativefirstpersonsingular                  sql.NullString
+	Feminineactiveindicativethirdpersonfiilmudarisingular   sql.NullString
 	Masculineactiveindicativesecondpersonfiilmudarisingular sql.NullString
 	Feminineactivesecondpersonfiilmudariplural              sql.NullString
+	Feminineactiveperformativesecondpersonsingular          sql.NullString
+	Feminineactivepastsecondpersonsingular                  sql.NullString
+	Feminineactivethirdpersonfiilmudariplural               sql.NullString
+	Masculineactiveperformativethirdpersondual              sql.NullString
+	Activeperfectfirstpersonsingular                        sql.NullString
+	Masculineactiveperformativethirdpersonplural            sql.NullString
+	Activeindicativefirstpersonfiilmudariplural             sql.NullString
+	Feminineactiveindicativesecondpersonfiilmudarisingular  sql.NullString
+	Masculineactivethirdpersondualfiilmudari                sql.NullString
+	Dual                                                    sql.NullString
+	Masculinethirdpersonsingular                            sql.NullString
+	Plural                                                  sql.NullString
+	Femininepassiveperformativesecondpersonsingular         sql.NullString
 	Feminineactiveimperativesecondpersonplural              sql.NullString
-	Masculineactiveindicativethirdpersondualfiilmudari      sql.NullString
+	Activefirstpersonfiilmudariplural                       sql.NullString
+	Activepastfirstpersonsingular                           sql.NullString
+	Feminineactivepastthirdpersondual                       sql.NullString
+	Feminineactiveperformativethirdpersonplural             sql.NullString
+	Masculineactivethirdpersonfiilmudariplural              sql.NullString
+	Feminineactiveperformativethirdpersonsingular           sql.NullString
 	Feminineactivethirdpersondualfiilmudarisubjunctive      sql.NullString
+	Commonactivepastsecondpersondual                        sql.NullString
+	Activeperformativefirstpersonplural                     sql.NullString
+	Activeindicativefirstpersonfiilmudarisingular           sql.NullString
+	Feminineactivepastsecondpersonplural                    sql.NullString
+	Activefirstpersonfiilmudarisingular                     sql.NullString
+	Masculineactiveindicativesecondpersonfiilmudariplural   sql.NullString
+	Masculineactiveindicativethirdpersondualfiilmudari      sql.NullString
+	Masculineactivepastsecondpersonsingular                 sql.NullString
+	Masculineactivethirdpersonfiilmudarisingularsubjunctive sql.NullString
+	Feminineactivesecondpersonfiilmudarisingularsubjunctive sql.NullString
+	Feminineactiveperformativethirdpersondual               sql.NullString
+	Masculineactivesecondpersonfiilmudarisingular           sql.NullString
+	Masculineactiveimperativesecondpersonplural             sql.NullString
+	Feminineactiveimperativesecondpersonsingular            sql.NullString
+	Activepastfirstpersonplural                             sql.NullString
+	Activesecondpersondualfiilmudari                        sql.NullString
+	Masculinepastsingular                                   sql.NullString
+	Activeindicativepluperfectthirdpersonsingular           sql.NullString
+	Masculineactiveimperativesecondpersonsingular           sql.NullString
+	Activefirstpersonfiilmudarisingularsubjunctive          sql.NullString
+	Masculineactiveindicativethirdpersonfiilmudarisingular  sql.NullString
+	Feminineactivethirdpersonfiilmudarisingularsubjunctive  sql.NullString
+	Masculineperformativethirdpersonsingular                sql.NullString
 	Masculineactiveperformativesecondpersonsingular         sql.NullString
-	Femininepastthirdpersonsingular                         sql.NullString
+	Feminineactivesecondpersonfiilmudaripluralsubjunctive   sql.NullString
+	Masculineactivepastthirdpersonplural                    sql.NullString
+	Feminineactivethirdpersonfiilmudaripluralsubjunctive    sql.NullString
+	Masculineactivepastdual                                 sql.NullString
 	Feminineactivepastthirdpersonplural                     sql.NullString
-	Activeperformativefirstpersonsingular                   sql.NullString
 }
 
-type BnBengaliDbAdjective struct {
+type BnAdjective struct {
 	Wdlexemeid           sql.NullString
-	Masculine            sql.NullString
 	Masculinecomparative sql.NullString
-	Feminine             sql.NullString
 	Lastmodified         sql.NullString
 	Femininecomparative  sql.NullString
 	Femininesuperlative  sql.NullString
-	Positive             sql.NullString
-	Masculinepositive    sql.NullString
+	Masculine            sql.NullString
 	Masculinesuperlative sql.NullString
-	Femininepositive     sql.NullString
-	Nominative           sql.NullString
-	Comparative          sql.NullString
+	Positive             sql.NullString
 	Superlative          sql.NullString
+	Masculinepositive    sql.NullString
+	Nominative           sql.NullString
+	Femininepositive     sql.NullString
+	Comparative          sql.NullString
+	Feminine             sql.NullString
 }
 
-type BnBengaliDbAdverb struct {
+type BnAdverb struct {
 	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
 	Positive     sql.NullString
-	Lastmodified sql.NullString
 }
 
-type BnBengaliDbConjunction struct {
+type BnConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type BnBengaliDbNoun struct {
+type BnNoun struct {
 	Wdlexemeid   sql.NullString
-	Locative     sql.NullString
 	Lastmodified sql.NullString
 	Accusative   sql.NullString
-	Dative       sql.NullString
-	Nominative   sql.NullString
 	Genitive     sql.NullString
+	Dative       sql.NullString
+	Locative     sql.NullString
+	Nominative   sql.NullString
 }
 
-type BnBengaliDbPersonalPronoun struct {
+type BnPersonalPronoun struct {
 	Wdlexemeid                     sql.NullString
-	Nominativesecondpersonsingular sql.NullString
 	Lastmodified                   sql.NullString
 	Genitivesecondpersonsingular   sql.NullString
 	Accusativesecondpersonsingular sql.NullString
+	Nominativesecondpersonsingular sql.NullString
 }
 
-type BnBengaliDbPostposition struct {
+type BnPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type BnBengaliDbPronoun struct {
+type BnPronoun struct {
 	Wdlexemeid                    sql.NullString
-	Accusativefirstpersonplural   sql.NullString
-	Genitivesingular              sql.NullString
-	Nominativesingular            sql.NullString
-	Dative                        sql.NullString
-	Genitivefirstpersonsingular   sql.NullString
-	Accusativesingular            sql.NullString
-	Nominativeplural              sql.NullString
-	Accusativefirstpersonsingular sql.NullString
-	Lastmodified                  sql.NullString
-	Accusative                    sql.NullString
-	Nominativefirstpersonplural   sql.NullString
-	Accusativeplural              sql.NullString
 	Nominativesecondpersonplural  sql.NullString
-	Genitivefirstpersonplural     sql.NullString
-	Nominativefirstpersonsingular sql.NullString
-	Locativefirstpersonsingular   sql.NullString
-	Accusativesecondpersonplural  sql.NullString
-	Genitivesecondpersonplural    sql.NullString
-	Nominative                    sql.NullString
+	Genitivesingular              sql.NullString
 	Genitive                      sql.NullString
 	Genitiveplural                sql.NullString
+	Genitivefirstpersonplural     sql.NullString
+	Locativefirstpersonsingular   sql.NullString
+	Accusativeplural              sql.NullString
+	Nominativefirstpersonsingular sql.NullString
+	Nominativefirstpersonplural   sql.NullString
+	Accusativefirstpersonsingular sql.NullString
+	Lastmodified                  sql.NullString
+	Accusativesecondpersonplural  sql.NullString
+	Nominativesingular            sql.NullString
+	Accusative                    sql.NullString
+	Nominativeplural              sql.NullString
+	Accusativefirstpersonplural   sql.NullString
+	Genitivefirstpersonsingular   sql.NullString
+	Accusativesingular            sql.NullString
+	Dative                        sql.NullString
+	Genitivesecondpersonplural    sql.NullString
+	Nominative                    sql.NullString
 }
 
-type BnBengaliDbProperNoun struct {
+type BnProperNoun struct {
 	Wdlexemeid   sql.NullString
-	Locative     sql.NullString
 	Lastmodified sql.NullString
 	Accusative   sql.NullString
-	Dative       sql.NullString
-	Nominative   sql.NullString
 	Genitive     sql.NullString
+	Dative       sql.NullString
+	Locative     sql.NullString
+	Nominative   sql.NullString
 }
 
-type BnBengaliDbVerb struct {
+type BnVerb struct {
 	Wdlexemeid                   sql.NullString
-	Presentperfectthirdperson    sql.NullString
+	Common                       sql.NullString
+	Firstperson                  sql.NullString
+	Genitive                     sql.NullString
 	Thirdperson                  sql.NullString
-	Simplepastfirstperson        sql.NullString
-	Future                       sql.NullString
 	Simplepresent                sql.NullString
-	Futurefirstperson            sql.NullString
-	Simplepresentfirstperson     sql.NullString
 	Presentperfectfirstperson    sql.NullString
+	Presentperfectthirdperson    sql.NullString
+	Presentcontinuousthirdperson sql.NullString
+	Simplepast                   sql.NullString
 	Lastmodified                 sql.NullString
 	Presentperfect               sql.NullString
-	Conditional                  sql.NullString
-	Simplepresentthirdperson     sql.NullString
-	Pluperfectthirdperson        sql.NullString
-	Futurethirdperson            sql.NullString
-	Pluperfect                   sql.NullString
-	Presentcontinuous            sql.NullString
-	Presentcontinuousthirdperson sql.NullString
-	Simplepastthirdperson        sql.NullString
-	Genitive                     sql.NullString
-	Pluperfectfirstperson        sql.NullString
-	Firstperson                  sql.NullString
 	Presentcontinuousfirstperson sql.NullString
-	Simplepast                   sql.NullString
-	Common                       sql.NullString
+	Futurefirstperson            sql.NullString
+	Futurethirdperson            sql.NullString
+	Pluperfectfirstperson        sql.NullString
+	Simplepastfirstperson        sql.NullString
+	Simplepastthirdperson        sql.NullString
+	Simplepresentfirstperson     sql.NullString
+	Presentcontinuous            sql.NullString
+	Conditional                  sql.NullString
+	Pluperfect                   sql.NullString
+	Pluperfectthirdperson        sql.NullString
+	Future                       sql.NullString
+	Simplepresentthirdperson     sql.NullString
 }
 
-type CsCzechDbAdjective struct {
+type CsAdjective struct {
 	Wdlexemeid                                         sql.NullString
-	Nominativefemininesingularsuperlative              sql.NullString
-	Accusativefemininesingularpositive                 sql.NullString
-	Accusativemasculineanimatepluralcomparative        sql.NullString
-	Accusativemasculineinanimatesingularsuperlative    sql.NullString
-	Dativefemininepluralpositive                       sql.NullString
-	Nominativemasculineanimatepluralsuperlative        sql.NullString
-	Dativemasculineinanimatesingularsuperlative        sql.NullString
-	Genitivemasculineinanimatesingularcomparative      sql.NullString
-	Vocativeneutersingularcomparative                  sql.NullString
-	Nominativefemininepluralpositive                   sql.NullString
 	Locativeneuterpluralcomparative                    sql.NullString
-	Dativefemininesingular                             sql.NullString
-	Instrumentalmasculineinanimatesingularpositive     sql.NullString
-	Instrumentalfemininesingularpositive               sql.NullString
-	Dativeneuterpluralsuperlative                      sql.NullString
-	Dativeneutersingular                               sql.NullString
-	Instrumentalsingular                               sql.NullString
-	Dativeplural                                       sql.NullString
-	Genitivemasculineinanimatepluralcomparative        sql.NullString
-	Nominativemasculineinanimatepluralpositive         sql.NullString
-	Dativemasculineinanimatepluralcomparative          sql.NullString
-	Vocativeneuterplural                               sql.NullString
-	Dativefemininesingularcomparative                  sql.NullString
-	Accusativefeminineplural                           sql.NullString
-	Accusativemasculineinanimatesingularcomparative    sql.NullString
-	Accusativefemininesingularsuperlative              sql.NullString
-	Vocativemasculineanimatesingularcomparative        sql.NullString
-	Accusativeplural                                   sql.NullString
-	Genitivemasculineinanimatesingular                 sql.NullString
-	Genitiveneutersingularsuperlative                  sql.NullString
-	Accusativeneutersingularcomparative                sql.NullString
-	Dativefemininesingularsuperlative                  sql.NullString
-	Genitivemasculineinanimatepluralpositive           sql.NullString
-	Locativefemininepluralcomparative                  sql.NullString
-	Dativemasculineinanimatesingular                   sql.NullString
-	Dativeneutersingularcomparative                    sql.NullString
-	Accusativeneuterplural                             sql.NullString
-	Genitivefemininepluralcomparative                  sql.NullString
-	Genitiveneutersingularpositive                     sql.NullString
-	Nominativemasculineanimatesingularcomparative      sql.NullString
-	Nominativemasculineinanimatepluralcomparative      sql.NullString
-	Accusativefemininepluralcomparative                sql.NullString
-	Vocativemasculinesingular                          sql.NullString
-	Dativefemininesingularpositive                     sql.NullString
-	Accusativeneutersingularpositive                   sql.NullString
-	Locativemasculineanimatesingular                   sql.NullString
-	Locativemasculineinanimatesingularcomparative      sql.NullString
-	Dativesingular                                     sql.NullString
-	Locativemasculineinanimatesingularpositive         sql.NullString
-	Nominativefeminineplural                           sql.NullString
-	Instrumentalmasculineanimatesingularsuperlative    sql.NullString
-	Vocativefeminineplural                             sql.NullString
-	Accusativeneuterpluralcomparative                  sql.NullString
-	Nominativefemininesingular                         sql.NullString
-	Dativefeminineplural                               sql.NullString
-	Dativeneutersingularpositive                       sql.NullString
-	Genitivemasculineanimatesingularpositive           sql.NullString
-	Dativemasculineinanimatesingularcomparative        sql.NullString
-	Instrumentalmasculineanimatepluralcomparative      sql.NullString
-	Nominativefemininepluralcomparative                sql.NullString
-	Nominativemasculineinanimatesingularpositive       sql.NullString
-	Vocativeneuterpluralcomparative                    sql.NullString
-	Locativeneutersingular                             sql.NullString
-	Vocativemasculineinanimatesingularpositive         sql.NullString
-	Genitiveplural                                     sql.NullString
-	Genitivemasculinesingular                          sql.NullString
-	Instrumentalfemininesingular                       sql.NullString
-	Dativemasculineinanimatepluralpositive             sql.NullString
-	Nominativemasculinesingular                        sql.NullString
-	Nominativemasculineanimatepluralcomparative        sql.NullString
-	Vocativefemininepluralpositive                     sql.NullString
-	Vocativefemininesingularpositive                   sql.NullString
-	Locativemasculineplural                            sql.NullString
-	Locativeneuterplural                               sql.NullString
-	Instrumentalmasculineinanimatepluralpositive       sql.NullString
-	Nominativeneutersingularcomparative                sql.NullString
-	Genitivemasculineanimatepluralcomparative          sql.NullString
-	Nominativemasculineanimatesingularsuperlative      sql.NullString
-	Vocativefemininepluralcomparative                  sql.NullString
-	Instrumentalmasculinesingular                      sql.NullString
-	Vocativemasculineinanimatesingular                 sql.NullString
-	Vocativemasculineinanimatepluralpositive           sql.NullString
-	Instrumentalmasculineanimatesingular               sql.NullString
-	Accusativemasculineanimatesingularcomparative      sql.NullString
-	Dativemasculineinanimateplural                     sql.NullString
-	Accusativemasculineplural                          sql.NullString
-	Nominativeplural                                   sql.NullString
-	Dativeneutersingularsuperlative                    sql.NullString
-	Vocativemasculineanimatepluralsuperlative          sql.NullString
-	Instrumentalmasculineinanimatepluralsuperlative    sql.NullString
-	Genitivemasculineplural                            sql.NullString
-	Locativeneuterpluralpositive                       sql.NullString
-	Locativefemininesingularcomparative                sql.NullString
-	Instrumentalfemininepluralcomparative              sql.NullString
-	Dativefemininepluralsuperlative                    sql.NullString
-	Instrumentalneutersingular                         sql.NullString
-	Genitivemasculineanimateplural                     sql.NullString
-	Nominativemasculineinanimatepluralsuperlative      sql.NullString
-	Locativemasculineanimatesingularpositive           sql.NullString
-	Instrumentalplural                                 sql.NullString
-	Accusativefemininepluralsuperlative                sql.NullString
-	Nominativefemininesingularpositive                 sql.NullString
-	Nominativemasculineinanimatesingularsuperlative    sql.NullString
-	Genitivefemininesingularsuperlative                sql.NullString
-	Vocativemasculineinanimateplural                   sql.NullString
-	Locativemasculineanimatepluralsuperlative          sql.NullString
-	Nominativeneutersingular                           sql.NullString
-	Locativeneutersingularcomparative                  sql.NullString
-	Genitivefemininepluralsuperlative                  sql.NullString
-	Nominativeneuterpluralsuperlative                  sql.NullString
-	Genitiveneuterplural                               sql.NullString
-	Vocativeneutersingularpositive                     sql.NullString
-	Accusativeneuterpluralsuperlative                  sql.NullString
-	Dativemasculinesingular                            sql.NullString
-	Accusativemasculineinanimatepluralcomparative      sql.NullString
-	Locativemasculinesingular                          sql.NullString
-	Locativemasculineinanimatepluralcomparative        sql.NullString
-	Vocativeneutersingularsuperlative                  sql.NullString
-	Nominativemasculineanimatesingular                 sql.NullString
-	Locativefemininepluralpositive                     sql.NullString
-	Superlative                                        sql.NullString
-	Comparative                                        sql.NullString
-	Genitivefemininesingularcomparative                sql.NullString
-	Vocativefemininesingularcomparative                sql.NullString
-	Neuterpluralpositive                               sql.NullString
-	Accusativemasculineinanimatepluralsuperlative      sql.NullString
-	Dativemasculineanimatesingularpositive             sql.NullString
-	Instrumentalneutersingularsuperlative              sql.NullString
-	Instrumentalfemininesingularcomparative            sql.NullString
-	Dativemasculineplural                              sql.NullString
-	Dativeneuterpluralcomparative                      sql.NullString
-	Vocativemasculineinanimatesingularcomparative      sql.NullString
-	Nominativemasculineinanimatesingular               sql.NullString
-	Accusativemasculineinanimatepluralpositive         sql.NullString
-	Genitivemasculineinanimateplural                   sql.NullString
-	Instrumentalfemininesingularsuperlative            sql.NullString
-	Nominativemasculineanimatepluralpositive           sql.NullString
-	Genitivefemininepluralpositive                     sql.NullString
-	Vocativeneuterpluralsuperlative                    sql.NullString
-	Nominativesingular                                 sql.NullString
-	Accusativefemininesingularcomparative              sql.NullString
-	Vocativeplural                                     sql.NullString
-	Genitivefemininesingularpositive                   sql.NullString
-	Vocativeneutersingular                             sql.NullString
-	Vocativemasculineanimateplural                     sql.NullString
-	Genitivemasculineinanimatepluralsuperlative        sql.NullString
-	Vocativesingular                                   sql.NullString
-	Vocativemasculineinanimatepluralsuperlative        sql.NullString
-	Dativemasculineanimatesingularsuperlative          sql.NullString
-	Lastmodified                                       sql.NullString
-	Genitiveneuterpluralcomparative                    sql.NullString
-	Locativemasculineanimatepluralpositive             sql.NullString
-	Vocativefemininesingular                           sql.NullString
-	Instrumentalfemininepluralpositive                 sql.NullString
-	Genitivefemininesingular                           sql.NullString
-	Instrumentalmasculineanimatepluralpositive         sql.NullString
-	Dativemasculineanimatesingular                     sql.NullString
-	Dativemasculineanimatepluralsuperlative            sql.NullString
-	Genitivefeminineplural                             sql.NullString
-	Locativemasculineanimatesingularsuperlative        sql.NullString
-	Locativeneutersingularpositive                     sql.NullString
-	Instrumentalneuterplural                           sql.NullString
-	Locativesingular                                   sql.NullString
-	Instrumentalmasculineanimatesingularpositive       sql.NullString
-	Accusativeneuterpluralpositive                     sql.NullString
-	Nominativeneuterpluralcomparative                  sql.NullString
-	Locativefemininepluralsuperlative                  sql.NullString
-	Locativemasculineinanimatepluralsuperlative        sql.NullString
-	Nominativemasculineanimateplural                   sql.NullString
-	Locativeplural                                     sql.NullString
-	Locativefemininesingularpositive                   sql.NullString
-	Nominativemasculineinanimatesingularcomparative    sql.NullString
-	Accusativefemininepluralpositive                   sql.NullString
-	Genitiveneuterpluralsuperlative                    sql.NullString
-	Dativemasculineinanimatesingularpositive           sql.NullString
-	Locativefemininesingular                           sql.NullString
-	Dativemasculineanimatepluralcomparative            sql.NullString
-	Dativeneuterpluralpositive                         sql.NullString
-	Locativemasculineinanimatesingularsuperlative      sql.NullString
-	Vocativemasculineinanimatepluralcomparative        sql.NullString
-	Vocativefemininepluralsuperlative                  sql.NullString
-	Accusativeneutersingularsuperlative                sql.NullString
-	Locativemasculineinanimatesingular                 sql.NullString
-	Dativemasculineanimatepluralpositive               sql.NullString
-	Accusativemasculineanimatepluralpositive           sql.NullString
-	Genitivemasculineanimatesingularsuperlative        sql.NullString
-	Vocativemasculineanimatepluralcomparative          sql.NullString
-	Instrumentalneuterpluralsuperlative                sql.NullString
-	Dativemasculineanimateplural                       sql.NullString
-	Instrumentalmasculineinanimatesingularsuperlative  sql.NullString
-	Accusativemasculineinanimatesingular               sql.NullString
-	Genitivemasculineanimatesingular                   sql.NullString
-	Locativemasculineanimatepluralcomparative          sql.NullString
-	Vocativemasculineanimatesingular                   sql.NullString
-	Dativeneuterplural                                 sql.NullString
-	Instrumentalneutersingularpositive                 sql.NullString
-	Instrumentalmasculineanimateplural                 sql.NullString
-	Genitiveneuterpluralpositive                       sql.NullString
-	Accusativemasculineanimatepluralsuperlative        sql.NullString
-	Instrumentalmasculineinanimateplural               sql.NullString
-	Nominativemasculineanimatesingularpositive         sql.NullString
-	Vocativemasculineanimatesingularpositive           sql.NullString
-	Locativemasculineanimatesingularcomparative        sql.NullString
-	Locativefeminineplural                             sql.NullString
-	Nominativefemininepluralsuperlative                sql.NullString
-	Genitivesingular                                   sql.NullString
-	Accusativeneutersingular                           sql.NullString
-	Accusativemasculineinanimateplural                 sql.NullString
-	Genitiveneutersingular                             sql.NullString
-	Vocativeneuterpluralpositive                       sql.NullString
-	Accusativemasculineanimatesingularsuperlative      sql.NullString
-	Nominativemasculineinanimateplural                 sql.NullString
-	Locativefemininesingularsuperlative                sql.NullString
-	Instrumentalmasculineinanimatesingular             sql.NullString
-	Locativemasculineinanimateplural                   sql.NullString
-	Accusativemasculineinanimatesingularpositive       sql.NullString
-	Locativemasculineinanimatepluralpositive           sql.NullString
-	Vocativemasculineanimatesingularsuperlative        sql.NullString
-	Instrumentalneuterpluralcomparative                sql.NullString
-	Accusativemasculineanimateplural                   sql.NullString
-	Locativeneuterpluralsuperlative                    sql.NullString
-	Accusativesingular                                 sql.NullString
-	Genitivemasculineanimatepluralsuperlative          sql.NullString
-	Nominativefemininesingularcomparative              sql.NullString
-	Vocativefemininesingularsuperlative                sql.NullString
-	Genitivemasculineanimatesingularcomparative        sql.NullString
-	Genitiveneutersingularcomparative                  sql.NullString
-	Neutersingularpositive                             sql.NullString
-	Instrumentalmasculineplural                        sql.NullString
-	Genitivemasculineinanimatesingularpositive         sql.NullString
-	Accusativemasculineanimatesingular                 sql.NullString
-	Instrumentalfemininepluralsuperlative              sql.NullString
-	Nominativeneutersingularpositive                   sql.NullString
-	Femininepluralpositive                             sql.NullString
-	Dativemasculineanimatesingularcomparative          sql.NullString
-	Accusativemasculineanimatesingularpositive         sql.NullString
-	Accusativefemininesingular                         sql.NullString
-	Instrumentalmasculineanimatesingularcomparative    sql.NullString
-	Dativemasculineinanimatepluralsuperlative          sql.NullString
-	Genitivemasculineanimatepluralpositive             sql.NullString
-	Genitivemasculineinanimatesingularsuperlative      sql.NullString
-	Instrumentalneuterpluralpositive                   sql.NullString
-	Vocativemasculineanimatepluralpositive             sql.NullString
-	Nominativeneuterpluralpositive                     sql.NullString
-	Masculineanimatemasculineinanimatesingularpositive sql.NullString
 	Instrumentalfeminineplural                         sql.NullString
-	Instrumentalneutersingularcomparative              sql.NullString
-	Femininesingularpositive                           sql.NullString
+	Instrumentalneuterpluralpositive                   sql.NullString
+	Locativefemininesingularsuperlative                sql.NullString
+	Locativeneuterplural                               sql.NullString
+	Dativeneuterpluralsuperlative                      sql.NullString
+	Dativeneutersingularsuperlative                    sql.NullString
+	Nominativefemininesingular                         sql.NullString
+	Instrumentalmasculineanimateplural                 sql.NullString
+	Accusativeneuterpluralpositive                     sql.NullString
+	Genitivemasculinesingular                          sql.NullString
+	Neutersingularpositive                             sql.NullString
+	Genitiveplural                                     sql.NullString
+	Genitivefemininesingularpositive                   sql.NullString
+	Instrumentalfemininepluralpositive                 sql.NullString
+	Locativemasculineanimatesingularsuperlative        sql.NullString
 	Masculineanimatemasculineinanimatepluralpositive   sql.NullString
-	Locativeneutersingularsuperlative                  sql.NullString
-	Dativefemininepluralcomparative                    sql.NullString
+	Femininesingularpositive                           sql.NullString
+	Dativemasculineinanimatesingularcomparative        sql.NullString
+	Accusativeplural                                   sql.NullString
+	Instrumentalmasculineinanimatesingular             sql.NullString
+	Instrumentalmasculineplural                        sql.NullString
+	Accusativemasculineinanimatesingularsuperlative    sql.NullString
+	Locativefemininepluralpositive                     sql.NullString
+	Masculineanimatemasculineinanimatesingularpositive sql.NullString
+	Accusativemasculineanimatepluralsuperlative        sql.NullString
+	Instrumentalfemininepluralsuperlative              sql.NullString
+	Dativemasculineanimatesingularpositive             sql.NullString
+	Vocativefemininepluralpositive                     sql.NullString
+	Accusativemasculineanimatepluralcomparative        sql.NullString
+	Accusativefeminineplural                           sql.NullString
+	Locativesingular                                   sql.NullString
+	Lastmodified                                       sql.NullString
+	Accusativefemininesingularsuperlative              sql.NullString
+	Genitivefemininepluralcomparative                  sql.NullString
+	Vocativefemininesingular                           sql.NullString
+	Vocativemasculineanimatepluralsuperlative          sql.NullString
+	Genitiveneutersingularcomparative                  sql.NullString
+	Locativemasculineanimatepluralpositive             sql.NullString
+	Dativefemininesingularcomparative                  sql.NullString
+	Nominativemasculineinanimatesingularcomparative    sql.NullString
+	Instrumentalmasculineanimatesingularpositive       sql.NullString
+	Locativemasculineinanimatepluralcomparative        sql.NullString
+	Nominativemasculineinanimatepluralpositive         sql.NullString
+	Vocativemasculineanimatesingularsuperlative        sql.NullString
+	Locativefemininesingularpositive                   sql.NullString
+	Instrumentalsingular                               sql.NullString
+	Vocativemasculinesingular                          sql.NullString
+	Genitivemasculineinanimateplural                   sql.NullString
+	Dativemasculineanimatesingularsuperlative          sql.NullString
+	Instrumentalmasculineanimatesingular               sql.NullString
+	Nominativefeminineplural                           sql.NullString
+	Vocativeplural                                     sql.NullString
+	Vocativeneutersingular                             sql.NullString
+	Nominativefemininesingularsuperlative              sql.NullString
+	Nominativeneuterpluralcomparative                  sql.NullString
+	Vocativemasculineinanimatepluralcomparative        sql.NullString
+	Vocativemasculineanimatesingularpositive           sql.NullString
+	Vocativeneuterplural                               sql.NullString
+	Accusativemasculineanimatesingularcomparative      sql.NullString
+	Accusativesingular                                 sql.NullString
+	Accusativefemininepluralsuperlative                sql.NullString
+	Accusativemasculineinanimatesingularcomparative    sql.NullString
+	Nominativeneutersingularpositive                   sql.NullString
+	Nominativemasculineanimatepluralpositive           sql.NullString
+	Dativefemininesingular                             sql.NullString
+	Accusativeneutersingular                           sql.NullString
+	Locativemasculineinanimatesingular                 sql.NullString
+	Locativeneutersingular                             sql.NullString
+	Nominativefemininesingularcomparative              sql.NullString
+	Instrumentalmasculineinanimatesingularsuperlative  sql.NullString
+	Locativemasculineinanimatepluralsuperlative        sql.NullString
+	Nominativefemininepluralsuperlative                sql.NullString
+	Accusativefemininesingularpositive                 sql.NullString
+	Genitivemasculineinanimatepluralcomparative        sql.NullString
+	Genitivesingular                                   sql.NullString
+	Genitivemasculineinanimatesingular                 sql.NullString
+	Instrumentalneuterpluralcomparative                sql.NullString
+	Dativemasculineanimatepluralpositive               sql.NullString
+	Vocativeneuterpluralcomparative                    sql.NullString
+	Dativefeminineplural                               sql.NullString
+	Genitivefeminineplural                             sql.NullString
+	Comparative                                        sql.NullString
+	Dativeneuterpluralcomparative                      sql.NullString
+	Genitivemasculineinanimatesingularsuperlative      sql.NullString
+	Dativeneuterpluralpositive                         sql.NullString
+	Genitivemasculineanimatepluralcomparative          sql.NullString
+	Vocativefemininesingularsuperlative                sql.NullString
+	Nominativefemininesingularpositive                 sql.NullString
+	Nominativeneuterpluralsuperlative                  sql.NullString
+	Accusativeneutersingularcomparative                sql.NullString
+	Nominativemasculineinanimatepluralcomparative      sql.NullString
+	Vocativemasculineanimatesingular                   sql.NullString
+	Instrumentalfemininesingular                       sql.NullString
+	Vocativemasculineinanimateplural                   sql.NullString
+	Locativemasculineinanimateplural                   sql.NullString
+	Instrumentalfemininesingularpositive               sql.NullString
+	Accusativeneutersingularpositive                   sql.NullString
+	Vocativefemininesingularcomparative                sql.NullString
+	Genitivemasculineanimatepluralpositive             sql.NullString
+	Nominativemasculineanimatepluralcomparative        sql.NullString
+	Locativefemininepluralcomparative                  sql.NullString
+	Dativeplural                                       sql.NullString
+	Dativefemininesingularsuperlative                  sql.NullString
+	Dativemasculinesingular                            sql.NullString
+	Instrumentalmasculinesingular                      sql.NullString
+	Locativemasculinesingular                          sql.NullString
+	Locativeplural                                     sql.NullString
+	Dativemasculineplural                              sql.NullString
+	Accusativefemininepluralpositive                   sql.NullString
+	Vocativeneutersingularpositive                     sql.NullString
+	Genitivemasculineplural                            sql.NullString
+	Dativemasculineinanimatesingularsuperlative        sql.NullString
+	Locativemasculineinanimatesingularpositive         sql.NullString
+	Locativeneutersingularpositive                     sql.NullString
+	Dativeneutersingularpositive                       sql.NullString
+	Locativemasculineinanimatepluralpositive           sql.NullString
+	Genitivefemininesingularcomparative                sql.NullString
+	Nominativemasculineinanimatesingularsuperlative    sql.NullString
+	Dativemasculineanimatesingularcomparative          sql.NullString
+	Instrumentalfemininesingularsuperlative            sql.NullString
+	Nominativemasculinesingular                        sql.NullString
+	Nominativemasculineinanimatepluralsuperlative      sql.NullString
+	Vocativemasculineinanimatepluralsuperlative        sql.NullString
+	Nominativemasculineinanimatesingular               sql.NullString
+	Dativemasculineinanimatesingularpositive           sql.NullString
+	Instrumentalneutersingularcomparative              sql.NullString
+	Dativemasculineinanimateplural                     sql.NullString
+	Dativemasculineanimatepluralcomparative            sql.NullString
+	Dativefemininepluralsuperlative                    sql.NullString
+	Dativemasculineinanimatepluralpositive             sql.NullString
+	Instrumentalmasculineanimatesingularsuperlative    sql.NullString
+	Vocativefemininesingularpositive                   sql.NullString
+	Instrumentalmasculineinanimatepluralpositive       sql.NullString
+	Genitiveneuterpluralpositive                       sql.NullString
+	Instrumentalplural                                 sql.NullString
+	Vocativefemininepluralsuperlative                  sql.NullString
+	Nominativemasculineanimatepluralsuperlative        sql.NullString
 	Locativemasculineanimateplural                     sql.NullString
-	Vocativemasculineinanimatesingularsuperlative      sql.NullString
-	Instrumentalmasculineanimatepluralsuperlative      sql.NullString
-	Nominativeneuterplural                             sql.NullString
+	Nominativefemininepluralpositive                   sql.NullString
+	Genitivefemininepluralpositive                     sql.NullString
+	Accusativefemininepluralcomparative                sql.NullString
 	Nominativeneutersingularsuperlative                sql.NullString
+	Instrumentalneuterpluralsuperlative                sql.NullString
+	Vocativemasculineinanimatesingularsuperlative      sql.NullString
+	Superlative                                        sql.NullString
 	Instrumentalmasculineinanimatesingularcomparative  sql.NullString
+	Nominativemasculineanimatesingularcomparative      sql.NullString
+	Locativeneuterpluralsuperlative                    sql.NullString
+	Instrumentalfemininesingularcomparative            sql.NullString
+	Locativemasculineinanimatesingularcomparative      sql.NullString
+	Locativefeminineplural                             sql.NullString
+	Instrumentalmasculineanimatepluralpositive         sql.NullString
+	Vocativefemininepluralcomparative                  sql.NullString
+	Nominativeneutersingularcomparative                sql.NullString
+	Accusativeneuterpluralsuperlative                  sql.NullString
+	Nominativeneuterpluralpositive                     sql.NullString
 	Instrumentalmasculineinanimatepluralcomparative    sql.NullString
+	Genitivefemininepluralsuperlative                  sql.NullString
+	Genitiveneutersingularpositive                     sql.NullString
+	Genitiveneuterplural                               sql.NullString
+	Vocativemasculineinanimatesingularcomparative      sql.NullString
+	Locativefemininepluralsuperlative                  sql.NullString
+	Genitivefemininesingularsuperlative                sql.NullString
+	Instrumentalmasculineanimatesingularcomparative    sql.NullString
+	Genitivemasculineanimateplural                     sql.NullString
+	Locativefemininesingularcomparative                sql.NullString
+	Vocativeneutersingularcomparative                  sql.NullString
+	Locativeneutersingularsuperlative                  sql.NullString
+	Genitivemasculineinanimatepluralsuperlative        sql.NullString
+	Locativemasculineanimatesingularcomparative        sql.NullString
+	Nominativemasculineanimatesingularpositive         sql.NullString
+	Dativemasculineinanimatepluralcomparative          sql.NullString
+	Accusativeneutersingularsuperlative                sql.NullString
+	Dativesingular                                     sql.NullString
+	Instrumentalmasculineanimatepluralcomparative      sql.NullString
+	Dativeneutersingularcomparative                    sql.NullString
+	Neuterpluralpositive                               sql.NullString
+	Instrumentalneutersingularsuperlative              sql.NullString
+	Nominativesingular                                 sql.NullString
+	Genitivemasculineinanimatesingularpositive         sql.NullString
+	Accusativemasculineinanimatepluralsuperlative      sql.NullString
+	Nominativefemininepluralcomparative                sql.NullString
+	Genitivemasculineinanimatepluralpositive           sql.NullString
+	Nominativeplural                                   sql.NullString
+	Accusativemasculineanimatesingular                 sql.NullString
+	Genitivefemininesingular                           sql.NullString
+	Accusativemasculineanimateplural                   sql.NullString
+	Accusativemasculineanimatesingularsuperlative      sql.NullString
+	Dativeneutersingular                               sql.NullString
+	Locativemasculineanimatepluralsuperlative          sql.NullString
+	Vocativemasculineanimateplural                     sql.NullString
+	Locativemasculineinanimatesingularsuperlative      sql.NullString
+	Dativemasculineinanimatesingular                   sql.NullString
+	Instrumentalneutersingular                         sql.NullString
+	Accusativemasculineinanimatepluralcomparative      sql.NullString
+	Dativefemininesingularpositive                     sql.NullString
+	Accusativemasculineanimatepluralpositive           sql.NullString
+	Locativemasculineanimatepluralcomparative          sql.NullString
+	Instrumentalfemininepluralcomparative              sql.NullString
+	Nominativeneuterplural                             sql.NullString
+	Accusativeneuterplural                             sql.NullString
+	Nominativemasculineinanimateplural                 sql.NullString
+	Genitiveneuterpluralcomparative                    sql.NullString
+	Nominativemasculineanimateplural                   sql.NullString
+	Accusativemasculineanimatesingularpositive         sql.NullString
+	Dativemasculineanimateplural                       sql.NullString
+	Dativefemininepluralcomparative                    sql.NullString
+	Genitiveneutersingularsuperlative                  sql.NullString
+	Genitivemasculineanimatepluralsuperlative          sql.NullString
+	Dativemasculineinanimatepluralsuperlative          sql.NullString
+	Vocativemasculineanimatesingularcomparative        sql.NullString
+	Genitiveneuterpluralsuperlative                    sql.NullString
+	Locativemasculineplural                            sql.NullString
+	Vocativesingular                                   sql.NullString
+	Dativemasculineanimatesingular                     sql.NullString
+	Nominativemasculineinanimatesingularpositive       sql.NullString
+	Genitiveneutersingular                             sql.NullString
+	Genitivemasculineinanimatesingularcomparative      sql.NullString
+	Locativefemininesingular                           sql.NullString
+	Genitivemasculineanimatesingular                   sql.NullString
+	Nominativemasculineanimatesingular                 sql.NullString
+	Accusativemasculineinanimatesingularpositive       sql.NullString
+	Genitivemasculineanimatesingularpositive           sql.NullString
+	Vocativeneuterpluralsuperlative                    sql.NullString
+	Vocativeneuterpluralpositive                       sql.NullString
+	Vocativemasculineinanimatesingular                 sql.NullString
+	Dativemasculineanimatepluralsuperlative            sql.NullString
+	Accusativemasculineinanimateplural                 sql.NullString
+	Femininepluralpositive                             sql.NullString
+	Vocativemasculineinanimatesingularpositive         sql.NullString
+	Dativeneuterplural                                 sql.NullString
+	Vocativeneutersingularsuperlative                  sql.NullString
+	Vocativemasculineinanimatepluralpositive           sql.NullString
+	Vocativemasculineanimatepluralpositive             sql.NullString
+	Locativeneuterpluralpositive                       sql.NullString
+	Locativemasculineanimatesingularpositive           sql.NullString
+	Instrumentalmasculineinanimatesingularpositive     sql.NullString
+	Nominativemasculineanimatesingularsuperlative      sql.NullString
+	Accusativemasculineinanimatesingular               sql.NullString
+	Vocativemasculineanimatepluralcomparative          sql.NullString
+	Accusativefemininesingular                         sql.NullString
+	Nominativeneutersingular                           sql.NullString
+	Accusativemasculineinanimatepluralpositive         sql.NullString
+	Genitivemasculineanimatesingularsuperlative        sql.NullString
+	Instrumentalmasculineanimatepluralsuperlative      sql.NullString
+	Instrumentalneuterplural                           sql.NullString
+	Locativemasculineanimatesingular                   sql.NullString
+	Dativefemininepluralpositive                       sql.NullString
+	Genitivemasculineanimatesingularcomparative        sql.NullString
+	Locativeneutersingularcomparative                  sql.NullString
+	Accusativeneuterpluralcomparative                  sql.NullString
+	Instrumentalneutersingularpositive                 sql.NullString
+	Accusativefemininesingularcomparative              sql.NullString
+	Instrumentalmasculineinanimateplural               sql.NullString
+	Accusativemasculineplural                          sql.NullString
+	Instrumentalmasculineinanimatepluralsuperlative    sql.NullString
+	Vocativefeminineplural                             sql.NullString
 }
 
-type CsCzechDbAdverb struct {
+type CsAdverb struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
 	Lastmodified sql.NullString
 	Comparative  sql.NullString
 	Superlative  sql.NullString
-}
-
-type CsCzechDbConjunction struct {
-	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
-}
-
-type CsCzechDbNoun struct {
-	Wdlexemeid                 sql.NullString
-	Locativeneutersingular     sql.NullString
-	Genitivesingular           sql.NullString
-	Nominativesingular         sql.NullString
-	Dative                     sql.NullString
-	Accusativeneutersingular   sql.NullString
-	Vocativeplural             sql.NullString
-	Vocativeneutersingular     sql.NullString
-	Vocativesingular           sql.NullString
-	Dativeneutersingular       sql.NullString
-	Instrumentalsingular       sql.NullString
-	Dativeplural               sql.NullString
-	Accusativesingular         sql.NullString
-	Nominativeplural           sql.NullString
-	Lastmodified               sql.NullString
-	Accusative                 sql.NullString
-	Instrumentalneutersingular sql.NullString
-	Accusativeplural           sql.NullString
-	Instrumentalplural         sql.NullString
-	Vocative                   sql.NullString
-	Instrumental               sql.NullString
-	Locative                   sql.NullString
-	Locativesingular           sql.NullString
-	Locativeplural             sql.NullString
-	Nominative                 sql.NullString
-	Plural                     sql.NullString
-	Genitive                   sql.NullString
-	Dativesingular             sql.NullString
-	Singular                   sql.NullString
-	Nominativeneuterplural     sql.NullString
-	Genitiveplural             sql.NullString
-}
-
-type CsCzechDbPersonalPronoun struct {
-	Wdlexemeid           sql.NullString
-	Instrumentalsingular sql.NullString
-	Vocativesingular     sql.NullString
-	Accusativesingular   sql.NullString
-	Nominativeplural     sql.NullString
-	Lastmodified         sql.NullString
-	Locativesingular     sql.NullString
-	Genitivesingular     sql.NullString
-	Nominativesingular   sql.NullString
-	Locativeplural       sql.NullString
-	Vocativeplural       sql.NullString
-	Accusativeplural     sql.NullString
-	Instrumentalplural   sql.NullString
-	Genitiveplural       sql.NullString
-	Dativeplural         sql.NullString
-	Dativesingular       sql.NullString
-}
-
-type CsCzechDbPreposition struct {
-	Wdlexemeid   sql.NullString
 	Positive     sql.NullString
+}
+
+type CsConjunction struct {
+	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type CsCzechDbPronoun struct {
+type CsNoun struct {
+	Wdlexemeid                 sql.NullString
+	Instrumentalneutersingular sql.NullString
+	Instrumentalplural         sql.NullString
+	Genitivesingular           sql.NullString
+	Nominativeneuterplural     sql.NullString
+	Genitive                   sql.NullString
+	Genitiveplural             sql.NullString
+	Vocative                   sql.NullString
+	Vocativesingular           sql.NullString
+	Accusativeplural           sql.NullString
+	Dativeplural               sql.NullString
+	Locativesingular           sql.NullString
+	Lastmodified               sql.NullString
+	Locativeplural             sql.NullString
+	Plural                     sql.NullString
+	Instrumental               sql.NullString
+	Dativesingular             sql.NullString
+	Instrumentalsingular       sql.NullString
+	Vocativeplural             sql.NullString
+	Nominativesingular         sql.NullString
+	Vocativeneutersingular     sql.NullString
+	Accusative                 sql.NullString
+	Nominativeplural           sql.NullString
+	Singular                   sql.NullString
+	Accusativesingular         sql.NullString
+	Dative                     sql.NullString
+	Dativeneutersingular       sql.NullString
+	Locative                   sql.NullString
+	Nominative                 sql.NullString
+	Accusativeneutersingular   sql.NullString
+	Locativeneutersingular     sql.NullString
+}
+
+type CsPersonalPronoun struct {
+	Wdlexemeid           sql.NullString
+	Locativesingular     sql.NullString
+	Lastmodified         sql.NullString
+	Nominativesingular   sql.NullString
+	Vocativeplural       sql.NullString
+	Instrumentalplural   sql.NullString
+	Genitivesingular     sql.NullString
+	Nominativeplural     sql.NullString
+	Accusativeplural     sql.NullString
+	Locativeplural       sql.NullString
+	Vocativesingular     sql.NullString
+	Dativesingular       sql.NullString
+	Accusativesingular   sql.NullString
+	Genitiveplural       sql.NullString
+	Instrumentalsingular sql.NullString
+	Dativeplural         sql.NullString
+}
+
+type CsPreposition struct {
+	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
+	Positive     sql.NullString
+}
+
+type CsPronoun struct {
 	Wdlexemeid                                     sql.NullString
-	Accusativefemininesingularpositive             sql.NullString
-	Dativefemininepluralpositive                   sql.NullString
-	Nominativefemininepluralpositive               sql.NullString
-	Dativefemininesingular                         sql.NullString
-	Instrumentalmasculineinanimatesingularpositive sql.NullString
-	Instrumentalfemininesingularpositive           sql.NullString
-	Dativeneutersingular                           sql.NullString
-	Instrumentalsingular                           sql.NullString
-	Nominativemasculineinanimatepluralpositive     sql.NullString
-	Vocativeneuterplural                           sql.NullString
-	Accusativefeminineplural                       sql.NullString
-	Genitivemasculineinanimatesingular             sql.NullString
-	Locative                                       sql.NullString
-	Genitivemasculineinanimatepluralpositive       sql.NullString
-	Dativemasculineinanimatesingular               sql.NullString
-	Accusativeneuterplural                         sql.NullString
-	Genitiveneutersingularpositive                 sql.NullString
-	Vocativemasculinesingular                      sql.NullString
-	Nominative                                     sql.NullString
-	Dativefemininesingularpositive                 sql.NullString
-	Locativemasculineanimatesingular               sql.NullString
-	Genitive                                       sql.NullString
-	Accusativeneutersingularpositive               sql.NullString
-	Dativesingular                                 sql.NullString
-	Locativemasculineinanimatesingularpositive     sql.NullString
-	Nominativefeminineplural                       sql.NullString
-	Vocativefeminineplural                         sql.NullString
-	Nominativefemininesingular                     sql.NullString
-	Dativefeminineplural                           sql.NullString
-	Dativeneutersingularpositive                   sql.NullString
-	Genitivemasculineanimatesingularpositive       sql.NullString
-	Nominativemasculineinanimatesingularpositive   sql.NullString
-	Locativeneutersingular                         sql.NullString
-	Vocativemasculineinanimatesingularpositive     sql.NullString
-	Genitivemasculinesingular                      sql.NullString
-	Instrumentalfemininesingular                   sql.NullString
-	Dativemasculineinanimatepluralpositive         sql.NullString
-	Nominativemasculinesingular                    sql.NullString
-	Vocativefemininepluralpositive                 sql.NullString
-	Vocativefemininesingularpositive               sql.NullString
+	Instrumentalfeminineplural                     sql.NullString
+	Instrumentalneuterpluralpositive               sql.NullString
 	Locativeneuterplural                           sql.NullString
-	Instrumentalmasculineinanimatepluralpositive   sql.NullString
-	Instrumentalmasculinesingular                  sql.NullString
-	Vocativemasculineinanimatesingular             sql.NullString
-	Vocativemasculineinanimatepluralpositive       sql.NullString
-	Instrumentalmasculineanimatesingular           sql.NullString
-	Dativemasculineinanimateplural                 sql.NullString
-	Locativeneuterpluralpositive                   sql.NullString
-	Accusative                                     sql.NullString
-	Instrumentalneutersingular                     sql.NullString
-	Genitivemasculineanimateplural                 sql.NullString
-	Locativemasculineanimatesingularpositive       sql.NullString
-	Nominativefemininesingularpositive             sql.NullString
-	Vocativemasculineinanimateplural               sql.NullString
-	Nominativeneutersingular                       sql.NullString
-	Dativemasculinesingular                        sql.NullString
-	Genitiveneuterplural                           sql.NullString
-	Vocativeneutersingularpositive                 sql.NullString
-	Locativemasculinesingular                      sql.NullString
-	Nominativemasculineanimatesingular             sql.NullString
+	Nominativefemininesingular                     sql.NullString
+	Instrumentalmasculineanimateplural             sql.NullString
+	Accusativeneuterpluralpositive                 sql.NullString
+	Genitivemasculinesingular                      sql.NullString
+	Genitivefemininesingularpositive               sql.NullString
+	Instrumentalfemininepluralpositive             sql.NullString
+	Instrumentalmasculineinanimatesingular         sql.NullString
 	Locativefemininepluralpositive                 sql.NullString
 	Dativemasculineanimatesingularpositive         sql.NullString
-	Nominativemasculineinanimatesingular           sql.NullString
-	Accusativemasculineinanimatepluralpositive     sql.NullString
-	Genitivemasculineinanimateplural               sql.NullString
-	Nominativemasculineanimatepluralpositive       sql.NullString
-	Genitivefemininepluralpositive                 sql.NullString
-	Nominativesingular                             sql.NullString
-	Dative                                         sql.NullString
-	Genitivefemininesingularpositive               sql.NullString
-	Vocativeneutersingular                         sql.NullString
-	Vocativesingular                               sql.NullString
-	Vocativemasculineanimateplural                 sql.NullString
-	Lastmodified                                   sql.NullString
-	Locativemasculineanimatepluralpositive         sql.NullString
-	Vocativefemininesingular                       sql.NullString
-	Instrumentalfemininepluralpositive             sql.NullString
-	Vocative                                       sql.NullString
-	Genitivefemininesingular                       sql.NullString
-	Instrumentalmasculineanimatepluralpositive     sql.NullString
-	Dativemasculineanimatesingular                 sql.NullString
-	Instrumental                                   sql.NullString
-	Genitivefeminineplural                         sql.NullString
-	Locativeneutersingularpositive                 sql.NullString
-	Instrumentalneuterplural                       sql.NullString
+	Vocativefemininepluralpositive                 sql.NullString
+	Accusativefeminineplural                       sql.NullString
 	Locativesingular                               sql.NullString
+	Lastmodified                                   sql.NullString
+	Vocativefemininesingular                       sql.NullString
+	Locativemasculineanimatepluralpositive         sql.NullString
+	Instrumental                                   sql.NullString
 	Instrumentalmasculineanimatesingularpositive   sql.NullString
-	Accusativeneuterpluralpositive                 sql.NullString
-	Nominativemasculineanimateplural               sql.NullString
+	Nominativemasculineinanimatepluralpositive     sql.NullString
 	Locativefemininesingularpositive               sql.NullString
-	Accusativefemininepluralpositive               sql.NullString
-	Dativemasculineinanimatesingularpositive       sql.NullString
-	Locativefemininesingular                       sql.NullString
-	Dativeneuterpluralpositive                     sql.NullString
-	Locativemasculineinanimatesingular             sql.NullString
-	Dativemasculineanimatepluralpositive           sql.NullString
-	Accusativemasculineanimatepluralpositive       sql.NullString
-	Dativemasculineanimateplural                   sql.NullString
-	Accusativemasculineinanimatesingular           sql.NullString
-	Genitivemasculineanimatesingular               sql.NullString
-	Vocativemasculineanimatesingular               sql.NullString
-	Dativeneuterplural                             sql.NullString
-	Instrumentalneutersingularpositive             sql.NullString
-	Instrumentalmasculineanimateplural             sql.NullString
-	Genitiveneuterpluralpositive                   sql.NullString
-	Instrumentalmasculineinanimateplural           sql.NullString
-	Nominativemasculineanimatesingularpositive     sql.NullString
+	Instrumentalsingular                           sql.NullString
+	Vocativemasculinesingular                      sql.NullString
+	Genitivemasculineinanimateplural               sql.NullString
+	Instrumentalmasculineanimatesingular           sql.NullString
+	Nominativefeminineplural                       sql.NullString
+	Vocativeneutersingular                         sql.NullString
 	Vocativemasculineanimatesingularpositive       sql.NullString
-	Locativefeminineplural                         sql.NullString
-	Genitivesingular                               sql.NullString
-	Accusativeneutersingular                       sql.NullString
-	Accusativemasculineinanimateplural             sql.NullString
-	Genitiveneutersingular                         sql.NullString
-	Vocativeneuterpluralpositive                   sql.NullString
-	Nominativemasculineinanimateplural             sql.NullString
-	Instrumentalmasculineinanimatesingular         sql.NullString
-	Locativemasculineinanimateplural               sql.NullString
-	Accusativemasculineinanimatesingularpositive   sql.NullString
-	Locativemasculineinanimatepluralpositive       sql.NullString
+	Vocativeneuterplural                           sql.NullString
 	Accusativesingular                             sql.NullString
-	Accusativemasculineanimateplural               sql.NullString
-	Genitivemasculineinanimatesingularpositive     sql.NullString
-	Accusativemasculineanimatesingular             sql.NullString
 	Nominativeneutersingularpositive               sql.NullString
-	Accusativemasculineanimatesingularpositive     sql.NullString
-	Accusativefemininesingular                     sql.NullString
+	Locative                                       sql.NullString
+	Nominativemasculineanimatepluralpositive       sql.NullString
+	Dativefemininesingular                         sql.NullString
+	Accusativeneutersingular                       sql.NullString
+	Locativemasculineinanimatesingular             sql.NullString
+	Locativeneutersingular                         sql.NullString
+	Accusativefemininesingularpositive             sql.NullString
+	Genitivesingular                               sql.NullString
+	Genitivemasculineinanimatesingular             sql.NullString
+	Dativemasculineanimatepluralpositive           sql.NullString
+	Dativefeminineplural                           sql.NullString
+	Genitivefeminineplural                         sql.NullString
+	Dativeneuterpluralpositive                     sql.NullString
+	Nominativefemininesingularpositive             sql.NullString
+	Locativemasculineinanimateplural               sql.NullString
+	Instrumentalfemininesingular                   sql.NullString
+	Vocativemasculineanimatesingular               sql.NullString
+	Vocativemasculineinanimateplural               sql.NullString
+	Instrumentalfemininesingularpositive           sql.NullString
+	Accusativeneutersingularpositive               sql.NullString
 	Genitivemasculineanimatepluralpositive         sql.NullString
-	Instrumentalneuterpluralpositive               sql.NullString
-	Vocativemasculineanimatepluralpositive         sql.NullString
-	Nominativeneuterpluralpositive                 sql.NullString
-	Instrumentalfeminineplural                     sql.NullString
+	Dativemasculinesingular                        sql.NullString
+	Instrumentalmasculinesingular                  sql.NullString
+	Locativemasculinesingular                      sql.NullString
+	Accusativefemininepluralpositive               sql.NullString
+	Vocativeneutersingularpositive                 sql.NullString
+	Locativemasculineinanimatesingularpositive     sql.NullString
+	Locativeneutersingularpositive                 sql.NullString
+	Dativeneutersingularpositive                   sql.NullString
+	Locativemasculineinanimatepluralpositive       sql.NullString
+	Nominativemasculinesingular                    sql.NullString
+	Accusative                                     sql.NullString
+	Nominativemasculineinanimatesingular           sql.NullString
+	Dativemasculineinanimatesingularpositive       sql.NullString
+	Dativemasculineinanimateplural                 sql.NullString
+	Dative                                         sql.NullString
+	Dativemasculineinanimatepluralpositive         sql.NullString
+	Vocativefemininesingularpositive               sql.NullString
+	Instrumentalmasculineinanimatepluralpositive   sql.NullString
+	Genitiveneuterpluralpositive                   sql.NullString
 	Locativemasculineanimateplural                 sql.NullString
+	Nominativefemininepluralpositive               sql.NullString
+	Genitivefemininepluralpositive                 sql.NullString
+	Locativefeminineplural                         sql.NullString
+	Instrumentalmasculineanimatepluralpositive     sql.NullString
+	Nominativeneuterpluralpositive                 sql.NullString
+	Genitiveneutersingularpositive                 sql.NullString
+	Genitiveneuterplural                           sql.NullString
+	Genitivemasculineanimateplural                 sql.NullString
+	Nominativemasculineanimatesingularpositive     sql.NullString
+	Dativesingular                                 sql.NullString
+	Nominativesingular                             sql.NullString
+	Genitivemasculineinanimatesingularpositive     sql.NullString
+	Genitivemasculineinanimatepluralpositive       sql.NullString
+	Accusativemasculineanimatesingular             sql.NullString
+	Genitivefemininesingular                       sql.NullString
+	Accusativemasculineanimateplural               sql.NullString
+	Dativeneutersingular                           sql.NullString
+	Vocativemasculineanimateplural                 sql.NullString
+	Dativemasculineinanimatesingular               sql.NullString
+	Instrumentalneutersingular                     sql.NullString
+	Dativefemininesingularpositive                 sql.NullString
+	Accusativemasculineanimatepluralpositive       sql.NullString
 	Nominativeneuterplural                         sql.NullString
+	Accusativeneuterplural                         sql.NullString
+	Nominativemasculineinanimateplural             sql.NullString
+	Genitive                                       sql.NullString
+	Nominativemasculineanimateplural               sql.NullString
+	Accusativemasculineanimatesingularpositive     sql.NullString
+	Vocative                                       sql.NullString
+	Dativemasculineanimateplural                   sql.NullString
+	Vocativesingular                               sql.NullString
+	Dativemasculineanimatesingular                 sql.NullString
+	Nominativemasculineinanimatesingularpositive   sql.NullString
+	Genitiveneutersingular                         sql.NullString
+	Locativefemininesingular                       sql.NullString
+	Genitivemasculineanimatesingular               sql.NullString
+	Nominativemasculineanimatesingular             sql.NullString
+	Accusativemasculineinanimatesingularpositive   sql.NullString
+	Genitivemasculineanimatesingularpositive       sql.NullString
+	Vocativeneuterpluralpositive                   sql.NullString
+	Vocativemasculineinanimatesingular             sql.NullString
+	Accusativemasculineinanimateplural             sql.NullString
+	Vocativemasculineinanimatesingularpositive     sql.NullString
+	Dativeneuterplural                             sql.NullString
+	Vocativemasculineinanimatepluralpositive       sql.NullString
+	Vocativemasculineanimatepluralpositive         sql.NullString
+	Locativeneuterpluralpositive                   sql.NullString
+	Locativemasculineanimatesingularpositive       sql.NullString
+	Instrumentalmasculineinanimatesingularpositive sql.NullString
+	Accusativemasculineinanimatesingular           sql.NullString
+	Accusativefemininesingular                     sql.NullString
+	Nominativeneutersingular                       sql.NullString
+	Accusativemasculineinanimatepluralpositive     sql.NullString
+	Instrumentalneuterplural                       sql.NullString
+	Locativemasculineanimatesingular               sql.NullString
+	Dativefemininepluralpositive                   sql.NullString
+	Instrumentalneutersingularpositive             sql.NullString
+	Instrumentalmasculineinanimateplural           sql.NullString
+	Nominative                                     sql.NullString
+	Vocativefeminineplural                         sql.NullString
 }
 
-type CsCzechDbProperNoun struct {
+type CsProperNoun struct {
 	Wdlexemeid                    sql.NullString
-	Instrumentalsingular          sql.NullString
-	Instrumentalfemininesingular  sql.NullString
-	Accusativesingular            sql.NullString
-	Nominativeplural              sql.NullString
-	Lastmodified                  sql.NullString
 	Locativesingular              sql.NullString
-	Genitiveplural                sql.NullString
-	Genitivesingular              sql.NullString
+	Lastmodified                  sql.NullString
 	Nominativesingular            sql.NullString
-	Locativeplural                sql.NullString
 	Vocativeplural                sql.NullString
-	Accusativeplural              sql.NullString
-	Instrumentalplural            sql.NullString
-	Vocativesingular              sql.NullString
-	Dativeplural                  sql.NullString
 	Instrumentalmasculinesingular sql.NullString
+	Instrumentalplural            sql.NullString
+	Genitivesingular              sql.NullString
+	Vocativesingular              sql.NullString
+	Nominativeplural              sql.NullString
+	Accusativeplural              sql.NullString
+	Locativeplural                sql.NullString
 	Dativesingular                sql.NullString
+	Accusativesingular            sql.NullString
+	Genitiveplural                sql.NullString
+	Instrumentalfemininesingular  sql.NullString
+	Instrumentalsingular          sql.NullString
+	Dativeplural                  sql.NullString
 }
 
-type CsCzechDbVerb struct {
+type CsVerb struct {
 	Wdlexemeid                                  sql.NullString
-	Animatemasculineactiveparticipleplural      sql.NullString
-	Futurethirdpersonsingular                   sql.NullString
-	Pasttransgressiveplural                     sql.NullString
-	Conditionalfirstpersonplural                sql.NullString
-	Indicativepresentsecondpersonsingular       sql.NullString
-	Masculineinanimatesingular                  sql.NullString
-	Imperativesecondpersonplural                sql.NullString
-	Neuteractiveparticipleplural                sql.NullString
-	Indicativethirdpersonplural                 sql.NullString
-	Masculinepassiveparticiplesingular          sql.NullString
-	Futuresecondpersonsingular                  sql.NullString
-	Neuterpasttransgressivesingular             sql.NullString
-	Neuterpassiveparticiplesingular             sql.NullString
-	Indicativefirstpersonplural                 sql.NullString
-	Masculineanimatesingular                    sql.NullString
-	Indicativethirdpersonsingular               sql.NullString
-	Feminineplural                              sql.NullString
-	Indicativesecondpersonplural                sql.NullString
-	Indicativepresentfirstpersonplural          sql.NullString
-	Plural                                      sql.NullString
-	Neuterplural                                sql.NullString
-	Masculineanimatepasttransgressiveplural     sql.NullString
-	Futuresecondpersonplural                    sql.NullString
-	Presentsecondpersonsingular                 sql.NullString
-	Masculineanimateactiveparticipleplural      sql.NullString
-	Neuterpassiveparticipleplural               sql.NullString
-	Feminineneuterpasttransgressivesingular     sql.NullString
-	Indicativepresentsecondpersonplural         sql.NullString
-	Femininepasttransgressiveplural             sql.NullString
-	Feminineactiveparticipleplural              sql.NullString
-	Masculineinanimateplural                    sql.NullString
-	Futurefirstpersonsingular                   sql.NullString
-	Conditionalfirstpersonsingular              sql.NullString
-	Masculineactiveparticiplesingular           sql.NullString
-	Masculineanimatepassiveparticipleplural     sql.NullString
-	Conditionalthirdpersonplural                sql.NullString
-	Neuterpastparticiplesingular                sql.NullString
-	Masculineinanimateactiveparticipleplural    sql.NullString
-	Feminineactiveparticiplesingular            sql.NullString
-	Conditionalthirdpersonsingular              sql.NullString
-	Femininepassiveparticiplesingular           sql.NullString
-	Inanimatemasculineactiveparticipleplural    sql.NullString
-	Indicativepresentthirdpersonsingular        sql.NullString
-	Masculineanimatepastparticiplesingular      sql.NullString
-	Presentthirdpersonsingular                  sql.NullString
-	Neuterpastparticipleplural                  sql.NullString
-	Masculineinanimatepastparticipleplural      sql.NullString
-	Masculineinanimatepasttransgressivesingular sql.NullString
-	Futurethirdpersonplural                     sql.NullString
-	Lastmodified                                sql.NullString
-	Imperativefirstpersonplural                 sql.NullString
-	Presentfirstpersonplural                    sql.NullString
-	Femininepastparticipleplural                sql.NullString
-	Animatemasculinepassiveparticipleplural     sql.NullString
-	Masculineinanimateactiveparticiplesingular  sql.NullString
-	Imperativesecondpersonsingular              sql.NullString
-	Neuterpasttransgressiveplural               sql.NullString
-	Femininepassiveparticipleplural             sql.NullString
-	Masculineanimatepasttransgressivesingular   sql.NullString
-	Femininepastparticiplesingular              sql.NullString
-	Masculineanimatepastparticipleplural        sql.NullString
-	Masculineinanimatepassiveparticipleplural   sql.NullString
-	Masculineinanimatepasttransgressiveplural   sql.NullString
-	Femininepasttransgressivesingular           sql.NullString
-	Femininesingular                            sql.NullString
-	Masculineinanimatepastparticiplesingular    sql.NullString
-	Masculineanimateplural                      sql.NullString
-	Masculinepasttransgressivesingular          sql.NullString
-	Infinitive                                  sql.NullString
-	Masculineanimateactiveparticiplesingular    sql.NullString
-	Indicativepresentfirstpersonsingular        sql.NullString
-	Indicativesecondpersonsingular              sql.NullString
-	Neuteractiveparticiplesingular              sql.NullString
-	Futurefirstpersonplural                     sql.NullString
-	Presentfirstpersonsingular                  sql.NullString
-	Conditionalsecondpersonplural               sql.NullString
-	Neutersingular                              sql.NullString
-	Presentthirdpersonplural                    sql.NullString
-	Feminineneutersingular                      sql.NullString
-	Conditionalsecondpersonsingular             sql.NullString
-	Presentsecondpersonplural                   sql.NullString
-	Inanimatemasculinepassiveparticipleplural   sql.NullString
-	Masculineanimatepassiveparticiplesingular   sql.NullString
 	Masculineinanimatepassiveparticiplesingular sql.NullString
+	Futuresecondpersonsingular                  sql.NullString
 	Masculinesingular                           sql.NullString
-	Indicativepresentthirdpersonplural          sql.NullString
+	Masculineanimatepassiveparticiplesingular   sql.NullString
+	Feminineneuterpasttransgressivesingular     sql.NullString
+	Femininepastparticipleplural                sql.NullString
+	Futurefirstpersonsingular                   sql.NullString
+	Conditionalsecondpersonplural               sql.NullString
+	Presentthirdpersonsingular                  sql.NullString
+	Masculineinanimatesingular                  sql.NullString
+	Conditionalfirstpersonsingular              sql.NullString
+	Conditionalthirdpersonplural                sql.NullString
+	Lastmodified                                sql.NullString
+	Futuresecondpersonplural                    sql.NullString
+	Masculinepasttransgressivesingular          sql.NullString
+	Feminineactiveparticiplesingular            sql.NullString
+	Masculineanimateplural                      sql.NullString
+	Imperativesecondpersonsingular              sql.NullString
+	Indicativethirdpersonplural                 sql.NullString
+	Femininepasttransgressivesingular           sql.NullString
+	Masculineanimatepastparticipleplural        sql.NullString
+	Presentfirstpersonsingular                  sql.NullString
+	Indicativethirdpersonsingular               sql.NullString
+	Futurefirstpersonplural                     sql.NullString
+	Animatemasculinepassiveparticipleplural     sql.NullString
+	Masculineanimatepastparticiplesingular      sql.NullString
+	Masculineinanimateactiveparticipleplural    sql.NullString
+	Masculineinanimatepasttransgressiveplural   sql.NullString
+	Conditionalthirdpersonsingular              sql.NullString
+	Masculineanimatepassiveparticipleplural     sql.NullString
+	Masculineanimatepasttransgressivesingular   sql.NullString
+	Masculineactiveparticiplesingular           sql.NullString
+	Presentsecondpersonsingular                 sql.NullString
+	Conditionalsecondpersonsingular             sql.NullString
+	Masculineinanimatepasttransgressivesingular sql.NullString
+	Masculineanimateactiveparticiplesingular    sql.NullString
+	Neuterpassiveparticipleplural               sql.NullString
+	Pasttransgressiveplural                     sql.NullString
+	Neuterpastparticiplesingular                sql.NullString
+	Femininepasttransgressiveplural             sql.NullString
+	Feminineplural                              sql.NullString
+	Indicativepresentsecondpersonsingular       sql.NullString
+	Indicativesecondpersonplural                sql.NullString
+	Masculineinanimatepastparticiplesingular    sql.NullString
+	Presentfirstpersonplural                    sql.NullString
+	Futurethirdpersonsingular                   sql.NullString
+	Masculineanimateactiveparticipleplural      sql.NullString
+	Feminineactiveparticipleplural              sql.NullString
+	Infinitive                                  sql.NullString
+	Neuteractiveparticipleplural                sql.NullString
 	Indicativefirstpersonsingular               sql.NullString
+	Neuteractiveparticiplesingular              sql.NullString
+	Animatemasculineactiveparticipleplural      sql.NullString
+	Conditionalfirstpersonplural                sql.NullString
+	Masculineinanimateactiveparticiplesingular  sql.NullString
+	Masculineinanimateplural                    sql.NullString
+	Neuterpasttransgressivesingular             sql.NullString
+	Femininepassiveparticiplesingular           sql.NullString
+	Indicativepresentfirstpersonplural          sql.NullString
+	Masculineanimatesingular                    sql.NullString
+	Plural                                      sql.NullString
+	Masculineanimatepasttransgressiveplural     sql.NullString
+	Femininepastparticiplesingular              sql.NullString
+	Feminineneutersingular                      sql.NullString
+	Imperativesecondpersonplural                sql.NullString
+	Inanimatemasculineactiveparticipleplural    sql.NullString
+	Indicativefirstpersonplural                 sql.NullString
+	Masculineinanimatepastparticipleplural      sql.NullString
+	Indicativepresentsecondpersonplural         sql.NullString
+	Indicativepresentthirdpersonsingular        sql.NullString
+	Indicativepresentthirdpersonplural          sql.NullString
+	Indicativesecondpersonsingular              sql.NullString
+	Femininesingular                            sql.NullString
+	Neuterpassiveparticiplesingular             sql.NullString
+	Presentthirdpersonplural                    sql.NullString
+	Masculinepassiveparticiplesingular          sql.NullString
+	Neuterpastparticipleplural                  sql.NullString
+	Futurethirdpersonplural                     sql.NullString
+	Femininepassiveparticipleplural             sql.NullString
+	Neutersingular                              sql.NullString
+	Neuterpasttransgressiveplural               sql.NullString
+	Imperativefirstpersonplural                 sql.NullString
+	Neuterplural                                sql.NullString
+	Inanimatemasculinepassiveparticipleplural   sql.NullString
+	Indicativepresentfirstpersonsingular        sql.NullString
+	Masculineinanimatepassiveparticipleplural   sql.NullString
+	Presentsecondpersonplural                   sql.NullString
 }
 
-type DaDanishDbAdjective struct {
+type DaAdjective struct {
 	Wdlexemeid                            sql.NullString
-	Definitesingularpositive              sql.NullString
-	Commonpositive                        sql.NullString
-	Commonindefinitesingular              sql.NullString
 	Indefinitesingular                    sql.NullString
-	Positive                              sql.NullString
-	Indefinitesuperlative                 sql.NullString
-	Definitesingularsuperlative           sql.NullString
-	Neuterindefinitesingularpositive      sql.NullString
-	Definitesingular                      sql.NullString
-	Definitepositive                      sql.NullString
-	Lastmodified                          sql.NullString
-	Commonindefinitesingularpositive      sql.NullString
 	Definitesuperlative                   sql.NullString
-	Neuterdefinitesingularpositive        sql.NullString
-	Neuterpositive                        sql.NullString
-	Indefinitesingularsuperlative         sql.NullString
-	Genitiveindefinitesingularpositive    sql.NullString
+	Superlative                           sql.NullString
+	Commonindefinitesingularpositive      sql.NullString
+	Indefinitesuperlative                 sql.NullString
+	Comparative                           sql.NullString
+	Pluralpositive                        sql.NullString
 	Definitepluralpositive                sql.NullString
 	Pluralsuperlative                     sql.NullString
-	Pluralpositive                        sql.NullString
-	Indefiniteplural                      sql.NullString
-	Neutersingular                        sql.NullString
-	Definiteplural                        sql.NullString
+	Indefinitesingularsuperlative         sql.NullString
 	Neuterindefinitesingular              sql.NullString
-	Plural                                sql.NullString
-	Comparative                           sql.NullString
-	Commonsingular                        sql.NullString
-	Indefinitesingularpositive            sql.NullString
-	Indefinitepositive                    sql.NullString
-	Nongenitiveindefinitesingularpositive sql.NullString
+	Indefiniteplural                      sql.NullString
 	Commonindefinitepositive              sql.NullString
-	Superlative                           sql.NullString
+	Lastmodified                          sql.NullString
+	Nongenitiveindefinitesingularpositive sql.NullString
+	Plural                                sql.NullString
+	Definitesingularsuperlative           sql.NullString
+	Definiteplural                        sql.NullString
+	Indefinitepositive                    sql.NullString
+	Neuterdefinitesingularpositive        sql.NullString
+	Indefinitesingularpositive            sql.NullString
+	Definitesingularpositive              sql.NullString
+	Neutersingular                        sql.NullString
+	Neuterindefinitesingularpositive      sql.NullString
+	Genitiveindefinitesingularpositive    sql.NullString
+	Neuterpositive                        sql.NullString
+	Commonsingular                        sql.NullString
+	Positive                              sql.NullString
+	Commonpositive                        sql.NullString
+	Commonindefinitesingular              sql.NullString
+	Definitepositive                      sql.NullString
+	Definitesingular                      sql.NullString
 }
 
-type DaDanishDbAdverb struct {
+type DaAdverb struct {
 	Wdlexemeid                       sql.NullString
-	Definitesingularpositive         sql.NullString
 	Lastmodified                     sql.NullString
+	Neuterindefinitesingularpositive sql.NullString
 	Pluralpositive                   sql.NullString
 	Positive                         sql.NullString
 	Superlative                      sql.NullString
+	Definitesingularpositive         sql.NullString
 	Comparative                      sql.NullString
-	Neuterindefinitesingularpositive sql.NullString
 }
 
-type DaDanishDbArticle struct {
+type DaArticle struct {
 	Wdlexemeid               sql.NullString
-	Commonindefinitesingular sql.NullString
 	Lastmodified             sql.NullString
-	Neuterdefinitesingular   sql.NullString
-	Neuterindefinitesingular sql.NullString
 	Commondefinitesingular   sql.NullString
+	Neuterdefinitesingular   sql.NullString
+	Commonindefinitesingular sql.NullString
+	Neuterindefinitesingular sql.NullString
 }
 
-type DaDanishDbConjunction struct {
+type DaConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type DaDanishDbNoun struct {
+type DaNoun struct {
 	Wdlexemeid                          sql.NullString
-	Nongenitivesingular                 sql.NullString
-	Nongenitivedefiniteplural           sql.NullString
-	Nongenitiveneuterindefinitesingular sql.NullString
-	Nongenitiveindefinite               sql.NullString
-	Nongenitivedefinitesingular         sql.NullString
-	Indefinitesingular                  sql.NullString
-	Nongenitiveneuterdefiniteplural     sql.NullString
-	Genitiveneuterdefinitesingular      sql.NullString
-	Genitivesingular                    sql.NullString
-	Nongenitiveneuterdefinitesingular   sql.NullString
-	Genitivecommondefiniteplural        sql.NullString
-	Genitivedefinitesingular            sql.NullString
-	Nongenitiveindefiniteplural         sql.NullString
-	Definite                            sql.NullString
-	Nongenitivecommondefinitesingular   sql.NullString
-	Definitesingular                    sql.NullString
-	Lastmodified                        sql.NullString
-	Nongenitive                         sql.NullString
-	Genitivecommonindefiniteplural      sql.NullString
-	Genitivenongenitivesingular         sql.NullString
-	Nongenitivedefinite                 sql.NullString
-	Genitiveneuterdefiniteplural        sql.NullString
-	Commondefinitesingular              sql.NullString
-	Nongenitivecommondefiniteplural     sql.NullString
-	Genitivedefinite                    sql.NullString
-	Genitiveindefinitesingular          sql.NullString
-	Indefiniteplural                    sql.NullString
-	Nongenitiveneuterindefiniteplural   sql.NullString
-	Genitiveindefinite                  sql.NullString
-	Indefinite                          sql.NullString
-	Definiteplural                      sql.NullString
-	Neuterindefinitesingular            sql.NullString
-	Genitive                            sql.NullString
-	Plural                              sql.NullString
 	Genitivedefiniteplural              sql.NullString
-	Nongenitiveindefinitesingular       sql.NullString
+	Indefinitesingular                  sql.NullString
+	Genitivesingular                    sql.NullString
+	Commondefinitesingular              sql.NullString
+	Genitivenongenitivesingular         sql.NullString
+	Genitiveneuterdefinitesingular      sql.NullString
+	Genitive                            sql.NullString
+	Nongenitiveindefiniteplural         sql.NullString
+	Nongenitive                         sql.NullString
+	Genitiveindefinitesingular          sql.NullString
+	Nongenitiveneuterdefiniteplural     sql.NullString
+	Nongenitiveneuterdefinitesingular   sql.NullString
+	Nongenitivedefiniteplural           sql.NullString
+	Nongenitiveindefinite               sql.NullString
+	Nongenitiveneuterindefiniteplural   sql.NullString
+	Genitivecommondefiniteplural        sql.NullString
+	Nongenitivesingular                 sql.NullString
+	Nongenitivecommondefinitesingular   sql.NullString
+	Genitivedefinite                    sql.NullString
+	Genitiveindefinite                  sql.NullString
+	Indefiniteplural                    sql.NullString
+	Neuterindefinitesingular            sql.NullString
+	Lastmodified                        sql.NullString
 	Genitivenongenitiveindefinite       sql.NullString
-	Neuterdefinitesingular              sql.NullString
-	Nongenitivecommonindefiniteplural   sql.NullString
+	Nongenitivedefinite                 sql.NullString
+	Genitivedefinitesingular            sql.NullString
 	Genitiveneuterindefiniteplural      sql.NullString
-	Genitivecommondefinitesingular      sql.NullString
+	Nongenitivedefinitesingular         sql.NullString
+	Plural                              sql.NullString
+	Neuterdefinitesingular              sql.NullString
+	Definiteplural                      sql.NullString
 	Genitiveindefiniteplural            sql.NullString
+	Genitivecommonindefiniteplural      sql.NullString
+	Nongenitiveindefinitesingular       sql.NullString
+	Nongenitivecommonindefiniteplural   sql.NullString
+	Nongenitiveneuterindefinitesingular sql.NullString
+	Genitiveneuterdefiniteplural        sql.NullString
+	Definite                            sql.NullString
+	Nongenitivecommondefiniteplural     sql.NullString
+	Genitivecommondefinitesingular      sql.NullString
+	Indefinite                          sql.NullString
+	Definitesingular                    sql.NullString
 }
 
-type DaDanishDbPersonalPronoun struct {
+type DaPersonalPronoun struct {
 	Wdlexemeid                 sql.NullString
-	Accusativedativenominative sql.NullString
 	Lastmodified               sql.NullString
-	Genitivecommonneuterplural sql.NullString
-	Oblique                    sql.NullString
 	Nominativemasculine        sql.NullString
-	Nominative                 sql.NullString
+	Accusativedativenominative sql.NullString
+	Genitivecommonneuterplural sql.NullString
 	Obliquemasculine           sql.NullString
-	Nominativefeminine         sql.NullString
 	Obliquefeminine            sql.NullString
+	Oblique                    sql.NullString
+	Nominativefeminine         sql.NullString
+	Nominative                 sql.NullString
 }
 
-type DaDanishDbPreposition struct {
+type DaPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type DaDanishDbPronoun struct {
+type DaPronoun struct {
 	Wdlexemeid                sql.NullString
-	Plural                    sql.NullString
-	Nongenitivecommonsingular sql.NullString
-	Neuter                    sql.NullString
-	Genitivecommonsingular    sql.NullString
-	Genitivemasculine         sql.NullString
 	Lastmodified              sql.NullString
-	Genitive                  sql.NullString
-	Nongenitive               sql.NullString
-	Commonsingular            sql.NullString
-	Oblique                   sql.NullString
-	Genitiveneutersingular    sql.NullString
+	Genitivecommonsingular    sql.NullString
 	Common                    sql.NullString
-	Neutersingular            sql.NullString
-	Nominative                sql.NullString
+	Neuter                    sql.NullString
 	Nongenitiveneutersingular sql.NullString
-	Genitiveplural            sql.NullString
-	Genitivefeminine          sql.NullString
+	Genitiveneutersingular    sql.NullString
 	Nongenitiveplural         sql.NullString
+	Plural                    sql.NullString
+	Commonsingular            sql.NullString
+	Neutersingular            sql.NullString
+	Genitive                  sql.NullString
+	Genitivefeminine          sql.NullString
+	Oblique                   sql.NullString
+	Nongenitivecommonsingular sql.NullString
+	Genitiveplural            sql.NullString
+	Nongenitive               sql.NullString
+	Nominative                sql.NullString
+	Genitivemasculine         sql.NullString
 }
 
-type DaDanishDbProperNoun struct {
+type DaProperNoun struct {
 	Wdlexemeid                    sql.NullString
-	Definitesingular              sql.NullString
-	Genitivedefinite              sql.NullString
-	Nongenitiveindefinitesingular sql.NullString
-	Nongenitivedefiniteplural     sql.NullString
 	Lastmodified                  sql.NullString
-	Genitiveplural                sql.NullString
-	Nongenitive                   sql.NullString
+	Nongenitiveindefinitesingular sql.NullString
+	Indefinitesingular            sql.NullString
+	Nongenitivedefinite           sql.NullString
+	Genitivedefinitesingular      sql.NullString
 	Genitiveindefinitesingular    sql.NullString
 	Nongenitivedefinitesingular   sql.NullString
-	Nongenitiveindefinite         sql.NullString
-	Indefinitesingular            sql.NullString
-	Genitiveindefinite            sql.NullString
-	Genitivedefinitesingular      sql.NullString
-	Nongenitivedefinite           sql.NullString
 	Nongenitiveplural             sql.NullString
+	Nongenitivedefiniteplural     sql.NullString
+	Nongenitiveindefinite         sql.NullString
 	Genitive                      sql.NullString
 	Nongenitiveindefiniteplural   sql.NullString
+	Genitiveplural                sql.NullString
+	Nongenitive                   sql.NullString
+	Genitivedefinite              sql.NullString
+	Genitiveindefinite            sql.NullString
+	Definitesingular              sql.NullString
 }
 
-type DaDanishDbVerb struct {
+type DaVerb struct {
 	Wdlexemeid           sql.NullString
-	Preterite            sql.NullString
-	Presentparticiple    sql.NullString
-	Pastparticiple       sql.NullString
-	Activepresent        sql.NullString
-	Passiveinfinitive    sql.NullString
 	Lastmodified         sql.NullString
-	Passivepresent       sql.NullString
-	Activepastparticiple sql.NullString
+	Pastparticiple       sql.NullString
 	Passivepreterite     sql.NullString
-	Imperative           sql.NullString
+	Present              sql.NullString
+	Passiveinfinitive    sql.NullString
+	Passivepresent       sql.NullString
+	Presentparticiple    sql.NullString
 	Infinitive           sql.NullString
-	Active               sql.NullString
-	Activeinfinitive     sql.NullString
 	Activepassive        sql.NullString
 	Activepreterite      sql.NullString
-	Present              sql.NullString
+	Imperative           sql.NullString
+	Activeinfinitive     sql.NullString
+	Activepastparticiple sql.NullString
+	Activepresent        sql.NullString
+	Active               sql.NullString
+	Preterite            sql.NullString
 }
 
-type DagDagbaniDbAdjective struct {
+type DagAdjective struct {
 	Wdlexemeid           sql.NullString
-	Presentcontinuous    sql.NullString
-	Phrasesingular       sql.NullString
-	Phrase               sql.NullString
-	Neuter               sql.NullString
-	Past                 sql.NullString
 	Lastmodified         sql.NullString
-	Singular             sql.NullString
-	Phrasepluralsingular sql.NullString
-	Simplepast           sql.NullString
-	Plural               sql.NullString
-	Comparative          sql.NullString
+	Neuter               sql.NullString
 	Present              sql.NullString
+	Plural               sql.NullString
+	Singular             sql.NullString
+	Simplepast           sql.NullString
+	Phrase               sql.NullString
+	Past                 sql.NullString
+	Presentcontinuous    sql.NullString
+	Comparative          sql.NullString
+	Phrasesingular       sql.NullString
+	Phrasepluralsingular sql.NullString
 }
 
-type DagDagbaniDbAdverb struct {
+type DagAdverb struct {
 	Wdlexemeid        sql.NullString
-	Pluralsingular    sql.NullString
-	Phrase            sql.NullString
-	Adverbiallocation sql.NullString
-	Locativeadverb    sql.NullString
-	Past              sql.NullString
 	Lastmodified      sql.NullString
+	Adverbofmanner    sql.NullString
+	Present           sql.NullString
+	Plural            sql.NullString
+	Pluralsingular    sql.NullString
 	Singular          sql.NullString
 	Adverbial         sql.NullString
-	Adverbofmanner    sql.NullString
-	Plural            sql.NullString
-	Present           sql.NullString
+	Phrase            sql.NullString
+	Past              sql.NullString
+	Locativeadverb    sql.NullString
+	Adverbiallocation sql.NullString
 }
 
-type DagDagbaniDbConjunction struct {
+type DagConjunction struct {
 	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
 	Singular     sql.NullString
+	Lastmodified sql.NullString
 }
 
-type DagDagbaniDbNoun struct {
+type DagNoun struct {
 	Wdlexemeid           sql.NullString
-	Presentparticiple    sql.NullString
-	Phrasesingular       sql.NullString
-	Future               sql.NullString
-	Pluralsingular       sql.NullString
-	Phrase               sql.NullString
-	Masculine            sql.NullString
-	Lastmodified         sql.NullString
-	Phrasepluralsingular sql.NullString
-	Presentcontinuous    sql.NullString
-	Pastpresent          sql.NullString
-	Locativeadverb       sql.NullString
-	Neuter               sql.NullString
-	Feminine             sql.NullString
-	Past                 sql.NullString
-	Neutersingular       sql.NullString
-	Plural               sql.NullString
-	Comparative          sql.NullString
-	Present              sql.NullString
-	Pastparticiple       sql.NullString
-	Neuterplural         sql.NullString
-	Singular             sql.NullString
 	Common               sql.NullString
+	Masculine            sql.NullString
+	Pastpresent          sql.NullString
+	Pluralsingular       sql.NullString
+	Comparative          sql.NullString
+	Phrasesingular       sql.NullString
+	Presentparticiple    sql.NullString
+	Past                 sql.NullString
+	Feminine             sql.NullString
+	Lastmodified         sql.NullString
+	Neuter               sql.NullString
+	Plural               sql.NullString
+	Presentcontinuous    sql.NullString
+	Neutersingular       sql.NullString
+	Phrasepluralsingular sql.NullString
+	Neuterplural         sql.NullString
+	Pastparticiple       sql.NullString
+	Present              sql.NullString
+	Future               sql.NullString
+	Singular             sql.NullString
+	Phrase               sql.NullString
+	Locativeadverb       sql.NullString
 }
 
-type DagDagbaniDbPersonalPronoun struct {
+type DagPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
-	Nominative   sql.NullString
 	Lastmodified sql.NullString
 	Genitive     sql.NullString
 	Oblique      sql.NullString
+	Nominative   sql.NullString
 }
 
-type DagDagbaniDbPostposition struct {
+type DagPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type DagDagbaniDbPreposition struct {
+type DagPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Present      sql.NullString
 }
 
-type DagDagbaniDbPronoun struct {
+type DagPronoun struct {
 	Wdlexemeid          sql.NullString
-	Thirdpersonsingular sql.NullString
 	Lastmodified        sql.NullString
-	Thirdpersonplural   sql.NullString
-	Secondpersonplural  sql.NullString
+	Thirdpersonsingular sql.NullString
 	Accusative          sql.NullString
+	Present             sql.NullString
+	Secondpersonplural  sql.NullString
+	Plural              sql.NullString
+	Thirdpersonplural   sql.NullString
 	Singular            sql.NullString
 	Nominative          sql.NullString
-	Plural              sql.NullString
-	Present             sql.NullString
 }
 
-type DagDagbaniDbProperNoun struct {
+type DagProperNoun struct {
 	Wdlexemeid   sql.NullString
+	Singular     sql.NullString
 	Lastmodified sql.NullString
 	Plural       sql.NullString
-	Singular     sql.NullString
 }
 
-type DagDagbaniDbVerb struct {
+type DagVerb struct {
 	Wdlexemeid                     sql.NullString
-	Presentparticiple              sql.NullString
-	Phrasesingular                 sql.NullString
-	Presentsingular                sql.NullString
-	Future                         sql.NullString
-	Infinitive                     sql.NullString
-	Simplepresent                  sql.NullString
-	Pastimperfect                  sql.NullString
-	Definite                       sql.NullString
-	Phrase                         sql.NullString
-	Imperativesecondpersonplural   sql.NullString
-	Lastmodified                   sql.NullString
-	Thirdpersonplural              sql.NullString
-	Presentplural                  sql.NullString
-	Firstpersonsingular            sql.NullString
-	Presentpresentcontinuous       sql.NullString
-	Presentcontinuous              sql.NullString
 	Pastpresent                    sql.NullString
-	Indicative                     sql.NullString
-	Neuter                         sql.NullString
-	Imperativesecondpersonsingular sql.NullString
-	Past                           sql.NullString
+	Presentpresentcontinuous       sql.NullString
 	Imperative                     sql.NullString
-	Futurepastpresent              sql.NullString
-	Adverbial                      sql.NullString
-	Adverbofmanner                 sql.NullString
-	Plural                         sql.NullString
-	Pastsingular                   sql.NullString
+	Phrasesingular                 sql.NullString
 	Comparative                    sql.NullString
-	Presentcontinuousplural        sql.NullString
-	Present                        sql.NullString
-	Pastparticiple                 sql.NullString
-	Firstpersonplural              sql.NullString
-	Simplefuture                   sql.NullString
-	Singular                       sql.NullString
-	Simplepast                     sql.NullString
+	Simplepresent                  sql.NullString
 	Futurepast                     sql.NullString
+	Presentsingular                sql.NullString
+	Firstpersonplural              sql.NullString
+	Presentparticiple              sql.NullString
+	Simplepast                     sql.NullString
+	Past                           sql.NullString
+	Firstpersonsingular            sql.NullString
+	Indicative                     sql.NullString
+	Lastmodified                   sql.NullString
+	Neuter                         sql.NullString
+	Plural                         sql.NullString
+	Imperativesecondpersonsingular sql.NullString
+	Adverbial                      sql.NullString
+	Pastimperfect                  sql.NullString
+	Presentplural                  sql.NullString
+	Adverbofmanner                 sql.NullString
+	Presentcontinuous              sql.NullString
+	Futurepastpresent              sql.NullString
+	Pastparticiple                 sql.NullString
+	Present                        sql.NullString
+	Future                         sql.NullString
+	Definite                       sql.NullString
+	Infinitive                     sql.NullString
+	Singular                       sql.NullString
+	Simplefuture                   sql.NullString
+	Pastsingular                   sql.NullString
+	Presentcontinuousplural        sql.NullString
+	Thirdpersonplural              sql.NullString
+	Imperativesecondpersonplural   sql.NullString
+	Phrase                         sql.NullString
 }
 
-type DeGermanDbAdjective struct {
+type DeAdjective struct {
 	Wdlexemeid                             sql.NullString
-	Nominativefemininesingularsuperlative  sql.NullString
-	Accusativefemininesingularpositive     sql.NullString
-	Dativepluralcomparative                sql.NullString
-	Accusativepluralcomparative            sql.NullString
-	Nominativemasculinesingularcomparative sql.NullString
-	Dativefemininesingular                 sql.NullString
-	Nominativemasculinesingularsuperlative sql.NullString
-	Dativeplural                           sql.NullString
-	Dativeneutersingular                   sql.NullString
-	Accusativeplural                       sql.NullString
-	Dativefemininesingularcomparative      sql.NullString
-	Accusativefemininesingularsuperlative  sql.NullString
-	Nominativefeminine                     sql.NullString
-	Genitiveneutersingularsuperlative      sql.NullString
-	Accusativeneutersingularcomparative    sql.NullString
-	Dativefemininesingularsuperlative      sql.NullString
-	Dativeneutersingularcomparative        sql.NullString
-	Genitiveneutersingularpositive         sql.NullString
-	Dativefemininesingularpositive         sql.NullString
-	Accusativeneutersingularpositive       sql.NullString
-	Accusativepluralsuperlative            sql.NullString
-	Dativesingular                         sql.NullString
-	Dativeneutersingularpositive           sql.NullString
-	Nominativefemininesingular             sql.NullString
-	Genitivepluralsuperlative              sql.NullString
-	Genitivemasculinesingularpositive      sql.NullString
-	Genitiveplural                         sql.NullString
-	Genitivemasculinesingular              sql.NullString
-	Nominativemasculinesingular            sql.NullString
-	Positive                               sql.NullString
-	Nominativeneutersingularcomparative    sql.NullString
-	Genitivemasculinesingularcomparative   sql.NullString
-	Nominativeplural                       sql.NullString
+	Masculinesingular                      sql.NullString
 	Dativeneutersingularsuperlative        sql.NullString
-	Nominativeneuter                       sql.NullString
-	Genitivepluralcomparative              sql.NullString
-	Nominativefemininesingularpositive     sql.NullString
-	Genitivefemininesingularsuperlative    sql.NullString
-	Nominativeneutersingular               sql.NullString
-	Dativemasculinesingular                sql.NullString
-	Comparative                            sql.NullString
-	Dativepluralpositive                   sql.NullString
-	Genitivefemininesingularcomparative    sql.NullString
-	Nominativepluralcomparative            sql.NullString
-	Genitivemasculinesingularsuperlative   sql.NullString
-	Accusativemasculinesingularsuperlative sql.NullString
-	Dativemasculinesingularsuperlative     sql.NullString
-	Dativepluralsuperlative                sql.NullString
-	Nominativesingular                     sql.NullString
-	Genitivepluralpositive                 sql.NullString
-	Accusativefemininesingularcomparative  sql.NullString
-	Genitivefemininesingularpositive       sql.NullString
-	Accusativemasculinesingularcomparative sql.NullString
-	Lastmodified                           sql.NullString
+	Nominativefemininesingular             sql.NullString
+	Genitivemasculinesingular              sql.NullString
 	Dativemasculinesingularcomparative     sql.NullString
-	Genitivefemininesingular               sql.NullString
-	Dativemasculinesingularpositive        sql.NullString
-	Nominativemasculinesingularpositive    sql.NullString
-	Nominativefemininepositive             sql.NullString
+	Genitiveplural                         sql.NullString
+	Genitivefemininesingularpositive       sql.NullString
+	Accusativeplural                       sql.NullString
 	Accusativepluralpositive               sql.NullString
-	Nominativemasculinepositive            sql.NullString
-	Accusativeneutersingularsuperlative    sql.NullString
-	Nominativemasculine                    sql.NullString
-	Nominativepluralpositive               sql.NullString
-	Nominativeneuterpositive               sql.NullString
-	Femininesingular                       sql.NullString
-	Genitivesingular                       sql.NullString
-	Accusativeneutersingular               sql.NullString
-	Genitiveneutersingular                 sql.NullString
-	Accusativesingular                     sql.NullString
-	Nominativefemininesingularcomparative  sql.NullString
+	Dativepluralpositive                   sql.NullString
+	Lastmodified                           sql.NullString
+	Accusativefemininesingularsuperlative  sql.NullString
+	Dativemasculinesingularsuperlative     sql.NullString
 	Genitiveneutersingularcomparative      sql.NullString
-	Accusativemasculinesingular            sql.NullString
-	Nominativepluralsuperlative            sql.NullString
+	Genitivemasculinesingularcomparative   sql.NullString
+	Nominativefemininepositive             sql.NullString
+	Dativefemininesingularcomparative      sql.NullString
+	Dativepluralsuperlative                sql.NullString
+	Nominativefemininesingularsuperlative  sql.NullString
+	Accusativesingular                     sql.NullString
 	Nominativeneutersingularpositive       sql.NullString
+	Dativefemininesingular                 sql.NullString
+	Accusativeneutersingular               sql.NullString
+	Nominativefemininesingularcomparative  sql.NullString
+	Accusativefemininesingularpositive     sql.NullString
+	Genitivesingular                       sql.NullString
+	Dativepluralcomparative                sql.NullString
+	Nominativeneuter                       sql.NullString
+	Accusativemasculinesingularcomparative sql.NullString
+	Comparative                            sql.NullString
+	Nominativepluralpositive               sql.NullString
+	Accusativemasculinesingularsuperlative sql.NullString
+	Nominativefemininesingularpositive     sql.NullString
+	Accusativeneutersingularcomparative    sql.NullString
+	Accusativeneutersingularpositive       sql.NullString
+	Dativemasculinesingularpositive        sql.NullString
+	Dativeplural                           sql.NullString
+	Nominativeneuterpositive               sql.NullString
+	Dativefemininesingularsuperlative      sql.NullString
+	Dativemasculinesingular                sql.NullString
+	Nominativefeminine                     sql.NullString
+	Dativeneutersingularpositive           sql.NullString
+	Genitivefemininesingularcomparative    sql.NullString
+	Nominativemasculinesingular            sql.NullString
+	Genitivepluralpositive                 sql.NullString
+	Nominativemasculine                    sql.NullString
+	Superlative                            sql.NullString
+	Nominativeneutersingularsuperlative    sql.NullString
+	Nominativepluralsuperlative            sql.NullString
+	Nominativeneutersingularcomparative    sql.NullString
+	Accusativemasculinesingular            sql.NullString
+	Genitiveneutersingularpositive         sql.NullString
+	Nominativepluralcomparative            sql.NullString
+	Genitivefemininesingularsuperlative    sql.NullString
+	Nominativemasculinesingularpositive    sql.NullString
+	Dativesingular                         sql.NullString
+	Accusativeneutersingularsuperlative    sql.NullString
+	Nominativemasculinepositive            sql.NullString
+	Dativeneutersingularcomparative        sql.NullString
+	Accusativemasculinesingularpositive    sql.NullString
+	Nominativesingular                     sql.NullString
+	Nominativemasculinesingularsuperlative sql.NullString
+	Genitivemasculinesingularpositive      sql.NullString
+	Nominativeplural                       sql.NullString
+	Genitivefemininesingular               sql.NullString
+	Dativeneutersingular                   sql.NullString
+	Accusativepluralsuperlative            sql.NullString
+	Dativefemininesingularpositive         sql.NullString
+	Genitiveneutersingularsuperlative      sql.NullString
+	Nominativemasculinesingularcomparative sql.NullString
+	Femininesingular                       sql.NullString
+	Genitiveneutersingular                 sql.NullString
+	Genitivemasculinesingularsuperlative   sql.NullString
+	Accusativepluralcomparative            sql.NullString
 	Accusativefemininesingular             sql.NullString
 	Neutersingular                         sql.NullString
-	Accusativemasculinesingularpositive    sql.NullString
-	Masculinesingular                      sql.NullString
-	Nominativeneutersingularsuperlative    sql.NullString
-	Superlative                            sql.NullString
+	Nominativeneutersingular               sql.NullString
+	Genitivepluralcomparative              sql.NullString
+	Positive                               sql.NullString
+	Accusativefemininesingularcomparative  sql.NullString
+	Genitivepluralsuperlative              sql.NullString
 }
 
-type DeGermanDbAdverb struct {
+type DeAdverb struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
 	Lastmodified sql.NullString
 	Comparative  sql.NullString
 	Superlative  sql.NullString
+	Positive     sql.NullString
 }
 
-type DeGermanDbConjunction struct {
+type DeConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type DeGermanDbNoun struct {
+type DeNoun struct {
 	Wdlexemeid                   sql.NullString
-	Accusativesingular           sql.NullString
-	Nominativeplural             sql.NullString
 	Lastmodified                 sql.NullString
-	Genitive                     sql.NullString
+	Nominativesingular           sql.NullString
 	Accusative                   sql.NullString
 	Genitivesingular             sql.NullString
-	Nominativesingular           sql.NullString
-	Singular                     sql.NullString
-	Dative                       sql.NullString
+	Nominativeplural             sql.NullString
 	Accusativeplural             sql.NullString
-	Nominative                   sql.NullString
-	Accusativegenitivenominative sql.NullString
 	Plural                       sql.NullString
-	Genitiveplural               sql.NullString
-	Dativeplural                 sql.NullString
+	Accusativegenitivenominative sql.NullString
+	Singular                     sql.NullString
 	Dativesingular               sql.NullString
+	Accusativesingular           sql.NullString
+	Dative                       sql.NullString
+	Genitive                     sql.NullString
+	Genitiveplural               sql.NullString
+	Nominative                   sql.NullString
+	Dativeplural                 sql.NullString
 }
 
-type DeGermanDbPersonalPronoun struct {
+type DePersonalPronoun struct {
 	Wdlexemeid         sql.NullString
 	Dativeneuter       sql.NullString
-	Accusativefeminine sql.NullString
 	Lastmodified       sql.NullString
-	Genitive           sql.NullString
+	Accusativeneuter   sql.NullString
+	Dativefeminine     sql.NullString
 	Accusative         sql.NullString
 	Nominativeneuter   sql.NullString
+	Accusativefeminine sql.NullString
 	Dative             sql.NullString
-	Dativefeminine     sql.NullString
-	Nominative         sql.NullString
-	Nominativefeminine sql.NullString
-	Accusativeneuter   sql.NullString
 	Genitivefeminine   sql.NullString
+	Nominativefeminine sql.NullString
+	Genitive           sql.NullString
+	Nominative         sql.NullString
 }
 
-type DeGermanDbPostposition struct {
+type DePostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type DeGermanDbPreposition struct {
+type DePreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type DeGermanDbProperNoun struct {
+type DeProperNoun struct {
 	Wdlexemeid                sql.NullString
-	Accusativesingular        sql.NullString
-	Nominativeplural          sql.NullString
 	Lastmodified              sql.NullString
-	Genitive                  sql.NullString
+	Nominativesingular        sql.NullString
 	Accusative                sql.NullString
 	Genitivesingular          sql.NullString
-	Nominativesingular        sql.NullString
-	Dative                    sql.NullString
-	Genitivefemininesingular  sql.NullString
+	Nominativeplural          sql.NullString
 	Accusativeplural          sql.NullString
-	Nominative                sql.NullString
-	Genitiveplural            sql.NullString
-	Dativeplural              sql.NullString
+	Genitivefemininesingular  sql.NullString
 	Genitivemasculinesingular sql.NullString
 	Dativesingular            sql.NullString
+	Accusativesingular        sql.NullString
+	Dative                    sql.NullString
+	Genitive                  sql.NullString
+	Genitiveplural            sql.NullString
+	Nominative                sql.NullString
+	Dativeplural              sql.NullString
 }
 
-type DeGermanDbVerb struct {
+type DeVerb struct {
 	Wdlexemeid                                            sql.NullString
-	Presentparticiple                                     sql.NullString
-	Futurethirdpersonsingular                             sql.NullString
-	Activepresentsecondpersonplural                       sql.NullString
-	Indicativeperfectfirstpersonsingular                  sql.NullString
-	Activeindicativepreteritefirstpersonplural            sql.NullString
-	Indicativepresentsecondpersonsingular                 sql.NullString
 	Activeindicativepluperfectfirstpersonplural           sql.NullString
-	Infinitivepresent                                     sql.NullString
-	Imperativeperfectsingular                             sql.NullString
-	Indicativeperfectsecondpersonsingular                 sql.NullString
-	Perfectthirdperson                                    sql.NullString
-	Activeindicativepresentsecondpersonplural             sql.NullString
-	Activeindicativepreteritefirstpersonsingular          sql.NullString
-	Activeindicativeperfectthirdpersonplural              sql.NullString
-	Activepresentthirdpersonsingular                      sql.NullString
-	Activeindicativepreteritethirdpersonplural            sql.NullString
-	Activeindicativepresentfirstpersonplural              sql.NullString
-	Activepreteritesecondpersonsingular                   sql.NullString
-	Activeindicativeperfectfirstpersonplural              sql.NullString
 	Futuresecondpersonsingular                            sql.NullString
-	Indicativefuturesecondpersonsingular                  sql.NullString
-	Imperativeplural                                      sql.NullString
-	Activepreteritefirstpersonplural                      sql.NullString
-	Indicativepluperfectfirstpersonsingular               sql.NullString
-	Activeindicativeperfectsecondpersonsingular           sql.NullString
-	Activeindicativepluperfectsecondpersonplural          sql.NullString
-	Indicativefuturesecondpersonplural                    sql.NullString
-	Indicativepresentfirstpersonplural                    sql.NullString
-	Activeimperativeindicativepresentsecondpersonsingular sql.NullString
-	Indicativeperfectfirstpersonplural                    sql.NullString
+	Activeindicativepresentthirdpersonplural              sql.NullString
+	Activeindicativefuturefirstpersonsingular             sql.NullString
+	Indicativepreteritesecondpersonplural                 sql.NullString
+	Activepresentfirstpersonplural                        sql.NullString
+	Activeindicativefuturethirdpersonplural               sql.NullString
+	Perfectthirdpersonsingular                            sql.NullString
+	Pluperfectthirdpersonsingular                         sql.NullString
+	Indicativepreteritethirdpersonsingular                sql.NullString
+	Indicativepreteritesecondpersonsingular               sql.NullString
+	Futurefirstpersonsingular                             sql.NullString
+	Indicativeperfectthirdpersonplural                    sql.NullString
+	Activeindicativepreteritefirstpersonplural            sql.NullString
+	Preteritefirstpersonplural                            sql.NullString
+	Presentthirdpersonsingular                            sql.NullString
+	Activeinfinitivepresent                               sql.NullString
+	Imperativepresentplural                               sql.NullString
+	Imperativesingular                                    sql.NullString
+	Activeindicativepresentfirstpersonplural              sql.NullString
+	Pluperfectsecondpersonplural                          sql.NullString
+	Lastmodified                                          sql.NullString
+	Indicativepluperfectthirdpersonplural                 sql.NullString
+	Activeindicativepreteritesecondpersonplural           sql.NullString
 	Futuresecondpersonplural                              sql.NullString
-	Indicativepluperfectthirdpersonsingular               sql.NullString
-	Activeindicativepreteritesecondpersonsingular         sql.NullString
-	Presentsecondpersonsingular                           sql.NullString
 	Pluperfectthirdpersonplural                           sql.NullString
+	Activeindicativeperfectfirstpersonplural              sql.NullString
+	Presentinfinitive                                     sql.NullString
+	Indicativepluperfectfirstpersonplural                 sql.NullString
+	Indicativefuturethirdpersonplural                     sql.NullString
+	Activeindicativepluperfectthirdpersonplural           sql.NullString
+	Preteritesecondpersonsingular                         sql.NullString
 	Activeindicativeperfectfirstpersonsingular            sql.NullString
-	Imperativethirdpersonplural                           sql.NullString
-	Indicativepresentsecondpersonplural                   sql.NullString
+	Activepresentthirdpersonplural                        sql.NullString
+	Activeindicativeperfectsecondpersonsingular           sql.NullString
+	Activeindicativefuturesecondpersonsingular            sql.NullString
+	Indicativepluperfectsecondpersonplural                sql.NullString
+	Perfect                                               sql.NullString
+	Activeindicativeperfectthirdpersonplural              sql.NullString
+	Indicativefuturethirdpersonsingular                   sql.NullString
+	Presentfirstpersonsingular                            sql.NullString
+	Activeindicativepresentsecondpersonplural             sql.NullString
+	Singular                                              sql.NullString
+	Futurefirstpersonplural                               sql.NullString
+	Indicativepreteritethirdpersonplural                  sql.NullString
+	Imperativeplural                                      sql.NullString
+	Activeimperativepresentsecondpersonpluralsingular     sql.NullString
+	Preteritefirstpersonsingular                          sql.NullString
+	Preteritethirdpersonplural                            sql.NullString
+	Activeindicativepreteritethirdpersonsingular          sql.NullString
+	Indicativefuturefirstpersonsingular                   sql.NullString
+	Indicativefuturesecondpersonsingular                  sql.NullString
+	Activepreteritefirstpersonsingular                    sql.NullString
+	Indicativepreteritefirstpersonplural                  sql.NullString
+	Preteritethirdpersonsingular                          sql.NullString
+	Activepreteritefirstpersonplural                      sql.NullString
+	Activeindicativepreteritethirdpersonplural            sql.NullString
+	Activeindicativepresentsecondpersonsingular           sql.NullString
+	Activeindicativepluperfectsecondpersonplural          sql.NullString
+	Presentsecondpersonsingular                           sql.NullString
+	Indicativefuturesecondpersonplural                    sql.NullString
+	Imperativepresentsingular                             sql.NullString
+	Activeinfinitiveperfect                               sql.NullString
+	Activepresentsecondpersonplural                       sql.NullString
 	Pluperfectfirstpersonplural                           sql.NullString
 	Activeindicativepluperfectfirstpersonsingular         sql.NullString
-	Activeindicativepreteritethirdpersonsingular          sql.NullString
-	Futurefirstpersonsingular                             sql.NullString
-	Activeindicativeperfectthirdpersonsingular            sql.NullString
-	Activepreteritesecondpersonplural                     sql.NullString
-	Indicativepluperfectfirstpersonplural                 sql.NullString
-	Futurethirdperson                                     sql.NullString
-	Indicativepreteritesecondpersonplural                 sql.NullString
-	Preteritesecondpersonplural                           sql.NullString
-	Activeindicativepresentthirdpersonplural              sql.NullString
-	Perfectsecondpersonsingular                           sql.NullString
-	Imperativesingular                                    sql.NullString
-	Activepresentfirstpersonplural                        sql.NullString
-	Indicativepreteritefirstpersonsingular                sql.NullString
-	Preteritethirdpersonplural                            sql.NullString
-	Activepreteritefirstpersonsingular                    sql.NullString
-	Activeimperativepresentsecondpersonsingular           sql.NullString
-	Activeimperativepresentsecondpersonpluralsingular     sql.NullString
-	Indicativepreteritethirdpersonplural                  sql.NullString
-	Indicativeperfectthirdpersonplural                    sql.NullString
-	Activeindicativepluperfectsecondpersonsingular        sql.NullString
-	Activeindicativepresentsecondpersonsingular           sql.NullString
-	Indicativepreteritethirdpersonsingular                sql.NullString
-	Indicativepresentthirdpersonsingular                  sql.NullString
-	Presentthirdpersonsingular                            sql.NullString
-	Indicativefuturefirstpersonsingular                   sql.NullString
-	Activeindicativepluperfectthirdpersonsingular         sql.NullString
-	Indicativepreteritesecondpersonsingular               sql.NullString
-	Indicativepluperfectsecondpersonplural                sql.NullString
-	Activeindicativefuturesecondpersonsingular            sql.NullString
-	Imperativepresentsingular                             sql.NullString
-	Perfectthirdpersonplural                              sql.NullString
-	Indicativefuturethirdpersonsingular                   sql.NullString
-	Indicativefuturefirstpersonplural                     sql.NullString
-	Activepreteritethirdpersonplural                      sql.NullString
-	Activeindicativepluperfectthirdpersonplural           sql.NullString
-	Activeindicativefuturefirstpersonsingular             sql.NullString
-	Preteritefirstpersonsingular                          sql.NullString
-	Activeindicativefuturesecondpersonplural              sql.NullString
-	Activepresentthirdpersonplural                        sql.NullString
-	Lastmodified                                          sql.NullString
-	Presentfirstpersonplural                              sql.NullString
-	Activeindicativefuturethirdpersonsingular             sql.NullString
-	Futurethirdpersonplural                               sql.NullString
-	Imperativefirstpersonplural                           sql.NullString
-	Pluperfectthirdperson                                 sql.NullString
-	Pluperfectfirstpersonsingular                         sql.NullString
-	Activeinfinitivepresent                               sql.NullString
-	Presentthirdperson                                    sql.NullString
-	Activepresentsecondpersonsingular                     sql.NullString
-	Imperativepresentplural                               sql.NullString
-	Singular                                              sql.NullString
-	Gerund                                                sql.NullString
-	Perfectfirstpersonplural                              sql.NullString
 	Activeindicativepresentfirstpersonsingular            sql.NullString
-	Indicativeperfectsecondpersonplural                   sql.NullString
-	Imperativeperfectplural                               sql.NullString
-	Indicativepluperfectthirdpersonplural                 sql.NullString
-	Presentinfinitive                                     sql.NullString
-	Infinitiveperfect                                     sql.NullString
-	Infinitive                                            sql.NullString
-	Activepreteritethirdpersonsingular                    sql.NullString
-	Indicativepreteritefirstpersonplural                  sql.NullString
-	Indicativepresentfirstpersonsingular                  sql.NullString
-	Activeimperativepresentsecondpersonplural             sql.NullString
-	Perfectsecondpersonplural                             sql.NullString
-	Activeindicativepresentthirdpersonsingular            sql.NullString
-	Pluperfectsecondpersonsingular                        sql.NullString
-	Indicativefuturethirdpersonplural                     sql.NullString
-	Futurefirstpersonplural                               sql.NullString
-	Activeinfinitiveperfect                               sql.NullString
-	Activeindicativefuturethirdpersonplural               sql.NullString
-	Presentfirstpersonsingular                            sql.NullString
-	Activeindicativepreteritesecondpersonplural           sql.NullString
-	Pluperfectthirdpersonsingular                         sql.NullString
-	Indicativepluperfectsecondpersonsingular              sql.NullString
-	Activepresentfirstpersonsingular                      sql.NullString
-	Indicativeperfectthirdpersonsingular                  sql.NullString
-	Activeindicativefuturefirstpersonplural               sql.NullString
-	Perfect                                               sql.NullString
-	Perfectthirdpersonsingular                            sql.NullString
-	Presentthirdpersonplural                              sql.NullString
+	Imperativeperfectsingular                             sql.NullString
 	Activeperfect                                         sql.NullString
+	Indicativepresentsecondpersonsingular                 sql.NullString
+	Activeindicativefuturefirstpersonplural               sql.NullString
+	Presentfirstpersonplural                              sql.NullString
 	Activeindicativeperfectsecondpersonplural             sql.NullString
-	Present                                               sql.NullString
-	Preteritesecondpersonsingular                         sql.NullString
+	Futurethirdpersonsingular                             sql.NullString
 	Pastparticiple                                        sql.NullString
-	Perfectfirstpersonsingular                            sql.NullString
-	Preteritethirdpersonsingular                          sql.NullString
-	Presentsecondpersonplural                             sql.NullString
-	Pluperfectsecondpersonplural                          sql.NullString
-	Preteritefirstpersonplural                            sql.NullString
-	Preteritethirdperson                                  sql.NullString
+	Activeimperativepresentsecondpersonsingular           sql.NullString
+	Infinitive                                            sql.NullString
+	Indicativeperfectfirstpersonsingular                  sql.NullString
+	Activepreteritethirdpersonplural                      sql.NullString
+	Indicativeperfectsecondpersonsingular                 sql.NullString
+	Gerund                                                sql.NullString
+	Activepresentfirstpersonsingular                      sql.NullString
+	Activeindicativepreteritesecondpersonsingular         sql.NullString
+	Perfectthirdpersonplural                              sql.NullString
+	Pluperfectfirstpersonsingular                         sql.NullString
+	Activepreteritesecondpersonsingular                   sql.NullString
+	Pluperfectsecondpersonsingular                        sql.NullString
+	Activepreteritesecondpersonplural                     sql.NullString
+	Activeimperativeindicativepresentsecondpersonsingular sql.NullString
+	Activeindicativepreteritefirstpersonsingular          sql.NullString
+	Activeindicativepluperfectsecondpersonsingular        sql.NullString
+	Activeindicativefuturethirdpersonsingular             sql.NullString
+	Indicativepreteritefirstpersonsingular                sql.NullString
+	Indicativepresentfirstpersonplural                    sql.NullString
+	Indicativeperfectfirstpersonplural                    sql.NullString
+	Indicativepluperfectsecondpersonsingular              sql.NullString
+	Imperativeperfectplural                               sql.NullString
+	Indicativepluperfectthirdpersonsingular               sql.NullString
+	Perfectfirstpersonplural                              sql.NullString
+	Indicativefuturefirstpersonplural                     sql.NullString
+	Pluperfectthirdperson                                 sql.NullString
+	Present                                               sql.NullString
+	Preteritesecondpersonplural                           sql.NullString
+	Indicativepluperfectfirstpersonsingular               sql.NullString
+	Perfectsecondpersonplural                             sql.NullString
+	Activeindicativeperfectthirdpersonsingular            sql.NullString
+	Activeindicativefuturesecondpersonplural              sql.NullString
+	Perfectthirdperson                                    sql.NullString
+	Indicativeperfectsecondpersonplural                   sql.NullString
+	Infinitiveperfect                                     sql.NullString
+	Indicativepresentsecondpersonplural                   sql.NullString
+	Indicativepresentthirdpersonsingular                  sql.NullString
 	Indicativepresentthirdpersonplural                    sql.NullString
+	Activepresentsecondpersonsingular                     sql.NullString
+	Indicativeperfectthirdpersonsingular                  sql.NullString
+	Presentparticiple                                     sql.NullString
+	Presentthirdpersonplural                              sql.NullString
+	Activeindicativepluperfectthirdpersonsingular         sql.NullString
+	Activeindicativepresentthirdpersonsingular            sql.NullString
+	Futurethirdperson                                     sql.NullString
+	Presentthirdperson                                    sql.NullString
+	Activeimperativepresentsecondpersonplural             sql.NullString
+	Futurethirdpersonplural                               sql.NullString
+	Imperativethirdpersonplural                           sql.NullString
+	Imperativefirstpersonplural                           sql.NullString
+	Perfectsecondpersonsingular                           sql.NullString
+	Preteritethirdperson                                  sql.NullString
+	Activepreteritethirdpersonsingular                    sql.NullString
+	Perfectfirstpersonsingular                            sql.NullString
+	Indicativepresentfirstpersonsingular                  sql.NullString
+	Infinitivepresent                                     sql.NullString
+	Activepresentthirdpersonsingular                      sql.NullString
+	Presentsecondpersonplural                             sql.NullString
 }
 
-type ElGreekDbAdjective struct {
+type ElAdjective struct {
 	Wdlexemeid                  sql.NullString
-	Accusativemasculineplural   sql.NullString
-	Nominativemasculinesingular sql.NullString
 	Lastmodified                sql.NullString
 	Vocativemasculineplural     sql.NullString
-	Nominativemasculineplural   sql.NullString
-	Vocativemasculinesingular   sql.NullString
-	Genitiveplural              sql.NullString
-	Accusativemasculinesingular sql.NullString
 	Genitivemasculinesingular   sql.NullString
+	Accusativemasculinesingular sql.NullString
+	Genitiveplural              sql.NullString
+	Vocativemasculinesingular   sql.NullString
+	Accusativemasculineplural   sql.NullString
+	Nominativemasculineplural   sql.NullString
+	Nominativemasculinesingular sql.NullString
 }
 
-type ElGreekDbAdverb struct {
+type ElAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type ElGreekDbConjunction struct {
+type ElConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type ElGreekDbNoun struct {
+type ElNoun struct {
 	Wdlexemeid         sql.NullString
-	Accusativesingular sql.NullString
-	Nominativeplural   sql.NullString
 	Lastmodified       sql.NullString
-	Genitiveplural     sql.NullString
-	Genitivesingular   sql.NullString
 	Nominativesingular sql.NullString
-	Singular           sql.NullString
 	Vocativeplural     sql.NullString
-	Accusativeplural   sql.NullString
-	Nominative         sql.NullString
 	Vocativesingular   sql.NullString
+	Genitivesingular   sql.NullString
+	Nominativeplural   sql.NullString
+	Accusativeplural   sql.NullString
+	Singular           sql.NullString
+	Accusativesingular sql.NullString
+	Genitiveplural     sql.NullString
+	Nominative         sql.NullString
 }
 
-type ElGreekDbProperNoun struct {
+type ElProperNoun struct {
 	Wdlexemeid   sql.NullString
+	Accusative   sql.NullString
 	Lastmodified sql.NullString
 	Genitive     sql.NullString
-	Accusative   sql.NullString
 }
 
-type ElGreekDbVerb struct {
+type ElVerb struct {
 	Wdlexemeid                                  sql.NullString
-	Presentparticiple                           sql.NullString
-	Pastsecondpersonsingular                    sql.NullString
+	Thirdpersonsingular                         sql.NullString
+	Indicativepresentsecondpersonplural         sql.NullString
 	Indicativepresentthirdpersonsingular        sql.NullString
-	Secondpersonsingular                        sql.NullString
+	Pastfirstpersonsingular                     sql.NullString
+	Indicativepresentthirdpersonplural          sql.NullString
+	Indicativepastimperfectthirdpersonsingular  sql.NullString
+	Pastthirdpersonplural                       sql.NullString
+	Indicativepastimperfectsecondpersonplural   sql.NullString
 	Indicativepastimperfectfirstpersonsingular  sql.NullString
 	Presentsingular                             sql.NullString
-	Infinitive                                  sql.NullString
-	Indicativepresentsecondpersonsingular       sql.NullString
-	Indicativepresentsecondpersonplural         sql.NullString
-	Indicativepresentfirstpersonsingular        sql.NullString
-	Indicativepastimperfectthirdpersonsingular  sql.NullString
-	Pastthirdpersonsingular                     sql.NullString
-	Pastfirstpersonsingular                     sql.NullString
-	Imperativesecondpersonplural                sql.NullString
-	Lastmodified                                sql.NullString
-	Thirdpersonplural                           sql.NullString
-	Secondpersonplural                          sql.NullString
-	Indicativepastimperfectthirdpersonplural    sql.NullString
-	Pastthirdpersonplural                       sql.NullString
-	Firstpersonsingular                         sql.NullString
-	Indicativepastimperfectsecondpersonplural   sql.NullString
-	Thirdpersonsingular                         sql.NullString
-	Imperativesecondpersonsingular              sql.NullString
-	Indicativepastimperfectfirstpersonplural    sql.NullString
+	Firstpersonplural                           sql.NullString
 	Pastfirstpersonplural                       sql.NullString
 	Indicativepresentfirstpersonplural          sql.NullString
-	Indicativepastimperfectsecondpersonsingular sql.NullString
-	Firstpersonplural                           sql.NullString
+	Presentparticiple                           sql.NullString
+	Pastthirdpersonsingular                     sql.NullString
 	Pastsecondpersonplural                      sql.NullString
-	Indicativepresentthirdpersonplural          sql.NullString
+	Firstpersonsingular                         sql.NullString
+	Lastmodified                                sql.NullString
+	Indicativepastimperfectsecondpersonsingular sql.NullString
+	Imperativesecondpersonsingular              sql.NullString
+	Pastsecondpersonsingular                    sql.NullString
+	Indicativepresentsecondpersonsingular       sql.NullString
+	Indicativepastimperfectfirstpersonplural    sql.NullString
+	Secondpersonsingular                        sql.NullString
+	Secondpersonplural                          sql.NullString
+	Thirdpersonplural                           sql.NullString
+	Infinitive                                  sql.NullString
+	Imperativesecondpersonplural                sql.NullString
+	Indicativepresentfirstpersonsingular        sql.NullString
+	Indicativepastimperfectthirdpersonplural    sql.NullString
 }
 
-type EnEnglishDbAdjective struct {
+type EnAdjective struct {
 	Wdlexemeid                       sql.NullString
-	Presentparticiple                sql.NullString
-	Pastparticiple                   sql.NullString
-	Simplepresentthirdpersonsingular sql.NullString
 	Lastmodified                     sql.NullString
+	Pastparticiple                   sql.NullString
+	Plural                           sql.NullString
 	Singular                         sql.NullString
 	Positive                         sql.NullString
 	Simplepast                       sql.NullString
-	Simplepresent                    sql.NullString
-	Plural                           sql.NullString
-	Comparative                      sql.NullString
 	Superlative                      sql.NullString
+	Presentparticiple                sql.NullString
+	Simplepresentthirdpersonsingular sql.NullString
+	Comparative                      sql.NullString
+	Simplepresent                    sql.NullString
 }
 
-type EnEnglishDbAdverb struct {
+type EnAdverb struct {
 	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
 	Contraction  sql.NullString
-	Lastmodified sql.NullString
 	Positive     sql.NullString
-	Comparative  sql.NullString
 	Superlative  sql.NullString
+	Comparative  sql.NullString
 }
 
-type EnEnglishDbConjunction struct {
+type EnConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type EnEnglishDbNoun struct {
+type EnNoun struct {
 	Wdlexemeid         sql.NullString
-	Pluralsingular     sql.NullString
+	Lastmodified       sql.NullString
+	Nominativesingular sql.NullString
+	Masculinesingular  sql.NullString
+	Genitivesingular   sql.NullString
 	Nominativeplural   sql.NullString
 	Femininesingular   sql.NullString
-	Lastmodified       sql.NullString
-	Genitive           sql.NullString
-	Genitiveplural     sql.NullString
-	Feminineplural     sql.NullString
-	Genitivesingular   sql.NullString
-	Singular           sql.NullString
-	Nominativesingular sql.NullString
-	Nominative         sql.NullString
-	Masculinesingular  sql.NullString
 	Plural             sql.NullString
+	Pluralsingular     sql.NullString
+	Singular           sql.NullString
+	Genitive           sql.NullString
+	Feminineplural     sql.NullString
+	Genitiveplural     sql.NullString
+	Nominative         sql.NullString
 	Masculineplural    sql.NullString
 }
 
-type EnEnglishDbPersonalPronoun struct {
+type EnPersonalPronoun struct {
 	Wdlexemeid         sql.NullString
+	Lastmodified       sql.NullString
+	Nominativesingular sql.NullString
+	Obliquesingular    sql.NullString
+	Plural             sql.NullString
 	Firstperson        sql.NullString
+	Singular           sql.NullString
 	Secondperson       sql.NullString
-	Obliquesingular    sql.NullString
-	Lastmodified       sql.NullString
+	Genitive           sql.NullString
+	Oblique            sql.NullString
 	Thirdperson        sql.NullString
-	Oblique            sql.NullString
-	Nominativesingular sql.NullString
-	Singular           sql.NullString
 	Nominative         sql.NullString
-	Plural             sql.NullString
-	Genitive           sql.NullString
 }
 
-type EnEnglishDbPostposition struct {
+type EnPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type EnEnglishDbPreposition struct {
+type EnPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type EnEnglishDbPronoun struct {
+type EnPronoun struct {
 	Wdlexemeid         sql.NullString
 	Lastmodified       sql.NullString
-	Oblique            sql.NullString
-	Singular           sql.NullString
 	Nominativesingular sql.NullString
-	Nominative         sql.NullString
-	Plural             sql.NullString
 	Obliquesingular    sql.NullString
+	Plural             sql.NullString
+	Singular           sql.NullString
+	Oblique            sql.NullString
+	Nominative         sql.NullString
 }
 
-type EnEnglishDbProperNoun struct {
+type EnProperNoun struct {
 	Wdlexemeid         sql.NullString
 	Lastmodified       sql.NullString
 	Nominativesingular sql.NullString
-	Singular           sql.NullString
 	Plural             sql.NullString
+	Singular           sql.NullString
 	Genitive           sql.NullString
 }
 
-type EnEnglishDbVerb struct {
+type EnVerb struct {
 	Wdlexemeid                             sql.NullString
-	Presentparticiple                      sql.NullString
-	Presentsubjunctive                     sql.NullString
-	Indicativepreteritethirdpersonsingular sql.NullString
-	Secondpersonsingular                   sql.NullString
-	Presentindicativeplural                sql.NullString
-	Simplepresentplural                    sql.NullString
-	Future                                 sql.NullString
-	Infinitive                             sql.NullString
-	Simplepresent                          sql.NullString
-	Simplepresentfirstpersonsingular       sql.NullString
-	Simplepresentthirdpersonsingular       sql.NullString
-	Simplepastpastparticiple               sql.NullString
-	Preteritefirstpersonsingular           sql.NullString
-	Lastmodified                           sql.NullString
-	Simplepresentsecondpersonsingular      sql.NullString
-	Presentindicativesecondperson          sql.NullString
-	Presentindicativesingular              sql.NullString
-	Presentindicativesecondpersonsingular  sql.NullString
 	Thirdpersonsingular                    sql.NullString
 	Simplepastplural                       sql.NullString
-	Presentindicativefirstpersonsingular   sql.NullString
-	Past                                   sql.NullString
-	Simplepastthirdpersonsingular          sql.NullString
-	Imperative                             sql.NullString
-	Indicativepreteritesecondperson        sql.NullString
-	Indicativepreteriteplural              sql.NullString
-	Indicativepreteritefirstpersonsingular sql.NullString
-	Present                                sql.NullString
-	Pastparticiple                         sql.NullString
 	Contraction                            sql.NullString
-	Simplepastsecondpersonsingular         sql.NullString
-	Preteritesubjunctive                   sql.NullString
-	Presentindicativethirdpersonsingular   sql.NullString
 	Simplepastfirstpersonsingular          sql.NullString
-	Singular                               sql.NullString
-	Simplepast                             sql.NullString
-	Simplepastsingular                     sql.NullString
+	Indicativepreteritethirdpersonsingular sql.NullString
 	Presentindicative                      sql.NullString
+	Imperative                             sql.NullString
+	Simplepresent                          sql.NullString
+	Simplepresentplural                    sql.NullString
+	Presentindicativefirstpersonsingular   sql.NullString
+	Indicativepreteritefirstpersonsingular sql.NullString
+	Presentparticiple                      sql.NullString
+	Simplepast                             sql.NullString
+	Past                                   sql.NullString
+	Simplepastsingular                     sql.NullString
+	Lastmodified                           sql.NullString
+	Presentindicativesecondpersonsingular  sql.NullString
+	Simplepresentfirstpersonsingular       sql.NullString
+	Preteritesubjunctive                   sql.NullString
+	Presentsubjunctive                     sql.NullString
+	Presentindicativethirdpersonsingular   sql.NullString
+	Simplepastpastparticiple               sql.NullString
+	Presentindicativesecondperson          sql.NullString
+	Simplepastsecondpersonsingular         sql.NullString
+	Pastparticiple                         sql.NullString
+	Simplepresentsecondpersonsingular      sql.NullString
+	Future                                 sql.NullString
+	Secondpersonsingular                   sql.NullString
+	Simplepastthirdpersonsingular          sql.NullString
+	Presentindicativeplural                sql.NullString
+	Present                                sql.NullString
+	Infinitive                             sql.NullString
+	Singular                               sql.NullString
+	Indicativepreteriteplural              sql.NullString
+	Presentindicativesingular              sql.NullString
+	Simplepresentthirdpersonsingular       sql.NullString
+	Indicativepreteritesecondperson        sql.NullString
+	Preteritefirstpersonsingular           sql.NullString
 }
 
-type EoEsperantoDbAdjective struct {
+type EoAdjective struct {
 	Wdlexemeid         sql.NullString
-	Accusativesingular sql.NullString
-	Nominativeplural   sql.NullString
 	Lastmodified       sql.NullString
 	Nominativesingular sql.NullString
 	Accusativeplural   sql.NullString
-}
-
-type EoEsperantoDbAdverb struct {
-	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
-}
-
-type EoEsperantoDbConjunction struct {
-	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
-}
-
-type EoEsperantoDbNoun struct {
-	Wdlexemeid         sql.NullString
-	Accusativesingular sql.NullString
 	Nominativeplural   sql.NullString
+	Accusativesingular sql.NullString
+}
+
+type EoAdverb struct {
+	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
+}
+
+type EoConjunction struct {
+	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
+}
+
+type EoNoun struct {
+	Wdlexemeid         sql.NullString
 	Lastmodified       sql.NullString
+	Nominativesingular sql.NullString
 	Accusative         sql.NullString
-	Nominativesingular sql.NullString
 	Accusativeplural   sql.NullString
+	Nominativeplural   sql.NullString
 	Plural             sql.NullString
+	Accusativesingular sql.NullString
 }
 
-type EoEsperantoDbPersonalPronoun struct {
+type EoPersonalPronoun struct {
 	Wdlexemeid         sql.NullString
-	Accusativesingular sql.NullString
-	Nominativeplural   sql.NullString
 	Lastmodified       sql.NullString
-	Accusative         sql.NullString
 	Nominativesingular sql.NullString
-	Nominativeneuter   sql.NullString
-	Accusativeplural   sql.NullString
-	Nominative         sql.NullString
 	Accusativeneuter   sql.NullString
-}
-
-type EoEsperantoDbPreposition struct {
-	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
-}
-
-type EoEsperantoDbPronoun struct {
-	Wdlexemeid   sql.NullString
-	Nominative   sql.NullString
-	Lastmodified sql.NullString
-	Accusative   sql.NullString
-}
-
-type EoEsperantoDbProperNoun struct {
-	Wdlexemeid         sql.NullString
-	Accusativesingular sql.NullString
+	Accusative         sql.NullString
+	Accusativeplural   sql.NullString
 	Nominativeplural   sql.NullString
+	Nominativeneuter   sql.NullString
+	Accusativesingular sql.NullString
+	Nominative         sql.NullString
+}
+
+type EoPreposition struct {
+	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
+}
+
+type EoPronoun struct {
+	Wdlexemeid   sql.NullString
+	Accusative   sql.NullString
+	Lastmodified sql.NullString
+	Nominative   sql.NullString
+}
+
+type EoProperNoun struct {
+	Wdlexemeid         sql.NullString
 	Lastmodified       sql.NullString
 	Nominativesingular sql.NullString
 	Accusativeplural   sql.NullString
+	Nominativeplural   sql.NullString
 	Plural             sql.NullString
+	Accusativesingular sql.NullString
 }
 
-type EoEsperantoDbVerb struct {
+type EoVerb struct {
 	Wdlexemeid                         sql.NullString
-	Preterite                          sql.NullString
+	Lastmodified                       sql.NullString
+	Subjunctive                        sql.NullString
+	Indicativefuture                   sql.NullString
+	Indicativepast                     sql.NullString
+	Indicativepresent                  sql.NullString
+	Presentindicative                  sql.NullString
+	Present                            sql.NullString
+	Volitive                           sql.NullString
+	Future                             sql.NullString
+	Infinitive                         sql.NullString
 	Futurepresentparticiple            sql.NullString
 	Indicativepresentpresentindicative sql.NullString
 	Past                               sql.NullString
-	Lastmodified                       sql.NullString
-	Subjunctive                        sql.NullString
-	Indicativepast                     sql.NullString
-	Volitive                           sql.NullString
-	Conditional                        sql.NullString
-	Future                             sql.NullString
-	Infinitive                         sql.NullString
 	Imperative                         sql.NullString
-	Presentindicative                  sql.NullString
-	Indicativepresent                  sql.NullString
-	Indicativefuture                   sql.NullString
-	Present                            sql.NullString
+	Conditional                        sql.NullString
+	Preterite                          sql.NullString
 }
 
-type EsSpanishDbAdjective struct {
+type EsAdjective struct {
 	Wdlexemeid                         sql.NullString
-	Femininemasculinesingular          sql.NullString
-	Femininesingular                   sql.NullString
-	Secondpersonsingular               sql.NullString
+	Masculinesingular                  sql.NullString
 	Masculinefirstpersonplural         sql.NullString
-	Femininesingularsuperlative        sql.NullString
-	Femininemasculineplural            sql.NullString
+	Femininesecondpersonsingular       sql.NullString
 	Masculinepluralsuperlative         sql.NullString
-	Femininefirstpersonsingular        sql.NullString
-	Lastmodified                       sql.NullString
-	Masculinesingularsuperlative       sql.NullString
-	Secondpersonplural                 sql.NullString
-	Masculinefirstpersonsingular       sql.NullString
-	Femininesecondpersonplural         sql.NullString
-	Femininefirstpersonpluralsingular  sql.NullString
-	Masculinesecondpersonplural        sql.NullString
-	Masculinethirdpersonplural         sql.NullString
-	Masculineplural                    sql.NullString
+	Femininefirstpersonplural          sql.NullString
+	Femininesingularsuperlative        sql.NullString
 	Masculinefirstpersonpluralsingular sql.NullString
+	Femininesingular                   sql.NullString
+	Femininemasculineplural            sql.NullString
+	Masculinesecondpersonplural        sql.NullString
+	Lastmodified                       sql.NullString
+	Masculinethirdpersonsingular       sql.NullString
+	Masculinethirdpersonplural         sql.NullString
+	Femininesecondpersonplural         sql.NullString
+	Plural                             sql.NullString
+	Femininefirstpersonsingular        sql.NullString
+	Femininepluralsuperlative          sql.NullString
+	Femininemasculinesingular          sql.NullString
+	Masculinesingularsuperlative       sql.NullString
 	Feminineplural                     sql.NullString
 	Femininethirdpersonsingular        sql.NullString
-	Femininefirstpersonplural          sql.NullString
-	Masculinethirdpersonsingular       sql.NullString
-	Femininesecondpersonsingular       sql.NullString
 	Neutersingular                     sql.NullString
-	Plural                             sql.NullString
-	Neuterplural                       sql.NullString
-	Singular                           sql.NullString
-	Femininethirdpersonplural          sql.NullString
 	Masculinesecondpersonsingular      sql.NullString
-	Masculinesingular                  sql.NullString
-	Femininepluralsuperlative          sql.NullString
+	Neuterplural                       sql.NullString
+	Masculinefirstpersonsingular       sql.NullString
+	Femininethirdpersonplural          sql.NullString
+	Secondpersonsingular               sql.NullString
+	Secondpersonplural                 sql.NullString
+	Femininefirstpersonpluralsingular  sql.NullString
+	Singular                           sql.NullString
+	Masculineplural                    sql.NullString
 }
 
-type EsSpanishDbAdverb struct {
+type EsAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Superlative  sql.NullString
 }
 
-type EsSpanishDbConjunction struct {
+type EsConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type EsSpanishDbNoun struct {
+type EsNoun struct {
 	Wdlexemeid                              sql.NullString
-	Masculinepluralsingular                 sql.NullString
-	Pastimperfectsecondpersonsingular       sql.NullString
-	Pastimperfectfirstpersonplural          sql.NullString
-	Indicativepreteritethirdpersonsingular  sql.NullString
-	Indicativepresentthirdpersonsingular    sql.NullString
-	Femininesingular                        sql.NullString
+	Indicativefirstpersonplural             sql.NullString
+	Pastimperfectsecondpersonplural         sql.NullString
+	Thirdpersonsingular                     sql.NullString
 	Indicativefuturefirstpersonsingular     sql.NullString
-	Secondpersonsingular                    sql.NullString
-	Indicativepreteritesecondpersonsingular sql.NullString
-	Futurefirstpersonsingularsubjunctive    sql.NullString
-	Indicativefuturefirstpersonplural       sql.NullString
-	Infinitive                              sql.NullString
-	Indicativefuturethirdpersonsingular     sql.NullString
-	Indicativepreteritefirstpersonplural    sql.NullString
-	Indicativepresentsecondpersonsingular   sql.NullString
-	Indicativepresentsecondpersonplural     sql.NullString
-	Futuresecondpersonpluralsubjunctive     sql.NullString
-	Pastimperfectthirdpersonplural          sql.NullString
-	Indicativepresentfirstpersonsingular    sql.NullString
-	Pluralsingular                          sql.NullString
-	Futurethirdpersonpluralsubjunctive      sql.NullString
+	Masculinesingular                       sql.NullString
+	Indicativefuturesecondpersonsingular    sql.NullString
 	Masculine                               sql.NullString
-	Imperativesecondpersonplural            sql.NullString
+	Indicativepresentsecondpersonplural     sql.NullString
+	Pluralsingular                          sql.NullString
+	Indicativepreteritesecondpersonplural   sql.NullString
+	Indicativepresentthirdpersonsingular    sql.NullString
+	Pastimperfectthirdpersonsingular        sql.NullString
+	Indicativepreteritefirstpersonplural    sql.NullString
+	Indicativepreteritethirdpersonsingular  sql.NullString
+	Indicativepresentthirdpersonplural      sql.NullString
+	Indicativepreteritesecondpersonsingular sql.NullString
+	Pastimperfectfirstpersonplural          sql.NullString
+	Futurefirstpersonsingularsubjunctive    sql.NullString
+	Futuresecondpersonsingularsubjunctive   sql.NullString
+	Futurethirdpersonsingularsubjunctive    sql.NullString
+	Futurefirstpersonpluralsubjunctive      sql.NullString
+	Indicativesecondpersonsingular          sql.NullString
+	Pluralpositive                          sql.NullString
+	Indicativefuturesecondpersonplural      sql.NullString
+	Firstpersonplural                       sql.NullString
+	Femininesingular                        sql.NullString
+	Indicativepreteritefirstpersonsingular  sql.NullString
+	Indicativepresentfirstpersonplural      sql.NullString
+	Indicativefirstpersonsingular           sql.NullString
+	Firstpersonsingular                     sql.NullString
+	Feminine                                sql.NullString
 	Lastmodified                            sql.NullString
-	Thirdpersonplural                       sql.NullString
-	Secondpersonplural                      sql.NullString
+	Pastimperfectthirdpersonplural          sql.NullString
+	Singularpositive                        sql.NullString
+	Indicativefuturefirstpersonplural       sql.NullString
+	Plural                                  sql.NullString
+	Indicativefuturethirdpersonplural       sql.NullString
+	Imperativesecondpersonsingular          sql.NullString
+	Feminineplural                          sql.NullString
+	Indicativepresentsecondpersonsingular   sql.NullString
+	Indicativesecondpersonplural            sql.NullString
 	Indicativethirdpersonplural             sql.NullString
 	Imperativefirstpersonplural             sql.NullString
-	Futuresecondpersonsingularsubjunctive   sql.NullString
-	Indicativesecondpersonsingular          sql.NullString
-	Pastimperfectthirdpersonsingular        sql.NullString
-	Participle                              sql.NullString
-	Indicativefuturethirdpersonplural       sql.NullString
-	Indicativefirstpersonplural             sql.NullString
-	Firstpersonsingular                     sql.NullString
-	Indicativefuturesecondpersonsingular    sql.NullString
-	Masculineplural                         sql.NullString
-	Singularpositive                        sql.NullString
-	Thirdpersonsingular                     sql.NullString
 	Pastimperfectfirstpersonsingular        sql.NullString
+	Futuresecondpersonpluralsubjunctive     sql.NullString
+	Masculinepluralsingular                 sql.NullString
+	Secondpersonsingular                    sql.NullString
+	Indicativefuturethirdpersonsingular     sql.NullString
+	Secondpersonplural                      sql.NullString
 	Indicativethirdpersonsingular           sql.NullString
-	Indicativepreteritesecondpersonplural   sql.NullString
-	Imperativesecondpersonsingular          sql.NullString
-	Feminine                                sql.NullString
-	Feminineplural                          sql.NullString
-	Pluralpositive                          sql.NullString
-	Pastimperfectsecondpersonplural         sql.NullString
-	Indicativesecondpersonplural            sql.NullString
-	Futurefirstpersonpluralsubjunctive      sql.NullString
-	Indicativefuturesecondpersonplural      sql.NullString
-	Indicativepresentfirstpersonplural      sql.NullString
-	Plural                                  sql.NullString
-	Indicativepreteritefirstpersonsingular  sql.NullString
-	Firstpersonplural                       sql.NullString
-	Futurethirdpersonsingularsubjunctive    sql.NullString
+	Infinitive                              sql.NullString
 	Singular                                sql.NullString
+	Thirdpersonplural                       sql.NullString
+	Imperativesecondpersonplural            sql.NullString
+	Participle                              sql.NullString
 	Indicativepreteritethirdpersonplural    sql.NullString
+	Indicativepresentfirstpersonsingular    sql.NullString
+	Masculineplural                         sql.NullString
+	Futurethirdpersonpluralsubjunctive      sql.NullString
 	Gerund                                  sql.NullString
-	Masculinesingular                       sql.NullString
-	Indicativepresentthirdpersonplural      sql.NullString
-	Indicativefirstpersonsingular           sql.NullString
+	Pastimperfectsecondpersonsingular       sql.NullString
 }
 
-type EsSpanishDbPersonalPronoun struct {
+type EsPersonalPronoun struct {
 	Wdlexemeid                                        sql.NullString
+	Masculinesingular                                 sql.NullString
+	Masculine                                         sql.NullString
 	Accusativemasculine                               sql.NullString
 	Femininesingular                                  sql.NullString
-	Masculine                                         sql.NullString
-	Lastmodified                                      sql.NullString
-	Masculineplural                                   sql.NullString
+	Accusativefeminine                                sql.NullString
 	Dativemasculine                                   sql.NullString
 	Feminine                                          sql.NullString
-	Feminineplural                                    sql.NullString
-	Dativefeminine                                    sql.NullString
-	Neutersingular                                    sql.NullString
+	Femininemasculineneuterpluralsingular             sql.NullString
+	Lastmodified                                      sql.NullString
+	Femininemasculine                                 sql.NullString
 	Accusativedativefemininemasculine                 sql.NullString
 	Plural                                            sql.NullString
-	Femininemasculine                                 sql.NullString
-	Accusativefeminine                                sql.NullString
+	Feminineplural                                    sql.NullString
+	Neutersingular                                    sql.NullString
 	Neuterplural                                      sql.NullString
-	Singular                                          sql.NullString
+	Dativefeminine                                    sql.NullString
 	Nominativevocativefemininemasculinepluralsingular sql.NullString
-	Masculinesingular                                 sql.NullString
-	Femininemasculineneuterpluralsingular             sql.NullString
+	Singular                                          sql.NullString
+	Masculineplural                                   sql.NullString
 }
 
-type EsSpanishDbPreposition struct {
+type EsPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type EsSpanishDbPronoun struct {
+type EsPronoun struct {
 	Wdlexemeid                sql.NullString
-	Masculineneuterplural     sql.NullString
-	Femininemasculinesingular sql.NullString
-	Femininesingular          sql.NullString
-	Lastmodified              sql.NullString
-	Feminineplural            sql.NullString
 	Neuterplural              sql.NullString
+	Lastmodified              sql.NullString
+	Masculinesingular         sql.NullString
+	Femininesingular          sql.NullString
+	Plural                    sql.NullString
+	Masculineneuterplural     sql.NullString
 	Singular                  sql.NullString
+	Neutersingular            sql.NullString
+	Femininemasculinesingular sql.NullString
+	Feminineplural            sql.NullString
 	Masculineneutersingular   sql.NullString
+	Masculineplural           sql.NullString
 	Femininemasculineplural   sql.NullString
 	Femininemasculineneuter   sql.NullString
-	Neutersingular            sql.NullString
-	Masculinesingular         sql.NullString
-	Plural                    sql.NullString
-	Masculineplural           sql.NullString
 }
 
-type EsSpanishDbProperNoun struct {
+type EsProperNoun struct {
 	Wdlexemeid        sql.NullString
-	Femininesingular  sql.NullString
 	Lastmodified      sql.NullString
-	Feminineplural    sql.NullString
-	Singular          sql.NullString
 	Masculinesingular sql.NullString
+	Femininesingular  sql.NullString
 	Plural            sql.NullString
+	Singular          sql.NullString
+	Feminineplural    sql.NullString
 	Masculineplural   sql.NullString
 }
 
-type EsSpanishDbVerb struct {
+type EsVerb struct {
 	Wdlexemeid                                  sql.NullString
-	Pastimperfectsecondpersonsingular           sql.NullString
-	Pastimperfectfirstpersonplural              sql.NullString
-	Indicativepreteritethirdpersonsingular      sql.NullString
-	Indicativepresentthirdpersonsingular        sql.NullString
-	Indicativefuturefirstpersonsingular         sql.NullString
-	Secondpersonsingular                        sql.NullString
-	Secondpersonpluralsubjunctive               sql.NullString
-	Indicativepreteritesecondpersonsingular     sql.NullString
-	Futurefirstpersonsingularsubjunctive        sql.NullString
-	Indicativepastimperfectfirstpersonsingular  sql.NullString
-	Firstpersonsingularsubjunctive              sql.NullString
-	Indicativefuturefirstpersonplural           sql.NullString
-	Infinitive                                  sql.NullString
-	Indicativefuturethirdpersonsingular         sql.NullString
-	Indicativepreteritefirstpersonplural        sql.NullString
-	Indicativepresentsecondpersonsingular       sql.NullString
-	Indicativepresentsecondpersonplural         sql.NullString
-	Futuresecondpersonpluralsubjunctive         sql.NullString
-	Pastimperfectthirdpersonplural              sql.NullString
-	Indicativepresentfirstpersonsingular        sql.NullString
-	Masculineparticipleplural                   sql.NullString
-	Indicativepastimperfectthirdpersonsingular  sql.NullString
-	Futurethirdpersonpluralsubjunctive          sql.NullString
-	Thirdpersonpluralsubjunctive                sql.NullString
-	Imperativesecondpersonplural                sql.NullString
-	Lastmodified                                sql.NullString
-	Thirdpersonplural                           sql.NullString
-	Secondpersonplural                          sql.NullString
-	Indicativethirdpersonplural                 sql.NullString
-	Imperativefirstpersonplural                 sql.NullString
-	Indicativepastimperfectthirdpersonplural    sql.NullString
-	Futuresecondpersonsingularsubjunctive       sql.NullString
-	Indicativesecondpersonsingular              sql.NullString
-	Pastimperfectthirdpersonsingular            sql.NullString
-	Participle                                  sql.NullString
-	Indicativefuturethirdpersonplural           sql.NullString
 	Indicativefirstpersonplural                 sql.NullString
-	Firstpersonsingular                         sql.NullString
-	Indicativefuturesecondpersonsingular        sql.NullString
-	Indicativepastimperfectsecondpersonplural   sql.NullString
-	Thirdpersonsingularsubjunctive              sql.NullString
-	Firstpersonpluralsubjunctive                sql.NullString
-	Thirdpersonsingular                         sql.NullString
-	Pastimperfectfirstpersonsingular            sql.NullString
-	Indicativethirdpersonsingular               sql.NullString
-	Indicativepreteritesecondpersonplural       sql.NullString
-	Imperativesecondpersonsingular              sql.NullString
-	Indicativepastimperfectfirstpersonplural    sql.NullString
 	Pastimperfectsecondpersonplural             sql.NullString
-	Indicativesecondpersonplural                sql.NullString
-	Futurefirstpersonpluralsubjunctive          sql.NullString
-	Indicativefuturesecondpersonplural          sql.NullString
-	Indicativepresentfirstpersonplural          sql.NullString
-	Feminineparticipleplural                    sql.NullString
-	Indicativepastimperfectsecondpersonsingular sql.NullString
-	Indicativepreteritefirstpersonsingular      sql.NullString
-	Feminineparticiplesingular                  sql.NullString
-	Secondpersonsingularsubjunctive             sql.NullString
-	Firstpersonplural                           sql.NullString
-	Futurethirdpersonsingularsubjunctive        sql.NullString
-	Indicativepreteritethirdpersonplural        sql.NullString
-	Gerund                                      sql.NullString
-	Indicativepresentthirdpersonplural          sql.NullString
+	Thirdpersonsingular                         sql.NullString
+	Indicativefuturefirstpersonsingular         sql.NullString
+	Thirdpersonpluralsubjunctive                sql.NullString
+	Indicativefuturesecondpersonsingular        sql.NullString
 	Masculineparticiplesingular                 sql.NullString
+	Indicativepresentsecondpersonplural         sql.NullString
+	Indicativepreteritesecondpersonplural       sql.NullString
+	Masculineparticipleplural                   sql.NullString
+	Indicativepresentthirdpersonsingular        sql.NullString
+	Pastimperfectthirdpersonsingular            sql.NullString
+	Indicativepreteritefirstpersonplural        sql.NullString
+	Indicativepreteritethirdpersonsingular      sql.NullString
+	Indicativepresentthirdpersonplural          sql.NullString
+	Indicativepreteritesecondpersonsingular     sql.NullString
+	Pastimperfectfirstpersonplural              sql.NullString
+	Futurefirstpersonsingularsubjunctive        sql.NullString
+	Futuresecondpersonsingularsubjunctive       sql.NullString
+	Futurethirdpersonsingularsubjunctive        sql.NullString
+	Futurefirstpersonpluralsubjunctive          sql.NullString
+	Indicativepastimperfectthirdpersonsingular  sql.NullString
+	Indicativepastimperfectsecondpersonplural   sql.NullString
+	Indicativesecondpersonsingular              sql.NullString
+	Indicativepastimperfectthirdpersonplural    sql.NullString
+	Indicativepastimperfectfirstpersonsingular  sql.NullString
+	Indicativefuturesecondpersonplural          sql.NullString
+	Firstpersonplural                           sql.NullString
+	Firstpersonsingularsubjunctive              sql.NullString
+	Indicativepreteritefirstpersonsingular      sql.NullString
+	Indicativepresentfirstpersonplural          sql.NullString
 	Indicativefirstpersonsingular               sql.NullString
+	Feminineparticipleplural                    sql.NullString
+	Firstpersonsingular                         sql.NullString
+	Lastmodified                                sql.NullString
+	Pastimperfectthirdpersonplural              sql.NullString
+	Secondpersonpluralsubjunctive               sql.NullString
+	Feminineparticiplesingular                  sql.NullString
+	Indicativefuturefirstpersonplural           sql.NullString
+	Indicativepastimperfectsecondpersonsingular sql.NullString
+	Indicativefuturethirdpersonplural           sql.NullString
+	Imperativesecondpersonsingular              sql.NullString
+	Indicativepresentsecondpersonsingular       sql.NullString
+	Indicativepastimperfectfirstpersonplural    sql.NullString
+	Indicativesecondpersonplural                sql.NullString
+	Indicativethirdpersonplural                 sql.NullString
+	Firstpersonpluralsubjunctive                sql.NullString
+	Imperativefirstpersonplural                 sql.NullString
+	Secondpersonsingularsubjunctive             sql.NullString
+	Pastimperfectfirstpersonsingular            sql.NullString
+	Futuresecondpersonpluralsubjunctive         sql.NullString
+	Secondpersonsingular                        sql.NullString
+	Indicativefuturethirdpersonsingular         sql.NullString
+	Secondpersonplural                          sql.NullString
+	Thirdpersonsingularsubjunctive              sql.NullString
+	Indicativethirdpersonsingular               sql.NullString
+	Infinitive                                  sql.NullString
+	Thirdpersonplural                           sql.NullString
+	Imperativesecondpersonplural                sql.NullString
+	Participle                                  sql.NullString
+	Indicativepreteritethirdpersonplural        sql.NullString
+	Indicativepresentfirstpersonsingular        sql.NullString
+	Futurethirdpersonpluralsubjunctive          sql.NullString
+	Gerund                                      sql.NullString
+	Pastimperfectsecondpersonsingular           sql.NullString
 }
 
-type EtEstonianDbAdjective struct {
+type EtAdjective struct {
 	Wdlexemeid          sql.NullString
-	Adessiveplural      sql.NullString
-	Comitativesingular  sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Terminativesingular sql.NullString
-	Illativeplural      sql.NullString
-	Essivesingular      sql.NullString
-	Terminativeplural   sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Abessiveplural      sql.NullString
-	Translativesingular sql.NullString
 	Comitativeplural    sql.NullString
-	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
 	Allativesingular    sql.NullString
-	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Ablativesingular    sql.NullString
-	Elativeplural       sql.NullString
-	Ablativeplural      sql.NullString
-	Singular            sql.NullString
+	Comitativesingular  sql.NullString
 	Genitiveplural      sql.NullString
+	Abessiveplural      sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
 	Partitiveplural     sql.NullString
+	Adessiveplural      sql.NullString
+	Ablativeplural      sql.NullString
+	Terminativeplural   sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Essiveplural        sql.NullString
+	Ablativesingular    sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Terminativesingular sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
+	Singular            sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Allativeplural      sql.NullString
 }
 
-type EtEstonianDbAdverb struct {
+type EtAdverb struct {
 	Wdlexemeid          sql.NullString
-	Adessiveplural      sql.NullString
-	Comitativesingular  sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Terminativesingular sql.NullString
-	Illativeplural      sql.NullString
-	Essivesingular      sql.NullString
-	Terminativeplural   sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Abessiveplural      sql.NullString
-	Translativesingular sql.NullString
 	Comitativeplural    sql.NullString
-	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
 	Allativesingular    sql.NullString
-	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Ablativesingular    sql.NullString
-	Elativeplural       sql.NullString
-	Ablativeplural      sql.NullString
-	Singular            sql.NullString
+	Comitativesingular  sql.NullString
 	Genitiveplural      sql.NullString
+	Abessiveplural      sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
 	Partitiveplural     sql.NullString
+	Adessiveplural      sql.NullString
+	Ablativeplural      sql.NullString
+	Terminativeplural   sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Essiveplural        sql.NullString
+	Ablativesingular    sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Terminativesingular sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
+	Singular            sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Allativeplural      sql.NullString
 }
 
-type EtEstonianDbConjunction struct {
+type EtConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type EtEstonianDbNoun struct {
+type EtNoun struct {
 	Wdlexemeid          sql.NullString
+	Comitativeplural    sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
+	Allativesingular    sql.NullString
+	Comitativesingular  sql.NullString
+	Genitiveplural      sql.NullString
+	Abessiveplural      sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
+	Partitiveplural     sql.NullString
+	Adessiveplural      sql.NullString
+	Ablativeplural      sql.NullString
+	Terminativeplural   sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
 	Genitivepartitive   sql.NullString
-	Comitativesingular  sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Terminativesingular sql.NullString
-	Illativeplural      sql.NullString
-	Terminativeplural   sql.NullString
-	Essivesingular      sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Partitiveplural     sql.NullString
-	Abessiveplural      sql.NullString
-	Translativesingular sql.NullString
-	Comitativeplural    sql.NullString
 	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
-	Allativesingular    sql.NullString
-	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Elativeplural       sql.NullString
 	Ablativesingular    sql.NullString
-	Ablativeplural      sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Terminativesingular sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
 	Singular            sql.NullString
-	Genitiveplural      sql.NullString
-	Adessiveplural      sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Allativeplural      sql.NullString
 }
 
-type EtEstonianDbPersonalPronoun struct {
+type EtPersonalPronoun struct {
 	Wdlexemeid          sql.NullString
-	Comitativesingular  sql.NullString
 	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Terminativesingular sql.NullString
-	Illative            sql.NullString
-	Allative            sql.NullString
-	Essivesingular      sql.NullString
-	Adessivesingular    sql.NullString
-	Lastmodified        sql.NullString
-	Inessive            sql.NullString
-	Translative         sql.NullString
+	Allativesingular    sql.NullString
 	Comitative          sql.NullString
-	Essive              sql.NullString
-	Translativesingular sql.NullString
-	Partitive           sql.NullString
-	Inessivesingular    sql.NullString
-	Ablative            sql.NullString
-	Illativesingular    sql.NullString
-	Terminative         sql.NullString
-	Allativesingular    sql.NullString
-	Elative             sql.NullString
-	Adessive            sql.NullString
-	Nominative          sql.NullString
+	Comitativesingular  sql.NullString
 	Genitive            sql.NullString
-	Abessivesingular    sql.NullString
+	Adessive            sql.NullString
+	Inessive            sql.NullString
+	Partitive           sql.NullString
+	Allative            sql.NullString
+	Translative         sql.NullString
 	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
+	Ablative            sql.NullString
+	Terminative         sql.NullString
+	Illative            sql.NullString
+	Elative             sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Essive              sql.NullString
 	Ablativesingular    sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Terminativesingular sql.NullString
+	Translativesingular sql.NullString
 	Abessive            sql.NullString
+	Inessivesingular    sql.NullString
+	Nominative          sql.NullString
 }
 
-type EtEstonianDbPostposition struct {
+type EtPostposition struct {
 	Wdlexemeid          sql.NullString
-	Adessiveplural      sql.NullString
-	Comitativesingular  sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Terminativesingular sql.NullString
-	Illativeplural      sql.NullString
-	Essivesingular      sql.NullString
-	Terminativeplural   sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Abessiveplural      sql.NullString
-	Translativesingular sql.NullString
 	Comitativeplural    sql.NullString
-	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
 	Allativesingular    sql.NullString
-	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Ablativesingular    sql.NullString
-	Elativeplural       sql.NullString
-	Ablativeplural      sql.NullString
+	Comitativesingular  sql.NullString
 	Genitiveplural      sql.NullString
+	Abessiveplural      sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
 	Partitiveplural     sql.NullString
+	Adessiveplural      sql.NullString
+	Ablativeplural      sql.NullString
+	Terminativeplural   sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Essiveplural        sql.NullString
+	Ablativesingular    sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Terminativesingular sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Allativeplural      sql.NullString
 }
 
-type EtEstonianDbPreposition struct {
+type EtPreposition struct {
 	Wdlexemeid          sql.NullString
-	Adessiveplural      sql.NullString
-	Comitativesingular  sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Terminativesingular sql.NullString
-	Illativeplural      sql.NullString
-	Essivesingular      sql.NullString
-	Terminativeplural   sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Abessiveplural      sql.NullString
-	Translativesingular sql.NullString
 	Comitativeplural    sql.NullString
-	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
 	Allativesingular    sql.NullString
-	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Ablativesingular    sql.NullString
+	Comitativesingular  sql.NullString
+	Genitiveplural      sql.NullString
+	Abessiveplural      sql.NullString
 	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
+	Partitiveplural     sql.NullString
+	Adessiveplural      sql.NullString
 	Ablativeplural      sql.NullString
+	Terminativeplural   sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Essiveplural        sql.NullString
+	Ablativesingular    sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Terminativesingular sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
 	Singular            sql.NullString
-	Genitiveplural      sql.NullString
-	Partitiveplural     sql.NullString
-}
-
-type EtEstonianDbPronoun struct {
-	Wdlexemeid          sql.NullString
-	Adessiveplural      sql.NullString
-	Comitativesingular  sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Terminativesingular sql.NullString
-	Illativeplural      sql.NullString
-	Essivesingular      sql.NullString
-	Terminativeplural   sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Abessiveplural      sql.NullString
 	Translativesingular sql.NullString
-	Comitativeplural    sql.NullString
-	Essiveplural        sql.NullString
 	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
-	Allativesingular    sql.NullString
 	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Ablativesingular    sql.NullString
-	Elativeplural       sql.NullString
-	Ablativeplural      sql.NullString
-	Singular            sql.NullString
-	Genitiveplural      sql.NullString
-	Partitiveplural     sql.NullString
 }
 
-type EtEstonianDbProperNoun struct {
+type EtPronoun struct {
 	Wdlexemeid          sql.NullString
-	Adessiveplural      sql.NullString
-	Comitativesingular  sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Terminativesingular sql.NullString
-	Illativeplural      sql.NullString
-	Essivesingular      sql.NullString
-	Terminativeplural   sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Abessiveplural      sql.NullString
-	Translativesingular sql.NullString
 	Comitativeplural    sql.NullString
-	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
 	Allativesingular    sql.NullString
-	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Ablativesingular    sql.NullString
-	Elativeplural       sql.NullString
-	Ablativeplural      sql.NullString
-	Singular            sql.NullString
+	Comitativesingular  sql.NullString
 	Genitiveplural      sql.NullString
+	Abessiveplural      sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
 	Partitiveplural     sql.NullString
+	Adessiveplural      sql.NullString
+	Ablativeplural      sql.NullString
+	Terminativeplural   sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Essiveplural        sql.NullString
+	Ablativesingular    sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Terminativesingular sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
+	Singular            sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Allativeplural      sql.NullString
 }
 
-type EtEstonianDbVerb struct {
+type EtProperNoun struct {
+	Wdlexemeid          sql.NullString
+	Comitativeplural    sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
+	Allativesingular    sql.NullString
+	Comitativesingular  sql.NullString
+	Genitiveplural      sql.NullString
+	Abessiveplural      sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
+	Partitiveplural     sql.NullString
+	Adessiveplural      sql.NullString
+	Ablativeplural      sql.NullString
+	Terminativeplural   sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Essiveplural        sql.NullString
+	Ablativesingular    sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Terminativesingular sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
+	Singular            sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Allativeplural      sql.NullString
+}
+
+type EtVerb struct {
 	Wdlexemeid                                  sql.NullString
-	Supine                                      sql.NullString
-	Indicativepresentthirdpersonsingular        sql.NullString
-	Conditionalpastsecondpersonsingular         sql.NullString
-	Imperativepresentsecondpersonsingular       sql.NullString
-	Indicativepastimperfectfirstpersonsingular  sql.NullString
-	Conditionalpresentsecondpersonsingular      sql.NullString
-	Conditionalpresentthirdpersonplural         sql.NullString
-	Infinitive                                  sql.NullString
-	Indicativepresentsecondpersonsingular       sql.NullString
-	Pastpresentparticiple                       sql.NullString
-	Indicativepresentsecondpersonplural         sql.NullString
-	Indicativepastimperfect                     sql.NullString
-	Imperativepresentfirstpersonplural          sql.NullString
-	Indicativepresentfirstpersonsingular        sql.NullString
-	Indicativepastimperfectthirdpersonsingular  sql.NullString
-	Lastmodified                                sql.NullString
-	Conditionalpresentfirstpersonsingular       sql.NullString
-	Translativesupine                           sql.NullString
-	Conditionalpastsecondpersonplural           sql.NullString
-	Elativesupine                               sql.NullString
-	Indicativepastimperfectthirdpersonplural    sql.NullString
-	Activeconditionalpast                       sql.NullString
-	Imperativepresentsecondpersonplural         sql.NullString
-	Indicativepastimperfectsecondpersonplural   sql.NullString
-	Indicativepresent                           sql.NullString
-	Imperativepresent                           sql.NullString
-	Activepresent                               sql.NullString
-	Indicativepastimperfectfirstpersonplural    sql.NullString
-	Activeindicativepresent                     sql.NullString
-	Past                                        sql.NullString
-	Conditionalpresentsecondpersonplural        sql.NullString
-	Activepastpresentparticiple                 sql.NullString
-	Inessivesupine                              sql.NullString
-	Activepast                                  sql.NullString
-	Indicativepresentfirstpersonplural          sql.NullString
-	Conditionalpresentfirstpersonplural         sql.NullString
-	Indicativepastimperfectsecondpersonsingular sql.NullString
 	Conditionalpastfirstpersonsingular          sql.NullString
-	Conditionalpastfirstpersonplural            sql.NullString
-	Present                                     sql.NullString
-	Activepresentpresentparticiple              sql.NullString
-	Abessivesupine                              sql.NullString
-	Activeimperativepresent                     sql.NullString
-	Conditionalpresent                          sql.NullString
-	Conditionalpastthirdpersonplural            sql.NullString
-	Activeconditionalpresent                    sql.NullString
+	Indicativepresent                           sql.NullString
+	Imperativepresentsecondpersonplural         sql.NullString
+	Indicativepresentsecondpersonplural         sql.NullString
+	Supine                                      sql.NullString
+	Activeconditionalpast                       sql.NullString
+	Conditionalpresentthirdpersonplural         sql.NullString
+	Indicativepresentthirdpersonsingular        sql.NullString
+	Conditionalpresentfirstpersonplural         sql.NullString
 	Indicativepresentthirdpersonplural          sql.NullString
-	Conditionalpast                             sql.NullString
+	Activepast                                  sql.NullString
+	Activeconditionalpresent                    sql.NullString
+	Indicativepastimperfectthirdpersonsingular  sql.NullString
+	Imperativepresentfirstpersonplural          sql.NullString
+	Indicativepastimperfectsecondpersonplural   sql.NullString
+	Conditionalpastsecondpersonsingular         sql.NullString
+	Indicativepastimperfectfirstpersonsingular  sql.NullString
+	Elativesupine                               sql.NullString
+	Translativesupine                           sql.NullString
+	Indicativepresentfirstpersonplural          sql.NullString
 	Presentpresentparticiple                    sql.NullString
+	Activeindicativepresent                     sql.NullString
+	Conditionalpresentsecondpersonsingular      sql.NullString
+	Activepresentpresentparticiple              sql.NullString
+	Past                                        sql.NullString
+	Conditionalpresentfirstpersonsingular       sql.NullString
+	Conditionalpastfirstpersonplural            sql.NullString
+	Activepresent                               sql.NullString
+	Conditionalpastsecondpersonplural           sql.NullString
+	Lastmodified                                sql.NullString
+	Imperativepresent                           sql.NullString
+	Conditionalpresent                          sql.NullString
+	Activeimperativepresent                     sql.NullString
+	Indicativepastimperfectsecondpersonsingular sql.NullString
+	Conditionalpast                             sql.NullString
+	Indicativepresentsecondpersonsingular       sql.NullString
+	Indicativepastimperfectfirstpersonplural    sql.NullString
+	Inessivesupine                              sql.NullString
+	Indicativepastimperfect                     sql.NullString
+	Conditionalpresentsecondpersonplural        sql.NullString
+	Present                                     sql.NullString
+	Activepastpresentparticiple                 sql.NullString
+	Conditionalpastthirdpersonplural            sql.NullString
+	Infinitive                                  sql.NullString
+	Imperativepresentsecondpersonsingular       sql.NullString
+	Pastpresentparticiple                       sql.NullString
+	Indicativepresentfirstpersonsingular        sql.NullString
+	Indicativepastimperfectthirdpersonplural    sql.NullString
+	Abessivesupine                              sql.NullString
 }
 
-type EuBasqueDbAdjective struct {
+type EuAdjective struct {
 	Wdlexemeid                sql.NullString
-	Ablativeanimateplural     sql.NullString
-	Locativeinanimatesingular sql.NullString
-	Ablativeinanimatesingular sql.NullString
-	Genitivesingular          sql.NullString
-	Inessiveanimate           sql.NullString
-	Dative                    sql.NullString
-	Absolutiveindefinite      sql.NullString
-	Allativeanimatesingular   sql.NullString
-	Absolutiveplural          sql.NullString
-	Inessiveanimatesingular   sql.NullString
-	Dativeplural              sql.NullString
-	Instrumentalsingular      sql.NullString
-	Ablativeanimate           sql.NullString
-	Allativeinanimateplural   sql.NullString
-	Lastmodified              sql.NullString
-	Allativeanimate           sql.NullString
-	Instrumentalplural        sql.NullString
-	Partitive                 sql.NullString
-	Instrumental              sql.NullString
-	Inessiveinanimatesingular sql.NullString
-	Locativeinanimate         sql.NullString
-	Locativeinanimateplural   sql.NullString
 	Ablativeanimatesingular   sql.NullString
-	Inanimate                 sql.NullString
-	Animatesingular           sql.NullString
-	Allativeinanimatesingular sql.NullString
-	Allativeanimateplural     sql.NullString
-	Inanimateplural           sql.NullString
-	Ablativeinanimate         sql.NullString
-	Genitive                  sql.NullString
-	Plural                    sql.NullString
-	Animate                   sql.NullString
-	Absolutive                sql.NullString
-	Dativesingular            sql.NullString
-	Comparative               sql.NullString
-	Inessiveinanimate         sql.NullString
-	Ablativeinanimateplural   sql.NullString
+	Locativeinanimateplural   sql.NullString
+	Instrumentalplural        sql.NullString
+	Genitivesingular          sql.NullString
 	Allativeinanimate         sql.NullString
+	Ablativeanimate           sql.NullString
 	Inessiveinanimateplural   sql.NullString
 	Inanimatesingular         sql.NullString
-	Singular                  sql.NullString
-	Animateplural             sql.NullString
-	Inessiveanimateplural     sql.NullString
-	Genitiveplural            sql.NullString
-	Absolutivesingular        sql.NullString
+	Animate                   sql.NullString
+	Genitive                  sql.NullString
 	Superlative               sql.NullString
+	Genitiveplural            sql.NullString
+	Inessiveanimate           sql.NullString
+	Absolutiveplural          sql.NullString
+	Partitive                 sql.NullString
+	Comparative               sql.NullString
+	Inanimateplural           sql.NullString
+	Absolutive                sql.NullString
+	Allativeinanimatesingular sql.NullString
+	Inessiveinanimate         sql.NullString
+	Allativeanimateplural     sql.NullString
+	Dativeplural              sql.NullString
+	Inessiveanimateplural     sql.NullString
+	Lastmodified              sql.NullString
+	Inanimate                 sql.NullString
+	Locativeinanimate         sql.NullString
+	Ablativeinanimate         sql.NullString
+	Animatesingular           sql.NullString
+	Animateplural             sql.NullString
+	Locativeinanimatesingular sql.NullString
+	Plural                    sql.NullString
+	Allativeanimatesingular   sql.NullString
+	Instrumental              sql.NullString
+	Dativesingular            sql.NullString
+	Inessiveinanimatesingular sql.NullString
+	Ablativeinanimatesingular sql.NullString
+	Inessiveanimatesingular   sql.NullString
+	Allativeanimate           sql.NullString
+	Instrumentalsingular      sql.NullString
+	Ablativeinanimateplural   sql.NullString
+	Allativeinanimateplural   sql.NullString
+	Ablativeanimateplural     sql.NullString
+	Singular                  sql.NullString
+	Dative                    sql.NullString
+	Absolutiveindefinite      sql.NullString
+	Absolutivesingular        sql.NullString
 }
 
-type EuBasqueDbAdverb struct {
+type EuAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Genitive     sql.NullString
 }
 
-type EuBasqueDbConjunction struct {
+type EuConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type EuBasqueDbNoun struct {
+type EuNoun struct {
 	Wdlexemeid                sql.NullString
-	Ablativeanimateplural     sql.NullString
-	Locativeinanimatesingular sql.NullString
-	Ablativeinanimatesingular sql.NullString
-	Genitivesingular          sql.NullString
-	Inessiveanimate           sql.NullString
-	Dative                    sql.NullString
+	Ablativeanimatesingular   sql.NullString
 	Inessiveplural            sql.NullString
-	Allativeanimatesingular   sql.NullString
-	Absolutiveplural          sql.NullString
-	Inessiveanimatesingular   sql.NullString
-	Dativeplural              sql.NullString
-	Instrumentalsingular      sql.NullString
-	Allative                  sql.NullString
-	Ablativeanimate           sql.NullString
-	Allativeinanimateplural   sql.NullString
-	Lastmodified              sql.NullString
-	Inessive                  sql.NullString
-	Allativeanimate           sql.NullString
-	Instrumentalplural        sql.NullString
-	Partitive                 sql.NullString
-	Instrumental              sql.NullString
-	Inessiveinanimatesingular sql.NullString
-	Locativeinanimate         sql.NullString
 	Locativeinanimateplural   sql.NullString
-	Ablativeanimatesingular   sql.NullString
-	Inessivesingular          sql.NullString
-	Inanimate                 sql.NullString
-	Allativesingular          sql.NullString
-	Locative                  sql.NullString
-	Animatesingular           sql.NullString
-	Locativesingular          sql.NullString
-	Allativeinanimatesingular sql.NullString
-	Locativeplural            sql.NullString
-	Allativeanimateplural     sql.NullString
-	Inanimateplural           sql.NullString
-	Allativeplural            sql.NullString
-	Ablativeinanimate         sql.NullString
-	Genitive                  sql.NullString
-	Plural                    sql.NullString
-	Animate                   sql.NullString
-	Absolutive                sql.NullString
-	Dativesingular            sql.NullString
-	Inessiveinanimate         sql.NullString
-	Ablativeinanimateplural   sql.NullString
-	Allativeinanimate         sql.NullString
-	Inessiveinanimateplural   sql.NullString
-	Inanimatesingular         sql.NullString
-	Singular                  sql.NullString
-	Animateplural             sql.NullString
-	Inessiveanimateplural     sql.NullString
-	Genitiveplural            sql.NullString
-	Absolutivesingular        sql.NullString
-}
-
-type EuBasqueDbPostposition struct {
-	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
-}
-
-type EuBasqueDbPronoun struct {
-	Wdlexemeid                sql.NullString
-	Ablativeanimateplural     sql.NullString
-	Locativeinanimatesingular sql.NullString
-	Ablativeinanimatesingular sql.NullString
+	Instrumentalplural        sql.NullString
 	Genitivesingular          sql.NullString
-	Inessiveanimate           sql.NullString
-	Dative                    sql.NullString
-	Allativeanimatesingular   sql.NullString
-	Absolutiveplural          sql.NullString
-	Inessiveanimatesingular   sql.NullString
-	Dativeplural              sql.NullString
-	Instrumentalsingular      sql.NullString
-	Ablativeanimate           sql.NullString
-	Allativeinanimateplural   sql.NullString
-	Lastmodified              sql.NullString
-	Allativeanimate           sql.NullString
-	Instrumentalplural        sql.NullString
-	Partitive                 sql.NullString
-	Instrumental              sql.NullString
-	Inessiveinanimatesingular sql.NullString
-	Locativeinanimate         sql.NullString
-	Locativeinanimateplural   sql.NullString
-	Ablativeanimatesingular   sql.NullString
-	Inanimate                 sql.NullString
-	Animatesingular           sql.NullString
-	Allativeinanimatesingular sql.NullString
-	Allativeanimateplural     sql.NullString
-	Inanimateplural           sql.NullString
-	Ablativeinanimate         sql.NullString
-	Genitive                  sql.NullString
-	Plural                    sql.NullString
-	Animate                   sql.NullString
-	Absolutive                sql.NullString
-	Dativesingular            sql.NullString
-	Inessiveinanimate         sql.NullString
-	Ablativeinanimateplural   sql.NullString
 	Allativeinanimate         sql.NullString
+	Ablativeanimate           sql.NullString
+	Allativesingular          sql.NullString
 	Inessiveinanimateplural   sql.NullString
 	Inanimatesingular         sql.NullString
-	Singular                  sql.NullString
-	Animateplural             sql.NullString
-	Inessiveanimateplural     sql.NullString
+	Animate                   sql.NullString
+	Genitive                  sql.NullString
 	Genitiveplural            sql.NullString
+	Inessive                  sql.NullString
+	Inessiveanimate           sql.NullString
+	Absolutiveplural          sql.NullString
+	Partitive                 sql.NullString
+	Allative                  sql.NullString
+	Inanimateplural           sql.NullString
+	Absolutive                sql.NullString
+	Allativeinanimatesingular sql.NullString
+	Inessiveinanimate         sql.NullString
+	Allativeanimateplural     sql.NullString
+	Dativeplural              sql.NullString
+	Inessiveanimateplural     sql.NullString
+	Lastmodified              sql.NullString
+	Inanimate                 sql.NullString
+	Locativesingular          sql.NullString
+	Locativeinanimate         sql.NullString
+	Ablativeinanimate         sql.NullString
+	Animatesingular           sql.NullString
+	Animateplural             sql.NullString
+	Locativeinanimatesingular sql.NullString
+	Locativeplural            sql.NullString
+	Plural                    sql.NullString
+	Allativeanimatesingular   sql.NullString
+	Instrumental              sql.NullString
+	Dativesingular            sql.NullString
+	Inessiveinanimatesingular sql.NullString
+	Ablativeinanimatesingular sql.NullString
+	Inessiveanimatesingular   sql.NullString
+	Allativeanimate           sql.NullString
+	Instrumentalsingular      sql.NullString
+	Ablativeinanimateplural   sql.NullString
+	Allativeinanimateplural   sql.NullString
+	Ablativeanimateplural     sql.NullString
+	Singular                  sql.NullString
+	Dative                    sql.NullString
+	Inessivesingular          sql.NullString
+	Locative                  sql.NullString
 	Absolutivesingular        sql.NullString
+	Allativeplural            sql.NullString
 }
 
-type EuBasqueDbProperNoun struct {
+type EuPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type EuBasqueDbVerb struct {
+type EuPronoun struct {
+	Wdlexemeid                sql.NullString
+	Ablativeanimatesingular   sql.NullString
+	Locativeinanimateplural   sql.NullString
+	Instrumentalplural        sql.NullString
+	Genitivesingular          sql.NullString
+	Allativeinanimate         sql.NullString
+	Ablativeanimate           sql.NullString
+	Inessiveinanimateplural   sql.NullString
+	Inanimatesingular         sql.NullString
+	Animate                   sql.NullString
+	Genitive                  sql.NullString
+	Genitiveplural            sql.NullString
+	Inessiveanimate           sql.NullString
+	Absolutiveplural          sql.NullString
+	Partitive                 sql.NullString
+	Inanimateplural           sql.NullString
+	Absolutive                sql.NullString
+	Allativeinanimatesingular sql.NullString
+	Inessiveinanimate         sql.NullString
+	Allativeanimateplural     sql.NullString
+	Dativeplural              sql.NullString
+	Inessiveanimateplural     sql.NullString
+	Lastmodified              sql.NullString
+	Inanimate                 sql.NullString
+	Locativeinanimate         sql.NullString
+	Ablativeinanimate         sql.NullString
+	Animatesingular           sql.NullString
+	Animateplural             sql.NullString
+	Locativeinanimatesingular sql.NullString
+	Plural                    sql.NullString
+	Allativeanimatesingular   sql.NullString
+	Instrumental              sql.NullString
+	Dativesingular            sql.NullString
+	Inessiveinanimatesingular sql.NullString
+	Ablativeinanimatesingular sql.NullString
+	Inessiveanimatesingular   sql.NullString
+	Allativeanimate           sql.NullString
+	Instrumentalsingular      sql.NullString
+	Ablativeinanimateplural   sql.NullString
+	Allativeinanimateplural   sql.NullString
+	Ablativeanimateplural     sql.NullString
+	Singular                  sql.NullString
+	Dative                    sql.NullString
+	Absolutivesingular        sql.NullString
+}
+
+type EuProperNoun struct {
+	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
+}
+
+type EuVerb struct {
 	Wdlexemeid                      sql.NullString
+	Masculineconditionalsubjunctive sql.NullString
+	Pastsubjunctive                 sql.NullString
+	Masculineindicative             sql.NullString
+	Masculineindicativepast         sql.NullString
+	Masculineconditionalindicative  sql.NullString
+	Indicativepresent               sql.NullString
+	Masculinepastsubjunctive        sql.NullString
+	Feminineconditional             sql.NullString
 	Conditionalindicative           sql.NullString
+	Masculine                       sql.NullString
+	Feminineindicativepresent       sql.NullString
+	Femininepresentsubjunctive      sql.NullString
+	Feminineconditionalindicative   sql.NullString
+	Feminineimperativepresent       sql.NullString
+	Feminineconditionalsubjunctive  sql.NullString
+	Femininepresent                 sql.NullString
+	Gerundimperfective              sql.NullString
+	Feminineindicativepast          sql.NullString
+	Masculinepresent                sql.NullString
+	Masculineimperativepresent      sql.NullString
+	Masculineconditional            sql.NullString
+	Past                            sql.NullString
+	Masculinesubjunctive            sql.NullString
+	Feminine                        sql.NullString
+	Indicative                      sql.NullString
+	Lastmodified                    sql.NullString
+	Imperativepresent               sql.NullString
+	Indicativepast                  sql.NullString
+	Feminineindicative              sql.NullString
+	Masculineindicativepresent      sql.NullString
 	Presentsubjunctive              sql.NullString
 	Nominalized                     sql.NullString
-	Femininepastsubjunctive         sql.NullString
-	Subjunctive                     sql.NullString
-	Conditionalsubjunctive          sql.NullString
-	Femininepresent                 sql.NullString
-	Masculineconditionalindicative  sql.NullString
-	Feminineconditionalindicative   sql.NullString
-	Future                          sql.NullString
-	Femininepresentsubjunctive      sql.NullString
-	Feminineimperativepresent       sql.NullString
-	Masculinepastsubjunctive        sql.NullString
-	Masculineconditional            sql.NullString
-	Masculine                       sql.NullString
-	Masculineindicativepresent      sql.NullString
-	Feminineindicative              sql.NullString
-	Feminineconditionalsubjunctive  sql.NullString
-	Masculineindicativepast         sql.NullString
-	Lastmodified                    sql.NullString
-	Masculinepresentsubjunctive     sql.NullString
-	Femininepast                    sql.NullString
 	Conditional                     sql.NullString
-	Participle                      sql.NullString
-	Femininesubjunctive             sql.NullString
-	Masculinepresent                sql.NullString
-	Pastsubjunctive                 sql.NullString
-	Imperativepresent               sql.NullString
-	Indicativepresent               sql.NullString
-	Indicative                      sql.NullString
-	Past                            sql.NullString
-	Feminine                        sql.NullString
+	Masculinepresentsubjunctive     sql.NullString
 	Masculinepast                   sql.NullString
-	Feminineindicativepresent       sql.NullString
-	Masculineimperativepresent      sql.NullString
+	Femininesubjunctive             sql.NullString
+	Subjunctive                     sql.NullString
+	Future                          sql.NullString
 	Present                         sql.NullString
-	Feminineconditional             sql.NullString
-	Masculineconditionalsubjunctive sql.NullString
-	Indicativepast                  sql.NullString
-	Masculinesubjunctive            sql.NullString
-	Gerundimperfective              sql.NullString
-	Masculineindicative             sql.NullString
-	Feminineindicativepast          sql.NullString
+	Conditionalsubjunctive          sql.NullString
+	Femininepast                    sql.NullString
+	Participle                      sql.NullString
+	Femininepastsubjunctive         sql.NullString
 }
 
-type FaPersianDbAdjective struct {
+type FaAdjective struct {
 	Wdlexemeid              sql.NullString
-	Feminine                sql.NullString
 	Lastmodified            sql.NullString
 	Femininecomparative     sql.NullString
+	Femininesuperlative     sql.NullString
+	Animateplural           sql.NullString
+	Animatefeminine         sql.NullString
+	Plural                  sql.NullString
+	Animate                 sql.NullString
+	Animatesuperlative      sql.NullString
 	Singular                sql.NullString
 	Positive                sql.NullString
-	Femininesuperlative     sql.NullString
 	Animatepositive         sql.NullString
-	Femininepositive        sql.NullString
-	Animateplural           sql.NullString
-	Animatecomparative      sql.NullString
-	Animatefeminine         sql.NullString
-	Animatefemininepositive sql.NullString
-	Animatesuperlative      sql.NullString
-	Plural                  sql.NullString
-	Comparative             sql.NullString
-	Animate                 sql.NullString
 	Superlative             sql.NullString
+	Animatecomparative      sql.NullString
+	Animatefemininepositive sql.NullString
+	Femininepositive        sql.NullString
+	Comparative             sql.NullString
+	Feminine                sql.NullString
 }
 
-type FaPersianDbAdverb struct {
+type FaAdverb struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
 	Lastmodified sql.NullString
 	Comparative  sql.NullString
 	Superlative  sql.NullString
+	Positive     sql.NullString
 }
 
-type FaPersianDbConjunction struct {
+type FaConjunction struct {
 	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
 	Singular     sql.NullString
+	Lastmodified sql.NullString
 }
 
-type FaPersianDbNoun struct {
+type FaNoun struct {
 	Wdlexemeid                 sql.NullString
-	Accusativesingular         sql.NullString
-	Nominativedefiniteplural   sql.NullString
-	Nominativeplural           sql.NullString
 	Lastmodified               sql.NullString
-	Indefinitesingular         sql.NullString
 	Nominativesingular         sql.NullString
+	Indefinitesingular         sql.NullString
+	Animateplural              sql.NullString
+	Nominativedefinitesingular sql.NullString
+	Accusativeplural           sql.NullString
+	Nominativeplural           sql.NullString
+	Plural                     sql.NullString
+	Dual                       sql.NullString
+	Nominativedefiniteplural   sql.NullString
 	Singular                   sql.NullString
 	Positive                   sql.NullString
-	Indefiniteplural           sql.NullString
-	Animatepositive            sql.NullString
-	Animateplural              sql.NullString
-	Accusativeplural           sql.NullString
-	Nominativedefinitesingular sql.NullString
-	Plural                     sql.NullString
-	Comparative                sql.NullString
-	Dual                       sql.NullString
+	Accusativesingular         sql.NullString
 	Superlative                sql.NullString
+	Animatepositive            sql.NullString
+	Comparative                sql.NullString
+	Indefiniteplural           sql.NullString
 }
 
-type FaPersianDbPersonalPronoun struct {
+type FaPersonalPronoun struct {
 	Wdlexemeid    sql.NullString
+	Singular      sql.NullString
 	Lastmodified  sql.NullString
 	Plural        sql.NullString
 	Animateplural sql.NullString
-	Singular      sql.NullString
 }
 
-type FaPersianDbPostposition struct {
+type FaPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type FaPersianDbPreposition struct {
+type FaPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type FaPersianDbPronoun struct {
+type FaPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type FaPersianDbProperNoun struct {
+type FaProperNoun struct {
 	Wdlexemeid         sql.NullString
-	Definitesingular   sql.NullString
 	Lastmodified       sql.NullString
-	Indefinitesingular sql.NullString
-	Singular           sql.NullString
 	Nominativesingular sql.NullString
+	Indefinitesingular sql.NullString
 	Animateplural      sql.NullString
-	Nominative         sql.NullString
 	Plural             sql.NullString
+	Singular           sql.NullString
+	Nominative         sql.NullString
+	Definitesingular   sql.NullString
 }
 
-type FaPersianDbVerb struct {
+type FaVerb struct {
 	Wdlexemeid                                   sql.NullString
-	Presentparticiple                            sql.NullString
-	Indicativepastsecondpersonplural             sql.NullString
-	Indicativepastthirdpersonplural              sql.NullString
-	Activefutureparticiple                       sql.NullString
-	Indicativepastimperfectfirstpersonsingular   sql.NullString
-	Imperativepresentfirstpersonplural           sql.NullString
-	Presentthirdpersonsingularsubjunctive        sql.NullString
-	Indicativepastimperfectthirdpersonsingular   sql.NullString
-	Presentsecondpersonpluralsubjunctive         sql.NullString
-	Imperativesecondpersonplural                 sql.NullString
-	Secondpersonplural                           sql.NullString
-	Indicativethirdpersonplural                  sql.NullString
-	Indicativepastimperfectthirdpersonplural     sql.NullString
 	Imperativepresentsecondpersonplural          sql.NullString
-	Firstpersonsingular                          sql.NullString
-	Passivepastparticiple                        sql.NullString
-	Indicativefirstpersonplural                  sql.NullString
-	Indicativethirdpersonsingular                sql.NullString
-	Indicativesimplepresentthirdpersonsingular   sql.NullString
-	Indicativepastfirstpersonplural              sql.NullString
-	Indicativesecondpersonplural                 sql.NullString
-	Presentperfectsecondpersonplural             sql.NullString
-	Imperativepresentthirdpersonsingular         sql.NullString
-	Indicativepresentperfectthirdpersonplural    sql.NullString
-	Presentperfectthirdpersonplural              sql.NullString
 	Presentindicativethirdpersonplural           sql.NullString
-	Presentperfectsecondpersonsingular           sql.NullString
-	Indicativesimplepresentfirstpersonsingular   sql.NullString
-	Pastparticiple                               sql.NullString
-	Presentperfectfirstpersonsingular            sql.NullString
-	Perfectpresentfirstpersonplural              sql.NullString
-	Indicativeaoristfirstpersonplural            sql.NullString
-	Indicativepresentperfectsecondpersonsingular sql.NullString
-	Imperativepresentfirstpersonsingular         sql.NullString
-	Thirdpersonsingular                          sql.NullString
-	Presentindicativefirstpersonplural           sql.NullString
-	Indicativepastimperfectfirstpersonplural     sql.NullString
-	Imperative                                   sql.NullString
-	Activeinfinitive                             sql.NullString
-	Indicativepresentperfectfirstpersonplural    sql.NullString
-	Firstpersonplural                            sql.NullString
-	Presentthirdpersonpluralsubjunctive          sql.NullString
-	Perfectpresentthirdpersonsingular            sql.NullString
-	Indicativepresentperfectsecondpersonplural   sql.NullString
-	Indicativesimplepresentsecondpersonplural    sql.NullString
-	Indicativeaoristthirdpersonsingular          sql.NullString
-	Presentfirstpersonpluralsubjunctive          sql.NullString
-	Presentperfectthirdpersonsingular            sql.NullString
-	Perfectpresentsecondpersonplural             sql.NullString
-	Activepresentparticiple                      sql.NullString
-	Presentsecondpersonsingularsubjunctive       sql.NullString
-	Indicativesimplepresentthirdpersonplural     sql.NullString
-	Indicativepastsecondpersonsingular           sql.NullString
-	Pastwordstem                                 sql.NullString
-	Imperativepresentthirdpersonplural           sql.NullString
-	Secondpersonsingular                         sql.NullString
 	Presentthirdpersonsingular                   sql.NullString
-	Imperativepresentsecondpersonsingular        sql.NullString
-	Indicativeaoristsecondpersonplural           sql.NullString
-	Presentwordstem                              sql.NullString
-	Passivefutureparticiple                      sql.NullString
-	Lastmodified                                 sql.NullString
-	Perfectpresentsecondpersonsingular           sql.NullString
-	Indicativesimplepresentfirstpersonplural     sql.NullString
-	Indicativesimplepresentsecondpersonsingular  sql.NullString
-	Indicativeaoristsecondpersonsingular         sql.NullString
-	Imperativesecondpersonsingular               sql.NullString
-	Indicativepresentperfectfirstpersonsingular  sql.NullString
-	Indicativeaoristfirstpersonsingular          sql.NullString
-	Passivepresentparticiple                     sql.NullString
-	Indicativepastimperfectsecondpersonsingular  sql.NullString
-	Indicativepresentperfectthirdpersonsingular  sql.NullString
-	Gerund                                       sql.NullString
-	Infinitive                                   sql.NullString
-	Indicativepastthirdpersonsingular            sql.NullString
-	Presentindicativesecondpersonplural          sql.NullString
-	Thirdpersonplural                            sql.NullString
-	Indicativesecondpersonsingular               sql.NullString
-	Presentparticiple1                           sql.NullString
-	Perfectpresentfirstpersonsingular            sql.NullString
-	Indicativepastfirstpersonsingular            sql.NullString
-	Indicativepastimperfectsecondpersonplural    sql.NullString
-	Presentperfectfirstpersonplural              sql.NullString
-	Perfectpresentthirdpersonplural              sql.NullString
-	Pastparticiple1                              sql.NullString
+	Imperativepresentfirstpersonsingular         sql.NullString
 	Indicativeaoristthirdpersonplural            sql.NullString
-	Presentfirstpersonsingularsubjunctive        sql.NullString
+	Lastmodified                                 sql.NullString
+	Indicativepastthirdpersonplural              sql.NullString
+	Presentperfectfirstpersonplural              sql.NullString
+	Presentperfectfirstpersonsingular            sql.NullString
+	Indicativesimplepresentthirdpersonsingular   sql.NullString
+	Perfectpresentthirdpersonplural              sql.NullString
+	Imperativesecondpersonsingular               sql.NullString
+	Indicativethirdpersonplural                  sql.NullString
+	Indicativesimplepresentfirstpersonsingular   sql.NullString
+	Indicativethirdpersonsingular                sql.NullString
+	Thirdpersonplural                            sql.NullString
+	Indicativepastsecondpersonplural             sql.NullString
+	Imperativepresentthirdpersonsingular         sql.NullString
+	Activepresentparticiple                      sql.NullString
+	Presentperfectsecondpersonplural             sql.NullString
+	Indicativepastimperfectthirdpersonsingular   sql.NullString
+	Imperativepresentfirstpersonplural           sql.NullString
+	Indicativepastimperfectsecondpersonplural    sql.NullString
+	Pastwordstem                                 sql.NullString
+	Presentindicativefirstpersonplural           sql.NullString
+	Passivepresentparticiple                     sql.NullString
+	Indicativeaoristthirdpersonsingular          sql.NullString
+	Indicativepastsecondpersonsingular           sql.NullString
+	Indicativeaoristfirstpersonsingular          sql.NullString
+	Indicativepresentperfectthirdpersonplural    sql.NullString
+	Indicativesecondpersonplural                 sql.NullString
+	Indicativepastthirdpersonsingular            sql.NullString
+	Pastparticiple                               sql.NullString
+	Perfectpresentfirstpersonplural              sql.NullString
+	Indicativesimplepresentthirdpersonplural     sql.NullString
+	Infinitive                                   sql.NullString
+	Imperativepresentsecondpersonsingular        sql.NullString
+	Indicativepastfirstpersonsingular            sql.NullString
 	Indicativefirstpersonsingular                sql.NullString
+	Gerund                                       sql.NullString
+	Indicativepresentperfectfirstpersonplural    sql.NullString
+	Indicativepresentperfectthirdpersonsingular  sql.NullString
+	Presentperfectthirdpersonsingular            sql.NullString
+	Indicativepastfirstpersonplural              sql.NullString
+	Imperative                                   sql.NullString
+	Indicativepresentperfectsecondpersonsingular sql.NullString
+	Presentfirstpersonsingularsubjunctive        sql.NullString
+	Presentsecondpersonpluralsubjunctive         sql.NullString
+	Passivefutureparticiple                      sql.NullString
+	Perfectpresentthirdpersonsingular            sql.NullString
+	Presentperfectsecondpersonsingular           sql.NullString
+	Indicativeaoristfirstpersonplural            sql.NullString
+	Presentthirdpersonpluralsubjunctive          sql.NullString
+	Indicativepresentperfectfirstpersonsingular  sql.NullString
+	Passivepastparticiple                        sql.NullString
+	Presentparticiple                            sql.NullString
+	Presentfirstpersonpluralsubjunctive          sql.NullString
+	Indicativeaoristsecondpersonsingular         sql.NullString
+	Indicativesimplepresentsecondpersonsingular  sql.NullString
+	Imperativesecondpersonplural                 sql.NullString
+	Perfectpresentsecondpersonsingular           sql.NullString
+	Perfectpresentfirstpersonsingular            sql.NullString
+	Indicativepastimperfectthirdpersonplural     sql.NullString
+	Indicativesimplepresentsecondpersonplural    sql.NullString
+	Activefutureparticiple                       sql.NullString
+	Indicativesimplepresentfirstpersonplural     sql.NullString
+	Indicativefirstpersonplural                  sql.NullString
+	Thirdpersonsingular                          sql.NullString
+	Imperativepresentthirdpersonplural           sql.NullString
+	Indicativesecondpersonsingular               sql.NullString
+	Indicativepresentperfectsecondpersonplural   sql.NullString
+	Indicativepastimperfectfirstpersonsingular   sql.NullString
+	Firstpersonplural                            sql.NullString
+	Presentindicativesecondpersonplural          sql.NullString
+	Presentparticiple1                           sql.NullString
+	Perfectpresentsecondpersonplural             sql.NullString
+	Indicativeaoristsecondpersonplural           sql.NullString
+	Firstpersonsingular                          sql.NullString
+	Presentthirdpersonsingularsubjunctive        sql.NullString
+	Presentwordstem                              sql.NullString
+	Activeinfinitive                             sql.NullString
+	Presentperfectthirdpersonplural              sql.NullString
+	Indicativepastimperfectsecondpersonsingular  sql.NullString
+	Indicativepastimperfectfirstpersonplural     sql.NullString
+	Pastparticiple1                              sql.NullString
+	Secondpersonsingular                         sql.NullString
+	Secondpersonplural                           sql.NullString
+	Presentsecondpersonsingularsubjunctive       sql.NullString
 }
 
-type FiFinnishDbAdjective struct {
+type FiAdjective struct {
 	Wdlexemeid                    sql.NullString
-	Nominativesingularpositive    sql.NullString
-	Adessiveplural                sql.NullString
-	Genitivesingular              sql.NullString
-	Nominativesingular            sql.NullString
-	Inessiveplural                sql.NullString
-	Positive                      sql.NullString
-	Genitivepluralpositive        sql.NullString
-	Genitivesingularsuperlative   sql.NullString
-	Illativeplural                sql.NullString
-	Essivesingular                sql.NullString
-	Adessivesingular              sql.NullString
-	Nominativeplural              sql.NullString
-	Lastmodified                  sql.NullString
-	Abessiveplural                sql.NullString
-	Genitivepluralcomparative     sql.NullString
-	Translativesingular           sql.NullString
 	Comitativeplural              sql.NullString
-	Essiveplural                  sql.NullString
-	Nominativepluralsuperlative   sql.NullString
-	Inessivesingular              sql.NullString
-	Illativesingular              sql.NullString
-	Allativesingular              sql.NullString
-	Genitivesingularpositive      sql.NullString
-	Nominativesingularsuperlative sql.NullString
-	Allativeplural                sql.NullString
-	Translativeplural             sql.NullString
-	Plural                        sql.NullString
-	Nominativepluralcomparative   sql.NullString
-	Abessivesingular              sql.NullString
-	Partitivesingular             sql.NullString
+	Inessiveplural                sql.NullString
+	Genitivesingular              sql.NullString
+	Nominativesingularpositive    sql.NullString
 	Genitivesingularcomparative   sql.NullString
-	Comparative                   sql.NullString
-	Elativesingular               sql.NullString
-	Elativeplural                 sql.NullString
-	Ablativesingular              sql.NullString
-	Ablativeplural                sql.NullString
-	Nominativesingularcomparative sql.NullString
-	Genitivepluralsuperlative     sql.NullString
-	Singular                      sql.NullString
+	Allativesingular              sql.NullString
+	Genitivesingularsuperlative   sql.NullString
+	Superlative                   sql.NullString
 	Genitiveplural                sql.NullString
+	Comparative                   sql.NullString
+	Abessiveplural                sql.NullString
+	Nominativesingularsuperlative sql.NullString
+	Elativeplural                 sql.NullString
+	Partitivesingular             sql.NullString
+	Nominativepluralsuperlative   sql.NullString
 	Nominativepluralpositive      sql.NullString
 	Partitiveplural               sql.NullString
-	Superlative                   sql.NullString
+	Adessiveplural                sql.NullString
+	Ablativeplural                sql.NullString
+	Nominativepluralcomparative   sql.NullString
+	Essivesingular                sql.NullString
+	Adessivesingular              sql.NullString
+	Lastmodified                  sql.NullString
+	Nominativesingularcomparative sql.NullString
+	Genitivesingularpositive      sql.NullString
+	Plural                        sql.NullString
+	Essiveplural                  sql.NullString
+	Ablativesingular              sql.NullString
+	Abessivesingular              sql.NullString
+	Nominativesingular            sql.NullString
+	Elativesingular               sql.NullString
+	Illativesingular              sql.NullString
+	Translativeplural             sql.NullString
+	Nominativeplural              sql.NullString
+	Genitivepluralcomparative     sql.NullString
+	Illativeplural                sql.NullString
+	Singular                      sql.NullString
+	Positive                      sql.NullString
+	Translativesingular           sql.NullString
+	Genitivepluralsuperlative     sql.NullString
+	Inessivesingular              sql.NullString
+	Genitivepluralpositive        sql.NullString
+	Allativeplural                sql.NullString
 }
 
-type FiFinnishDbAdverb struct {
+type FiAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type FiFinnishDbConjunction struct {
+type FiConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type FiFinnishDbNoun struct {
+type FiNoun struct {
 	Wdlexemeid          sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Illativeplural      sql.NullString
-	Essivesingular      sql.NullString
-	Accusativesingular  sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Comitative          sql.NullString
-	Partitiveplural     sql.NullString
-	Abessiveplural      sql.NullString
-	Accusativeplural    sql.NullString
-	Translativesingular sql.NullString
-	Partitive           sql.NullString
 	Comitativeplural    sql.NullString
-	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
 	Allativesingular    sql.NullString
-	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Plural              sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Elativeplural       sql.NullString
-	Ablativesingular    sql.NullString
-	Ablativeplural      sql.NullString
+	Comitative          sql.NullString
 	Genitiveplural      sql.NullString
+	Partitive           sql.NullString
+	Abessiveplural      sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
+	Accusativeplural    sql.NullString
+	Partitiveplural     sql.NullString
 	Adessiveplural      sql.NullString
+	Ablativeplural      sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Plural              sql.NullString
+	Essiveplural        sql.NullString
+	Ablativesingular    sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
+	Accusativesingular  sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Allativeplural      sql.NullString
 }
 
-type FiFinnishDbPersonalPronoun struct {
+type FiPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
-	Ablative     sql.NullString
-	Elative      sql.NullString
 	Lastmodified sql.NullString
-	Adessive     sql.NullString
-	Translative  sql.NullString
-	Inessive     sql.NullString
+	Ablative     sql.NullString
 	Accusative   sql.NullString
-	Abessive     sql.NullString
-	Essive       sql.NullString
-	Allative     sql.NullString
-	Nominative   sql.NullString
 	Illative     sql.NullString
+	Essive       sql.NullString
 	Genitive     sql.NullString
+	Elative      sql.NullString
+	Abessive     sql.NullString
+	Adessive     sql.NullString
+	Inessive     sql.NullString
+	Nominative   sql.NullString
+	Allative     sql.NullString
+	Translative  sql.NullString
 	Partitive    sql.NullString
 }
 
-type FiFinnishDbPostposition struct {
+type FiPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type FiFinnishDbPronoun struct {
+type FiPronoun struct {
 	Wdlexemeid          sql.NullString
-	Adessiveplural      sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
 	Inessiveplural      sql.NullString
-	Illative            sql.NullString
-	Illativeplural      sql.NullString
-	Essivesingular      sql.NullString
-	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
-	Lastmodified        sql.NullString
-	Accusative          sql.NullString
-	Translative         sql.NullString
-	Inessive            sql.NullString
-	Abessiveplural      sql.NullString
-	Essive              sql.NullString
-	Translativesingular sql.NullString
-	Partitive           sql.NullString
-	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Ablative            sql.NullString
-	Illativesingular    sql.NullString
+	Genitivesingular    sql.NullString
 	Allativesingular    sql.NullString
-	Elative             sql.NullString
-	Adessive            sql.NullString
-	Allativeplural      sql.NullString
-	Nominative          sql.NullString
-	Translativeplural   sql.NullString
 	Genitive            sql.NullString
-	Abessivesingular    sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Elativeplural       sql.NullString
-	Ablativesingular    sql.NullString
-	Ablativeplural      sql.NullString
-	Allative            sql.NullString
+	Adessive            sql.NullString
 	Genitiveplural      sql.NullString
+	Inessive            sql.NullString
+	Partitive           sql.NullString
+	Allative            sql.NullString
+	Abessiveplural      sql.NullString
+	Translative         sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
+	Ablative            sql.NullString
+	Illative            sql.NullString
 	Partitiveplural     sql.NullString
-}
-
-type FiFinnishDbProperNoun struct {
-	Wdlexemeid          sql.NullString
-	Genitivesingular    sql.NullString
-	Nominativesingular  sql.NullString
-	Inessiveplural      sql.NullString
-	Illativeplural      sql.NullString
+	Adessiveplural      sql.NullString
+	Elative             sql.NullString
+	Ablativeplural      sql.NullString
 	Essivesingular      sql.NullString
 	Adessivesingular    sql.NullString
-	Nominativeplural    sql.NullString
 	Lastmodified        sql.NullString
-	Partitiveplural     sql.NullString
-	Translativesingular sql.NullString
+	Essive              sql.NullString
 	Essiveplural        sql.NullString
-	Inessivesingular    sql.NullString
-	Illativesingular    sql.NullString
-	Allativesingular    sql.NullString
-	Allativeplural      sql.NullString
-	Translativeplural   sql.NullString
-	Partitivesingular   sql.NullString
-	Elativesingular     sql.NullString
-	Elativeplural       sql.NullString
 	Ablativesingular    sql.NullString
-	Ablativeplural      sql.NullString
+	Abessivesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Accusative          sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Nominative          sql.NullString
+	Allativeplural      sql.NullString
+}
+
+type FiProperNoun struct {
+	Wdlexemeid          sql.NullString
+	Inessiveplural      sql.NullString
+	Genitivesingular    sql.NullString
+	Allativesingular    sql.NullString
 	Genitiveplural      sql.NullString
+	Elativeplural       sql.NullString
+	Partitivesingular   sql.NullString
+	Partitiveplural     sql.NullString
 	Adessiveplural      sql.NullString
+	Ablativeplural      sql.NullString
+	Essivesingular      sql.NullString
+	Adessivesingular    sql.NullString
+	Lastmodified        sql.NullString
+	Essiveplural        sql.NullString
+	Ablativesingular    sql.NullString
+	Nominativesingular  sql.NullString
+	Elativesingular     sql.NullString
+	Illativesingular    sql.NullString
+	Translativeplural   sql.NullString
+	Nominativeplural    sql.NullString
+	Illativeplural      sql.NullString
+	Translativesingular sql.NullString
+	Inessivesingular    sql.NullString
+	Allativeplural      sql.NullString
 }
 
-type FiFinnishDbVerb struct {
+type FiVerb struct {
 	Wdlexemeid                                  sql.NullString
-	Pastimperfectsecondpersonsingular           sql.NullString
-	Presentsecondpersonsingular                 sql.NullString
-	Activeconditionalpresentthirdpersonsingular sql.NullString
-	Indicativepresentthirdpersonsingular        sql.NullString
-	Indicativepassivepastimperfect              sql.NullString
-	Imperativepresentsecondpersonsingular       sql.NullString
-	Indicativepastimperfectfirstpersonsingular  sql.NullString
-	Passive                                     sql.NullString
-	Infinitive                                  sql.NullString
-	Imperativethirdpersonplural                 sql.NullString
-	Indicativepresentsecondpersonsingular       sql.NullString
-	Indicativepresentsecondpersonplural         sql.NullString
-	Indicativepresentfirstpersonsingular        sql.NullString
-	Indicativepastimperfectthirdpersonsingular  sql.NullString
-	Indicativepresentthirdperson                sql.NullString
-	Imperativesecondpersonplural                sql.NullString
-	Lastmodified                                sql.NullString
-	Imperativefirstpersonplural                 sql.NullString
-	Activepastparticiple                        sql.NullString
-	Indicativethirdpersonplural                 sql.NullString
-	Indicativepastimperfectthirdpersonplural    sql.NullString
-	Activeindicativepresentthirdpersonsingular  sql.NullString
-	Indicativesecondpersonsingular              sql.NullString
-	Indicativepastfirstpersonsingular           sql.NullString
-	Indicativefirstpersonplural                 sql.NullString
-	Imperativethirdpersonsingular               sql.NullString
-	Indicativepastimperfectsecondpersonplural   sql.NullString
-	Indicativepresent                           sql.NullString
-	Pastimperfectfirstpersonsingular            sql.NullString
-	Indicativethirdpersonsingular               sql.NullString
-	Imperativesecondpersonsingular              sql.NullString
-	Presentfirstpersonsingular                  sql.NullString
-	Indicativepastimperfectfirstpersonplural    sql.NullString
-	Indicativepassivepresent                    sql.NullString
-	Indicativepassivepast                       sql.NullString
-	Indicativesecondpersonplural                sql.NullString
-	Indicativepresentfirstpersonplural          sql.NullString
-	Indicativepastimperfectsecondpersonsingular sql.NullString
-	Imperativepresentthirdpersonsingular        sql.NullString
-	Illativeinfinitive                          sql.NullString
-	Activeindicativepastthirdpersonsingular     sql.NullString
 	Indicativepastimperfectthirdperson          sql.NullString
-	Activeindicativepresentfirstpersonsingular  sql.NullString
+	Indicativefirstpersonplural                 sql.NullString
+	Indicativepresent                           sql.NullString
+	Imperativethirdpersonsingular               sql.NullString
+	Activeindicativepastthirdpersonsingular     sql.NullString
+	Indicativepassivepast                       sql.NullString
+	Passive                                     sql.NullString
+	Indicativepresentsecondpersonplural         sql.NullString
+	Activeconditionalpresentthirdpersonsingular sql.NullString
+	Illativeinfinitive                          sql.NullString
+	Indicativepresentthirdpersonsingular        sql.NullString
+	Imperativepresentthirdpersonsingular        sql.NullString
+	Indicativepresentthirdperson                sql.NullString
 	Indicativepresentthirdpersonplural          sql.NullString
+	Indicativepastimperfectthirdpersonsingular  sql.NullString
+	Indicativepastimperfectsecondpersonplural   sql.NullString
+	Indicativesecondpersonsingular              sql.NullString
+	Indicativepastimperfectfirstpersonsingular  sql.NullString
+	Presentsecondpersonsingular                 sql.NullString
+	Indicativepresentfirstpersonplural          sql.NullString
 	Indicativefirstpersonsingular               sql.NullString
+	Activepastparticiple                        sql.NullString
+	Lastmodified                                sql.NullString
+	Activeindicativepresentthirdpersonsingular  sql.NullString
+	Indicativepassivepastimperfect              sql.NullString
+	Activeindicativepresentfirstpersonsingular  sql.NullString
+	Indicativepastimperfectsecondpersonsingular sql.NullString
+	Imperativesecondpersonsingular              sql.NullString
+	Indicativepresentsecondpersonsingular       sql.NullString
+	Indicativepastimperfectfirstpersonplural    sql.NullString
+	Indicativesecondpersonplural                sql.NullString
+	Indicativethirdpersonplural                 sql.NullString
+	Imperativethirdpersonplural                 sql.NullString
+	Imperativefirstpersonplural                 sql.NullString
+	Pastimperfectfirstpersonsingular            sql.NullString
+	Pastimperfectsecondpersonsingular           sql.NullString
+	Presentfirstpersonsingular                  sql.NullString
+	Indicativethirdpersonsingular               sql.NullString
+	Infinitive                                  sql.NullString
+	Imperativepresentsecondpersonsingular       sql.NullString
+	Indicativepastfirstpersonsingular           sql.NullString
+	Imperativesecondpersonplural                sql.NullString
+	Indicativepresentfirstpersonsingular        sql.NullString
+	Indicativepastimperfectthirdpersonplural    sql.NullString
+	Indicativepassivepresent                    sql.NullString
 }
 
-type FrFrenchDbAdjective struct {
+type FrAdjective struct {
 	Wdlexemeid                   sql.NullString
+	Lastmodified                 sql.NullString
+	Masculinesingular            sql.NullString
 	Masculine                    sql.NullString
 	Femininesingular             sql.NullString
-	Lastmodified                 sql.NullString
-	Feminineplural               sql.NullString
-	Singular                     sql.NullString
 	Masculinesingularcomparative sql.NullString
-	Masculinesingular            sql.NullString
 	Plural                       sql.NullString
+	Singular                     sql.NullString
+	Feminineplural               sql.NullString
 	Comparative                  sql.NullString
 	Masculineplural              sql.NullString
 }
 
-type FrFrenchDbAdverb struct {
+type FrAdverb struct {
 	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
 	Singular     sql.NullString
+	Lastmodified sql.NullString
 }
 
-type FrFrenchDbArticle struct {
+type FrArticle struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Plural       sql.NullString
 }
 
-type FrFrenchDbConjunction struct {
+type FrConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type FrFrenchDbNoun struct {
+type FrNoun struct {
 	Wdlexemeid                sql.NullString
-	Pluralsingular            sql.NullString
-	Masculinepluralsingular   sql.NullString
-	Femininemasculinesingular sql.NullString
-	Masculine                 sql.NullString
-	Feminine                  sql.NullString
-	Femininesingular          sql.NullString
 	Lastmodified              sql.NullString
-	Feminineplural            sql.NullString
-	Singular                  sql.NullString
-	Femininemasculineplural   sql.NullString
+	Masculinepluralsingular   sql.NullString
 	Masculinesingular         sql.NullString
+	Masculine                 sql.NullString
+	Femininesingular          sql.NullString
 	Plural                    sql.NullString
+	Pluralsingular            sql.NullString
+	Singular                  sql.NullString
+	Femininemasculinesingular sql.NullString
+	Feminineplural            sql.NullString
 	Masculineplural           sql.NullString
+	Femininemasculineplural   sql.NullString
+	Feminine                  sql.NullString
 }
 
-type FrFrenchDbPersonalPronoun struct {
+type FrPersonalPronoun struct {
 	Wdlexemeid         sql.NullString
-	Nominativeplural   sql.NullString
 	Lastmodified       sql.NullString
-	Oblique            sql.NullString
 	Nominativesingular sql.NullString
+	Nominativeplural   sql.NullString
+	Oblique            sql.NullString
 	Nominative         sql.NullString
 }
 
-type FrFrenchDbPreposition struct {
+type FrPreposition struct {
 	Wdlexemeid        sql.NullString
-	Femininesingular  sql.NullString
-	Lastmodified      sql.NullString
-	Plural            sql.NullString
 	Masculinesingular sql.NullString
+	Lastmodified      sql.NullString
+	Femininesingular  sql.NullString
+	Plural            sql.NullString
 }
 
-type FrFrenchDbPronoun struct {
+type FrPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type FrFrenchDbProperNoun struct {
+type FrProperNoun struct {
 	Wdlexemeid         sql.NullString
-	Femininesingular   sql.NullString
 	Lastmodified       sql.NullString
-	Feminineplural     sql.NullString
-	Singular           sql.NullString
 	Nominativesingular sql.NullString
-	Nominative         sql.NullString
 	Masculinesingular  sql.NullString
+	Femininesingular   sql.NullString
 	Plural             sql.NullString
+	Singular           sql.NullString
+	Feminineplural     sql.NullString
+	Nominative         sql.NullString
 	Masculineplural    sql.NullString
 }
 
-type FrFrenchDbVerb struct {
+type FrVerb struct {
 	Wdlexemeid                                      sql.NullString
-	Presentparticiple                               sql.NullString
-	Masculinepastparticiplesingular                 sql.NullString
-	Indicativepreteritethirdpersonsingular          sql.NullString
-	Presentsecondpersonsingularsubjunctive          sql.NullString
-	Indicativepresentthirdpersonsingular            sql.NullString
-	Imperativepresentsecondpersonsingular           sql.NullString
-	Indicativepreteritesecondpersonsingular         sql.NullString
-	Indicativesimplefuturesecondpersonplural        sql.NullString
-	Conditionalpresentsecondpersonsingular          sql.NullString
-	Conditionalpresentthirdpersonplural             sql.NullString
-	Indicativefuturesimplefuturesecondpersonplural  sql.NullString
-	Infinitive                                      sql.NullString
-	Indicativesimplefuturefirstpersonplural         sql.NullString
-	Indicativesimplefuturethirdpersonplural         sql.NullString
-	Indicativepreteritefirstpersonplural            sql.NullString
-	Indicativepresentsecondpersonsingular           sql.NullString
-	Imperativepresentfirstpersonplural              sql.NullString
-	Indicativepresentsecondpersonplural             sql.NullString
-	Indicativeimperfectfirstpersonplural            sql.NullString
-	Indicativepresentfirstpersonsingular            sql.NullString
-	Presentthirdpersonsingularsubjunctive           sql.NullString
-	Presentsecondpersonpluralsubjunctive            sql.NullString
-	Lastmodified                                    sql.NullString
-	Conditionalpresentfirstpersonsingular           sql.NullString
-	Femininepastparticipleplural                    sql.NullString
-	Indicativesimplefuturefirstpersonsingular       sql.NullString
-	Femininepastparticiplepastparticiplesingular    sql.NullString
-	Presentparticiple1                              sql.NullString
-	Imperativepresentsecondpersonplural             sql.NullString
-	Imperfectfirstpersonsingularsubjunctive         sql.NullString
-	Masculinepastparticipleplural                   sql.NullString
-	Indicativepreteritesecondpersonplural           sql.NullString
-	Presentparticiplepresentparticiple              sql.NullString
-	Indicativefuturesimplefuturefirstpersonsingular sql.NullString
-	Indicativefuturesimplefuturethirdpersonplural   sql.NullString
-	Masculinepastparticiplepastparticiplesingular   sql.NullString
-	Conditionalpresentsecondpersonplural            sql.NullString
-	Indicativefuturesimplefuturethirdpersonsingular sql.NullString
-	Imperfectthirdpersonsingularsubjunctive         sql.NullString
-	Imperfectthirdpersonpluralsubjunctive           sql.NullString
-	Indicativeimperfectsecondpersonplural           sql.NullString
-	Conditionalpresentthirdpersonsingular           sql.NullString
-	Indicativepresentfirstpersonplural              sql.NullString
-	Femininepastparticiplesingular                  sql.NullString
-	Indicativeimperfectsecondpersonsingular         sql.NullString
-	Imperfectsecondpersonpluralsubjunctive          sql.NullString
-	Conditionalpresentfirstpersonplural             sql.NullString
-	Indicativepreteritefirstpersonsingular          sql.NullString
-	Indicativeimperfectthirdpersonplural            sql.NullString
-	Pastparticiple                                  sql.NullString
-	Presentthirdpersonpluralsubjunctive             sql.NullString
-	Imperfectfirstpersonpluralsubjunctive           sql.NullString
 	Imperfectsecondpersonsingularsubjunctive        sql.NullString
-	Indicativeimperfectthirdpersonsingular          sql.NullString
-	Presentfirstpersonpluralsubjunctive             sql.NullString
-	Indicativesimplefuturesecondpersonsingular      sql.NullString
-	Indicativepreteritethirdpersonplural            sql.NullString
-	Gerund                                          sql.NullString
-	Indicativeimperfectfirstpersonsingular          sql.NullString
-	Presentfirstpersonsingularsubjunctive           sql.NullString
-	Indicativepresentthirdpersonplural              sql.NullString
+	Conditionalpresentthirdpersonsingular           sql.NullString
+	Indicativeimperfectfirstpersonplural            sql.NullString
 	Indicativesimplefuturethirdpersonsingular       sql.NullString
+	Presentparticiplepresentparticiple              sql.NullString
+	Imperativepresentsecondpersonplural             sql.NullString
+	Indicativepresentsecondpersonplural             sql.NullString
+	Indicativepreteritesecondpersonplural           sql.NullString
+	Indicativesimplefuturefirstpersonsingular       sql.NullString
+	Imperfectthirdpersonpluralsubjunctive           sql.NullString
+	Indicativepresentthirdpersonsingular            sql.NullString
+	Conditionalpresentthirdpersonplural             sql.NullString
+	Indicativepreteritefirstpersonplural            sql.NullString
+	Indicativepreteritethirdpersonsingular          sql.NullString
+	Indicativepresentthirdpersonplural              sql.NullString
+	Indicativepreteritesecondpersonsingular         sql.NullString
+	Conditionalpresentfirstpersonplural             sql.NullString
+	Indicativefuturesimplefuturethirdpersonplural   sql.NullString
+	Imperativepresentfirstpersonplural              sql.NullString
+	Indicativesimplefuturesecondpersonsingular      sql.NullString
+	Imperfectthirdpersonsingularsubjunctive         sql.NullString
+	Indicativesimplefuturethirdpersonplural         sql.NullString
+	Femininepastparticipleplural                    sql.NullString
+	Femininepastparticiplepastparticiplesingular    sql.NullString
+	Imperfectsecondpersonpluralsubjunctive          sql.NullString
+	Presentfirstpersonsingularsubjunctive           sql.NullString
+	Indicativeimperfectsecondpersonplural           sql.NullString
+	Indicativepreteritefirstpersonsingular          sql.NullString
+	Indicativepresentfirstpersonplural              sql.NullString
+	Presentparticiple                               sql.NullString
+	Presentsecondpersonpluralsubjunctive            sql.NullString
+	Conditionalpresentsecondpersonsingular          sql.NullString
+	Indicativeimperfectthirdpersonplural            sql.NullString
+	Indicativesimplefuturefirstpersonplural         sql.NullString
+	Conditionalpresentfirstpersonsingular           sql.NullString
+	Imperfectfirstpersonsingularsubjunctive         sql.NullString
+	Presentthirdpersonsingularsubjunctive           sql.NullString
+	Masculinepastparticiplesingular                 sql.NullString
+	Lastmodified                                    sql.NullString
+	Indicativeimperfectfirstpersonsingular          sql.NullString
+	Indicativeimperfectthirdpersonsingular          sql.NullString
+	Indicativefuturesimplefuturethirdpersonsingular sql.NullString
+	Masculinepastparticipleplural                   sql.NullString
+	Indicativesimplefuturesecondpersonplural        sql.NullString
+	Presentthirdpersonpluralsubjunctive             sql.NullString
+	Femininepastparticiplesingular                  sql.NullString
+	Indicativepresentsecondpersonsingular           sql.NullString
+	Conditionalpresentsecondpersonplural            sql.NullString
+	Imperfectfirstpersonpluralsubjunctive           sql.NullString
+	Indicativefuturesimplefuturesecondpersonplural  sql.NullString
+	Masculinepastparticiplepastparticiplesingular   sql.NullString
+	Presentparticiple1                              sql.NullString
+	Pastparticiple                                  sql.NullString
+	Gerund                                          sql.NullString
+	Presentfirstpersonpluralsubjunctive             sql.NullString
+	Infinitive                                      sql.NullString
+	Presentsecondpersonsingularsubjunctive          sql.NullString
+	Imperativepresentsecondpersonsingular           sql.NullString
+	Indicativeimperfectsecondpersonsingular         sql.NullString
+	Indicativepreteritethirdpersonplural            sql.NullString
+	Indicativepresentfirstpersonsingular            sql.NullString
+	Indicativefuturesimplefuturefirstpersonsingular sql.NullString
 }
 
-type HaHausaDbAdjective struct {
+type HaAdjective struct {
 	Wdlexemeid        sql.NullString
-	Femininesingular  sql.NullString
-	Lastmodified      sql.NullString
-	Plural            sql.NullString
 	Masculinesingular sql.NullString
+	Lastmodified      sql.NullString
+	Femininesingular  sql.NullString
+	Plural            sql.NullString
 }
 
-type HaHausaDbAdverb struct {
+type HaAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type HaHausaDbConjunction struct {
+type HaConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type HaHausaDbNoun struct {
+type HaNoun struct {
 	Wdlexemeid   sql.NullString
+	Singular     sql.NullString
 	Lastmodified sql.NullString
 	Plural       sql.NullString
-	Singular     sql.NullString
 }
 
-type HaHausaDbPersonalPronoun struct {
+type HaPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type HaHausaDbPreposition struct {
+type HaPreposition struct {
 	Wdlexemeid   sql.NullString
+	Singular     sql.NullString
 	Lastmodified sql.NullString
 	Plural       sql.NullString
-	Singular     sql.NullString
 }
 
-type HaHausaDbProperNoun struct {
+type HaProperNoun struct {
 	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
 	Singular     sql.NullString
+	Lastmodified sql.NullString
 }
 
-type HaHausaDbVerb struct {
+type HaVerb struct {
 	Wdlexemeid         sql.NullString
-	Lastmodified       sql.NullString
 	Imperativesingular sql.NullString
+	Lastmodified       sql.NullString
 	Feminine           sql.NullString
 }
 
-type HeHebrewDbAdjective struct {
+type HeAdjective struct {
 	Wdlexemeid                 sql.NullString
-	Femininesingular           sql.NullString
 	Lastmodified               sql.NullString
+	Feminineconstructplural    sql.NullString
+	Masculinesingular          sql.NullString
+	Femininesingular           sql.NullString
+	Singular                   sql.NullString
+	Feminineconstructsingular  sql.NullString
 	Feminineplural             sql.NullString
 	Masculineconstructsingular sql.NullString
-	Singular                   sql.NullString
-	Masculineconstructplural   sql.NullString
-	Masculinesingular          sql.NullString
-	Feminineconstructplural    sql.NullString
 	Masculineplural            sql.NullString
-	Feminineconstructsingular  sql.NullString
+	Masculineconstructplural   sql.NullString
 }
 
-type HeHebrewDbAdverb struct {
+type HeAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type HeHebrewDbArticle struct {
+type HeArticle struct {
 	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
 	Definite     sql.NullString
-	Lastmodified sql.NullString
 }
 
-type HeHebrewDbConjunction struct {
+type HeConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type HeHebrewDbNoun struct {
+type HeNoun struct {
 	Wdlexemeid                         sql.NullString
-	Constructsingular                  sql.NullString
-	Femininemasculinesingular          sql.NullString
-	Femininesingular                   sql.NullString
-	Femininemasculineconstructsingular sql.NullString
-	Femininemasculineplural            sql.NullString
-	Femininedual                       sql.NullString
-	Masculine                          sql.NullString
-	Masculinedual                      sql.NullString
-	Feminineconstructdual              sql.NullString
-	Lastmodified                       sql.NullString
-	Masculineconstructpluralsingular   sql.NullString
-	Masculineplural                    sql.NullString
-	Feminineconstructsingular          sql.NullString
-	Feminine                           sql.NullString
-	Feminineplural                     sql.NullString
-	Constructplural                    sql.NullString
-	Femininemasculineconstructplural   sql.NullString
-	Plural                             sql.NullString
 	Feminineconstructplural            sql.NullString
-	Masculineconstructdual             sql.NullString
-	Femininemasculine                  sql.NullString
-	Masculineconstructsingular         sql.NullString
-	Singular                           sql.NullString
-	Masculineconstructplural           sql.NullString
+	Constructsingular                  sql.NullString
 	Masculinesingular                  sql.NullString
+	Masculine                          sql.NullString
+	Constructplural                    sql.NullString
+	Feminineconstructsingular          sql.NullString
+	Masculineconstructpluralsingular   sql.NullString
+	Masculinedual                      sql.NullString
+	Femininesingular                   sql.NullString
+	Masculineconstructdual             sql.NullString
+	Femininemasculineconstructplural   sql.NullString
+	Femininemasculineplural            sql.NullString
+	Feminine                           sql.NullString
+	Femininemasculineconstructsingular sql.NullString
+	Lastmodified                       sql.NullString
+	Femininemasculine                  sql.NullString
+	Plural                             sql.NullString
+	Femininemasculinesingular          sql.NullString
+	Feminineplural                     sql.NullString
+	Masculineconstructplural           sql.NullString
+	Femininedual                       sql.NullString
+	Singular                           sql.NullString
+	Feminineconstructdual              sql.NullString
+	Masculineconstructsingular         sql.NullString
+	Masculineplural                    sql.NullString
 }
 
-type HeHebrewDbPreposition struct {
+type HePreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type HeHebrewDbPronoun struct {
+type HePronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type HeHebrewDbProperNoun struct {
+type HeProperNoun struct {
 	Wdlexemeid                 sql.NullString
-	Feminine                   sql.NullString
-	Femininesingular           sql.NullString
 	Lastmodified               sql.NullString
+	Nominativesingular         sql.NullString
+	Feminineconstructplural    sql.NullString
+	Masculinesingular          sql.NullString
+	Femininesingular           sql.NullString
+	Singular                   sql.NullString
+	Feminineconstructsingular  sql.NullString
 	Feminineplural             sql.NullString
 	Masculineconstructsingular sql.NullString
-	Singular                   sql.NullString
-	Nominativesingular         sql.NullString
-	Masculineconstructplural   sql.NullString
-	Masculinesingular          sql.NullString
-	Feminineconstructplural    sql.NullString
 	Masculineplural            sql.NullString
-	Feminineconstructsingular  sql.NullString
+	Masculineconstructplural   sql.NullString
+	Feminine                   sql.NullString
 }
 
-type HeHebrewDbVerb struct {
+type HeVerb struct {
 	Wdlexemeid                              sql.NullString
-	Masculinepastthirdpersonsingular        sql.NullString
-	Femininepastsecondpersonplural          sql.NullString
-	Masculinefuturesecondpersonsingular     sql.NullString
-	Presentsingular                         sql.NullString
-	Infinitive                              sql.NullString
-	Masculinefuturethirdperson              sql.NullString
-	Femininefuturethirdpersonsingular       sql.NullString
-	Femininepresentconstructplural          sql.NullString
-	Femininepastthirdpersonplural           sql.NullString
-	Masculinepastsecondpersonsingular       sql.NullString
-	Masculinefuturethirdpersonsingular      sql.NullString
-	Masculinepastthirdpersonplural          sql.NullString
-	Pastfirstpersonsingular                 sql.NullString
-	Futurefirstpersonsingular               sql.NullString
-	Lastmodified                            sql.NullString
-	Femininepresentconstructsingular        sql.NullString
-	Feminineimperativesecondpersonsingular  sql.NullString
-	Femininepastsecondpersonsingular        sql.NullString
-	Presentconstructplural                  sql.NullString
-	Pastthirdpersonplural                   sql.NullString
-	Presentplural                           sql.NullString
-	Firstpersonsingular                     sql.NullString
-	Futurefirstpersonplural                 sql.NullString
 	Masculineimperativesecondpersonsingular sql.NullString
-	Femininefuturesecondpersonsingular      sql.NullString
-	Pastfirstpersonplural                   sql.NullString
-	Masculinefuturethirdpersonplural        sql.NullString
+	Masculinepastthirdpersonplural          sql.NullString
 	Presentconstruct                        sql.NullString
-	Masculinepresentconstructsingular       sql.NullString
-	Masculinepresentsingular                sql.NullString
-	Feminineimperativesecondpersonplural    sql.NullString
-	Femininepresentplural                   sql.NullString
-	Present                                 sql.NullString
-	Masculineimperativesecondpersonplural   sql.NullString
-	Femininefuturethirdpersonplural         sql.NullString
-	Firstpersonplural                       sql.NullString
-	Masculinepresentconstructplural         sql.NullString
-	Femininepresentsingular                 sql.NullString
-	Femininepastthirdpersonsingular         sql.NullString
-	Masculinefuturesecondpersonplural       sql.NullString
-	Commonsingular                          sql.NullString
-	Masculinepastsecondpersonplural         sql.NullString
-	Masculinepresentplural                  sql.NullString
-	Masculineimperativeplural               sql.NullString
-	Presentconstructsingular                sql.NullString
 	Femininefuturesecondpersonplural        sql.NullString
+	Presentconstructplural                  sql.NullString
+	Presentconstructsingular                sql.NullString
+	Pastfirstpersonsingular                 sql.NullString
+	Masculinepresentsingular                sql.NullString
+	Masculinefuturesecondpersonplural       sql.NullString
+	Femininepresentplural                   sql.NullString
+	Futurefirstpersonsingular               sql.NullString
+	Femininefuturethirdpersonplural         sql.NullString
+	Pastthirdpersonplural                   sql.NullString
+	Femininepastsecondpersonsingular        sql.NullString
+	Masculineimperativesecondpersonplural   sql.NullString
+	Presentsingular                         sql.NullString
+	Firstpersonplural                       sql.NullString
+	Pastfirstpersonplural                   sql.NullString
+	Femininepresentconstructplural          sql.NullString
+	Masculinepastsecondpersonsingular       sql.NullString
+	Femininepastsecondpersonplural          sql.NullString
+	Femininepastthirdpersonplural           sql.NullString
+	Masculinepastsecondpersonplural         sql.NullString
+	Firstpersonsingular                     sql.NullString
+	Femininefuturethirdpersonsingular       sql.NullString
+	Lastmodified                            sql.NullString
+	Masculinefuturethirdperson              sql.NullString
+	Femininefuturesecondpersonsingular      sql.NullString
+	Feminineimperativesecondpersonsingular  sql.NullString
+	Masculinefuturethirdpersonplural        sql.NullString
+	Presentplural                           sql.NullString
+	Masculinepresentconstructsingular       sql.NullString
+	Femininepastthirdpersonsingular         sql.NullString
+	Masculineimperativeplural               sql.NullString
+	Feminineimperativesecondpersonplural    sql.NullString
+	Masculinefuturethirdpersonsingular      sql.NullString
+	Masculinefuturesecondpersonsingular     sql.NullString
+	Present                                 sql.NullString
+	Femininepresentconstructsingular        sql.NullString
+	Commonsingular                          sql.NullString
+	Infinitive                              sql.NullString
+	Femininepresentsingular                 sql.NullString
+	Futurefirstpersonplural                 sql.NullString
+	Masculinepresentplural                  sql.NullString
+	Masculinepresentconstructplural         sql.NullString
+	Masculinepastthirdpersonsingular        sql.NullString
 }
 
-type IDIndonesianDbAdjective struct {
+type IDAdjective struct {
 	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
 	Wordstem     sql.NullString
-	Lastmodified sql.NullString
-	Positive     sql.NullString
 	Passive      sql.NullString
-	Active       sql.NullString
-	Comparative  sql.NullString
+	Positive     sql.NullString
 	Superlative  sql.NullString
+	Comparative  sql.NullString
+	Active       sql.NullString
 }
 
-type IDIndonesianDbAdverb struct {
+type IDAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type IDIndonesianDbArticle struct {
+type IDArticle struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type IDIndonesianDbConjunction struct {
+type IDConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type IDIndonesianDbNoun struct {
+type IDNoun struct {
 	Wdlexemeid     sql.NullString
-	Pluralsingular sql.NullString
-	Phrase         sql.NullString
-	Wordstem       sql.NullString
 	Lastmodified   sql.NullString
-	Singular       sql.NullString
+	Wordstem       sql.NullString
 	Passive        sql.NullString
-	Active         sql.NullString
 	Plural         sql.NullString
+	Pluralsingular sql.NullString
+	Singular       sql.NullString
+	Phrase         sql.NullString
 	Comparative    sql.NullString
+	Active         sql.NullString
 }
 
-type IDIndonesianDbPreposition struct {
+type IDPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type IDIndonesianDbPronoun struct {
+type IDPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type IDIndonesianDbVerb struct {
+type IDVerb struct {
 	Wdlexemeid          sql.NullString
-	Wordstem            sql.NullString
-	Passivesecondperson sql.NullString
 	Lastmodified        sql.NullString
-	Passive             sql.NullString
-	Active              sql.NullString
 	Passivefirstperson  sql.NullString
-	Imperative          sql.NullString
+	Wordstem            sql.NullString
+	Passive             sql.NullString
 	Infinitive          sql.NullString
+	Passivesecondperson sql.NullString
+	Imperative          sql.NullString
 	Nominative          sql.NullString
 	Comparative         sql.NullString
+	Active              sql.NullString
 }
 
-type IgIgboDbAdjective struct {
+type IgAdjective struct {
 	Wdlexemeid             sql.NullString
-	Pluralsingular         sql.NullString
-	Presentparticiple      sql.NullString
-	Pastparticiple         sql.NullString
-	Presentcontinuous      sql.NullString
-	Past                   sql.NullString
-	Comparativesuperlative sql.NullString
 	Lastmodified           sql.NullString
+	Pastparticiple         sql.NullString
+	Present                sql.NullString
+	Plural                 sql.NullString
+	Pluralsingular         sql.NullString
+	Comparativesuperlative sql.NullString
+	Presentparticiple      sql.NullString
 	Singular               sql.NullString
 	Positive               sql.NullString
-	Gerund                 sql.NullString
-	Plural                 sql.NullString
-	Comparative            sql.NullString
 	Superlative            sql.NullString
-	Present                sql.NullString
+	Past                   sql.NullString
+	Presentcontinuous      sql.NullString
+	Comparative            sql.NullString
+	Gerund                 sql.NullString
 }
 
-type IgIgboDbAdverb struct {
+type IgAdverb struct {
 	Wdlexemeid     sql.NullString
 	Lastmodified   sql.NullString
-	Pastparticiple sql.NullString
 	Adverbial      sql.NullString
+	Pastparticiple sql.NullString
 	Future         sql.NullString
 }
 
-type IgIgboDbConjunction struct {
+type IgConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type IgIgboDbNoun struct {
+type IgNoun struct {
 	Wdlexemeid        sql.NullString
-	Pluralsingular    sql.NullString
-	Presentparticiple sql.NullString
-	Pastparticiple    sql.NullString
-	Masculine         sql.NullString
-	Past              sql.NullString
-	Femininesingular  sql.NullString
 	Lastmodified      sql.NullString
-	Genitive          sql.NullString
-	Singular          sql.NullString
-	Imperative        sql.NullString
-	Infinitive        sql.NullString
-	Nominative        sql.NullString
-	Plural            sql.NullString
+	Pastparticiple    sql.NullString
 	Present           sql.NullString
+	Masculine         sql.NullString
+	Femininesingular  sql.NullString
+	Plural            sql.NullString
+	Pluralsingular    sql.NullString
+	Infinitive        sql.NullString
+	Singular          sql.NullString
+	Presentparticiple sql.NullString
+	Genitive          sql.NullString
+	Past              sql.NullString
+	Imperative        sql.NullString
+	Nominative        sql.NullString
 }
 
-type IgIgboDbPreposition struct {
+type IgPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Contraction  sql.NullString
 }
 
-type IgIgboDbPronoun struct {
+type IgPronoun struct {
 	Wdlexemeid               sql.NullString
-	Obliquethirdpersonplural sql.NullString
 	Lastmodified             sql.NullString
-	Oblique                  sql.NullString
-	Singular                 sql.NullString
 	Nominativesingular       sql.NullString
+	Obliquethirdpersonplural sql.NullString
+	Singular                 sql.NullString
+	Oblique                  sql.NullString
 	Nominative               sql.NullString
 }
 
-type IgIgboDbProperNoun struct {
+type IgProperNoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type IgIgboDbVerb struct {
+type IgVerb struct {
 	Wdlexemeid                         sql.NullString
-	Presentparticiple                  sql.NullString
-	Nominalized                        sql.NullString
-	Future                             sql.NullString
-	Infinitive                         sql.NullString
+	Wordstem                           sql.NullString
 	Pluralsingular                     sql.NullString
-	Phrase                             sql.NullString
+	Imperative                         sql.NullString
+	Presentcontinuouspresentparticiple sql.NullString
+	Presentparticiple                  sql.NullString
+	Presentpresentparticiple           sql.NullString
+	Past                               sql.NullString
 	Lastmodified                       sql.NullString
 	Presentperfect                     sql.NullString
-	Participle                         sql.NullString
-	Imperativepresent                  sql.NullString
-	Presentcontinuous                  sql.NullString
-	Wordstem                           sql.NullString
-	Past                               sql.NullString
-	Imperativepastparticiple           sql.NullString
-	Imperative                         sql.NullString
-	Plural                             sql.NullString
-	Present                            sql.NullString
-	Presentcontinuouspresentparticiple sql.NullString
 	Pastpastparticiple                 sql.NullString
+	Imperativepresent                  sql.NullString
+	Plural                             sql.NullString
+	Imperativepastparticiple           sql.NullString
+	Nominalized                        sql.NullString
+	Presentcontinuous                  sql.NullString
 	Pastparticiple                     sql.NullString
+	Present                            sql.NullString
+	Future                             sql.NullString
+	Infinitive                         sql.NullString
 	Singular                           sql.NullString
+	Participle                         sql.NullString
+	Phrase                             sql.NullString
 	Gerund                             sql.NullString
-	Presentpresentparticiple           sql.NullString
 }
 
-type ItItalianDbAdjective struct {
+type ItAdjective struct {
 	Wdlexemeid                   sql.NullString
+	Lastmodified                 sql.NullString
 	Singularsuperlative          sql.NullString
+	Pluralsuperlative            sql.NullString
+	Masculinesingular            sql.NullString
 	Masculine                    sql.NullString
 	Femininesingular             sql.NullString
-	Lastmodified                 sql.NullString
-	Feminineplural               sql.NullString
-	Masculinesingularsuperlative sql.NullString
-	Femininesingularsuperlative  sql.NullString
-	Pluralsuperlative            sql.NullString
-	Singular                     sql.NullString
-	Masculinepluralsuperlative   sql.NullString
-	Masculinesingular            sql.NullString
 	Plural                       sql.NullString
 	Femininepluralsuperlative    sql.NullString
-	Masculineplural              sql.NullString
+	Singular                     sql.NullString
+	Masculinesingularsuperlative sql.NullString
+	Masculinepluralsuperlative   sql.NullString
+	Feminineplural               sql.NullString
 	Superlative                  sql.NullString
+	Masculineplural              sql.NullString
+	Femininesingularsuperlative  sql.NullString
 }
 
-type ItItalianDbAdverb struct {
+type ItAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type ItItalianDbConjunction struct {
+type ItConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type ItItalianDbNoun struct {
+type ItNoun struct {
 	Wdlexemeid        sql.NullString
-	Pluralsingular    sql.NullString
-	Masculine         sql.NullString
-	Feminine          sql.NullString
-	Femininesingular  sql.NullString
 	Lastmodified      sql.NullString
-	Feminineplural    sql.NullString
-	Singular          sql.NullString
-	Vocative          sql.NullString
 	Masculinesingular sql.NullString
+	Masculine         sql.NullString
+	Femininesingular  sql.NullString
 	Plural            sql.NullString
+	Pluralsingular    sql.NullString
+	Singular          sql.NullString
+	Feminineplural    sql.NullString
+	Vocative          sql.NullString
 	Masculineplural   sql.NullString
+	Feminine          sql.NullString
 }
 
-type ItItalianDbPersonalPronoun struct {
+type ItPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Masculine    sql.NullString
 	Feminine     sql.NullString
 }
 
-type ItItalianDbPreposition struct {
+type ItPreposition struct {
 	Wdlexemeid        sql.NullString
-	Femininesingular  sql.NullString
 	Lastmodified      sql.NullString
-	Feminineplural    sql.NullString
 	Masculinesingular sql.NullString
+	Femininesingular  sql.NullString
+	Feminineplural    sql.NullString
 	Masculineplural   sql.NullString
 }
 
-type ItItalianDbPronoun struct {
+type ItPronoun struct {
 	Wdlexemeid        sql.NullString
-	Femininesingular  sql.NullString
 	Lastmodified      sql.NullString
-	Feminineplural    sql.NullString
-	Singular          sql.NullString
 	Masculinesingular sql.NullString
+	Femininesingular  sql.NullString
 	Plural            sql.NullString
+	Singular          sql.NullString
+	Feminineplural    sql.NullString
 	Masculineplural   sql.NullString
 }
 
-type ItItalianDbProperNoun struct {
+type ItProperNoun struct {
 	Wdlexemeid         sql.NullString
-	Feminine           sql.NullString
 	Lastmodified       sql.NullString
 	Nominativesingular sql.NullString
-	Singular           sql.NullString
 	Plural             sql.NullString
+	Singular           sql.NullString
+	Feminine           sql.NullString
 }
 
-type ItItalianDbVerb struct {
+type ItVerb struct {
 	Wdlexemeid                                      sql.NullString
-	Presentparticiple                               sql.NullString
-	Secondpersonpluralsubjunctive                   sql.NullString
-	Indicativepastimperfectfirstpersonsingular      sql.NullString
-	Conditionalfirstpersonplural                    sql.NullString
-	Infinitivepresent                               sql.NullString
-	Indicativepresentsecondpersonsingular           sql.NullString
-	Indicativepastimperfectthirdpersonsingular      sql.NullString
-	Thirdpersonpluralsubjunctive                    sql.NullString
-	Presentgerund                                   sql.NullString
-	Imperativesecondpersonplural                    sql.NullString
-	Activeindicativepresentsecondpersonplural       sql.NullString
-	Indicativepastimperfectthirdpersonplural        sql.NullString
-	Indicativepresentindicativesecondpersonsingular sql.NullString
-	Activeindicativepresentfirstpersonplural        sql.NullString
-	Indicativepresentindicativethirdpersonsingular  sql.NullString
-	Pastimperfectfirstpersonsingular                sql.NullString
-	Presentindicativefirstpersonsingular            sql.NullString
-	Indicativepresentfirstpersonplural              sql.NullString
-	Presentindicativethirdpersonsingular            sql.NullString
-	Presentindicativethirdpersonplural              sql.NullString
-	Presentpresentindicativethirdpersonplural       sql.NullString
-	Pastimperfectsecondpersonsingular               sql.NullString
-	Presentsecondpersonsingular                     sql.NullString
-	Pastparticiple                                  sql.NullString
-	Participlepastparticiple                        sql.NullString
-	Imperativethirdpersonplural                     sql.NullString
-	Indicativepresentsecondpersonplural             sql.NullString
-	Pastimperfectthirdpersonplural                  sql.NullString
-	Conditionalfirstpersonsingular                  sql.NullString
-	Pastimperfectthirdpersonsingular                sql.NullString
-	Imperativethirdpersonsingular                   sql.NullString
-	Presentindicativesecondpersonsingular           sql.NullString
-	Presentindicativefirstpersonplural              sql.NullString
-	Indicativepreteritesecondpersonplural           sql.NullString
-	Indicativepastimperfectfirstpersonplural        sql.NullString
-	Preteritesecondpersonplural                     sql.NullString
-	Feminineparticiplepastparticiplesingular        sql.NullString
-	Activeindicativepresentthirdpersonplural        sql.NullString
-	Conditionalthirdpersonplural                    sql.NullString
-	Participlepresentparticiple                     sql.NullString
-	Indicativepreteritefirstpersonsingular          sql.NullString
-	Secondpersonsingularsubjunctive                 sql.NullString
-	Firstpersonplural                               sql.NullString
-	Preteritethirdpersonplural                      sql.NullString
-	Indicativepresentindicativefirstpersonplural    sql.NullString
-	Indicativepreteritethirdpersonplural            sql.NullString
-	Conditionalthirdpersonsingular                  sql.NullString
-	Indicativesimplefuturefirstpersonplural         sql.NullString
-	Activeindicativepresentsecondpersonsingular     sql.NullString
-	Pastimperfectfirstpersonplural                  sql.NullString
-	Indicativepreteritethirdpersonsingular          sql.NullString
-	Indicativepresentthirdpersonsingular            sql.NullString
-	Presentthirdpersonsingular                      sql.NullString
-	Indicativepreteritesecondpersonsingular         sql.NullString
-	Thirdpersonparticiplepastparticiplesingular     sql.NullString
-	Infinitivepresentinfinitive                     sql.NullString
-	Preteritefirstpersonsingular                    sql.NullString
-	Masculineparticiplepastparticipleplural         sql.NullString
-	Lastmodified                                    sql.NullString
-	Imperativefirstpersonplural                     sql.NullString
-	Presentfirstpersonplural                        sql.NullString
-	Indicativesimplefuturefirstpersonsingular       sql.NullString
-	Masculineparticiplepastparticiplesingular       sql.NullString
-	Imperativesecondpersonsingular                  sql.NullString
-	Indicativepresentindicativethirdpersonplural    sql.NullString
-	Indicativepastimperfectsecondpersonsingular     sql.NullString
-	Indicativepresentindicativesecondpersonplural   sql.NullString
-	Gerund                                          sql.NullString
-	Activeindicativepresentfirstpersonsingular      sql.NullString
 	Indicativesimplefuturethirdpersonsingular       sql.NullString
-	Indicativepresentindicativefirstpersonsingular  sql.NullString
-	Indicativesimplefuturesecondpersonplural        sql.NullString
-	Firstpersonsingularsubjunctive                  sql.NullString
-	Indicativesimplefuturethirdpersonplural         sql.NullString
-	Infinitive                                      sql.NullString
-	Indicativepreteritefirstpersonplural            sql.NullString
-	Indicativepresentfirstpersonsingular            sql.NullString
-	Presentindicativesecondpersonplural             sql.NullString
-	Activeindicativepresentthirdpersonsingular      sql.NullString
-	Presentparticiple1                              sql.NullString
-	Thirdpersonsingularsubjunctive                  sql.NullString
-	Firstpersonpluralsubjunctive                    sql.NullString
-	Indicativepastimperfectsecondpersonplural       sql.NullString
-	Presentfirstpersonsingular                      sql.NullString
-	Conditionalsecondpersonplural                   sql.NullString
 	Pastimperfectsecondpersonplural                 sql.NullString
-	Presentthirdpersonplural                        sql.NullString
-	Preteritesecondpersonsingular                   sql.NullString
-	Pastparticiple1                                 sql.NullString
-	Feminineparticiplepastparticipleplural          sql.NullString
-	Conditionalsecondpersonsingular                 sql.NullString
-	Presentsecondpersonplural                       sql.NullString
-	Preteritefirstpersonplural                      sql.NullString
+	Thirdpersonpluralsubjunctive                    sql.NullString
+	Activeindicativepresentthirdpersonplural        sql.NullString
+	Participlepresentparticiple                     sql.NullString
+	Presentindicativethirdpersonplural              sql.NullString
+	Indicativepreteritesecondpersonplural           sql.NullString
+	Indicativesimplefuturefirstpersonsingular       sql.NullString
+	Indicativepreteritethirdpersonsingular          sql.NullString
+	Pastimperfectfirstpersonplural                  sql.NullString
+	Indicativepreteritesecondpersonsingular         sql.NullString
 	Indicativesimplefuturesecondpersonsingular      sql.NullString
+	Conditionalsecondpersonplural                   sql.NullString
+	Preteritefirstpersonplural                      sql.NullString
+	Presentthirdpersonsingular                      sql.NullString
+	Feminineparticiplepastparticiplesingular        sql.NullString
+	Presentpresentindicativethirdpersonplural       sql.NullString
+	Indicativesimplefuturefirstpersonplural         sql.NullString
+	Activeindicativepresentfirstpersonplural        sql.NullString
+	Conditionalfirstpersonsingular                  sql.NullString
+	Conditionalthirdpersonplural                    sql.NullString
+	Lastmodified                                    sql.NullString
+	Pastimperfectthirdpersonplural                  sql.NullString
+	Secondpersonpluralsubjunctive                   sql.NullString
+	Presentindicativesecondpersonsingular           sql.NullString
+	Imperativesecondpersonsingular                  sql.NullString
+	Preteritesecondpersonsingular                   sql.NullString
+	Indicativepresentindicativethirdpersonsingular  sql.NullString
+	Presentfirstpersonsingular                      sql.NullString
+	Activeindicativepresentsecondpersonplural       sql.NullString
+	Firstpersonsingularsubjunctive                  sql.NullString
+	Indicativepreteritethirdpersonplural            sql.NullString
+	Preteritefirstpersonsingular                    sql.NullString
+	Pastimperfectsecondpersonsingular               sql.NullString
+	Preteritethirdpersonplural                      sql.NullString
+	Imperativethirdpersonsingular                   sql.NullString
+	Conditionalthirdpersonsingular                  sql.NullString
+	Indicativepreteritefirstpersonplural            sql.NullString
+	Indicativepastimperfectthirdpersonsingular      sql.NullString
+	Indicativepastimperfectsecondpersonplural       sql.NullString
+	Indicativesimplefuturethirdpersonplural         sql.NullString
+	Presentindicativefirstpersonsingular            sql.NullString
+	Activeindicativepresentsecondpersonsingular     sql.NullString
+	Conditionalsecondpersonsingular                 sql.NullString
+	Presentindicativefirstpersonplural              sql.NullString
+	Presentsecondpersonsingular                     sql.NullString
+	Activeindicativepresentfirstpersonsingular      sql.NullString
+	Indicativepresentindicativethirdpersonplural    sql.NullString
+	Indicativesimplefuturesecondpersonplural        sql.NullString
+	Indicativepresentsecondpersonsingular           sql.NullString
+	Masculineparticiplepastparticiplesingular       sql.NullString
+	Secondpersonsingularsubjunctive                 sql.NullString
+	Pastimperfectfirstpersonsingular                sql.NullString
+	Presentfirstpersonplural                        sql.NullString
+	Pastparticiple                                  sql.NullString
+	Infinitive                                      sql.NullString
+	Thirdpersonsingularsubjunctive                  sql.NullString
+	Gerund                                          sql.NullString
+	Indicativepresentindicativefirstpersonsingular  sql.NullString
+	Conditionalfirstpersonplural                    sql.NullString
+	Presentgerund                                   sql.NullString
+	Thirdpersonparticiplepastparticiplesingular     sql.NullString
+	Indicativepreteritefirstpersonsingular          sql.NullString
+	Indicativepresentfirstpersonplural              sql.NullString
+	Indicativepresentindicativefirstpersonplural    sql.NullString
+	Feminineparticiplepastparticipleplural          sql.NullString
+	Presentparticiple                               sql.NullString
+	Infinitivepresentinfinitive                     sql.NullString
+	Preteritesecondpersonplural                     sql.NullString
+	Imperativesecondpersonplural                    sql.NullString
+	Indicativepastimperfectthirdpersonplural        sql.NullString
+	Indicativepresentsecondpersonplural             sql.NullString
+	Indicativepresentthirdpersonsingular            sql.NullString
+	Pastimperfectthirdpersonsingular                sql.NullString
 	Indicativepresentthirdpersonplural              sql.NullString
+	Indicativepastimperfectfirstpersonsingular      sql.NullString
+	Presentindicativesecondpersonplural             sql.NullString
+	Firstpersonplural                               sql.NullString
+	Presentparticiple1                              sql.NullString
+	Participlepastparticiple                        sql.NullString
+	Masculineparticiplepastparticipleplural         sql.NullString
+	Presentthirdpersonplural                        sql.NullString
+	Indicativepresentindicativesecondpersonplural   sql.NullString
+	Activeindicativepresentthirdpersonsingular      sql.NullString
+	Indicativepastimperfectsecondpersonsingular     sql.NullString
+	Indicativepastimperfectfirstpersonplural        sql.NullString
+	Pastparticiple1                                 sql.NullString
+	Presentindicativethirdpersonsingular            sql.NullString
+	Firstpersonpluralsubjunctive                    sql.NullString
+	Imperativethirdpersonplural                     sql.NullString
+	Imperativefirstpersonplural                     sql.NullString
+	Indicativepresentindicativesecondpersonsingular sql.NullString
+	Indicativepresentfirstpersonsingular            sql.NullString
+	Infinitivepresent                               sql.NullString
+	Presentsecondpersonplural                       sql.NullString
 }
 
-type JaJapaneseDbAdjective struct {
+type JaAdjective struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Hypothetical sql.NullString
-	Imperfective sql.NullString
-	Attributive  sql.NullString
 	Conjunctive  sql.NullString
+	Attributive  sql.NullString
+	Imperfective sql.NullString
 	Negative     sql.NullString
 }
 
-type JaJapaneseDbAdverb struct {
+type JaAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type JaJapaneseDbConjunction struct {
+type JaConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type JaJapaneseDbNoun struct {
+type JaNoun struct {
 	Wdlexemeid   sql.NullString
+	Singular     sql.NullString
 	Lastmodified sql.NullString
 	Plural       sql.NullString
-	Singular     sql.NullString
 }
 
-type JaJapaneseDbPersonalPronoun struct {
+type JaPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Masculine    sql.NullString
 	Feminine     sql.NullString
 }
 
-type JaJapaneseDbPronoun struct {
+type JaPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type JaJapaneseDbProperNoun struct {
+type JaProperNoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type JaJapaneseDbVerb struct {
+type JaVerb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Hypothetical sql.NullString
-	Imperfective sql.NullString
-	Attributive  sql.NullString
 	Conjunctive  sql.NullString
+	Attributive  sql.NullString
+	Imperfective sql.NullString
 	Negative     sql.NullString
 }
 
-type KoKoreanDbAdjective struct {
+type KoAdjective struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Wordstem     sql.NullString
 }
 
-type KoKoreanDbAdverb struct {
+type KoAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type KoKoreanDbNoun struct {
+type KoNoun struct {
 	Wdlexemeid   sql.NullString
+	Singular     sql.NullString
 	Lastmodified sql.NullString
 	Plural       sql.NullString
-	Singular     sql.NullString
 }
 
-type KoKoreanDbPostposition struct {
+type KoPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type KoKoreanDbPronoun struct {
+type KoPronoun struct {
 	Wdlexemeid       sql.NullString
 	Lastmodified     sql.NullString
-	Plural           sql.NullString
 	Nominativeplural sql.NullString
+	Plural           sql.NullString
 	Dativeplural     sql.NullString
 }
 
-type KoKoreanDbProperNoun struct {
+type KoProperNoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type KoKoreanDbVerb struct {
+type KoVerb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Wordstem     sql.NullString
-	Past         sql.NullString
 	Present      sql.NullString
+	Past         sql.NullString
 }
 
-type KuKurmanjiDbAdjective struct {
+type KuAdjective struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
 	Lastmodified sql.NullString
 	Comparative  sql.NullString
 	Superlative  sql.NullString
+	Positive     sql.NullString
 }
 
-type KuKurmanjiDbAdverb struct {
+type KuAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type KuKurmanjiDbConjunction struct {
+type KuConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type KuKurmanjiDbNoun struct {
+type KuNoun struct {
 	Wdlexemeid                   sql.NullString
-	Directmasculineplural        sql.NullString
 	Indefinitesingular           sql.NullString
-	Obliquefeminineplural        sql.NullString
-	Vocativeplural               sql.NullString
-	Vocativesingular             sql.NullString
-	Definitesingular             sql.NullString
-	Lastmodified                 sql.NullString
-	Directindefinitesingular     sql.NullString
-	Obliquemasculinesingular     sql.NullString
-	Vocativefemininesingular     sql.NullString
-	Obliquemasculineplural       sql.NullString
-	Directdefinitesingular       sql.NullString
-	Vocativemasculineplural      sql.NullString
-	Obliquefemininesingular      sql.NullString
-	Obliquedefiniteplural        sql.NullString
-	Indefiniteplural             sql.NullString
-	Vocativesecondpersonsingular sql.NullString
 	Obliquedefinitesingular      sql.NullString
-	Obliqueindefinitesingular    sql.NullString
-	Vocativemasculinesingular    sql.NullString
-	Definiteplural               sql.NullString
+	Obliquefeminineplural        sql.NullString
 	Directfemininesingular       sql.NullString
-	Directmasculinesingular      sql.NullString
-	Directindefiniteplural       sql.NullString
-	Vocativesecondpersonplural   sql.NullString
-	Vocativefeminineplural       sql.NullString
 	Directdefiniteplural         sql.NullString
-	Directfeminineplural         sql.NullString
 	Obliqueindefiniteplural      sql.NullString
+	Obliquemasculineplural       sql.NullString
+	Vocativesingular             sql.NullString
+	Directindefiniteplural       sql.NullString
+	Obliqueindefinitesingular    sql.NullString
+	Vocativemasculineplural      sql.NullString
+	Indefiniteplural             sql.NullString
+	Lastmodified                 sql.NullString
+	Vocativefemininesingular     sql.NullString
+	Directmasculineplural        sql.NullString
+	Vocativesecondpersonsingular sql.NullString
+	Obliquedefiniteplural        sql.NullString
+	Definiteplural               sql.NullString
+	Directindefinitesingular     sql.NullString
+	Vocativesecondpersonplural   sql.NullString
+	Obliquefemininesingular      sql.NullString
+	Vocativemasculinesingular    sql.NullString
+	Directdefinitesingular       sql.NullString
+	Vocativeplural               sql.NullString
+	Directfeminineplural         sql.NullString
+	Directmasculinesingular      sql.NullString
+	Obliquemasculinesingular     sql.NullString
+	Vocativefeminineplural       sql.NullString
+	Definitesingular             sql.NullString
 }
 
-type KuKurmanjiDbPersonalPronoun struct {
+type KuPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type KuKurmanjiDbPreposition struct {
+type KuPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type KuKurmanjiDbPronoun struct {
+type KuPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type KuKurmanjiDbProperNoun struct {
+type KuProperNoun struct {
 	Wdlexemeid              sql.NullString
-	Definitesingular        sql.NullString
 	Lastmodified            sql.NullString
 	Obliquedefinitesingular sql.NullString
 	Vocative                sql.NullString
 	Directdefinitesingular  sql.NullString
+	Definitesingular        sql.NullString
 }
 
-type LaLatinDbAdjective struct {
+type LaAdjective struct {
 	Wdlexemeid                             sql.NullString
-	Ablativecommonsingularpositive         sql.NullString
-	Accusativefemininesingularpositive     sql.NullString
-	Nominativefemininesingularsuperlative  sql.NullString
-	Dativepluralcomparative                sql.NullString
-	Vocativecommonsingularcomparative      sql.NullString
-	Vocativeneutersingularcomparative      sql.NullString
-	Vocativemasculinesingularpositive      sql.NullString
-	Nominativefemininepluralpositive       sql.NullString
 	Ablativemasculinesingularpositive      sql.NullString
-	Dativefemininesingular                 sql.NullString
-	Ablativepluralsuperlative              sql.NullString
-	Ablativefemininesingularpositive       sql.NullString
-	Nominativemasculinesingularsuperlative sql.NullString
-	Dativeplural                           sql.NullString
-	Dativeneutersingular                   sql.NullString
-	Ablativefemininesingular               sql.NullString
-	Vocativeneuterplural                   sql.NullString
-	Accusativefemininesingularsuperlative  sql.NullString
-	Accusativefeminineplural               sql.NullString
-	Genitiveneutersingularsuperlative      sql.NullString
-	Accusativecommonpluralpositive         sql.NullString
-	Accusativeneutersingularcomparative    sql.NullString
-	Dativefemininesingularsuperlative      sql.NullString
-	Ablativesingularcomparative            sql.NullString
-	Accusativeneuterplural                 sql.NullString
-	Genitiveneutersingularpositive         sql.NullString
-	Vocativemasculinesingular              sql.NullString
-	Dativefemininesingularpositive         sql.NullString
-	Accusativeneutersingularpositive       sql.NullString
-	Nominativecommonpluralpositive         sql.NullString
-	Accusativecommonpluralcomparative      sql.NullString
-	Dativesingular                         sql.NullString
-	Nominativefeminineplural               sql.NullString
-	Ablativesingular                       sql.NullString
-	Vocativefeminineplural                 sql.NullString
-	Nominativecommonsingularcomparative    sql.NullString
-	Dativeneutersingularpositive           sql.NullString
-	Accusativeneuterpluralcomparative      sql.NullString
-	Nominativefemininesingular             sql.NullString
-	Ablativemasculinesingular              sql.NullString
-	Vocativeneuterpluralcomparative        sql.NullString
-	Genitivemasculinesingularpositive      sql.NullString
-	Genitiveplural                         sql.NullString
-	Genitivemasculinesingular              sql.NullString
-	Nominativemasculinesingular            sql.NullString
-	Genitivecommonsingularpositive         sql.NullString
-	Ablativeneutersingular                 sql.NullString
-	Ablativeneuterpluralpositive           sql.NullString
-	Nominativesingularpositive             sql.NullString
-	Vocativefemininepluralpositive         sql.NullString
-	Nominativecommonsingularpositive       sql.NullString
-	Vocativefemininesingularpositive       sql.NullString
-	Positive                               sql.NullString
-	Nominativeneutersingularcomparative    sql.NullString
-	Vocativemasculinesingularsuperlative   sql.NullString
-	Nominativemasculinepluralpositive      sql.NullString
-	Accusativemasculineplural              sql.NullString
-	Dativeneutersingularsuperlative        sql.NullString
-	Genitivemasculineplural                sql.NullString
-	Ablativemasculinesingularsuperlative   sql.NullString
-	Genitivecommonsingularcomparative      sql.NullString
-	Nominativemasculinepluralsuperlative   sql.NullString
-	Genitivepluralcomparative              sql.NullString
-	Nominativefemininesingularpositive     sql.NullString
-	Accusativefemininepluralsuperlative    sql.NullString
-	Ablativeneutersingularpositive         sql.NullString
-	Genitivefemininesingularsuperlative    sql.NullString
-	Nominativeneutersingular               sql.NullString
-	Genitivefemininepluralsuperlative      sql.NullString
-	Vocativesingularpositive               sql.NullString
-	Nominativeneuterpluralsuperlative      sql.NullString
-	Accusativeneuterpluralsuperlative      sql.NullString
-	Vocativeneutersingularpositive         sql.NullString
-	Vocativemasculinepluralsuperlative     sql.NullString
-	Dativemasculinesingular                sql.NullString
-	Genitiveneuterplural                   sql.NullString
-	Accusativecommonsingularpositive       sql.NullString
-	Vocativeneutersingularsuperlative      sql.NullString
-	Dativepluralpositive                   sql.NullString
-	Genitivemasculinesingularsuperlative   sql.NullString
-	Dativecommonsingularpositive           sql.NullString
-	Accusativemasculinesingularsuperlative sql.NullString
-	Dativemasculinesingularsuperlative     sql.NullString
 	Ablativepluralcomparative              sql.NullString
-	Dativepluralsuperlative                sql.NullString
-	Vocativeneuterpluralsuperlative        sql.NullString
-	Genitivefemininepluralpositive         sql.NullString
-	Ablativedativemasculinesingular        sql.NullString
-	Nominativesingular                     sql.NullString
-	Genitivepluralpositive                 sql.NullString
-	Genitivefemininesingularpositive       sql.NullString
-	Vocativeneutersingular                 sql.NullString
-	Vocativesingular                       sql.NullString
-	Vocativecommonpluralcomparative        sql.NullString
-	Lastmodified                           sql.NullString
-	Ablativepluralpositive                 sql.NullString
-	Vocativefemininesingular               sql.NullString
-	Dativesingularcomparative              sql.NullString
-	Accusativemasculinepluralsuperlative   sql.NullString
-	Genitivefemininesingular               sql.NullString
-	Dativemasculinesingularpositive        sql.NullString
-	Nominativemasculinesingularpositive    sql.NullString
-	Dativesingularpositive                 sql.NullString
-	Genitivefeminineplural                 sql.NullString
-	Genitivemasculinepluralpositive        sql.NullString
-	Ablativesingularpositive               sql.NullString
-	Ablativefemininesingularsuperlative    sql.NullString
-	Vocativemasculineplural                sql.NullString
+	Dativeneutersingularsuperlative        sql.NullString
+	Nominativefemininesingular             sql.NullString
+	Ablativefemininesingularpositive       sql.NullString
 	Accusativeneuterpluralpositive         sql.NullString
-	Nominativeneuterpluralcomparative      sql.NullString
-	Genitivesingularpositive               sql.NullString
-	Dativefeminineneuter                   sql.NullString
-	Locativefemininesingularpositive       sql.NullString
-	Accusativefemininepluralpositive       sql.NullString
+	Genitivemasculinesingular              sql.NullString
+	Genitiveplural                         sql.NullString
+	Genitivefemininesingularpositive       sql.NullString
 	Accusativecommonsingularcomparative    sql.NullString
-	Genitiveneuterpluralsuperlative        sql.NullString
-	Vocativefemininepluralsuperlative      sql.NullString
-	Ablativeplural                         sql.NullString
-	Accusativeneutersingularsuperlative    sql.NullString
-	Nominativemasculineplural              sql.NullString
 	Accusativemasculinepluralpositive      sql.NullString
-	Genitiveneuterpluralpositive           sql.NullString
-	Nominativefemininepluralsuperlative    sql.NullString
-	Genitivemasculinepluralsuperlative     sql.NullString
-	Genitivesingular                       sql.NullString
-	Vocativeneuterpluralpositive           sql.NullString
-	Accusativeneutersingular               sql.NullString
-	Vocativecommonpluralpositive           sql.NullString
-	Genitiveneutersingular                 sql.NullString
-	Vocativemasculinepluralpositive        sql.NullString
+	Ablativeplural                         sql.NullString
+	Vocativefemininepluralpositive         sql.NullString
 	Vocativecommonsingularpositive         sql.NullString
-	Vocativefemininesingularsuperlative    sql.NullString
+	Nominativemasculineplural              sql.NullString
+	Accusativefeminineplural               sql.NullString
+	Dativepluralpositive                   sql.NullString
+	Lastmodified                           sql.NullString
+	Nominativecommonsingularcomparative    sql.NullString
+	Accusativefemininesingularsuperlative  sql.NullString
+	Vocativefemininesingular               sql.NullString
+	Dativemasculinesingularsuperlative     sql.NullString
+	Vocativemasculinepluralsuperlative     sql.NullString
 	Genitiveneutersingularcomparative      sql.NullString
-	Accusativemasculinesingular            sql.NullString
+	Locativefemininesingularpositive       sql.NullString
+	Vocativemasculinesingular              sql.NullString
+	Nominativecommonpluralpositive         sql.NullString
+	Nominativefeminineplural               sql.NullString
+	Dativepluralsuperlative                sql.NullString
+	Vocativeneutersingular                 sql.NullString
+	Nominativefemininesingularsuperlative  sql.NullString
+	Nominativeneuterpluralcomparative      sql.NullString
+	Vocativeneuterplural                   sql.NullString
+	Accusativefemininepluralsuperlative    sql.NullString
 	Nominativeneutersingularpositive       sql.NullString
-	Nominativecommonpluralcomparative      sql.NullString
-	Accusativefemininesingular             sql.NullString
-	Accusativemasculinesingularpositive    sql.NullString
-	Nominativeneuterpluralpositive         sql.NullString
-	Nominativeneuterplural                 sql.NullString
+	Dativefemininesingular                 sql.NullString
+	Accusativeneutersingular               sql.NullString
+	Nominativefemininepluralsuperlative    sql.NullString
+	Accusativefemininesingularpositive     sql.NullString
+	Genitivesingular                       sql.NullString
+	Dativepluralcomparative                sql.NullString
+	Vocativeneuterpluralcomparative        sql.NullString
+	Genitivefeminineplural                 sql.NullString
+	Nominativemasculinepluralsuperlative   sql.NullString
 	Ablativeneutersingularsuperlative      sql.NullString
-	Nominativeneutersingularsuperlative    sql.NullString
+	Accusativemasculinesingularsuperlative sql.NullString
+	Vocativefemininesingularsuperlative    sql.NullString
+	Nominativefemininesingularpositive     sql.NullString
+	Nominativeneuterpluralsuperlative      sql.NullString
+	Accusativeneutersingularcomparative    sql.NullString
+	Accusativeneutersingularpositive       sql.NullString
+	Dativemasculinesingularpositive        sql.NullString
+	Accusativemasculinepluralsuperlative   sql.NullString
+	Dativeplural                           sql.NullString
+	Ablativeneutersingular                 sql.NullString
+	Dativefemininesingularsuperlative      sql.NullString
+	Ablativepluralsuperlative              sql.NullString
+	Dativemasculinesingular                sql.NullString
+	Accusativecommonpluralpositive         sql.NullString
+	Accusativefemininepluralpositive       sql.NullString
+	Vocativeneutersingularpositive         sql.NullString
+	Genitivemasculineplural                sql.NullString
+	Nominativecommonsingularpositive       sql.NullString
+	Dativeneutersingularpositive           sql.NullString
+	Vocativecommonpluralcomparative        sql.NullString
+	Ablativesingular                       sql.NullString
+	Nominativemasculinesingular            sql.NullString
+	Vocativecommonpluralpositive           sql.NullString
+	Accusativecommonpluralcomparative      sql.NullString
+	Genitivepluralpositive                 sql.NullString
+	Vocativefemininesingularpositive       sql.NullString
+	Genitiveneuterpluralpositive           sql.NullString
+	Vocativefemininepluralsuperlative      sql.NullString
+	Genitivefemininepluralpositive         sql.NullString
+	Nominativefemininepluralpositive       sql.NullString
 	Superlative                            sql.NullString
+	Nominativeneutersingularsuperlative    sql.NullString
+	Ablativesingularcomparative            sql.NullString
+	Vocativemasculinesingularpositive      sql.NullString
+	Ablativesingularpositive               sql.NullString
+	Vocativemasculinepluralpositive        sql.NullString
+	Dativefeminineneuter                   sql.NullString
+	Dativesingularcomparative              sql.NullString
+	Nominativeneutersingularcomparative    sql.NullString
+	Accusativeneuterpluralsuperlative      sql.NullString
+	Nominativeneuterpluralpositive         sql.NullString
+	Genitivecommonsingularcomparative      sql.NullString
+	Genitivefemininepluralsuperlative      sql.NullString
+	Accusativemasculinesingular            sql.NullString
+	Genitiveneutersingularpositive         sql.NullString
+	Genitiveneuterplural                   sql.NullString
+	Genitivefemininesingularsuperlative    sql.NullString
+	Vocativeneutersingularcomparative      sql.NullString
+	Dativesingularpositive                 sql.NullString
+	Nominativemasculinesingularpositive    sql.NullString
+	Genitivesingularpositive               sql.NullString
+	Accusativeneutersingularsuperlative    sql.NullString
+	Dativesingular                         sql.NullString
+	Genitivemasculinepluralsuperlative     sql.NullString
+	Accusativemasculinesingularpositive    sql.NullString
+	Nominativesingular                     sql.NullString
+	Nominativemasculinesingularsuperlative sql.NullString
+	Ablativepluralpositive                 sql.NullString
+	Genitivemasculinesingularpositive      sql.NullString
+	Vocativecommonsingularcomparative      sql.NullString
+	Genitivefemininesingular               sql.NullString
+	Dativeneutersingular                   sql.NullString
+	Dativefemininesingularpositive         sql.NullString
+	Ablativedativemasculinesingular        sql.NullString
+	Nominativesingularpositive             sql.NullString
+	Nominativeneuterplural                 sql.NullString
+	Accusativeneuterplural                 sql.NullString
+	Genitivecommonsingularpositive         sql.NullString
+	Ablativeneuterpluralpositive           sql.NullString
+	Genitiveneutersingularsuperlative      sql.NullString
+	Ablativemasculinesingularsuperlative   sql.NullString
+	Genitiveneuterpluralsuperlative        sql.NullString
+	Vocativesingular                       sql.NullString
+	Vocativemasculineplural                sql.NullString
+	Vocativemasculinesingularsuperlative   sql.NullString
+	Genitiveneutersingular                 sql.NullString
+	Vocativeneuterpluralsuperlative        sql.NullString
+	Vocativesingularpositive               sql.NullString
+	Vocativeneuterpluralpositive           sql.NullString
+	Dativecommonsingularpositive           sql.NullString
+	Ablativecommonsingularpositive         sql.NullString
+	Genitivemasculinepluralpositive        sql.NullString
+	Vocativeneutersingularsuperlative      sql.NullString
+	Nominativecommonpluralcomparative      sql.NullString
+	Accusativecommonsingularpositive       sql.NullString
+	Genitivemasculinesingularsuperlative   sql.NullString
+	Ablativemasculinesingular              sql.NullString
+	Ablativefemininesingular               sql.NullString
+	Accusativefemininesingular             sql.NullString
+	Nominativemasculinepluralpositive      sql.NullString
+	Nominativeneutersingular               sql.NullString
+	Ablativefemininesingularsuperlative    sql.NullString
+	Ablativeneutersingularpositive         sql.NullString
+	Genitivepluralcomparative              sql.NullString
+	Positive                               sql.NullString
+	Accusativeneuterpluralcomparative      sql.NullString
+	Accusativemasculineplural              sql.NullString
+	Vocativefeminineplural                 sql.NullString
 }
 
-type LaLatinDbAdverb struct {
+type LaAdverb struct {
 	Wdlexemeid                  sql.NullString
-	Ablativefemininesingular    sql.NullString
-	Nominativemasculinesingular sql.NullString
 	Lastmodified                sql.NullString
-	Positive                    sql.NullString
 	Nominativeneuterplural      sql.NullString
 	Accusativeneuterplural      sql.NullString
-	Comparative                 sql.NullString
+	Positive                    sql.NullString
 	Superlative                 sql.NullString
+	Ablativefemininesingular    sql.NullString
+	Comparative                 sql.NullString
+	Nominativemasculinesingular sql.NullString
 }
 
-type LaLatinDbConjunction struct {
+type LaConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type LaLatinDbNoun struct {
+type LaNoun struct {
 	Wdlexemeid                                          sql.NullString
-	Dativefemininesingular                              sql.NullString
-	Ablativefemininesingularpositive                    sql.NullString
-	Ablativeactivepresentparticiplesingular             sql.NullString
-	Dativeplural                                        sql.NullString
-	Dativefemininepassivefutureparticiplesingular       sql.NullString
-	Activeindicativepresentsecondpersonplural           sql.NullString
-	Vocativemasculinepassiveperfectparticipleplural     sql.NullString
-	Ablativedativesingular                              sql.NullString
-	Activeperfectsecondpersonpluralsubjunctive          sql.NullString
-	Activeperfectthirdpersonpluralsubjunctive           sql.NullString
-	Indicativepassivepastimperfectfirstpersonsingular   sql.NullString
-	Vocativeactivepresentparticiplesingular             sql.NullString
-	Ablativeneuterpassiveperfectparticiplesingular      sql.NullString
-	Indicativepassivepresentfirstpersonsingular         sql.NullString
-	Nominative                                          sql.NullString
-	Dativefemininesingularpositive                      sql.NullString
-	Accusativeneutersingularpositive                    sql.NullString
-	Nominativefeminineplural                            sql.NullString
-	Ablativesingular                                    sql.NullString
-	Vocativefeminineplural                              sql.NullString
-	Genitiveneuteractivefutureparticipleplural          sql.NullString
-	Ablativemasculinesingular                           sql.NullString
-	Genitivemasculinepassivefutureparticipleplural      sql.NullString
-	Dativecommonplural                                  sql.NullString
-	Genitiveplural                                      sql.NullString
-	Vocativecommonsingular                              sql.NullString
-	Accusativenominativevocativeplural                  sql.NullString
-	Locativeneuterplural                                sql.NullString
-	Positive                                            sql.NullString
-	Dativeneuterpassivefutureparticiplesingular         sql.NullString
-	Dativecommonsingular                                sql.NullString
-	Genitivemasculinepassiveperfectparticiplesingular   sql.NullString
-	Accusativeneuterpassiveperfectparticipleplural      sql.NullString
-	Accusativenominativevocativesingular                sql.NullString
-	Activeindicativepastimperfectthirdpersonplural      sql.NullString
-	Dativeneuterpassiveperfectparticiplesingular        sql.NullString
-	Imperativepassivepresentsecondpersonsingular        sql.NullString
-	Nominativeneutersingular                            sql.NullString
-	Allativesingular                                    sql.NullString
-	Genitiveneuterplural                                sql.NullString
-	Activepastimperfectthirdpersonsingularsubjunctive   sql.NullString
-	Nominativemasculinepassiveperfectparticiplesingular sql.NullString
-	Imperativepassivefuturethirdpersonsingular          sql.NullString
-	Nominativemasculinepassivefutureparticiplesingular  sql.NullString
-	Indicativepassivepastimperfectthirdpersonsingular   sql.NullString
-	Nominativefeminineactivefutureparticiplesingular    sql.NullString
-	Nominativeneuterpassivefutureparticiplesingular     sql.NullString
+	Activeindicativepresentthirdpersonplural            sql.NullString
+	Ablativeactivepresentparticipleplural               sql.NullString
+	Accusativeneuterpluralpositive                      sql.NullString
+	Dativemasculineactivefutureparticiplesingular       sql.NullString
 	Vocativemasculineactivefutureparticiplesingular     sql.NullString
-	Activeindicativefuturesecondpersonsingular          sql.NullString
-	Accusativemasculineactivefutureparticipleplural     sql.NullString
-	Vocativeplural                                      sql.NullString
-	Vocativeneutersingular                              sql.NullString
 	Activeindicativepluperfectthirdpersonplural         sql.NullString
-	Activeindicativefuturefirstpersonsingular           sql.NullString
-	Imperativepassivepresentsecondpersonplural          sql.NullString
-	Vocativefemininepassiveperfectparticipleplural      sql.NullString
-	Activepastimperfectfirstpersonpluralsubjunctive     sql.NullString
-	Genitiveactivepresentparticipleplural               sql.NullString
-	Dativemasculinesingularpositive                     sql.NullString
-	Genitivefeminineplural                              sql.NullString
-	Accusativefemininepassiveperfectparticipleplural    sql.NullString
-	Activeindicativefutureperfectsecondpersonplural     sql.NullString
-	Accusativecommonactivepresentparticipleplural       sql.NullString
-	Nominativemasculineplural                           sql.NullString
-	Vocativeneuterpassivefutureparticiplesingular       sql.NullString
-	Activeimperativefuturesecondpersonsingular          sql.NullString
-	Nominativefemininepassiveperfectparticiplesingular  sql.NullString
-	Dativeneuterplural                                  sql.NullString
-	Dativeactivefutureparticipleplural                  sql.NullString
-	Locativefeminineplural                              sql.NullString
-	Passivepresentthirdpersonpluralsubjunctive          sql.NullString
-	Activeindicativepastimperfectthirdpersonsingular    sql.NullString
-	Accusativeneutersingular                            sql.NullString
-	Vocativefeminineactivefutureparticipleplural        sql.NullString
-	Vocativeneuterpluralpositive                        sql.NullString
-	Vocativemasculinepluralpositive                     sql.NullString
-	Indicativepassivepresentthirdpersonsingular         sql.NullString
-	Accusativesingular                                  sql.NullString
-	Nominativefeminineactivefutureparticipleplural      sql.NullString
-	Passivepastimperfectthirdpersonpluralsubjunctive    sql.NullString
-	Activepluperfectthirdpersonsingularsubjunctive      sql.NullString
-	Indicativepassivefuturesecondpersonplural           sql.NullString
-	Ablativedativeplural                                sql.NullString
+	Dativeactivepresentparticipleplural                 sql.NullString
 	Activeperfectfirstpersonpluralsubjunctive           sql.NullString
-	Vocativemasculinepassivefutureparticiplesingular    sql.NullString
-	Ablativecommonplural                                sql.NullString
-	Ablativepassivefutureparticipleplural               sql.NullString
-	Genitivefeminineactivefutureparticipleplural        sql.NullString
-	Passivepastimperfectsecondpersonsingularsubjunctive sql.NullString
-	Neuter                                              sql.NullString
-	Activepresentthirdpersonpluralsubjunctive           sql.NullString
-	Nominativeneuterpluralpositive                      sql.NullString
-	Ablativeneuterpassivefutureparticiplesingular       sql.NullString
-	Activepluperfectsecondpersonpluralsubjunctive       sql.NullString
-	Ablativeneuterplural                                sql.NullString
-	Genitiveneuterpassiveperfectparticipleplural        sql.NullString
-	Accusativeneuteractivepresentparticipleplural       sql.NullString
-	Genitivecommonsingular                              sql.NullString
-	Vocativemasculinesingularpositive                   sql.NullString
-	Activeindicativeperfectthirdpersonplural            sql.NullString
-	Indicativepassivepresentfirstpersonplural           sql.NullString
-	Accusativefemininepassiveperfectparticiplesingular  sql.NullString
-	Dativefemininepassiveperfectparticiplesingular      sql.NullString
-	Accusativeneuterplural                              sql.NullString
-	Activepastimperfectsecondpersonsingularsubjunctive  sql.NullString
-	Activeindicativeperfectsecondpersonsingular         sql.NullString
-	Accusativemasculinepassiveperfectparticipleplural   sql.NullString
+	Ablativemasculinepassiveperfectparticiplesingular   sql.NullString
+	Accusativemasculinepassivefutureparticiplesingular  sql.NullString
+	Singular                                            sql.NullString
+	Vocativeneuterplural                                sql.NullString
+	Nominativeneutersingularpositive                    sql.NullString
+	Genitivemasculinepassiveperfectparticipleplural     sql.NullString
+	Dativefemininesingular                              sql.NullString
+	Accusativeneutersingular                            sql.NullString
+	Vocativeneuterpassivefutureparticiplesingular       sql.NullString
+	Accusativefemininesingularpositive                  sql.NullString
+	Vocativemasculinepassiveperfectparticipleplural     sql.NullString
+	Nominativecommonactivepresentparticipleplural       sql.NullString
+	Accusativefemininepassiveperfectparticipleplural    sql.NullString
+	Ablativefeminineactivefutureparticiplesingular      sql.NullString
+	Activeindicativepluperfectsecondpersonplural        sql.NullString
+	Nominativemasculineactivefutureparticiplesingular   sql.NullString
+	Ablativefeminineplural                              sql.NullString
+	Ablativefemininepassivefutureparticiplesingular     sql.NullString
 	Accusativeneuterpassivefutureparticipleplural       sql.NullString
-	Vocativemasculinesingular                           sql.NullString
-	Activepresentthirdpersonsingularsubjunctive         sql.NullString
-	Vocativefemininepassivefutureparticiplesingular     sql.NullString
-	Genitiveneuteractivefutureparticiplesingular        sql.NullString
-	Vocativefemininesingularpositive                    sql.NullString
-	Activeindicativeperfectfirstpersonsingular          sql.NullString
-	Genitiveneuterpassivefutureparticipleplural         sql.NullString
-	Ablativecommonsingular                              sql.NullString
-	Nominativeplural                                    sql.NullString
-	Activeindicativeperfectthirdpersonsingular          sql.NullString
-	Activeimperativefuturethirdpersonsingular           sql.NullString
-	Genitivefemininepassiveperfectparticiplesingular    sql.NullString
-	Activepresentindicativefirstpersonsingular          sql.NullString
+	Accusativeneutersingularpositive                    sql.NullString
+	Dativeplural                                        sql.NullString
+	Dativeactivepresentparticiplesingular               sql.NullString
+	Neuter                                              sql.NullString
+	Dativemasculineplural                               sql.NullString
 	Locativecommonsingular                              sql.NullString
-	Passivepresentsecondpersonsingularsubjunctive       sql.NullString
-	Nominativefemininepassivefutureparticipleplural     sql.NullString
-	Dativemasculinesingular                             sql.NullString
-	Vocativeneutersingularpositive                      sql.NullString
-	Indicativepassivepresentthirdpersonplural           sql.NullString
-	Locativemasculinesingular                           sql.NullString
-	Genitivefemininepassivefutureparticipleplural       sql.NullString
-	Passivepastimperfectfirstpersonpluralsubjunctive    sql.NullString
-	Ablativemasculinepassivefutureparticiplesingular    sql.NullString
-	Dativepluralpositive                                sql.NullString
-	Accusativecommonsingular                            sql.NullString
-	Vocativecommonplural                                sql.NullString
-	Ablativepassiveperfectparticipleplural              sql.NullString
-	Ablativemasculineplural                             sql.NullString
-	Dativemasculinepassivefutureparticiplesingular      sql.NullString
+	Genitivemasculineplural                             sql.NullString
+	Passivepresentthirdpersonsingularsubjunctive        sql.NullString
+	Nominativemasculinesingular                         sql.NullString
+	Imperativepassivefuturethirdpersonplural            sql.NullString
+	Activepluperfectsecondpersonsingularsubjunctive     sql.NullString
+	Accusativeneutersingularsupine                      sql.NullString
+	Activepresentthirdpersonpluralsubjunctive           sql.NullString
 	Activeindicativepluperfectsecondpersonsingular      sql.NullString
-	Accusativeneuteractivepresentparticiplesingular     sql.NullString
-	Dative                                              sql.NullString
-	Activeindicativefuturesecondpersonplural            sql.NullString
+	Accusativeneuteractivefutureparticipleplural        sql.NullString
+	Ablativecommonsingular                              sql.NullString
+	Activepastimperfectfirstpersonsingularsubjunctive   sql.NullString
+	Indicativepassivepresentfirstpersonplural           sql.NullString
+	Vocativefemininepassiveperfectparticipleplural      sql.NullString
+	Nominativemasculinesingularpositive                 sql.NullString
+	Activepluperfectfirstpersonpluralsubjunctive        sql.NullString
+	Genitivefemininepassiveperfectparticipleplural      sql.NullString
+	Genitiveneuteractivefutureparticiplesingular        sql.NullString
+	Activeindicativefutureperfectfirstpersonsingular    sql.NullString
+	Activeperfectsecondpersonpluralsubjunctive          sql.NullString
+	Indicativepassivefuturethirdpersonsingular          sql.NullString
+	Dativeneutersingular                                sql.NullString
+	Activeindicativeperfectthirdpersonsingular          sql.NullString
+	Imperativepassivepresentsecondpersonplural          sql.NullString
+	Imperativepassivefuturesecondpersonsingular         sql.NullString
+	Activepluperfectfirstpersonsingularsubjunctive      sql.NullString
+	Nominativeneuterplural                              sql.NullString
+	Accusativeneuterpassiveperfectparticiplesingular    sql.NullString
+	Accusativefeminineactivefutureparticiplesingular    sql.NullString
+	Locativefemininesingular                            sql.NullString
+	Vocativecommonsingular                              sql.NullString
+	Activeimperativefuturesecondpersonsingular          sql.NullString
+	Accusativeneuterpassiveperfectparticipleplural      sql.NullString
+	Activeindicativepresentthirdpersonsingular          sql.NullString
+	Activeindicativepastimperfectthirdpersonsingular    sql.NullString
+	Ablativemasculinesingular                           sql.NullString
+	Nominativemasculinepluralpositive                   sql.NullString
+	Nominativeneutersingular                            sql.NullString
+	Activeimperativefuturethirdpersonsingular           sql.NullString
+	Accusativemasculineplural                           sql.NullString
+	Genitivemasculinepassivefutureparticipleplural      sql.NullString
+	Ablativemasculinesingularpositive                   sql.NullString
+	Activeindicativefuturefirstpersonsingular           sql.NullString
+	Nominativefemininesingular                          sql.NullString
+	Activeindicativefuturethirdpersonplural             sql.NullString
+	Nominativecommonsingular                            sql.NullString
+	Genitiveactivepresentparticipleplural               sql.NullString
+	Genitivefeminineactivefutureparticiplesingular      sql.NullString
+	Accusativemasculinepluralpositive                   sql.NullString
+	Vocativefemininepassivefutureparticiplesingular     sql.NullString
+	Feminine                                            sql.NullString
+	Genitivefemininepassiveperfectparticiplesingular    sql.NullString
+	Locativesingular                                    sql.NullString
+	Nominativeneuterpassivefutureparticiplesingular     sql.NullString
+	Dativefemininepassiveperfectparticiplesingular      sql.NullString
+	Nominativefeminineplural                            sql.NullString
+	Vocativeneutersingular                              sql.NullString
+	Accusativesingular                                  sql.NullString
+	Indicativepassivepastimperfectthirdpersonplural     sql.NullString
+	Accusativecommonplural                              sql.NullString
+	Locativeneutersingular                              sql.NullString
+	Dativemasculinepassivefutureparticiplesingular      sql.NullString
+	Activepresentsecondpersonpluralsubjunctive          sql.NullString
+	Nominativefemininepassivefutureparticiplesingular   sql.NullString
+	Vocativefemininepassiveperfectparticiplesingular    sql.NullString
+	Passivepresentthirdpersonpluralsubjunctive          sql.NullString
+	Dativefeminineplural                                sql.NullString
+	Genitivefeminineplural                              sql.NullString
+	Activeindicativepresentsecondpersonsingular         sql.NullString
+	Accusativecommonsingular                            sql.NullString
+	Nominativefemininesingularpositive                  sql.NullString
+	Ablativeneuteractivefutureparticiplesingular        sql.NullString
+	Ablativeneutersingular                              sql.NullString
+	Indicativepassivefuturefirstpersonplural            sql.NullString
+	Indicativepassivepresentsecondpersonplural          sql.NullString
+	Activeindicativepluperfectfirstpersonsingular       sql.NullString
+	Locativemasculinesingular                           sql.NullString
+	Indicativepassivepastimperfectthirdpersonsingular   sql.NullString
+	Activeindicativepresentfirstpersonsingular          sql.NullString
+	Accusativefemininepluralpositive                    sql.NullString
+	Genitivemasculineactivefutureparticipleplural       sql.NullString
+	Activeindicativefuturefirstpersonplural             sql.NullString
+	Vocativecommonplural                                sql.NullString
+	Activeindicativeperfectsecondpersonplural           sql.NullString
+	Activepluperfectsecondpersonpluralsubjunctive       sql.NullString
+	Accusative                                          sql.NullString
+	Vocativefemininepassivefutureparticipleplural       sql.NullString
+	Ablativemasculineplural                             sql.NullString
+	Vocativeactivepresentparticiplesingular             sql.NullString
+	Passivepastimperfectthirdpersonpluralsubjunctive    sql.NullString
+	Vocativefemininesingularpositive                    sql.NullString
+	Genitiveneuterpluralpositive                        sql.NullString
+	Accusativefemininepassiveperfectparticiplesingular  sql.NullString
+	Genitivefemininepluralpositive                      sql.NullString
+	Activepastimperfectfirstpersonpluralsubjunctive     sql.NullString
+	Activeindicativefutureperfectfirstpersonplural      sql.NullString
+	Genitiveneutersingularpositive                      sql.NullString
+	Genitiveneuterplural                                sql.NullString
+	Activeindicativefutureperfectsecondpersonplural     sql.NullString
+	Activepluperfectthirdpersonsingularsubjunctive      sql.NullString
+	Vocativefeminineactivefutureparticiplesingular      sql.NullString
+	Activepastimperfectsecondpersonsingularsubjunctive  sql.NullString
+	Indicativepassivepresentthirdpersonsingular         sql.NullString
+	Nominativeplural                                    sql.NullString
+	Activepresentinfinitive                             sql.NullString
+	Genitiveneuterpassiveperfectparticiplesingular      sql.NullString
+	Dativefemininesingularpositive                      sql.NullString
+	Masculine                                           sql.NullString
+	Activepastimperfectthirdpersonpluralsubjunctive     sql.NullString
+	Genitivemasculinepassiveperfectparticiplesingular   sql.NullString
+	Passivepresentsecondpersonsingularsubjunctive       sql.NullString
+	Vocativesingular                                    sql.NullString
+	Genitiveneutersingular                              sql.NullString
+	Nominativeneuteractivepresentparticipleplural       sql.NullString
+	Vocativeneuterpluralpositive                        sql.NullString
+	Genitivemasculinepluralpositive                     sql.NullString
+	Activepresentthirdpersonsingularsubjunctive         sql.NullString
+	Indicativepassivepresentthirdpersonplural           sql.NullString
+	Ablativefemininesingular                            sql.NullString
+	Genitivefeminineactivefutureparticipleplural        sql.NullString
+	Activeperfectfirstpersonsingularsubjunctive         sql.NullString
+	Positive                                            sql.NullString
+	Dativecommonsingular                                sql.NullString
 	Activeindicativepastimperfectsecondpersonplural     sql.NullString
+	Genitivecommonsingular                              sql.NullString
+	Activeindicativepluperfectfirstpersonplural         sql.NullString
+	Vocativemasculinepassiveperfectparticiplesingular   sql.NullString
+	Locativeneuterplural                                sql.NullString
+	Vocativeneuteractivefutureparticipleplural          sql.NullString
+	Genitiveplural                                      sql.NullString
+	Accusativefemininepassivefutureparticipleplural     sql.NullString
+	Activeimperativefuturethirdpersonplural             sql.NullString
+	Dativeneuterpassivefutureparticiplesingular         sql.NullString
+	Ablative                                            sql.NullString
+	Indicativepassivefuturesecondpersonplural           sql.NullString
+	Accusativeneuterpassivefutureparticiplesingular     sql.NullString
+	Vocativefemininepluralpositive                      sql.NullString
+	Nominativemasculineplural                           sql.NullString
+	Accusativefeminineplural                            sql.NullString
+	Dativepluralpositive                                sql.NullString
+	Lastmodified                                        sql.NullString
+	Activeindicativeperfectfirstpersonplural            sql.NullString
+	Passivepastimperfectsecondpersonsingularsubjunctive sql.NullString
+	Dativeneuteractivefutureparticiplesingular          sql.NullString
+	Activeindicativeperfectfirstpersonsingular          sql.NullString
+	Vocativemasculinesingular                           sql.NullString
+	Dativecommonplural                                  sql.NullString
+	Activeindicativeperfectsecondpersonsingular         sql.NullString
+	Passivepresentfirstpersonsingularsubjunctive        sql.NullString
+	Genitiveneuteractivefutureparticipleplural          sql.NullString
+	Indicativepassivepastimperfectsecondpersonsingular  sql.NullString
+	Passivepastimperfectfirstpersonsingularsubjunctive  sql.NullString
+	Vocativemasculinepassivefutureparticiplesingular    sql.NullString
+	Genitiveneuterpassivefutureparticipleplural         sql.NullString
+	Vocativeneuterpassiveperfectparticiplesingular      sql.NullString
+	Ablativeneuterpassiveperfectparticiplesingular      sql.NullString
+	Genitivesingular                                    sql.NullString
+	Nominativemasculinepassivefutureparticipleplural    sql.NullString
+	Dativemasculinepassiveperfectparticiplesingular     sql.NullString
+	Activeinfinitiveperfect                             sql.NullString
+	Nominativefemininepassiveperfectparticipleplural    sql.NullString
+	Vocativeneuterpassivefutureparticipleplural         sql.NullString
+	Indicativepassivepastimperfectfirstpersonsingular   sql.NullString
+	Dativemasculinesingular                             sql.NullString
+	Ablativesingular                                    sql.NullString
+	Ablativedativeplural                                sql.NullString
+	Activeimperativepresentsecondpersonsingular         sql.NullString
+	Accusativecommonactivepresentparticipleplural       sql.NullString
+	Common                                              sql.NullString
+	Allativesingular                                    sql.NullString
+	Vocativemasculinesingularpositive                   sql.NullString
+	Vocativemasculinepluralpositive                     sql.NullString
+	Activeindicativefuturethirdpersonsingular           sql.NullString
+	Vocativemasculineactivefutureparticipleplural       sql.NullString
+	Genitiveactivepresentparticiplesingular             sql.NullString
+	Activepresentfirstpersonsingularsubjunctive         sql.NullString
+	Accusativemasculinesingular                         sql.NullString
+	Activeperfectthirdpersonpluralsubjunctive           sql.NullString
+	Nominativemasculineactivefutureparticipleplural     sql.NullString
+	Imperativepassivepresentsecondpersonsingular        sql.NullString
+	Activeimperativefuturesecondpersonplural            sql.NullString
+	Vocativeneuteractivepresentparticipleplural         sql.NullString
+	Accusativemasculinesingularpositive                 sql.NullString
+	Ablativepluralpositive                              sql.NullString
 	Activeindicativefutureperfectsecondpersonsingular   sql.NullString
 	Genitivefemininesingular                            sql.NullString
-	Genitivefeminineactivefutureparticiplesingular      sql.NullString
-	Accusativecommonactivepresentparticiplesingular     sql.NullString
-	Nominativemasculinesingularpositive                 sql.NullString
-	Indicativepassivepastimperfectsecondpersonplural    sql.NullString
-	Vocativemasculineplural                             sql.NullString
-	Locativeplural                                      sql.NullString
-	Nominativecommonactivepresentparticipleplural       sql.NullString
-	Ablativefeminineactivefutureparticiplesingular      sql.NullString
-	Nominativeneuteractivefutureparticiplesingular      sql.NullString
-	Activepresentfirstpersonpluralsubjunctive           sql.NullString
-	Passivepresentfirstpersonsingularsubjunctive        sql.NullString
-	Genitivefemininepassiveperfectparticipleplural      sql.NullString
-	Dativeneuteractivefutureparticiplesingular          sql.NullString
-	Activepastimperfectfirstpersonsingularsubjunctive   sql.NullString
-	Ablativemasculineactivefutureparticiplesingular     sql.NullString
-	Ablativefemininepassiveperfectparticiplesingular    sql.NullString
-	Vocativeneuterpassiveperfectparticiplesingular      sql.NullString
-	Activeindicativefuturefirstpersonplural             sql.NullString
+	Accusativemasculinepassivefutureparticipleplural    sql.NullString
+	Activeindicativefuturesecondpersonplural            sql.NullString
 	Accusativemasculinepassiveperfectparticiplesingular sql.NullString
-	Nominativemasculinepassiveperfectparticipleplural   sql.NullString
-	Activeindicativeperfectsecondpersonplural           sql.NullString
-	Ablativeactivepresentparticipleplural               sql.NullString
-	Indicativepassivepresentsecondpersonsingular        sql.NullString
-	Nominativeneuterplural                              sql.NullString
-	Genitivemasculineactivefutureparticipleplural       sql.NullString
-	Genitiveneuterpassiveperfectparticiplesingular      sql.NullString
-	Passivepastimperfectfirstpersonsingularsubjunctive  sql.NullString
-	Ablativeactivefutureparticipleplural                sql.NullString
-	Ablativemasculinesingularpositive                   sql.NullString
-	Dativepassivefutureparticipleplural                 sql.NullString
-	Activeindicativepluperfectfirstpersonplural         sql.NullString
-	Imperativepassivefuturesecondpersonsingular         sql.NullString
-	Ablativefemininesingular                            sql.NullString
-	Nominativeneuteractivefutureparticipleplural        sql.NullString
-	Activeindicativepresentfirstpersonplural            sql.NullString
-	Vocativeneuterplural                                sql.NullString
-	Activeindicativeperfectfirstpersonplural            sql.NullString
-	Activepresentinfinitive                             sql.NullString
-	Activeperfectthirdpersonsingularsubjunctive         sql.NullString
-	Activepluperfectfirstpersonpluralsubjunctive        sql.NullString
-	Dativemasculineactivefutureparticiplesingular       sql.NullString
-	Activeindicativepluperfectsecondpersonplural        sql.NullString
-	Genitive                                            sql.NullString
-	Accusativeneutersingularsupine                      sql.NullString
-	Nominativefemininesingular                          sql.NullString
-	Dativeneutersingularpositive                        sql.NullString
-	Genitivecommonplural                                sql.NullString
-	Dativepassiveperfectparticipleplural                sql.NullString
-	Locativeneutersingular                              sql.NullString
-	Genitivemasculinesingular                           sql.NullString
-	Passivepresentfirstpersonpluralsubjunctive          sql.NullString
-	Nominativemasculinesingular                         sql.NullString
-	Indicativepassivefuturefirstpersonsingular          sql.NullString
-	Locativemasculineplural                             sql.NullString
-	Nominativeneuterpassiveperfectparticipleplural      sql.NullString
-	Genitivemasculinepassivefutureparticiplesingular    sql.NullString
-	Nominativemasculinepluralpositive                   sql.NullString
-	Accusativemasculineplural                           sql.NullString
-	Activeindicativepluperfectfirstpersonsingular       sql.NullString
-	Ablativeneuteractivefutureparticiplesingular        sql.NullString
-	Nominativefemininesingularpositive                  sql.NullString
-	Activepluperfectthirdpersonpluralsubjunctive        sql.NullString
-	Ablative                                            sql.NullString
-	Nominativefemininepassivefutureparticiplesingular   sql.NullString
-	Indicativepassivepastimperfectfirstpersonplural     sql.NullString
-	Activeindicativepresentthirdpersonplural            sql.NullString
-	Nominativemasculinepassivefutureparticipleplural    sql.NullString
-	Activeimperativefuturesecondpersonplural            sql.NullString
-	Nominativeneuteractivepresentparticipleplural       sql.NullString
-	Ablativemasculinepassiveperfectparticiplesingular   sql.NullString
-	Activeimperativepresentsecondpersonsingular         sql.NullString
-	Activepresentsecondpersonpluralsubjunctive          sql.NullString
-	Dativemasculineplural                               sql.NullString
-	Activeindicativepastimperfectsecondpersonsingular   sql.NullString
-	Activeimperativefuturethirdpersonplural             sql.NullString
-	Accusativeneuterpassivefutureparticiplesingular     sql.NullString
-	Nominativefemininepassiveperfectparticipleplural    sql.NullString
-	Passivepastimperfectsecondpersonpluralsubjunctive   sql.NullString
 	Activeindicativepastimperfectfirstpersonplural      sql.NullString
+	Dativeneuterpassiveperfectparticiplesingular        sql.NullString
+	Indicativepassivepastimperfectfirstpersonplural     sql.NullString
+	Accusativecommonactivepresentparticiplesingular     sql.NullString
+	Ablativeneutersingularsupine                        sql.NullString
+	Vocativemasculineplural                             sql.NullString
+	Indicativepassivepresentfirstpersonsingular         sql.NullString
+	Nominativefeminineactivefutureparticiplesingular    sql.NullString
 	Activeindicativepluperfectthirdpersonsingular       sql.NullString
-	Accusativeneuterpassiveperfectparticiplesingular    sql.NullString
-	Nominativesingular                                  sql.NullString
-	Dativeactivepresentparticipleplural                 sql.NullString
-	Activepresentindicativethirdpersonsingular          sql.NullString
-	Activepastimperfectsecondpersonpluralsubjunctive    sql.NullString
-	Genitivefemininesingularpositive                    sql.NullString
-	Masculine                                           sql.NullString
-	Lastmodified                                        sql.NullString
-	Ablativepluralpositive                              sql.NullString
-	Vocativefemininesingular                            sql.NullString
-	Vocativeneuterpassiveperfectparticipleplural        sql.NullString
-	Genitivemasculinepluralpositive                     sql.NullString
-	Feminine                                            sql.NullString
-	Accusativeneuterpluralpositive                      sql.NullString
-	Indicativepassivefuturesecondpersonsingular         sql.NullString
-	Locativefemininesingular                            sql.NullString
-	Activepluperfectsecondpersonsingularsubjunctive     sql.NullString
-	Ablativeplural                                      sql.NullString
-	Common                                              sql.NullString
-	Locativecommonplural                                sql.NullString
-	Activeindicativepresentfirstpersonsingular          sql.NullString
-	Accusativemasculineactivefutureparticiplesingular   sql.NullString
-	Genitivesingular                                    sql.NullString
-	Indicativepassivepastimperfectsecondpersonsingular  sql.NullString
-	Activeimperativepresentsecondpersonplural           sql.NullString
-	Activeindicativepresentthirdpersonsingular          sql.NullString
-	Nominativemasculineactivefutureparticipleplural     sql.NullString
-	Accusativemasculinesingular                         sql.NullString
-	Indicativepassivefuturethirdpersonplural            sql.NullString
-	Activeinfinitiveperfect                             sql.NullString
-	Vocativemasculinepassiveperfectparticiplesingular   sql.NullString
-	Activeindicativefuturethirdpersonplural             sql.NullString
+	Activeindicativefutureperfectthirdpersonplural      sql.NullString
+	Dativeneuterplural                                  sql.NullString
+	Ablativeactivefutureparticipleplural                sql.NullString
+	Nominativeactivepresentparticiplesingular           sql.NullString
+	Accusativefemininesingular                          sql.NullString
+	Dativefemininepassivefutureparticiplesingular       sql.NullString
+	Indicativepassivefuturefirstpersonsingular          sql.NullString
+	Vocativeneuteractivefutureparticiplesingular        sql.NullString
+	Nominativeneuterpassivefutureparticipleplural       sql.NullString
+	Passivepastimperfectthirdpersonsingularsubjunctive  sql.NullString
+	Ablativepassiveperfectparticipleplural              sql.NullString
+	Accusativeneuteractivefutureparticiplesingular      sql.NullString
+	Dativefeminineactivefutureparticiplesingular        sql.NullString
+	Activeindicativepastimperfectsecondpersonsingular   sql.NullString
+	Ablativeneuterpassivefutureparticiplesingular       sql.NullString
 	Passiveinfinitivepresent                            sql.NullString
-	Genitivemasculinepassiveperfectparticipleplural     sql.NullString
-	Genitiveactivepresentparticiplesingular             sql.NullString
-	Activeperfectsecondpersonsingularsubjunctive        sql.NullString
-	Accusativefeminineactivefutureparticiplesingular    sql.NullString
-	Activepluperfectfirstpersonsingularsubjunctive      sql.NullString
-	Accusativefemininesingularpositive                  sql.NullString
-	Nominativefemininepluralpositive                    sql.NullString
-	Ablativefemininepassivefutureparticiplesingular     sql.NullString
-	Dativeneutersingular                                sql.NullString
+	Ablativefemininesingularpositive                    sql.NullString
+	Genitivemasculinesingular                           sql.NullString
+	Activepresentsecondpersonsingularsubjunctive        sql.NullString
+	Genitivefemininesingularpositive                    sql.NullString
+	Accusativeneuteractivepresentparticiplesingular     sql.NullString
+	Vocativemasculinepassivefutureparticipleplural      sql.NullString
+	Activeinfinitivepresent                             sql.NullString
+	Accusativenominativevocativeplural                  sql.NullString
+	Accusativeplural                                    sql.NullString
+	Nominativemasculinepassivefutureparticiplesingular  sql.NullString
+	Ablativeplural                                      sql.NullString
+	Passivepresentsecondpersonpluralsubjunctive         sql.NullString
+	Activeindicativepresentfirstpersonplural            sql.NullString
+	Indicativepassivefuturethirdpersonplural            sql.NullString
+	Accusativefeminineactivefutureparticipleplural      sql.NullString
+	Activepresentindicativethirdpersonsingular          sql.NullString
+	Imperativepassivefuturethirdpersonsingular          sql.NullString
+	Vocativefemininesingular                            sql.NullString
+	Dativeactivefutureparticipleplural                  sql.NullString
+	Genitivefemininepassivefutureparticipleplural       sql.NullString
+	Activeindicativefuturesecondpersonsingular          sql.NullString
+	Ablativepassivefutureparticipleplural               sql.NullString
+	Genitivecommonplural                                sql.NullString
+	Vocativeplural                                      sql.NullString
+	Indicativepassivepastimperfectsecondpersonplural    sql.NullString
+	Activeindicativeperfectthirdpersonplural            sql.NullString
+	Nominativecommonplural                              sql.NullString
+	Activeindicativepresentsecondpersonplural           sql.NullString
+	Activeindicativepastimperfectfirstpersonsingular    sql.NullString
+	Nominativefeminineactivefutureparticipleplural      sql.NullString
+	Genitivemasculinepassivefutureparticiplesingular    sql.NullString
+	Ablativemasculineactivefutureparticiplesingular     sql.NullString
+	Accusativemasculineactivefutureparticiplesingular   sql.NullString
+	Nominativeneuteractivefutureparticipleplural        sql.NullString
+	Accusativemasculineactivefutureparticipleplural     sql.NullString
+	Activepastimperfectsecondpersonpluralsubjunctive    sql.NullString
+	Indicativepassivepresentsecondpersonsingular        sql.NullString
+	Genitivemasculineactivefutureparticiplesingular     sql.NullString
+	Locativecommonplural                                sql.NullString
+	Dativepassivefutureparticipleplural                 sql.NullString
+	Ablativeneuterplural                                sql.NullString
+	Dativemasculinesingularpositive                     sql.NullString
+	Nominativeneuterpassiveperfectparticipleplural      sql.NullString
+	Ablativedativesingular                              sql.NullString
+	Locativeplural                                      sql.NullString
+	Vocativeneutersingularpositive                      sql.NullString
+	Accusativenominativevocativesingular                sql.NullString
+	Dativeneutersingularpositive                        sql.NullString
+	Ablativefemininepassiveperfectparticiplesingular    sql.NullString
 	Accusativefemininepassivefutureparticiplesingular   sql.NullString
 	Genitiveneuterpassivefutureparticiplesingular       sql.NullString
-	Accusativeplural                                    sql.NullString
-	Accusativefeminineplural                            sql.NullString
-	Ablativefeminineplural                              sql.NullString
-	Genitiveneutersingularpositive                      sql.NullString
-	Activepresentfirstpersonsingularsubjunctive         sql.NullString
+	Ablativecommonplural                                sql.NullString
 	Genitivefemininepassivefutureparticiplesingular     sql.NullString
-	Dativesingular                                      sql.NullString
-	Vocativecommonactivepresentparticipleplural         sql.NullString
-	Vocativeneuterpassivefutureparticipleplural         sql.NullString
-	Activeindicativefutureperfectthirdpersonsingular    sql.NullString
-	Dativefeminineplural                                sql.NullString
-	Activeindicativefutureperfectfirstpersonplural      sql.NullString
-	Vocativemasculineactivefutureparticipleplural       sql.NullString
-	Genitivemasculinesingularpositive                   sql.NullString
-	Ablativeneutersingular                              sql.NullString
-	Vocativefemininepluralpositive                      sql.NullString
-	Activepresentsecondpersonsingularsubjunctive        sql.NullString
-	Genitivemasculineplural                             sql.NullString
-	Accusative                                          sql.NullString
-	Dativemasculinepassiveperfectparticiplesingular     sql.NullString
-	Ablativeneutersingularpositive                      sql.NullString
+	Ablativeactivepresentparticiplesingular             sql.NullString
+	Dative                                              sql.NullString
 	Nominativeneuterpassiveperfectparticiplesingular    sql.NullString
-	Accusativecommonplural                              sql.NullString
-	Ablativeneutersingularsupine                        sql.NullString
-	Activeindicativepastimperfectfirstpersonsingular    sql.NullString
-	Passivepresentthirdpersonsingularsubjunctive        sql.NullString
-	Nominativeneuterpassivefutureparticipleplural       sql.NullString
-	Nominativecommonplural                              sql.NullString
-	Indicativepassivepastimperfectthirdpersonplural     sql.NullString
-	Imperativepassivefuturethirdpersonplural            sql.NullString
-	Activeindicativepresentsecondpersonsingular         sql.NullString
-	Accusativefeminineactivefutureparticipleplural      sql.NullString
-	Genitivefemininepluralpositive                      sql.NullString
-	Passivepastimperfectthirdpersonsingularsubjunctive  sql.NullString
-	Vocativeneuteractivefutureparticiplesingular        sql.NullString
-	Dativefeminineactivefutureparticiplesingular        sql.NullString
-	Vocativesingular                                    sql.NullString
-	Vocativeneuteractivepresentparticipleplural         sql.NullString
-	Accusativemasculinepassivefutureparticiplesingular  sql.NullString
-	Activeindicativefuturethirdpersonsingular           sql.NullString
-	Indicativepassivefuturethirdpersonsingular          sql.NullString
-	Vocativemasculinepassivefutureparticipleplural      sql.NullString
+	Activeindicativepastimperfectthirdpersonplural      sql.NullString
+	Nominativefemininepluralpositive                    sql.NullString
+	Vocativeneuterpassiveperfectparticipleplural        sql.NullString
+	Passivepresentfirstpersonpluralsubjunctive          sql.NullString
+	Locativefeminineplural                              sql.NullString
+	Activepresentfirstpersonpluralsubjunctive           sql.NullString
+	Nominativeneuterpluralpositive                      sql.NullString
+	Passivepastimperfectsecondpersonpluralsubjunctive   sql.NullString
+	Activepresentindicativefirstpersonsingular          sql.NullString
+	Dativesingular                                      sql.NullString
+	Activeindicativefutureperfectthirdpersonsingular    sql.NullString
+	Nominativesingular                                  sql.NullString
+	Genitivemasculinesingularpositive                   sql.NullString
+	Passivepastimperfectfirstpersonpluralsubjunctive    sql.NullString
+	Accusativemasculinepassiveperfectparticipleplural   sql.NullString
+	Activeperfectsecondpersonsingularsubjunctive        sql.NullString
+	Nominativemasculinepassiveperfectparticipleplural   sql.NullString
+	Ablativemasculinepassivefutureparticiplesingular    sql.NullString
+	Nominativemasculinepassiveperfectparticiplesingular sql.NullString
+	Accusativeneuterplural                              sql.NullString
+	Genitive                                            sql.NullString
+	Accusativeneuteractivepresentparticipleplural       sql.NullString
 	Vocative                                            sql.NullString
-	Activeinfinitivepresent                             sql.NullString
-	Genitivemasculineactivefutureparticiplesingular     sql.NullString
-	Locativesingular                                    sql.NullString
-	Passivepresentsecondpersonpluralsubjunctive         sql.NullString
-	Nominativecommonsingular                            sql.NullString
-	Accusativefemininepluralpositive                    sql.NullString
-	Indicativepassivefuturefirstpersonplural            sql.NullString
-	Singular                                            sql.NullString
-	Accusativemasculinepluralpositive                   sql.NullString
-	Accusativemasculinepassivefutureparticipleplural    sql.NullString
-	Genitiveneuterpluralpositive                        sql.NullString
-	Vocativefeminineactivefutureparticiplesingular      sql.NullString
-	Vocativefemininepassiveperfectparticiplesingular    sql.NullString
-	Genitiveneutersingular                              sql.NullString
-	Vocativeneuteractivefutureparticipleplural          sql.NullString
-	Activepastimperfectthirdpersonpluralsubjunctive     sql.NullString
-	Accusativeneuteractivefutureparticipleplural        sql.NullString
-	Accusativeneuteractivefutureparticiplesingular      sql.NullString
-	Accusativefemininepassivefutureparticipleplural     sql.NullString
-	Activeindicativefutureperfectfirstpersonsingular    sql.NullString
-	Activeindicativefutureperfectthirdpersonplural      sql.NullString
-	Vocativefemininepassivefutureparticipleplural       sql.NullString
-	Nominativeneutersingularpositive                    sql.NullString
-	Dativeactivepresentparticiplesingular               sql.NullString
-	Accusativefemininesingular                          sql.NullString
-	Activeperfectfirstpersonsingularsubjunctive         sql.NullString
-	Accusativemasculinesingularpositive                 sql.NullString
-	Nominativeactivepresentparticiplesingular           sql.NullString
-	Nominativemasculineactivefutureparticiplesingular   sql.NullString
-	Indicativepassivepresentsecondpersonplural          sql.NullString
+	Activeperfectthirdpersonsingularsubjunctive         sql.NullString
+	Activepastimperfectthirdpersonsingularsubjunctive   sql.NullString
+	Locativemasculineplural                             sql.NullString
+	Nominativefemininepassivefutureparticipleplural     sql.NullString
+	Vocativecommonactivepresentparticipleplural         sql.NullString
+	Activepluperfectthirdpersonpluralsubjunctive        sql.NullString
+	Indicativepassivefuturesecondpersonsingular         sql.NullString
+	Genitiveneuterpassiveperfectparticipleplural        sql.NullString
+	Activeimperativepresentsecondpersonplural           sql.NullString
+	Vocativefeminineactivefutureparticipleplural        sql.NullString
+	Nominativeneuteractivefutureparticiplesingular      sql.NullString
+	Ablativeneutersingularpositive                      sql.NullString
+	Dativepassiveperfectparticipleplural                sql.NullString
+	Nominative                                          sql.NullString
+	Nominativefemininepassiveperfectparticiplesingular  sql.NullString
+	Vocativefeminineplural                              sql.NullString
 }
 
-type LaLatinDbPersonalPronoun struct {
+type LaPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
-	Nominative   sql.NullString
 	Lastmodified sql.NullString
+	Nominative   sql.NullString
 }
 
-type LaLatinDbPreposition struct {
+type LaPreposition struct {
 	Wdlexemeid   sql.NullString
+	Accusative   sql.NullString
 	Lastmodified sql.NullString
 	Genitive     sql.NullString
 	Ablative     sql.NullString
-	Accusative   sql.NullString
 }
 
-type LaLatinDbPronoun struct {
+type LaPronoun struct {
 	Wdlexemeid                  sql.NullString
-	Nominativemasculinesingular sql.NullString
-	Ablativeneutersingular      sql.NullString
 	Genitivesingular            sql.NullString
-	Accusativeneutersingular    sql.NullString
-	Dativeplural                sql.NullString
-	Accusativemasculineplural   sql.NullString
-	Ablativefemininesingular    sql.NullString
-	Lastmodified                sql.NullString
-	Genitivemasculineplural     sql.NullString
-	Accusativefeminineplural    sql.NullString
-	Accusativemasculinesingular sql.NullString
-	Genitivefeminineplural      sql.NullString
-	Nominativeneutersingular    sql.NullString
-	Genitiveneuterplural        sql.NullString
-	Accusativeneuterplural      sql.NullString
-	Accusativefemininesingular  sql.NullString
-	Dativesingular              sql.NullString
-	Nominativefeminineplural    sql.NullString
-	Ablativeplural              sql.NullString
-	Nominativefemininesingular  sql.NullString
-	Nominativemasculineplural   sql.NullString
 	Nominativeneuterplural      sql.NullString
+	Nominativefemininesingular  sql.NullString
+	Accusativeneuterplural      sql.NullString
+	Genitivefeminineplural      sql.NullString
+	Accusativemasculinesingular sql.NullString
+	Ablativeplural              sql.NullString
+	Genitiveneuterplural        sql.NullString
+	Ablativeneutersingular      sql.NullString
+	Nominativemasculineplural   sql.NullString
+	Dativeplural                sql.NullString
+	Accusativefeminineplural    sql.NullString
+	Lastmodified                sql.NullString
 	Ablativemasculinesingular   sql.NullString
+	Dativesingular              sql.NullString
+	Ablativefemininesingular    sql.NullString
+	Accusativefemininesingular  sql.NullString
+	Genitivemasculineplural     sql.NullString
+	Nominativemasculinesingular sql.NullString
+	Nominativefeminineplural    sql.NullString
+	Nominativeneutersingular    sql.NullString
+	Accusativeneutersingular    sql.NullString
+	Accusativemasculineplural   sql.NullString
 }
 
-type LaLatinDbProperNoun struct {
+type LaProperNoun struct {
 	Wdlexemeid                  sql.NullString
-	Nominativemasculinesingular sql.NullString
 	Genitivesingular            sql.NullString
-	Nominativesingular          sql.NullString
+	Genitivemasculinesingular   sql.NullString
+	Genitiveplural              sql.NullString
 	Locativemasculineplural     sql.NullString
-	Vocativeplural              sql.NullString
-	Vocativesingular            sql.NullString
-	Dativeplural                sql.NullString
-	Accusativemasculineplural   sql.NullString
-	Accusativesingular          sql.NullString
-	Nominativeplural            sql.NullString
-	Lastmodified                sql.NullString
-	Genitivemasculineplural     sql.NullString
 	Accusativeplural            sql.NullString
-	Accusativemasculinesingular sql.NullString
-	Dativemasculinesingular     sql.NullString
-	Feminine                    sql.NullString
+	Vocativesingular            sql.NullString
 	Vocativemasculineplural     sql.NullString
-	Locativesingular            sql.NullString
-	Locativemasculinesingular   sql.NullString
-	Vocativemasculinesingular   sql.NullString
-	Plural                      sql.NullString
-	Dativesingular              sql.NullString
-	Ablativesingular            sql.NullString
+	Accusativemasculinesingular sql.NullString
 	Ablativeplural              sql.NullString
 	Nominativemasculineplural   sql.NullString
-	Ablativemasculineplural     sql.NullString
-	Ablativemasculinesingular   sql.NullString
-	Singular                    sql.NullString
+	Feminine                    sql.NullString
+	Dativeplural                sql.NullString
+	Locativesingular            sql.NullString
+	Lastmodified                sql.NullString
+	Dativemasculinesingular     sql.NullString
+	Locativemasculinesingular   sql.NullString
 	Dativemasculineplural       sql.NullString
-	Genitiveplural              sql.NullString
-	Genitivemasculinesingular   sql.NullString
+	Plural                      sql.NullString
+	Ablativemasculinesingular   sql.NullString
+	Dativesingular              sql.NullString
+	Genitivemasculineplural     sql.NullString
+	Vocativemasculinesingular   sql.NullString
+	Ablativesingular            sql.NullString
+	Nominativemasculinesingular sql.NullString
+	Vocativeplural              sql.NullString
+	Nominativesingular          sql.NullString
+	Nominativeplural            sql.NullString
+	Singular                    sql.NullString
+	Accusativesingular          sql.NullString
+	Ablativemasculineplural     sql.NullString
+	Accusativemasculineplural   sql.NullString
 }
 
-type LvLatvianDbAdjective struct {
+type LvAdjective struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type LvLatvianDbAdverb struct {
+type LvAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type LvLatvianDbConjunction struct {
+type LvConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type LvLatvianDbNoun struct {
+type LvNoun struct {
 	Wdlexemeid           sql.NullString
-	Instrumentalsingular sql.NullString
-	Vocativesingular     sql.NullString
-	Accusativesingular   sql.NullString
-	Nominativeplural     sql.NullString
-	Lastmodified         sql.NullString
 	Locativesingular     sql.NullString
-	Genitivesingular     sql.NullString
+	Lastmodified         sql.NullString
 	Nominativesingular   sql.NullString
-	Locativeplural       sql.NullString
 	Vocativeplural       sql.NullString
-	Accusativeplural     sql.NullString
 	Instrumentalplural   sql.NullString
-	Genitiveplural       sql.NullString
-	Dativeplural         sql.NullString
+	Genitivesingular     sql.NullString
+	Nominativeplural     sql.NullString
+	Accusativeplural     sql.NullString
+	Locativeplural       sql.NullString
+	Vocativesingular     sql.NullString
 	Dativesingular       sql.NullString
+	Accusativesingular   sql.NullString
+	Genitiveplural       sql.NullString
+	Instrumentalsingular sql.NullString
+	Dativeplural         sql.NullString
 }
 
-type LvLatvianDbPersonalPronoun struct {
+type LvPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
-	Locative     sql.NullString
 	Lastmodified sql.NullString
 	Accusative   sql.NullString
-	Dative       sql.NullString
-	Nominative   sql.NullString
-	Genitive     sql.NullString
 	Instrumental sql.NullString
+	Genitive     sql.NullString
+	Dative       sql.NullString
+	Locative     sql.NullString
+	Nominative   sql.NullString
 }
 
-type LvLatvianDbPreposition struct {
+type LvPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type LvLatvianDbPronoun struct {
+type LvPronoun struct {
 	Wdlexemeid   sql.NullString
-	Locative     sql.NullString
 	Lastmodified sql.NullString
 	Accusative   sql.NullString
-	Dative       sql.NullString
-	Nominative   sql.NullString
 	Genitive     sql.NullString
+	Dative       sql.NullString
+	Locative     sql.NullString
+	Nominative   sql.NullString
 }
 
-type LvLatvianDbProperNoun struct {
+type LvProperNoun struct {
 	Wdlexemeid           sql.NullString
-	Instrumentalsingular sql.NullString
-	Vocativesingular     sql.NullString
-	Accusativesingular   sql.NullString
-	Nominativeplural     sql.NullString
-	Lastmodified         sql.NullString
 	Locativesingular     sql.NullString
-	Genitivesingular     sql.NullString
+	Lastmodified         sql.NullString
 	Nominativesingular   sql.NullString
-	Locativeplural       sql.NullString
 	Vocativeplural       sql.NullString
-	Accusativeplural     sql.NullString
 	Instrumentalplural   sql.NullString
-	Genitiveplural       sql.NullString
-	Dativeplural         sql.NullString
+	Genitivesingular     sql.NullString
+	Nominativeplural     sql.NullString
+	Accusativeplural     sql.NullString
+	Locativeplural       sql.NullString
+	Vocativesingular     sql.NullString
 	Dativesingular       sql.NullString
+	Accusativesingular   sql.NullString
+	Genitiveplural       sql.NullString
+	Instrumentalsingular sql.NullString
+	Dativeplural         sql.NullString
 }
 
-type LvLatvianDbVerb struct {
+type LvVerb struct {
 	Wdlexemeid                                  sql.NullString
-	Indicativesimplepresentsecondpersonsingular sql.NullString
-	Indicativesimplepresentfirstpersonsingular  sql.NullString
-	Indicativesimplepresentthirdpersonplural    sql.NullString
 	Lastmodified                                sql.NullString
+	Indicativesimplepresentfirstpersonsingular  sql.NullString
+	Indicativesimplepresentsecondpersonsingular sql.NullString
+	Indicativesimplepresentthirdpersonplural    sql.NullString
 	Indicativesimplepresentthirdpersonsingular  sql.NullString
-	Indicativesimplepresentsecondpersonplural   sql.NullString
 	Infinitive                                  sql.NullString
+	Indicativesimplepresentsecondpersonplural   sql.NullString
 	Indicativesimplepresentfirstpersonplural    sql.NullString
 }
 
-type MlMalayalamDbAdjective struct {
+type MlAdjective struct {
 	Wdlexemeid           sql.NullString
-	Instrumentalsingular sql.NullString
-	Accusativesingular   sql.NullString
-	Nominativeplural     sql.NullString
 	Locativesingular     sql.NullString
 	Lastmodified         sql.NullString
-	Genitiveplural       sql.NullString
-	Genitivesingular     sql.NullString
 	Nominativesingular   sql.NullString
-	Singular             sql.NullString
-	Locativeplural       sql.NullString
-	Accusativeplural     sql.NullString
 	Instrumentalplural   sql.NullString
+	Genitivesingular     sql.NullString
+	Nominativeplural     sql.NullString
+	Accusativeplural     sql.NullString
+	Locativeplural       sql.NullString
 	Plural               sql.NullString
-	Dativeplural         sql.NullString
+	Singular             sql.NullString
 	Dativesingular       sql.NullString
+	Accusativesingular   sql.NullString
+	Genitiveplural       sql.NullString
+	Instrumentalsingular sql.NullString
+	Dativeplural         sql.NullString
 }
 
-type MlMalayalamDbAdverb struct {
+type MlAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MlMalayalamDbConjunction struct {
+type MlConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MlMalayalamDbNoun struct {
+type MlNoun struct {
 	Wdlexemeid               sql.NullString
-	Genitivesingular         sql.NullString
-	Nominativesingular       sql.NullString
-	Dative                   sql.NullString
-	Vocativeplural           sql.NullString
-	Vocativesingular         sql.NullString
-	Dativeplural             sql.NullString
-	Instrumentalsingular     sql.NullString
-	Pluralsingular           sql.NullString
-	Accusativesingular       sql.NullString
-	Nominativeplural         sql.NullString
-	Lastmodified             sql.NullString
-	Accusative               sql.NullString
-	Accusativeplural         sql.NullString
 	Instrumentalplural       sql.NullString
-	Instrumental             sql.NullString
-	Locative                 sql.NullString
-	Locativesingular         sql.NullString
-	Locativeplural           sql.NullString
-	Nominative               sql.NullString
-	Plural                   sql.NullString
-	Commonplural             sql.NullString
+	Masculinesingular        sql.NullString
+	Genitivesingular         sql.NullString
+	Pluralsingular           sql.NullString
 	Genitive                 sql.NullString
+	Genitiveplural           sql.NullString
+	Commonplural             sql.NullString
+	Accusativeplural         sql.NullString
+	Vocativesingular         sql.NullString
+	Vocativecommonsingular   sql.NullString
+	Dativeplural             sql.NullString
+	Locativesingular         sql.NullString
+	Lastmodified             sql.NullString
+	Locativeplural           sql.NullString
+	Plural                   sql.NullString
+	Instrumental             sql.NullString
 	Dativesingular           sql.NullString
+	Instrumentalsingular     sql.NullString
 	Vocativecommonplural     sql.NullString
 	Nominativefeminineplural sql.NullString
-	Singular                 sql.NullString
+	Vocativeplural           sql.NullString
+	Nominativesingular       sql.NullString
+	Accusative               sql.NullString
+	Nominativeplural         sql.NullString
 	Nominativecommonplural   sql.NullString
-	Masculinesingular        sql.NullString
-	Genitiveplural           sql.NullString
-	Vocativecommonsingular   sql.NullString
+	Singular                 sql.NullString
+	Accusativesingular       sql.NullString
+	Dative                   sql.NullString
+	Locative                 sql.NullString
+	Nominative               sql.NullString
 }
 
-type MlMalayalamDbPersonalPronoun struct {
+type MlPersonalPronoun struct {
 	Wdlexemeid                      sql.NullString
-	Thirdpersonsingular             sql.NullString
-	Accusativethirdpersonsingular   sql.NullString
-	Locative                        sql.NullString
-	Vocativethirdpersonsingular     sql.NullString
+	Dativethirdpersonsingular       sql.NullString
 	Lastmodified                    sql.NullString
-	Genitive                        sql.NullString
+	Thirdpersonsingular             sql.NullString
+	Instrumentalthirdpersonsingular sql.NullString
 	Nominativethirdpersonsingular   sql.NullString
 	Accusative                      sql.NullString
-	Dative                          sql.NullString
-	Dativethirdpersonsingular       sql.NullString
-	Vocative                        sql.NullString
-	Nominative                      sql.NullString
+	Locative                        sql.NullString
+	Accusativethirdpersonsingular   sql.NullString
 	Genitivethirdpersonsingular     sql.NullString
 	Instrumental                    sql.NullString
+	Genitive                        sql.NullString
+	Dative                          sql.NullString
+	Vocativethirdpersonsingular     sql.NullString
+	Nominative                      sql.NullString
+	Vocative                        sql.NullString
 	Locativethirdpersonsingular     sql.NullString
-	Instrumentalthirdpersonsingular sql.NullString
 }
 
-type MlMalayalamDbPostposition struct {
+type MlPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MlMalayalamDbPreposition struct {
+type MlPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MlMalayalamDbPronoun struct {
+type MlPronoun struct {
 	Wdlexemeid                      sql.NullString
+	Thirdpersonsingular             sql.NullString
+	Instrumentalplural              sql.NullString
 	Nominativethirdpersonsingular   sql.NullString
 	Genitivesingular                sql.NullString
-	Nominativesingular              sql.NullString
-	Dative                          sql.NullString
-	Dativethirdpersonsingular       sql.NullString
-	Vocativeplural                  sql.NullString
-	Accusativethirdpersonplural     sql.NullString
-	Genitivethirdpersonsingular     sql.NullString
-	Vocativesingular                sql.NullString
-	Dativeplural                    sql.NullString
-	Instrumentalsingular            sql.NullString
-	Instrumentalthirdpersonsingular sql.NullString
-	Accusativesingular              sql.NullString
-	Nominativeplural                sql.NullString
-	Dativethirdpersonplural         sql.NullString
-	Vocativethirdpersonsingular     sql.NullString
-	Lastmodified                    sql.NullString
-	Thirdpersonplural               sql.NullString
-	Genitivethirdpersonplural       sql.NullString
-	Accusative                      sql.NullString
-	Accusativeplural                sql.NullString
-	Instrumentalplural              sql.NullString
-	Vocative                        sql.NullString
-	Instrumental                    sql.NullString
-	Thirdpersonsingular             sql.NullString
-	Locative                        sql.NullString
-	Locativesingular                sql.NullString
-	Nominativevocative              sql.NullString
-	Locativeplural                  sql.NullString
-	Nominative                      sql.NullString
-	Plural                          sql.NullString
 	Genitive                        sql.NullString
-	Dativesingular                  sql.NullString
-	Locativethirdpersonplural       sql.NullString
-	Accusativethirdpersonsingular   sql.NullString
-	Vocativethirdpersonplural       sql.NullString
-	Singular                        sql.NullString
-	Nominativethirdpersonplural     sql.NullString
-	Instrumentalthirdpersonplural   sql.NullString
 	Genitiveplural                  sql.NullString
 	Locativethirdpersonsingular     sql.NullString
+	Vocative                        sql.NullString
+	Dativethirdpersonsingular       sql.NullString
+	Vocativesingular                sql.NullString
+	Accusativeplural                sql.NullString
+	Genitivethirdpersonplural       sql.NullString
+	Vocativethirdpersonplural       sql.NullString
+	Vocativethirdpersonsingular     sql.NullString
+	Dativeplural                    sql.NullString
+	Instrumentalthirdpersonplural   sql.NullString
+	Locativesingular                sql.NullString
+	Lastmodified                    sql.NullString
+	Instrumentalthirdpersonsingular sql.NullString
+	Accusativethirdpersonplural     sql.NullString
+	Locativeplural                  sql.NullString
+	Plural                          sql.NullString
+	Nominativethirdpersonplural     sql.NullString
+	Instrumental                    sql.NullString
+	Dativesingular                  sql.NullString
+	Dativethirdpersonplural         sql.NullString
+	Genitivethirdpersonsingular     sql.NullString
+	Instrumentalsingular            sql.NullString
+	Vocativeplural                  sql.NullString
+	Nominativesingular              sql.NullString
+	Accusative                      sql.NullString
+	Nominativeplural                sql.NullString
+	Nominativevocative              sql.NullString
+	Accusativethirdpersonsingular   sql.NullString
+	Locativethirdpersonplural       sql.NullString
+	Thirdpersonplural               sql.NullString
+	Singular                        sql.NullString
+	Accusativesingular              sql.NullString
+	Dative                          sql.NullString
+	Locative                        sql.NullString
+	Nominative                      sql.NullString
 }
 
-type MlMalayalamDbProperNoun struct {
+type MlProperNoun struct {
 	Wdlexemeid                 sql.NullString
-	Accusativelocativesingular sql.NullString
-	Genitivesingular           sql.NullString
-	Nominativesingular         sql.NullString
-	Dative                     sql.NullString
-	Vocativeplural             sql.NullString
-	Vocativesingular           sql.NullString
-	Dativeplural               sql.NullString
-	Instrumentalsingular       sql.NullString
-	Accusativesingular         sql.NullString
-	Nominativeplural           sql.NullString
-	Lastmodified               sql.NullString
-	Accusative                 sql.NullString
-	Accusativeplural           sql.NullString
 	Instrumentalplural         sql.NullString
-	Instrumental               sql.NullString
-	Locative                   sql.NullString
-	Locativesingular           sql.NullString
-	Locativeplural             sql.NullString
+	Genitivesingular           sql.NullString
 	Genitive                   sql.NullString
-	Plural                     sql.NullString
-	Dativesingular             sql.NullString
-	Singular                   sql.NullString
 	Genitiveplural             sql.NullString
+	Vocativesingular           sql.NullString
+	Accusativeplural           sql.NullString
+	Dativeplural               sql.NullString
+	Locativesingular           sql.NullString
+	Lastmodified               sql.NullString
+	Locativeplural             sql.NullString
+	Plural                     sql.NullString
+	Instrumental               sql.NullString
+	Dativesingular             sql.NullString
+	Instrumentalsingular       sql.NullString
+	Vocativeplural             sql.NullString
+	Nominativesingular         sql.NullString
+	Accusative                 sql.NullString
+	Nominativeplural           sql.NullString
+	Singular                   sql.NullString
+	Accusativesingular         sql.NullString
+	Dative                     sql.NullString
+	Accusativelocativesingular sql.NullString
+	Locative                   sql.NullString
 }
 
-type MlMalayalamDbVerb struct {
+type MlVerb struct {
 	Wdlexemeid        sql.NullString
-	Presentinfinitive sql.NullString
-	Presentcontinuous sql.NullString
-	Simplefuture      sql.NullString
 	Lastmodified      sql.NullString
-	Simplepast        sql.NullString
-	Future            sql.NullString
-	Infinitive        sql.NullString
 	Imperative        sql.NullString
+	Future            sql.NullString
+	Presentinfinitive sql.NullString
+	Infinitive        sql.NullString
+	Simplefuture      sql.NullString
+	Simplepast        sql.NullString
+	Presentcontinuous sql.NullString
 	Simplepresent     sql.NullString
 }
 
-type MsMalayDbAdjective struct {
+type MsAdjective struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
-	Lastmodified sql.NullString
 	Singular     sql.NullString
+	Lastmodified sql.NullString
 	Superlative  sql.NullString
+	Positive     sql.NullString
 }
 
-type MsMalayDbAdverb struct {
+type MsAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MsMalayDbConjunction struct {
+type MsConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MsMalayDbNoun struct {
+type MsNoun struct {
 	Wdlexemeid                 sql.NullString
-	Thirdpersonsingular        sql.NullString
 	Lastmodified               sql.NullString
+	Thirdpersonsingular        sql.NullString
 	Secondpersonsingular       sql.NullString
 	Secondpersonplural         sql.NullString
 	Thirdpersonpluralsingular  sql.NullString
-	Singular                   sql.NullString
-	Active                     sql.NullString
-	Firstpersonpluralsingular  sql.NullString
-	Firstpersonsingular        sql.NullString
-	Secondpersonpluralsingular sql.NullString
 	Plural                     sql.NullString
+	Firstpersonpluralsingular  sql.NullString
+	Secondpersonpluralsingular sql.NullString
+	Singular                   sql.NullString
+	Firstpersonsingular        sql.NullString
+	Active                     sql.NullString
 }
 
-type MsMalayDbPersonalPronoun struct {
+type MsPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MsMalayDbPreposition struct {
+type MsPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MsMalayDbPronoun struct {
+type MsPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type MsMalayDbProperNoun struct {
+type MsProperNoun struct {
 	Wdlexemeid   sql.NullString
+	Singular     sql.NullString
 	Lastmodified sql.NullString
 	Plural       sql.NullString
-	Singular     sql.NullString
 }
 
-type MsMalayDbVerb struct {
+type MsVerb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Passive      sql.NullString
 	Active       sql.NullString
 }
 
-type PlPolishDbAdverb struct {
+type PlAdverb struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
 	Lastmodified sql.NullString
 	Comparative  sql.NullString
 	Superlative  sql.NullString
+	Positive     sql.NullString
 }
 
-type PlPolishDbConjunction struct {
+type PlConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type PlPolishDbNoun struct {
+type PlNoun struct {
 	Wdlexemeid                           sql.NullString
-	Accusativenominativevocativeplural   sql.NullString
-	Genitivesingular                     sql.NullString
-	Nominativesingular                   sql.NullString
-	Dative                               sql.NullString
-	Vocativeplural                       sql.NullString
-	Vocativesingular                     sql.NullString
-	Dativeplural                         sql.NullString
-	Instrumentalsingular                 sql.NullString
-	Accusativesingular                   sql.NullString
-	Nominativeplural                     sql.NullString
-	Lastmodified                         sql.NullString
-	Accusative                           sql.NullString
-	Accusativeplural                     sql.NullString
 	Instrumentalplural                   sql.NullString
-	Vocative                             sql.NullString
+	Genitivesingular                     sql.NullString
 	Genitivemasculineinanimatesingular   sql.NullString
-	Instrumental                         sql.NullString
-	Locative                             sql.NullString
 	Dativelocativesingular               sql.NullString
-	Locativesingular                     sql.NullString
-	Locativeplural                       sql.NullString
-	Nominative                           sql.NullString
 	Genitive                             sql.NullString
+	Genitiveplural                       sql.NullString
+	Vocative                             sql.NullString
+	Accusativenominativevocativeplural   sql.NullString
+	Vocativesingular                     sql.NullString
+	Accusativeplural                     sql.NullString
+	Dativeplural                         sql.NullString
+	Locativesingular                     sql.NullString
+	Lastmodified                         sql.NullString
+	Locativeplural                       sql.NullString
 	Plural                               sql.NullString
+	Instrumental                         sql.NullString
 	Dativesingular                       sql.NullString
 	Accusativemasculineinanimatesingular sql.NullString
-	Genitiveplural                       sql.NullString
+	Instrumentalsingular                 sql.NullString
+	Vocativeplural                       sql.NullString
+	Nominativesingular                   sql.NullString
+	Accusative                           sql.NullString
+	Nominativeplural                     sql.NullString
+	Accusativesingular                   sql.NullString
+	Dative                               sql.NullString
+	Locative                             sql.NullString
+	Nominative                           sql.NullString
 }
 
-type PlPolishDbPersonalPronoun struct {
+type PlPersonalPronoun struct {
 	Wdlexemeid           sql.NullString
-	Instrumentalsingular sql.NullString
-	Accusativesingular   sql.NullString
-	Locative             sql.NullString
-	Lastmodified         sql.NullString
 	Locativesingular     sql.NullString
+	Lastmodified         sql.NullString
+	Nominativesingular   sql.NullString
 	Accusative           sql.NullString
 	Genitivesingular     sql.NullString
-	Nominativesingular   sql.NullString
+	Instrumental         sql.NullString
+	Dativesingular       sql.NullString
+	Accusativesingular   sql.NullString
+	Genitive             sql.NullString
 	Dative               sql.NullString
-	Vocative             sql.NullString
+	Instrumentalsingular sql.NullString
+	Locative             sql.NullString
 	Nominative           sql.NullString
-	Genitive             sql.NullString
-	Instrumental         sql.NullString
-	Dativesingular       sql.NullString
+	Vocative             sql.NullString
 }
 
-type PlPolishDbPreposition struct {
+type PlPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type PlPolishDbPronoun struct {
+type PlPronoun struct {
 	Wdlexemeid           sql.NullString
-	Instrumentalsingular sql.NullString
-	Accusativesingular   sql.NullString
-	Locative             sql.NullString
-	Lastmodified         sql.NullString
 	Locativesingular     sql.NullString
+	Lastmodified         sql.NullString
+	Nominativesingular   sql.NullString
 	Accusative           sql.NullString
 	Genitivesingular     sql.NullString
-	Nominativesingular   sql.NullString
-	Dative               sql.NullString
-	Genitive             sql.NullString
 	Instrumental         sql.NullString
 	Dativesingular       sql.NullString
-}
-
-type PlPolishDbProperNoun struct {
-	Wdlexemeid           sql.NullString
-	Instrumentalsingular sql.NullString
 	Accusativesingular   sql.NullString
-	Nominativeplural     sql.NullString
-	Lastmodified         sql.NullString
+	Genitive             sql.NullString
+	Dative               sql.NullString
+	Locative             sql.NullString
+	Instrumentalsingular sql.NullString
+}
+
+type PlProperNoun struct {
+	Wdlexemeid           sql.NullString
 	Locativesingular     sql.NullString
-	Genitiveplural       sql.NullString
-	Nominativevocative   sql.NullString
-	Genitivesingular     sql.NullString
+	Lastmodified         sql.NullString
 	Nominativesingular   sql.NullString
-	Locativeplural       sql.NullString
 	Vocativeplural       sql.NullString
-	Accusativeplural     sql.NullString
 	Instrumentalplural   sql.NullString
+	Genitivesingular     sql.NullString
 	Vocativesingular     sql.NullString
-	Dativeplural         sql.NullString
+	Nominativeplural     sql.NullString
+	Accusativeplural     sql.NullString
+	Locativeplural       sql.NullString
+	Nominativevocative   sql.NullString
 	Dativesingular       sql.NullString
+	Accusativesingular   sql.NullString
+	Genitiveplural       sql.NullString
+	Instrumentalsingular sql.NullString
+	Dativeplural         sql.NullString
 }
 
-type PlPolishDbVerb struct {
+type PlVerb struct {
 	Wdlexemeid                                  sql.NullString
-	Presentsecondpersonsingular                 sql.NullString
-	Masculinepastthirdpersonsingular            sql.NullString
-	Masculineanimateactiveparticipleplural      sql.NullString
-	Femininepassiveparticiplesingular           sql.NullString
-	Neuterpassiveparticipleplural               sql.NullString
-	Indicativepresentthirdpersonsingular        sql.NullString
-	Presentthirdpersonsingular                  sql.NullString
-	Presentsingular                             sql.NullString
-	Infinitive                                  sql.NullString
-	Imperativethirdpersonplural                 sql.NullString
-	Masculineanimateactiveparticiplesingular    sql.NullString
-	Indicativepresentsecondpersonsingular       sql.NullString
 	Neuterpastfirstpersonsingular               sql.NullString
-	Indicativepresentsecondpersonplural         sql.NullString
-	Indicativepresentfirstpersonsingular        sql.NullString
-	Feminineactiveparticipleplural              sql.NullString
-	Masculinepastsecondpersonsingular           sql.NullString
-	Femininepastfirstpersonsingular             sql.NullString
-	Neuterpastsecondpersonsingular              sql.NullString
-	Imperativesecondpersonplural                sql.NullString
-	Lastmodified                                sql.NullString
-	Presentfirstpersonplural                    sql.NullString
-	Imperativefirstpersonplural                 sql.NullString
-	Neuteractiveparticipleplural                sql.NullString
-	Femininepastsecondpersonsingular            sql.NullString
-	Notmasculinepersonalpastthirdpersonplural   sql.NullString
-	Neuteractiveparticiplesingular              sql.NullString
-	Neuterpassiveparticiplesingular             sql.NullString
-	Firstpersonsingular                         sql.NullString
-	Imperativethirdpersonsingular               sql.NullString
-	Indicativepresent                           sql.NullString
-	Imperativepresent                           sql.NullString
-	Masculineinanimateactiveparticiplesingular  sql.NullString
-	Notmasculinepersonalpastfirstpersonplural   sql.NullString
-	Imperativesecondpersonsingular              sql.NullString
-	Presentfirstpersonsingular                  sql.NullString
-	Conditionalfuture                           sql.NullString
-	Neuterpastthirdpersonsingular               sql.NullString
-	Masculinepastfirstpersonsingular            sql.NullString
-	Masculinepersonalpastsecondpersonplural     sql.NullString
-	Indicativepresentfirstpersonplural          sql.NullString
-	Masculineanimatepassiveparticipleplural     sql.NullString
-	Presentthirdpersonplural                    sql.NullString
-	Femininepresentplural                       sql.NullString
-	Indicativefuture                            sql.NullString
-	Masculinepersonalpastfirstpersonplural      sql.NullString
-	Femininepastthirdpersonsingular             sql.NullString
-	Presentsecondpersonplural                   sql.NullString
-	Notmasculinepersonalpastsecondpersonplural  sql.NullString
-	Masculinepersonalpastthirdpersonplural      sql.NullString
-	Indicativepast                              sql.NullString
-	Masculineindicativepastthirdpersonsingular  sql.NullString
-	Conditionalpresent                          sql.NullString
-	Masculineinanimatepassiveparticipleplural   sql.NullString
-	Masculineanimatepassiveparticiplesingular   sql.NullString
-	Imperativefirstpersonsingular               sql.NullString
 	Masculineinanimatepassiveparticiplesingular sql.NullString
-	Feminineactiveparticiplesingular            sql.NullString
+	Indicativepresent                           sql.NullString
+	Imperativethirdpersonsingular               sql.NullString
+	Neuteractiveparticiplesingular              sql.NullString
+	Indicativepresentsecondpersonplural         sql.NullString
+	Masculineanimatepassiveparticiplesingular   sql.NullString
+	Masculineanimatepassiveparticipleplural     sql.NullString
+	Masculineinanimatepassiveparticipleplural   sql.NullString
+	Notmasculinepersonalpastfirstpersonplural   sql.NullString
+	Notmasculinepersonalpastsecondpersonplural  sql.NullString
+	Indicativepresentthirdpersonsingular        sql.NullString
+	Masculinepersonalpastthirdpersonplural      sql.NullString
+	Masculineinanimateactiveparticiplesingular  sql.NullString
 	Indicativepresentthirdpersonplural          sql.NullString
+	Femininepresentplural                       sql.NullString
+	Indicativepresentfirstpersonsingular        sql.NullString
+	Masculinepersonalpastfirstpersonplural      sql.NullString
+	Presentthirdpersonsingular                  sql.NullString
+	Femininepastsecondpersonsingular            sql.NullString
+	Presentsingular                             sql.NullString
+	Neuterpastthirdpersonsingular               sql.NullString
+	Presentsecondpersonsingular                 sql.NullString
+	Femininepassiveparticiplesingular           sql.NullString
+	Imperativefirstpersonsingular               sql.NullString
+	Indicativepresentfirstpersonplural          sql.NullString
+	Neuterpassiveparticiplesingular             sql.NullString
+	Masculinepastsecondpersonsingular           sql.NullString
+	Conditionalfuture                           sql.NullString
+	Firstpersonsingular                         sql.NullString
+	Presentthirdpersonplural                    sql.NullString
+	Neuterpastsecondpersonsingular              sql.NullString
+	Notmasculinepersonalpastthirdpersonplural   sql.NullString
+	Masculineanimateactiveparticiplesingular    sql.NullString
+	Lastmodified                                sql.NullString
+	Imperativepresent                           sql.NullString
+	Indicativepast                              sql.NullString
+	Conditionalpresent                          sql.NullString
+	Masculineindicativepastthirdpersonsingular  sql.NullString
+	Neuterpassiveparticipleplural               sql.NullString
+	Feminineactiveparticiplesingular            sql.NullString
+	Imperativesecondpersonsingular              sql.NullString
+	Masculinepersonalpastsecondpersonplural     sql.NullString
+	Indicativepresentsecondpersonsingular       sql.NullString
 	Femininepassiveparticipleplural             sql.NullString
+	Imperativethirdpersonplural                 sql.NullString
+	Imperativefirstpersonplural                 sql.NullString
+	Femininepastthirdpersonsingular             sql.NullString
+	Presentfirstpersonplural                    sql.NullString
+	Indicativefuture                            sql.NullString
+	Masculineanimateactiveparticipleplural      sql.NullString
+	Feminineactiveparticipleplural              sql.NullString
+	Presentfirstpersonsingular                  sql.NullString
+	Masculinepastfirstpersonsingular            sql.NullString
+	Infinitive                                  sql.NullString
+	Imperativesecondpersonplural                sql.NullString
+	Neuteractiveparticipleplural                sql.NullString
+	Masculinepastthirdpersonsingular            sql.NullString
+	Femininepastfirstpersonsingular             sql.NullString
+	Presentsecondpersonplural                   sql.NullString
 }
 
-type PtPortugueseDbAdjective struct {
+type PtAdjective struct {
 	Wdlexemeid                   sql.NullString
-	Femininesingular             sql.NullString
-	Femininesingularsuperlative  sql.NullString
-	Masculinepluralsuperlative   sql.NullString
-	Lastmodified                 sql.NullString
-	Masculinesingularsuperlative sql.NullString
-	Masculineplural              sql.NullString
-	Singularpositive             sql.NullString
-	Feminineplural               sql.NullString
-	Pluralpositive               sql.NullString
-	Pluralsuperlative            sql.NullString
-	Femininepluralpositive       sql.NullString
-	Masculinesingularpositive    sql.NullString
-	Plural                       sql.NullString
-	Femininesingularpositive     sql.NullString
-	Singularsuperlative          sql.NullString
-	Masculinepluralpositive      sql.NullString
-	Singular                     sql.NullString
 	Masculinesingular            sql.NullString
+	Masculinepluralpositive      sql.NullString
+	Masculinepluralsuperlative   sql.NullString
+	Femininesingularsuperlative  sql.NullString
+	Femininesingularpositive     sql.NullString
+	Pluralpositive               sql.NullString
+	Singularsuperlative          sql.NullString
+	Pluralsuperlative            sql.NullString
+	Femininesingular             sql.NullString
+	Masculinesingularpositive    sql.NullString
+	Femininepluralpositive       sql.NullString
+	Lastmodified                 sql.NullString
+	Singularpositive             sql.NullString
+	Plural                       sql.NullString
 	Femininepluralsuperlative    sql.NullString
+	Masculinesingularsuperlative sql.NullString
+	Feminineplural               sql.NullString
+	Singular                     sql.NullString
+	Masculineplural              sql.NullString
 }
 
-type PtPortugueseDbAdverb struct {
+type PtAdverb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type PtPortugueseDbArticle struct {
+type PtArticle struct {
 	Wdlexemeid              sql.NullString
-	Masculinepluralsingular sql.NullString
-	Femininesingular        sql.NullString
 	Lastmodified            sql.NullString
-	Feminineplural          sql.NullString
+	Masculinepluralsingular sql.NullString
 	Masculinesingular       sql.NullString
+	Femininesingular        sql.NullString
+	Feminineplural          sql.NullString
 	Masculineplural         sql.NullString
 }
 
-type PtPortugueseDbConjunction struct {
+type PtConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type PtPortugueseDbNoun struct {
+type PtNoun struct {
 	Wdlexemeid                sql.NullString
-	Femininesingularpositive  sql.NullString
-	Femininemasculinesingular sql.NullString
-	Femininesingular          sql.NullString
 	Lastmodified              sql.NullString
-	Feminineplural            sql.NullString
+	Femininesingularpositive  sql.NullString
+	Singularpositive          sql.NullString
 	Pluralpositive            sql.NullString
-	Masculinepluralpositive   sql.NullString
+	Masculinesingular         sql.NullString
+	Femininesingular          sql.NullString
+	Plural                    sql.NullString
 	Masculinesingularpositive sql.NullString
 	Singular                  sql.NullString
-	Femininepluralpositive    sql.NullString
-	Masculinesingular         sql.NullString
-	Plural                    sql.NullString
+	Masculinepluralpositive   sql.NullString
+	Femininemasculinesingular sql.NullString
+	Feminineplural            sql.NullString
 	Masculineplural           sql.NullString
-	Singularpositive          sql.NullString
+	Femininepluralpositive    sql.NullString
 }
 
-type PtPortugueseDbPersonalPronoun struct {
+type PtPersonalPronoun struct {
 	Wdlexemeid                         sql.NullString
+	Nominativefeminineplural           sql.NullString
+	Lastmodified                       sql.NullString
+	Nominativesingular                 sql.NullString
+	Masculinecontraction               sql.NullString
+	Masculinesingular                  sql.NullString
+	Nominativeplural                   sql.NullString
+	Nominativefemininesingular         sql.NullString
+	Obliquesingular                    sql.NullString
+	Obliquefeminineplural              sql.NullString
+	Masculinemasculinepersonalsingular sql.NullString
+	Singular                           sql.NullString
+	Plural                             sql.NullString
+	Obliquemasculinesingular           sql.NullString
+	Obliquefemininesingular            sql.NullString
+	Masculineplural                    sql.NullString
 	Obliqueplural                      sql.NullString
 	Nominativemasculinesingular        sql.NullString
-	Masculinecontraction               sql.NullString
-	Nominativefeminineplural           sql.NullString
-	Nominativeplural                   sql.NullString
-	Lastmodified                       sql.NullString
-	Nominativefemininesingular         sql.NullString
-	Obliquefemininesingular            sql.NullString
-	Singular                           sql.NullString
-	Obliquefeminineplural              sql.NullString
-	Nominativesingular                 sql.NullString
-	Obliquemasculinesingular           sql.NullString
-	Masculinemasculinepersonalsingular sql.NullString
-	Masculinesingular                  sql.NullString
-	Plural                             sql.NullString
-	Obliquesingular                    sql.NullString
-	Masculineplural                    sql.NullString
 }
 
-type PtPortugueseDbPreposition struct {
+type PtPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type PtPortugueseDbPronoun struct {
+type PtPronoun struct {
 	Wdlexemeid        sql.NullString
-	Contraction       sql.NullString
-	Femininesingular  sql.NullString
-	Lastmodified      sql.NullString
-	Feminineplural    sql.NullString
 	Neuterplural      sql.NullString
+	Lastmodified      sql.NullString
+	Masculinesingular sql.NullString
+	Femininesingular  sql.NullString
+	Contraction       sql.NullString
+	Plural            sql.NullString
 	Singular          sql.NullString
 	Neutersingular    sql.NullString
-	Masculinesingular sql.NullString
-	Plural            sql.NullString
+	Feminineplural    sql.NullString
 	Masculineplural   sql.NullString
 }
 
-type PtPortugueseDbProperNoun struct {
+type PtProperNoun struct {
 	Wdlexemeid                sql.NullString
-	Femininemasculinesingular sql.NullString
-	Femininesingular          sql.NullString
 	Lastmodified              sql.NullString
-	Feminineplural            sql.NullString
-	Pluralpositive            sql.NullString
-	Singular                  sql.NullString
-	Femininemasculineplural   sql.NullString
-	Masculinesingular         sql.NullString
-	Plural                    sql.NullString
-	Masculineplural           sql.NullString
 	Singularpositive          sql.NullString
+	Pluralpositive            sql.NullString
+	Masculinesingular         sql.NullString
+	Femininesingular          sql.NullString
+	Plural                    sql.NullString
+	Singular                  sql.NullString
+	Femininemasculinesingular sql.NullString
+	Feminineplural            sql.NullString
+	Masculineplural           sql.NullString
+	Femininemasculineplural   sql.NullString
 }
 
-type PtPortugueseDbVerb struct {
+type PtVerb struct {
 	Wdlexemeid                                   sql.NullString
-	Indicativepastperfectfirstpersonsingular     sql.NullString
-	Indicativepastperfectsecondpersonplural      sql.NullString
-	Indicativepastimperfectfirstpersonsingular   sql.NullString
 	Infinitivesecondpersonplural                 sql.NullString
-	Indicativepresentsecondpersonsingular        sql.NullString
-	Presentthirdpersonsingularsubjunctive        sql.NullString
-	Indicativepastperfectthirdpersonsingular     sql.NullString
-	Indicativepastimperfectthirdpersonsingular   sql.NullString
-	Presentsecondpersonpluralsubjunctive         sql.NullString
-	Infinitivefirstpersonplural                  sql.NullString
-	Imperativesecondpersonplural                 sql.NullString
-	Secondpersonplural                           sql.NullString
-	Indicativethirdpersonplural                  sql.NullString
-	Indicativepastimperfectthirdpersonplural     sql.NullString
-	Participle                                   sql.NullString
-	Indicativefirstpersonplural                  sql.NullString
-	Firstpersonsingular                          sql.NullString
-	Indicativethirdpersonsingular                sql.NullString
-	Presentindicativefirstpersonsingular         sql.NullString
-	Indicativepluperfectfirstpersonsingular      sql.NullString
-	Indicativesecondpersonplural                 sql.NullString
-	Indicativepastperfectthirdpersonplural       sql.NullString
-	Indicativepresentfirstpersonplural           sql.NullString
-	Presentindicativethirdpersonsingular         sql.NullString
 	Presentindicativethirdpersonplural           sql.NullString
+	Lastmodified                                 sql.NullString
+	Indicativepluperfectthirdpersonplural        sql.NullString
+	Indicativepluperfectfirstpersonplural        sql.NullString
+	Presentindicativesecondpersonsingular        sql.NullString
+	Imperativesecondpersonsingular               sql.NullString
+	Indicativethirdpersonplural                  sql.NullString
+	Indicativepluperfectsecondpersonplural       sql.NullString
+	Indicativethirdpersonsingular                sql.NullString
+	Thirdpersonplural                            sql.NullString
+	Futurethirdpersonpluralsubjunctive           sql.NullString
+	Infinitivefirstpersonplural                  sql.NullString
+	Imperativethirdpersonsingular                sql.NullString
+	Futuresecondpersonsingularsubjunctive        sql.NullString
+	Futurethirdpersonsingularsubjunctive         sql.NullString
+	Indicativepastimperfectthirdpersonsingular   sql.NullString
+	Indicativepastimperfectsecondpersonplural    sql.NullString
+	Presentindicativefirstpersonsingular         sql.NullString
+	Presentindicativefirstpersonplural           sql.NullString
+	Pastimperfectsecondpersonsingularsubjunctive sql.NullString
+	Pastimperfect                                sql.NullString
+	Indicativepresentsecondpersonsingular        sql.NullString
+	Indicativepastperfectfirstpersonplural       sql.NullString
+	Indicativesecondpersonplural                 sql.NullString
+	Pastparticiple                               sql.NullString
+	Infinitivethirdpersonplural                  sql.NullString
+	Infinitive                                   sql.NullString
+	Indicativefirstpersonsingular                sql.NullString
+	Gerund                                       sql.NullString
+	Indicativepastperfectthirdpersonplural       sql.NullString
+	Futurefirstpersonpluralsubjunctive           sql.NullString
+	Pastimperfectfirstpersonsingularsubjunctive  sql.NullString
+	Infinitivesecondpersonsingular               sql.NullString
+	Presentfirstpersonsingularsubjunctive        sql.NullString
+	Indicativepresentfirstpersonplural           sql.NullString
+	Presentsecondpersonpluralsubjunctive         sql.NullString
+	Indicativepastperfectsecondpersonsingular    sql.NullString
+	Indicativepluperfectsecondpersonsingular     sql.NullString
 	Indicativepluperfectthirdpersonsingular      sql.NullString
+	Presentthirdpersonpluralsubjunctive          sql.NullString
+	Indicativepastperfectfirstpersonsingular     sql.NullString
+	Presentfirstpersonpluralsubjunctive          sql.NullString
+	Indicativepluperfectfirstpersonsingular      sql.NullString
+	Imperativesecondpersonplural                 sql.NullString
+	Participle                                   sql.NullString
+	Indicativepastimperfectthirdpersonplural     sql.NullString
+	Indicativefirstpersonplural                  sql.NullString
+	Thirdpersonsingular                          sql.NullString
+	Indicativepresentsecondpersonplural          sql.NullString
+	Infinitivefirstpersonsingular                sql.NullString
+	Indicativepresentthirdpersonsingular         sql.NullString
+	Indicativepastperfectsecondpersonplural      sql.NullString
+	Indicativepresentthirdpersonplural           sql.NullString
+	Futurefirstpersonsingularsubjunctive         sql.NullString
 	Pastimperfectfirstpersonpluralsubjunctive    sql.NullString
 	Pastimperfectsecondpersonpluralsubjunctive   sql.NullString
-	Pastimperfectfirstpersonsingularsubjunctive  sql.NullString
-	Pastimperfectsecondpersonsingularsubjunctive sql.NullString
-	Infinitivethirdpersonplural                  sql.NullString
-	Imperativethirdpersonplural                  sql.NullString
-	Indicativepresentsecondpersonplural          sql.NullString
-	Pastimperfectthirdpersonpluralsubjunctive    sql.NullString
-	Indicativepluperfectfirstpersonplural        sql.NullString
-	Imperativethirdpersonsingular                sql.NullString
-	Presentindicativesecondpersonsingular        sql.NullString
-	Thirdpersonsingular                          sql.NullString
-	Presentindicativefirstpersonplural           sql.NullString
-	Indicativepastimperfectfirstpersonplural     sql.NullString
-	Pastimperfectthirdpersonsingularsubjunctive  sql.NullString
-	Firstpersonplural                            sql.NullString
-	Presentthirdpersonpluralsubjunctive          sql.NullString
-	Presentfirstpersonpluralsubjunctive          sql.NullString
-	Presentsecondpersonsingularsubjunctive       sql.NullString
-	Indicativepresentthirdpersonsingular         sql.NullString
-	Infinitivesecondpersonsingular               sql.NullString
-	Secondpersonsingular                         sql.NullString
-	Indicativepluperfectsecondpersonplural       sql.NullString
-	Pastimperfect                                sql.NullString
-	Futurethirdpersonpluralsubjunctive           sql.NullString
-	Lastmodified                                 sql.NullString
-	Imperativefirstpersonplural                  sql.NullString
-	Indicativepastperfectsecondpersonsingular    sql.NullString
-	Futuresecondpersonsingularsubjunctive        sql.NullString
-	Imperativesecondpersonsingular               sql.NullString
-	Indicativepastimperfectsecondpersonsingular  sql.NullString
-	Futurethirdpersonsingularsubjunctive         sql.NullString
-	Gerund                                       sql.NullString
-	Infinitivefirstpersonsingular                sql.NullString
-	Indicativepluperfectthirdpersonplural        sql.NullString
-	Futurefirstpersonsingularsubjunctive         sql.NullString
-	Infinitive                                   sql.NullString
-	Futuresecondpersonpluralsubjunctive          sql.NullString
-	Indicativepresentfirstpersonsingular         sql.NullString
-	Presentindicativesecondpersonplural          sql.NullString
-	Thirdpersonplural                            sql.NullString
-	Indicativepastperfectfirstpersonplural       sql.NullString
 	Indicativesecondpersonsingular               sql.NullString
+	Indicativepastimperfectfirstpersonsingular   sql.NullString
+	Firstpersonplural                            sql.NullString
+	Presentindicativesecondpersonplural          sql.NullString
 	Infinitivethirdpersonsingular                sql.NullString
-	Indicativepastimperfectsecondpersonplural    sql.NullString
-	Indicativepluperfectsecondpersonsingular     sql.NullString
-	Futurefirstpersonpluralsubjunctive           sql.NullString
-	Pastparticiple                               sql.NullString
-	Presentfirstpersonsingularsubjunctive        sql.NullString
-	Indicativepresentthirdpersonplural           sql.NullString
-	Indicativefirstpersonsingular                sql.NullString
+	Firstpersonsingular                          sql.NullString
+	Presentthirdpersonsingularsubjunctive        sql.NullString
+	Pastimperfectthirdpersonpluralsubjunctive    sql.NullString
+	Indicativepastimperfectsecondpersonsingular  sql.NullString
+	Indicativepastimperfectfirstpersonplural     sql.NullString
+	Presentindicativethirdpersonsingular         sql.NullString
+	Indicativepastperfectthirdpersonsingular     sql.NullString
+	Imperativethirdpersonplural                  sql.NullString
+	Imperativefirstpersonplural                  sql.NullString
+	Pastimperfectthirdpersonsingularsubjunctive  sql.NullString
+	Futuresecondpersonpluralsubjunctive          sql.NullString
+	Secondpersonsingular                         sql.NullString
+	Secondpersonplural                           sql.NullString
+	Presentsecondpersonsingularsubjunctive       sql.NullString
+	Indicativepresentfirstpersonsingular         sql.NullString
 }
 
-type RuRussianDbAdjective struct {
+type RuAdjective struct {
 	Wdlexemeid                           sql.NullString
-	Instrumentalfemininesingular         sql.NullString
-	Nominativemasculinesingular          sql.NullString
-	Feminineshortsingular                sql.NullString
-	Femininesingular                     sql.NullString
-	Nominativesingular                   sql.NullString
-	Accusativeanimateplural              sql.NullString
-	Accusativeneutersingular             sql.NullString
-	Genitiveneutersingular               sql.NullString
-	Dativefemininesingular               sql.NullString
-	Instrumentalmasculinesingular        sql.NullString
-	Dativeneutersingular                 sql.NullString
-	Dativeplural                         sql.NullString
-	Nominativeplural                     sql.NullString
-	Lastmodified                         sql.NullString
-	Accusativeinanimatemasculinesingular sql.NullString
 	Instrumentalneutersingular           sql.NullString
-	Pluralshort                          sql.NullString
-	Instrumentalplural                   sql.NullString
-	Genitivefemininesingular             sql.NullString
-	Accusativeanimatemasculinesingular   sql.NullString
-	Accusativemasculinesingular          sql.NullString
-	Prepositionalmasculinesingular       sql.NullString
-	Neutershortsingular                  sql.NullString
-	Nominativeneutersingular             sql.NullString
-	Dativemasculinesingular              sql.NullString
-	Prepositionalneutersingular          sql.NullString
-	Accusativeinanimateplural            sql.NullString
-	Accusativeinanimatesingular          sql.NullString
-	Prepositionalplural                  sql.NullString
-	Accusativeanimateneutersingular      sql.NullString
-	Masculineshortsingular               sql.NullString
-	Accusativefemininesingular           sql.NullString
-	Neutersingular                       sql.NullString
-	Plural                               sql.NullString
-	Comparative                          sql.NullString
-	Masculinesingular                    sql.NullString
-	Accusativeanimatefemininesingular    sql.NullString
-	Accusativeinanimateneutersingular    sql.NullString
-	Nominativefemininesingular           sql.NullString
-	Nominativemasculineplural            sql.NullString
 	Nominativemasculine                  sql.NullString
-	Accusativefeminineinanimatesingular  sql.NullString
+	Prepositionalneutersingular          sql.NullString
+	Accusativeinanimatemasculinesingular sql.NullString
 	Prepositionalfemininesingular        sql.NullString
-	Genitiveplural                       sql.NullString
+	Instrumentalplural                   sql.NullString
+	Masculinesingular                    sql.NullString
+	Nominativefemininesingular           sql.NullString
 	Genitivemasculinesingular            sql.NullString
 	Superlative                          sql.NullString
+	Genitiveplural                       sql.NullString
+	Accusativeanimateneutersingular      sql.NullString
+	Comparative                          sql.NullString
+	Accusativeanimateplural              sql.NullString
+	Accusativeinanimatesingular          sql.NullString
+	Neutershortsingular                  sql.NullString
+	Femininesingular                     sql.NullString
+	Genitiveneutersingular               sql.NullString
+	Accusativemasculinesingular          sql.NullString
+	Instrumentalfemininesingular         sql.NullString
+	Accusativeanimatemasculinesingular   sql.NullString
+	Prepositionalplural                  sql.NullString
+	Accusativeanimatefemininesingular    sql.NullString
+	Nominativemasculineplural            sql.NullString
+	Dativeplural                         sql.NullString
+	Feminineshortsingular                sql.NullString
+	Lastmodified                         sql.NullString
+	Pluralshort                          sql.NullString
+	Dativemasculinesingular              sql.NullString
+	Instrumentalmasculinesingular        sql.NullString
+	Plural                               sql.NullString
+	Accusativefemininesingular           sql.NullString
+	Masculineshortsingular               sql.NullString
+	Neutersingular                       sql.NullString
+	Accusativeinanimateplural            sql.NullString
+	Nominativemasculinesingular          sql.NullString
+	Accusativeinanimateneutersingular    sql.NullString
+	Nominativeneutersingular             sql.NullString
+	Nominativesingular                   sql.NullString
+	Nominativeplural                     sql.NullString
+	Genitivefemininesingular             sql.NullString
+	Accusativefeminineinanimatesingular  sql.NullString
+	Dativeneutersingular                 sql.NullString
+	Prepositionalmasculinesingular       sql.NullString
+	Dativefemininesingular               sql.NullString
+	Accusativeneutersingular             sql.NullString
 }
 
-type RuRussianDbAdverb struct {
+type RuAdverb struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
 	Lastmodified sql.NullString
 	Comparative  sql.NullString
 	Superlative  sql.NullString
+	Positive     sql.NullString
 }
 
-type RuRussianDbConjunction struct {
+type RuConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type RuRussianDbNoun struct {
+type RuNoun struct {
 	Wdlexemeid                   sql.NullString
-	Genitivesingular             sql.NullString
-	Nominativesingular           sql.NullString
-	Accusativeanimateplural      sql.NullString
-	Vocativesingular             sql.NullString
-	Prepositionalsingular        sql.NullString
-	Dativeplural                 sql.NullString
-	Instrumentalsingular         sql.NullString
-	Accusativesingular           sql.NullString
-	Nominativeplural             sql.NullString
-	Lastmodified                 sql.NullString
-	Genitiveplural               sql.NullString
-	Accusativeplural             sql.NullString
 	Instrumentalplural           sql.NullString
-	Partitive                    sql.NullString
-	Locative                     sql.NullString
-	Locativesingular             sql.NullString
-	Accusativeinanimateplural    sql.NullString
-	Accusativenominativeplural   sql.NullString
-	Prepositionalplural          sql.NullString
-	Partitivesingular            sql.NullString
-	Dativesingular               sql.NullString
-	Accusativegenitivesingular   sql.NullString
+	Genitivesingular             sql.NullString
 	Accusativenominativesingular sql.NullString
+	Genitiveplural               sql.NullString
+	Partitive                    sql.NullString
+	Accusativeanimateplural      sql.NullString
+	Partitivesingular            sql.NullString
+	Accusativegenitivesingular   sql.NullString
+	Accusativenominativeplural   sql.NullString
+	Accusativeplural             sql.NullString
+	Vocativesingular             sql.NullString
+	Prepositionalplural          sql.NullString
+	Dativeplural                 sql.NullString
+	Locativesingular             sql.NullString
+	Lastmodified                 sql.NullString
+	Dativesingular               sql.NullString
+	Instrumentalsingular         sql.NullString
+	Accusativeinanimateplural    sql.NullString
+	Prepositionalsingular        sql.NullString
+	Nominativesingular           sql.NullString
+	Nominativeplural             sql.NullString
+	Accusativesingular           sql.NullString
+	Locative                     sql.NullString
 }
 
-type RuRussianDbPersonalPronoun struct {
+type RuPersonalPronoun struct {
 	Wdlexemeid                        sql.NullString
-	Instrumentalfirstpersonsingular   sql.NullString
-	Accusativefirstpersonplural       sql.NullString
-	Instrumentalsecondpersonsingular  sql.NullString
-	Dativefirstpersonplural           sql.NullString
-	Genitivesecondpersonsingular      sql.NullString
+	Nominativesecondpersonplural      sql.NullString
 	Genitivesingular                  sql.NullString
-	Nominativesingular                sql.NullString
-	Dative                            sql.NullString
+	Prepositionalfirstpersonsingular  sql.NullString
+	Instrumentalfirstpersonsingular   sql.NullString
 	Nominativesecondpersonsingular    sql.NullString
-	Prepositionalsingular             sql.NullString
+	Genitive                          sql.NullString
 	Instrumentalsecondpersonplural    sql.NullString
-	Prepositional                     sql.NullString
-	Genitivefirstpersonsingular       sql.NullString
-	Accusativesingular                sql.NullString
-	Instrumentalsingular              sql.NullString
-	Accusativefirstpersonsingular     sql.NullString
-	Lastmodified                      sql.NullString
-	Accusative                        sql.NullString
+	Genitivefirstpersonplural         sql.NullString
+	Dativefirstpersonplural           sql.NullString
+	Accusativesecondpersonsingular    sql.NullString
+	Dativefirstpersonsingular         sql.NullString
+	Genitivesecondpersonsingular      sql.NullString
+	Instrumentalsecondpersonsingular  sql.NullString
+	Nominativefirstpersonsingular     sql.NullString
 	Nominativefirstpersonplural       sql.NullString
+	Accusativefirstpersonsingular     sql.NullString
 	Prepositionalsecondpersonplural   sql.NullString
+	Lastmodified                      sql.NullString
+	Dativesecondpersonplural          sql.NullString
+	Prepositional                     sql.NullString
 	Instrumentalfirstpersonplural     sql.NullString
 	Instrumental                      sql.NullString
-	Genitivefirstpersonplural         sql.NullString
-	Nominativesecondpersonplural      sql.NullString
-	Dativefirstpersonsingular         sql.NullString
-	Prepositionalfirstpersonplural    sql.NullString
-	Nominativefirstpersonsingular     sql.NullString
-	Dativesecondpersonplural          sql.NullString
-	Accusativesecondpersonplural      sql.NullString
-	Nominative                        sql.NullString
-	Genitive                          sql.NullString
-	Dativesecondpersonsingular        sql.NullString
-	Prepositionalsecondpersonsingular sql.NullString
 	Dativesingular                    sql.NullString
-	Prepositionalfirstpersonsingular  sql.NullString
-	Accusativesecondpersonsingular    sql.NullString
+	Dativesecondpersonsingular        sql.NullString
+	Instrumentalsingular              sql.NullString
+	Accusativesecondpersonplural      sql.NullString
+	Prepositionalsingular             sql.NullString
+	Nominativesingular                sql.NullString
+	Accusative                        sql.NullString
+	Accusativefirstpersonplural       sql.NullString
+	Genitivefirstpersonsingular       sql.NullString
+	Accusativesingular                sql.NullString
+	Prepositionalsecondpersonsingular sql.NullString
+	Dative                            sql.NullString
+	Prepositionalfirstpersonplural    sql.NullString
+	Nominative                        sql.NullString
 }
 
-type RuRussianDbPreposition struct {
+type RuPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type RuRussianDbPronoun struct {
+type RuPronoun struct {
 	Wdlexemeid            sql.NullString
-	Instrumentalsingular  sql.NullString
-	Accusativesingular    sql.NullString
 	Lastmodified          sql.NullString
-	Genitivesingular      sql.NullString
 	Nominativesingular    sql.NullString
-	Prepositionalsingular sql.NullString
+	Genitivesingular      sql.NullString
 	Dativesingular        sql.NullString
+	Accusativesingular    sql.NullString
+	Instrumentalsingular  sql.NullString
+	Prepositionalsingular sql.NullString
 }
 
-type RuRussianDbProperNoun struct {
+type RuProperNoun struct {
 	Wdlexemeid            sql.NullString
-	Instrumentalsingular  sql.NullString
-	Vocativesingular      sql.NullString
-	Accusativesingular    sql.NullString
-	Nominativeplural      sql.NullString
 	Lastmodified          sql.NullString
-	Genitiveplural        sql.NullString
-	Genitivesingular      sql.NullString
 	Nominativesingular    sql.NullString
-	Prepositionalplural   sql.NullString
-	Accusativeplural      sql.NullString
 	Instrumentalplural    sql.NullString
+	Genitivesingular      sql.NullString
+	Nominativeplural      sql.NullString
+	Accusativeplural      sql.NullString
+	Vocativesingular      sql.NullString
+	Dativesingular        sql.NullString
+	Accusativesingular    sql.NullString
+	Genitiveplural        sql.NullString
+	Prepositionalplural   sql.NullString
+	Instrumentalsingular  sql.NullString
 	Prepositionalsingular sql.NullString
 	Dativeplural          sql.NullString
-	Dativesingular        sql.NullString
 }
 
-type RuRussianDbVerb struct {
+type RuVerb struct {
 	Wdlexemeid                                  sql.NullString
-	Presentsecondpersonsingular                 sql.NullString
-	Activepresentparticiple                     sql.NullString
-	Feminineindicativepastsecondpersonsingular  sql.NullString
-	Indicativepastsecondpersonplural            sql.NullString
-	Indicativepresentthirdpersonsingular        sql.NullString
+	Futuresecondpersonsingular                  sql.NullString
 	Indicativefuturefirstpersonsingular         sql.NullString
-	Futurethirdpersonsingular                   sql.NullString
-	Indicativepastthirdpersonplural             sql.NullString
-	Femininesingular                            sql.NullString
+	Activepresentparticiple                     sql.NullString
+	Masculinesingular                           sql.NullString
+	Indicativefuturesecondpersonsingular        sql.NullString
+	Presentindicativethirdpersonplural          sql.NullString
+	Pastplural                                  sql.NullString
+	Indicativepresentsecondpersonplural         sql.NullString
+	Indicativepresentthirdpersonsingular        sql.NullString
+	Neuterpastsingular                          sql.NullString
+	Femininepastsingular                        sql.NullString
+	Indicativepastfirstpersonplural             sql.NullString
+	Adverbialpresentparticiple                  sql.NullString
 	Indicativepresentthirdpersonplural          sql.NullString
+	Futurefirstpersonsingular                   sql.NullString
 	Presentthirdpersonsingular                  sql.NullString
+	Presentindicativefirstpersonsingular        sql.NullString
+	Femininepastsecondpersonsingular            sql.NullString
+	Indicativefuturesecondpersonplural          sql.NullString
+	Presentindicativefirstpersonplural          sql.NullString
+	Presentindicativesecondpersonplural         sql.NullString
+	Femininesingular                            sql.NullString
+	Presentsecondpersonsingular                 sql.NullString
+	Passivepresentparticiple                    sql.NullString
+	Indicativepresentfirstpersonplural          sql.NullString
+	Masculinepastsecondpersonsingular           sql.NullString
+	Past                                        sql.NullString
+	Masculineindicativepastsecondpersonsingular sql.NullString
+	Imperativesingular                          sql.NullString
+	Masculinepastsingular                       sql.NullString
+	Activepastparticiple                        sql.NullString
+	Presentthirdpersonplural                    sql.NullString
+	Neuterpastsecondpersonsingular              sql.NullString
+	Lastmodified                                sql.NullString
+	Masculineindicativepastfirstpersonsingular  sql.NullString
+	Indicativepastthirdpersonplural             sql.NullString
+	Futuresecondpersonplural                    sql.NullString
+	Neuterindicativepastthirdpersonsingular     sql.NullString
+	Masculineindicativepastthirdpersonsingular  sql.NullString
+	Feminineindicativepastsecondpersonsingular  sql.NullString
 	Indicativefuturefirstpersonplural           sql.NullString
-	Infinitive                                  sql.NullString
+	Presentindicativesecondpersonsingular       sql.NullString
+	Plural                                      sql.NullString
+	Presentsecondpersonthirdpersonsingular      sql.NullString
+	Feminineindicativepastthirdpersonsingular   sql.NullString
+	Imperativesecondpersonsingular              sql.NullString
+	Indicativefuturethirdpersonplural           sql.NullString
+	Futurethirdpersonplural                     sql.NullString
+	Indicativepresentsecondpersonsingular       sql.NullString
+	Presentindicativethirdpersonsingular        sql.NullString
+	Neutersingular                              sql.NullString
+	Passivepastparticiple                       sql.NullString
+	Imperativefirstpersonplural                 sql.NullString
+	Feminineindicativepastfirstpersonsingular   sql.NullString
+	Pastsecondpersonthirdpersonplural           sql.NullString
+	Presentfirstpersonplural                    sql.NullString
+	Futurethirdpersonsingular                   sql.NullString
+	Present                                     sql.NullString
 	Indicativefuturethirdpersonsingular         sql.NullString
 	Future                                      sql.NullString
-	Masculinepastsingular                       sql.NullString
-	Presentfirstpersonplural                    sql.NullString
-	Indicativepresentsecondpersonsingular       sql.NullString
-	Indicativepresentsecondpersonplural         sql.NullString
-	Indicativepresentfirstpersonsingular        sql.NullString
-	Presentindicativesecondpersonplural         sql.NullString
-	Masculinepastsecondpersonsingular           sql.NullString
-	Neuterpastsecondpersonsingular              sql.NullString
-	Futurethirdpersonplural                     sql.NullString
-	Futurefirstpersonsingular                   sql.NullString
-	Lastmodified                                sql.NullString
-	Imperativesecondpersonplural                sql.NullString
-	Neuterpastsingular                          sql.NullString
-	Imperativefirstpersonplural                 sql.NullString
-	Neuterindicativepastthirdpersonsingular     sql.NullString
-	Adverbialpresentparticiple                  sql.NullString
-	Adverbialpastparticiple                     sql.NullString
-	Femininepastsecondpersonsingular            sql.NullString
-	Futuresecondpersonsingular                  sql.NullString
-	Activepastparticiple                        sql.NullString
-	Masculineindicativepastsecondpersonsingular sql.NullString
-	Indicativefuturethirdpersonplural           sql.NullString
-	Futurefirstpersonplural                     sql.NullString
-	Indicativefuturesecondpersonsingular        sql.NullString
-	Passivepastparticiple                       sql.NullString
-	Presentindicativesecondpersonsingular       sql.NullString
-	Presentindicativefirstpersonplural          sql.NullString
-	Imperativeplural                            sql.NullString
-	Imperativesecondpersonsingular              sql.NullString
 	Presentfirstpersonsingular                  sql.NullString
-	Presentindicativefirstpersonsingular        sql.NullString
-	Past                                        sql.NullString
-	Indicativepastfirstpersonplural             sql.NullString
-	Presentsecondpersonthirdpersonsingular      sql.NullString
+	Infinitive                                  sql.NullString
 	Masculinepastfirstpersonsingular            sql.NullString
-	Pastplural                                  sql.NullString
-	Indicativefuturesecondpersonplural          sql.NullString
-	Neutersingular                              sql.NullString
-	Indicativepresentfirstpersonplural          sql.NullString
-	Plural                                      sql.NullString
-	Imperativesingular                          sql.NullString
-	Presentthirdpersonplural                    sql.NullString
-	Passivepresentparticiple                    sql.NullString
-	Present                                     sql.NullString
-	Pastsecondpersonthirdpersonplural           sql.NullString
-	Feminineindicativepastthirdpersonsingular   sql.NullString
-	Masculineindicativepastfirstpersonsingular  sql.NullString
+	Indicativepastsecondpersonplural            sql.NullString
+	Imperativesecondpersonplural                sql.NullString
+	Futurefirstpersonplural                     sql.NullString
+	Imperativeplural                            sql.NullString
+	Indicativepresentfirstpersonsingular        sql.NullString
+	Adverbialpastparticiple                     sql.NullString
 	Presentsecondpersonplural                   sql.NullString
-	Masculineindicativepastthirdpersonsingular  sql.NullString
-	Futuresecondpersonplural                    sql.NullString
-	Presentindicativethirdpersonsingular        sql.NullString
-	Presentindicativethirdpersonplural          sql.NullString
-	Feminineindicativepastfirstpersonsingular   sql.NullString
-	Masculinesingular                           sql.NullString
-	Femininepastsingular                        sql.NullString
 }
 
-type SkSlovakDbAdjective struct {
+type SkAdjective struct {
 	Wdlexemeid                                      sql.NullString
-	Nominativefemininesingularsuperlative           sql.NullString
-	Accusativefemininesingularpositive              sql.NullString
-	Dativepluralcomparative                         sql.NullString
-	Accusativemasculineinanimatesingularsuperlative sql.NullString
-	Instrumentalpluralsuperlative                   sql.NullString
-	Nominativemasculinesingularcomparative          sql.NullString
-	Nominativemasculinepersonalpluralsuperlative    sql.NullString
-	Instrumentalfemininesingularpositive            sql.NullString
-	Nominativemasculinesingularsuperlative          sql.NullString
-	Locativemasculinesingularsuperlative            sql.NullString
-	Dativefemininesingularcomparative               sql.NullString
-	Accusativemasculineinanimatesingularcomparative sql.NullString
-	Accusativefemininesingularsuperlative           sql.NullString
-	Genitiveneutersingularsuperlative               sql.NullString
-	Accusativeneutersingularcomparative             sql.NullString
-	Instrumentalmasculinesingularpositive           sql.NullString
-	Locativepluralcomparative                       sql.NullString
-	Dativefemininesingularsuperlative               sql.NullString
-	Dativeneutersingularcomparative                 sql.NullString
-	Genitiveneutersingularpositive                  sql.NullString
-	Accusativeneutersingularpositive                sql.NullString
-	Dativefemininesingularpositive                  sql.NullString
-	Dativeneutersingularpositive                    sql.NullString
-	Genitivepluralsuperlative                       sql.NullString
-	Accusativemasculinepersonalpluralsuperlative    sql.NullString
-	Genitivemasculinesingularpositive               sql.NullString
-	Instrumentalmasculinesingularsuperlative        sql.NullString
-	Accusativenotmasculinepersonalpluralsuperlative sql.NullString
-	Positive                                        sql.NullString
-	Nominativeneutersingularcomparative             sql.NullString
-	Genitivemasculinesingularcomparative            sql.NullString
-	Accusativemasculineanimatesingularcomparative   sql.NullString
-	Dativeneutersingularsuperlative                 sql.NullString
-	Locativefemininesingularcomparative             sql.NullString
-	Genitivepluralcomparative                       sql.NullString
-	Nominativefemininesingularpositive              sql.NullString
-	Instrumentalmasculinesingularcomparative        sql.NullString
-	Genitivefemininesingularsuperlative             sql.NullString
-	Locativeneutersingularcomparative               sql.NullString
-	Dativepluralpositive                            sql.NullString
-	Genitivefemininesingularcomparative             sql.NullString
-	Genitivemasculinesingularsuperlative            sql.NullString
-	Instrumentalneutersingularsuperlative           sql.NullString
-	Instrumentalfemininesingularcomparative         sql.NullString
-	Dativemasculinesingularsuperlative              sql.NullString
-	Dativepluralsuperlative                         sql.NullString
-	Nominativenotmasculinepersonalpluralpositive    sql.NullString
-	Instrumentalfemininesingularsuperlative         sql.NullString
-	Locativepluralsuperlative                       sql.NullString
-	Genitivepluralpositive                          sql.NullString
-	Accusativefemininesingularcomparative           sql.NullString
-	Nominativenotmasculinepersonalpluralsuperlative sql.NullString
-	Genitivefemininesingularpositive                sql.NullString
-	Accusativemasculinepersonalpluralpositive       sql.NullString
-	Instrumentalpluralpositive                      sql.NullString
-	Nominativemasculinepersonalpluralpositive       sql.NullString
-	Accusativemasculinepersonalpluralcomparative    sql.NullString
-	Lastmodified                                    sql.NullString
-	Dativemasculinesingularcomparative              sql.NullString
-	Dativemasculinesingularpositive                 sql.NullString
-	Nominativemasculinesingularpositive             sql.NullString
-	Locativeneutersingularpositive                  sql.NullString
 	Locativemasculinesingularpositive               sql.NullString
-	Locativemasculinesingularcomparative            sql.NullString
-	Locativefemininesingularpositive                sql.NullString
-	Accusativeneutersingularsuperlative             sql.NullString
-	Instrumentalneutersingularpositive              sql.NullString
-	Nominativenotmasculinepersonalpluralcomparative sql.NullString
-	Instrumentalpluralcomparative                   sql.NullString
-	Nominativemasculinepersonalpluralcomparative    sql.NullString
-	Accusativemasculineanimatesingularsuperlative   sql.NullString
 	Locativefemininesingularsuperlative             sql.NullString
-	Accusativemasculineinanimatesingularpositive    sql.NullString
-	Nominativefemininesingularcomparative           sql.NullString
-	Genitiveneutersingularcomparative               sql.NullString
-	Locativepluralpositive                          sql.NullString
-	Accusativenotmasculinepersonalpluralcomparative sql.NullString
-	Nominativeneutersingularpositive                sql.NullString
 	Accusativenotmasculinepersonalpluralpositive    sql.NullString
-	Accusativemasculineanimatesingularpositive      sql.NullString
+	Dativeneutersingularsuperlative                 sql.NullString
+	Dativemasculinesingularcomparative              sql.NullString
+	Genitivefemininesingularpositive                sql.NullString
+	Accusativemasculineinanimatesingularsuperlative sql.NullString
+	Locativemasculinesingularsuperlative            sql.NullString
+	Dativepluralpositive                            sql.NullString
+	Lastmodified                                    sql.NullString
+	Accusativefemininesingularsuperlative           sql.NullString
+	Dativemasculinesingularsuperlative              sql.NullString
+	Genitiveneutersingularcomparative               sql.NullString
+	Genitivemasculinesingularcomparative            sql.NullString
+	Dativefemininesingularcomparative               sql.NullString
+	Locativefemininesingularpositive                sql.NullString
+	Accusativemasculinepersonalpluralsuperlative    sql.NullString
+	Dativepluralsuperlative                         sql.NullString
+	Nominativefemininesingularsuperlative           sql.NullString
+	Accusativemasculineanimatesingularcomparative   sql.NullString
+	Accusativemasculineinanimatesingularcomparative sql.NullString
+	Nominativeneutersingularpositive                sql.NullString
+	Nominativefemininesingularcomparative           sql.NullString
+	Accusativefemininesingularpositive              sql.NullString
+	Locativepluralsuperlative                       sql.NullString
+	Dativepluralcomparative                         sql.NullString
+	Instrumentalpluralpositive                      sql.NullString
+	Accusativenotmasculinepersonalpluralsuperlative sql.NullString
+	Nominativefemininesingularpositive              sql.NullString
+	Accusativeneutersingularcomparative             sql.NullString
+	Nominativenotmasculinepersonalpluralpositive    sql.NullString
+	Instrumentalfemininesingularpositive            sql.NullString
+	Accusativeneutersingularpositive                sql.NullString
+	Dativemasculinesingularpositive                 sql.NullString
+	Instrumentalmasculinesingularcomparative        sql.NullString
+	Nominativenotmasculinepersonalpluralcomparative sql.NullString
+	Dativefemininesingularsuperlative               sql.NullString
+	Nominativenotmasculinepersonalpluralsuperlative sql.NullString
+	Instrumentalfemininesingularsuperlative         sql.NullString
+	Locativeneutersingularpositive                  sql.NullString
+	Dativeneutersingularpositive                    sql.NullString
+	Genitivefemininesingularcomparative             sql.NullString
 	Instrumentalneutersingularcomparative           sql.NullString
-	Locativeneutersingularsuperlative               sql.NullString
+	Accusativemasculinepersonalpluralpositive       sql.NullString
+	Genitivepluralpositive                          sql.NullString
 	Nominativeneutersingularsuperlative             sql.NullString
+	Nominativemasculinepersonalpluralsuperlative    sql.NullString
 	Superlative                                     sql.NullString
+	Instrumentalfemininesingularcomparative         sql.NullString
+	Nominativeneutersingularcomparative             sql.NullString
+	Locativemasculinesingularcomparative            sql.NullString
+	Genitiveneutersingularpositive                  sql.NullString
+	Genitivefemininesingularsuperlative             sql.NullString
+	Locativefemininesingularcomparative             sql.NullString
+	Locativeneutersingularsuperlative               sql.NullString
+	Nominativemasculinesingularpositive             sql.NullString
+	Instrumentalpluralsuperlative                   sql.NullString
+	Accusativeneutersingularsuperlative             sql.NullString
+	Dativeneutersingularcomparative                 sql.NullString
+	Instrumentalneutersingularsuperlative           sql.NullString
+	Nominativemasculinesingularsuperlative          sql.NullString
+	Instrumentalmasculinesingularpositive           sql.NullString
+	Genitivemasculinesingularpositive               sql.NullString
+	Instrumentalpluralcomparative                   sql.NullString
+	Instrumentalmasculinesingularsuperlative        sql.NullString
+	Accusativemasculineanimatesingularsuperlative   sql.NullString
+	Locativepluralpositive                          sql.NullString
+	Dativefemininesingularpositive                  sql.NullString
+	Accusativemasculineanimatesingularpositive      sql.NullString
+	Genitiveneutersingularsuperlative               sql.NullString
+	Accusativemasculinepersonalpluralcomparative    sql.NullString
+	Nominativemasculinesingularcomparative          sql.NullString
+	Accusativenotmasculinepersonalpluralcomparative sql.NullString
+	Accusativemasculineinanimatesingularpositive    sql.NullString
+	Nominativemasculinepersonalpluralcomparative    sql.NullString
+	Genitivemasculinesingularsuperlative            sql.NullString
+	Nominativemasculinepersonalpluralpositive       sql.NullString
+	Locativepluralcomparative                       sql.NullString
+	Genitivepluralcomparative                       sql.NullString
+	Locativeneutersingularcomparative               sql.NullString
+	Positive                                        sql.NullString
+	Instrumentalneutersingularpositive              sql.NullString
+	Accusativefemininesingularcomparative           sql.NullString
+	Genitivepluralsuperlative                       sql.NullString
 }
 
-type SkSlovakDbAdverb struct {
+type SkAdverb struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
 	Lastmodified sql.NullString
 	Comparative  sql.NullString
 	Superlative  sql.NullString
+	Positive     sql.NullString
 }
 
-type SkSlovakDbConjunction struct {
+type SkConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type SkSlovakDbNoun struct {
+type SkNoun struct {
 	Wdlexemeid                    sql.NullString
-	Accusativeanimatesingular     sql.NullString
-	Instrumentalfemininesingular  sql.NullString
-	Nominativemasculinesingular   sql.NullString
-	Locativeinanimatesingular     sql.NullString
-	Locativefeminineplural        sql.NullString
+	Instrumentalfeminineplural    sql.NullString
+	Instrumentalplural            sql.NullString
 	Genitivesingular              sql.NullString
-	Nominativesingular            sql.NullString
+	Nominativefemininesingular    sql.NullString
+	Genitivemasculinesingular     sql.NullString
+	Dativeanimatesingular         sql.NullString
+	Genitivefeminineplural        sql.NullString
+	Genitiveplural                sql.NullString
+	Dativefeminineplural          sql.NullString
+	Accusativeinanimatesingular   sql.NullString
 	Locativemasculineplural       sql.NullString
-	Dativefemininesingular        sql.NullString
+	Accusativeplural              sql.NullString
 	Vocativesingular              sql.NullString
-	Instrumentalmasculinesingular sql.NullString
+	Locativefeminineplural        sql.NullString
+	Instrumentalmasculineplural   sql.NullString
+	Locativefemininesingular      sql.NullString
+	Accusativemasculinesingular   sql.NullString
+	Instrumentalfemininesingular  sql.NullString
+	Nominativemasculineplural     sql.NullString
 	Dativeplural                  sql.NullString
+	Dativeinanimatesingular       sql.NullString
+	Locativesingular              sql.NullString
+	Lastmodified                  sql.NullString
+	Accusativeanimatesingular     sql.NullString
+	Accusativefeminineplural      sql.NullString
+	Dativemasculinesingular       sql.NullString
+	Instrumentalmasculinesingular sql.NullString
+	Neuter                        sql.NullString
+	Locativemasculinesingular     sql.NullString
+	Locativeplural                sql.NullString
+	Locativeinanimatesingular     sql.NullString
+	Dativemasculineplural         sql.NullString
+	Dativesingular                sql.NullString
+	Accusativefemininesingular    sql.NullString
+	Genitivemasculineplural       sql.NullString
 	Instrumentalsingular          sql.NullString
-	Accusativemasculineplural     sql.NullString
+	Nominativemasculinesingular   sql.NullString
+	Nominativefeminineplural      sql.NullString
+	Nominativesingular            sql.NullString
+	Nominativeplural              sql.NullString
+	Genitivefemininesingular      sql.NullString
+	Singular                      sql.NullString
 	Accusativesingular            sql.NullString
 	Locativeanimatesingular       sql.NullString
-	Nominativeplural              sql.NullString
-	Lastmodified                  sql.NullString
-	Genitivemasculineplural       sql.NullString
-	Genitiveplural                sql.NullString
-	Accusativeplural              sql.NullString
-	Instrumentalplural            sql.NullString
-	Accusativefeminineplural      sql.NullString
-	Genitivefemininesingular      sql.NullString
-	Accusativemasculinesingular   sql.NullString
-	Instrumentalmasculineplural   sql.NullString
-	Genitivefeminineplural        sql.NullString
-	Dativemasculinesingular       sql.NullString
-	Neuter                        sql.NullString
-	Locativesingular              sql.NullString
-	Locativemasculinesingular     sql.NullString
-	Dativeinanimatesingular       sql.NullString
-	Accusativeinanimatesingular   sql.NullString
-	Locativeplural                sql.NullString
-	Accusativefemininesingular    sql.NullString
-	Dativesingular                sql.NullString
-	Locativefemininesingular      sql.NullString
-	Instrumentalfeminineplural    sql.NullString
-	Nominativefeminineplural      sql.NullString
-	Nominativefemininesingular    sql.NullString
-	Dativefeminineplural          sql.NullString
-	Nominativemasculineplural     sql.NullString
-	Singular                      sql.NullString
-	Dativemasculineplural         sql.NullString
-	Dativeanimatesingular         sql.NullString
-	Genitivemasculinesingular     sql.NullString
+	Dativefemininesingular        sql.NullString
+	Accusativemasculineplural     sql.NullString
 }
 
-type SkSlovakDbPreposition struct {
+type SkPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type SkSlovakDbPronoun struct {
+type SkPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type SkSlovakDbProperNoun struct {
+type SkProperNoun struct {
 	Wdlexemeid                             sql.NullString
-	Nominativemasculineinanimatesingular   sql.NullString
-	Genitivemasculineinanimateplural       sql.NullString
-	Instrumentalmasculineinanimateplural   sql.NullString
+	Instrumentalplural                     sql.NullString
 	Genitivesingular                       sql.NullString
-	Nominativesingular                     sql.NullString
-	Accusativemasculineinanimateplural     sql.NullString
+	Genitivemasculineinanimatesingular     sql.NullString
 	Nominativemasculineinanimateplural     sql.NullString
+	Genitiveplural                         sql.NullString
+	Accusativeplural                       sql.NullString
 	Instrumentalmasculineinanimatesingular sql.NullString
 	Locativemasculineinanimateplural       sql.NullString
 	Dativeplural                           sql.NullString
-	Instrumentalsingular                   sql.NullString
-	Accusativesingular                     sql.NullString
-	Dativemasculineinanimateplural         sql.NullString
-	Nominativeplural                       sql.NullString
-	Lastmodified                           sql.NullString
-	Accusativeplural                       sql.NullString
-	Instrumentalplural                     sql.NullString
-	Genitivemasculineinanimatesingular     sql.NullString
-	Neuter                                 sql.NullString
 	Locativesingular                       sql.NullString
-	Dativemasculineinanimatesingular       sql.NullString
+	Lastmodified                           sql.NullString
+	Accusativemasculineinanimateplural     sql.NullString
+	Neuter                                 sql.NullString
 	Locativeplural                         sql.NullString
 	Dativesingular                         sql.NullString
-	Locativemasculineinanimatesingular     sql.NullString
 	Accusativemasculineinanimatesingular   sql.NullString
-	Genitiveplural                         sql.NullString
+	Instrumentalsingular                   sql.NullString
+	Genitivemasculineinanimateplural       sql.NullString
+	Nominativesingular                     sql.NullString
+	Nominativeplural                       sql.NullString
+	Nominativemasculineinanimatesingular   sql.NullString
+	Accusativesingular                     sql.NullString
+	Dativemasculineinanimateplural         sql.NullString
+	Instrumentalmasculineinanimateplural   sql.NullString
+	Locativemasculineinanimatesingular     sql.NullString
+	Dativemasculineinanimatesingular       sql.NullString
 }
 
-type SkSlovakDbVerb struct {
+type SkVerb struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 	Infinitive   sql.NullString
 }
 
-type SvSwedishDbAdjective struct {
+type SvAdjective struct {
 	Wdlexemeid                                 sql.NullString
-	Definitesingularpositive                   sql.NullString
-	Commonpositive                             sql.NullString
-	Masculinedefinitesingular                  sql.NullString
-	Commonindefinitesingular                   sql.NullString
-	Femininesingular                           sql.NullString
-	Positive                                   sql.NullString
-	Indefinitepluralpositive                   sql.NullString
+	Definitesuperlative                        sql.NullString
+	Masculinedefinitepluralsingularsuperlative sql.NullString
+	Superlative                                sql.NullString
+	Commonindefinitesingularpositive           sql.NullString
 	Indefinitesuperlative                      sql.NullString
+	Comparative                                sql.NullString
+	Nominativecommonindefinitesingularpositive sql.NullString
+	Masculinedefinitesuperlative               sql.NullString
+	Pluralpositive                             sql.NullString
+	Definitepluralpositive                     sql.NullString
+	Singularsuperlative                        sql.NullString
+	Pluralsuperlative                          sql.NullString
+	Femininesingular                           sql.NullString
+	Masculinedefinitesingularpositive          sql.NullString
+	Nominativeindefinitesingular               sql.NullString
+	Neuterindefinitesingular                   sql.NullString
+	Lastmodified                               sql.NullString
+	Singularpositive                           sql.NullString
+	Plural                                     sql.NullString
 	Definitesingularsuperlative                sql.NullString
+	Definiteplural                             sql.NullString
+	Pluralcomparative                          sql.NullString
+	Definitesingularpositive                   sql.NullString
+	Neutersingular                             sql.NullString
 	Neuterindefinitesingularpositive           sql.NullString
 	Feminineneuterdefinitesingular             sql.NullString
-	Pluralcomparative                          sql.NullString
-	Definitesingular                           sql.NullString
-	Definitepositive                           sql.NullString
-	Lastmodified                               sql.NullString
-	Commonindefinitesingularpositive           sql.NullString
-	Definitesuperlative                        sql.NullString
-	Masculinedefinitesingularpositive          sql.NullString
-	Masculinedefinitesuperlative               sql.NullString
-	Singularpositive                           sql.NullString
-	Definitepluralpositive                     sql.NullString
-	Pluralsuperlative                          sql.NullString
-	Pluralpositive                             sql.NullString
-	Definiteindefinitepluralsingularpositive   sql.NullString
-	Masculinedefinitepluralsingularsuperlative sql.NullString
-	Neutersingular                             sql.NullString
-	Definiteplural                             sql.NullString
-	Neuterindefinitesingular                   sql.NullString
-	Plural                                     sql.NullString
-	Comparative                                sql.NullString
-	Singularsuperlative                        sql.NullString
-	Nominativecommonindefinitesingularpositive sql.NullString
+	Masculinedefinitesingular                  sql.NullString
 	Masculinedefinitesingularsuperlative       sql.NullString
+	Indefinitepluralpositive                   sql.NullString
 	Commonsingular                             sql.NullString
-	Nominativeindefinitesingular               sql.NullString
-	Superlative                                sql.NullString
+	Positive                                   sql.NullString
+	Definiteindefinitepluralsingularpositive   sql.NullString
+	Commonpositive                             sql.NullString
+	Commonindefinitesingular                   sql.NullString
+	Definitepositive                           sql.NullString
+	Definitesingular                           sql.NullString
 }
 
-type SvSwedishDbAdverb struct {
+type SvAdverb struct {
 	Wdlexemeid                        sql.NullString
-	Neuterindefinitesingularpositive  sql.NullString
-	Definitesingularpositive          sql.NullString
-	Definitepluralpositive            sql.NullString
 	Lastmodified                      sql.NullString
-	Commonindefinitesingularpositive  sql.NullString
+	Neuterindefinitesingularpositive  sql.NullString
+	Definitepluralpositive            sql.NullString
 	Masculinedefinitesingularpositive sql.NullString
 	Positive                          sql.NullString
-	Comparative                       sql.NullString
 	Superlative                       sql.NullString
+	Commonindefinitesingularpositive  sql.NullString
+	Definitesingularpositive          sql.NullString
+	Comparative                       sql.NullString
 }
 
-type SvSwedishDbArticle struct {
+type SvArticle struct {
 	Wdlexemeid     sql.NullString
-	Neuter         sql.NullString
 	Lastmodified   sql.NullString
-	Commonsingular sql.NullString
 	Common         sql.NullString
-	Neutersingular sql.NullString
+	Neuter         sql.NullString
 	Plural         sql.NullString
+	Commonsingular sql.NullString
+	Neutersingular sql.NullString
 }
 
-type SvSwedishDbConjunction struct {
+type SvConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type SvSwedishDbNoun struct {
+type SvNoun struct {
 	Wdlexemeid                   sql.NullString
-	Definite                     sql.NullString
-	Nominativeindefinite         sql.NullString
-	Nominativedefiniteplural     sql.NullString
-	Nominativeindefiniteplural   sql.NullString
-	Genitivedefinite             sql.NullString
 	Lastmodified                 sql.NullString
-	Genitive                     sql.NullString
-	Genitiveindefinitesingular   sql.NullString
-	Oblique                      sql.NullString
-	Nominativeindefinitesingular sql.NullString
-	Nominativesingular           sql.NullString
-	Genitiveindefinite           sql.NullString
-	Nominativedefinite           sql.NullString
-	Nominativedefinitesingular   sql.NullString
-	Nominative                   sql.NullString
-	Genitiveindefiniteplural     sql.NullString
-	Genitivedefinitesingular     sql.NullString
 	Genitivedefiniteplural       sql.NullString
+	Nominativesingular           sql.NullString
+	Genitivedefinitesingular     sql.NullString
+	Genitiveindefinitesingular   sql.NullString
+	Definite                     sql.NullString
+	Genitiveindefinite           sql.NullString
+	Nominativedefiniteplural     sql.NullString
+	Nominativeindefinite         sql.NullString
+	Genitiveindefiniteplural     sql.NullString
+	Nominativeindefinitesingular sql.NullString
+	Genitive                     sql.NullString
+	Nominativedefinite           sql.NullString
+	Oblique                      sql.NullString
+	Genitivedefinite             sql.NullString
+	Nominativedefinitesingular   sql.NullString
+	Nominativeindefiniteplural   sql.NullString
+	Nominative                   sql.NullString
 }
 
-type SvSwedishDbPersonalPronoun struct {
+type SvPersonalPronoun struct {
 	Wdlexemeid     sql.NullString
 	Lastmodified   sql.NullString
+	Plural         sql.NullString
+	Commonsingular sql.NullString
 	Genitive       sql.NullString
 	Oblique        sql.NullString
-	Commonsingular sql.NullString
-	Neutersingular sql.NullString
 	Nominative     sql.NullString
-	Plural         sql.NullString
+	Neutersingular sql.NullString
 }
 
-type SvSwedishDbPreposition struct {
+type SvPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type SvSwedishDbPronoun struct {
+type SvPronoun struct {
 	Wdlexemeid                      sql.NullString
-	Nominativemasculinesingular     sql.NullString
-	Neuter                          sql.NullString
 	Lastmodified                    sql.NullString
-	Genitive                        sql.NullString
-	Neuterdefinitesingular          sql.NullString
-	Commonsingular                  sql.NullString
-	Oblique                         sql.NullString
-	Vocative                        sql.NullString
-	Commonfemininemasculinesingular sql.NullString
-	Obliquemasculinesingular        sql.NullString
 	Common                          sql.NullString
-	Neutersingular                  sql.NullString
-	Nominative                      sql.NullString
+	Commonfemininemasculinesingular sql.NullString
+	Neuter                          sql.NullString
 	Masculinesingular               sql.NullString
 	Plural                          sql.NullString
+	Commonsingular                  sql.NullString
 	Genitivemasculinesingular       sql.NullString
+	Neuterdefinitesingular          sql.NullString
+	Vocative                        sql.NullString
+	Genitive                        sql.NullString
+	Obliquemasculinesingular        sql.NullString
+	Oblique                         sql.NullString
+	Nominative                      sql.NullString
+	Neutersingular                  sql.NullString
+	Nominativemasculinesingular     sql.NullString
 }
 
-type SvSwedishDbProperNoun struct {
+type SvProperNoun struct {
 	Wdlexemeid                   sql.NullString
 	Lastmodified                 sql.NullString
+	Nominativesingular           sql.NullString
 	Genitiveindefinitesingular   sql.NullString
 	Genitivesingular             sql.NullString
-	Nominativesingular           sql.NullString
 	Nominativeindefinitesingular sql.NullString
-	Nominative                   sql.NullString
 	Genitive                     sql.NullString
+	Nominative                   sql.NullString
 }
 
-type SvSwedishDbVerb struct {
+type SvVerb struct {
 	Wdlexemeid             sql.NullString
-	Supine                 sql.NullString
-	Passiveinfinitive      sql.NullString
-	Subjunctive            sql.NullString
 	Activepresentplural    sql.NullString
-	Infinitive             sql.NullString
-	Activesupine           sql.NullString
-	Activepreteriteplural  sql.NullString
-	Lastmodified           sql.NullString
-	Passivepreterite       sql.NullString
 	Activepluperfectsupine sql.NullString
-	Passivesupine          sql.NullString
-	Activepastpreterite    sql.NullString
-	Activepresent          sql.NullString
-	Past                   sql.NullString
-	Passivepresent         sql.NullString
-	Imperative             sql.NullString
-	Activeinfinitive       sql.NullString
-	Activepreterite        sql.NullString
-	Present                sql.NullString
-	Preterite              sql.NullString
-	Pastparticiple         sql.NullString
-	Futuresubjunctive      sql.NullString
-	Activeimperative       sql.NullString
 	Passivepreteriteplural sql.NullString
+	Passivepreterite       sql.NullString
+	Supine                 sql.NullString
+	Activepastpreterite    sql.NullString
+	Passivepresent         sql.NullString
+	Futuresubjunctive      sql.NullString
+	Imperative             sql.NullString
+	Activesupine           sql.NullString
+	Activeimperative       sql.NullString
+	Passiveinfinitive      sql.NullString
+	Past                   sql.NullString
+	Activeinfinitive       sql.NullString
+	Activepresent          sql.NullString
+	Lastmodified           sql.NullString
+	Subjunctive            sql.NullString
+	Pastparticiple         sql.NullString
+	Present                sql.NullString
+	Infinitive             sql.NullString
+	Activepreteriteplural  sql.NullString
+	Activepreterite        sql.NullString
+	Passivesupine          sql.NullString
+	Preterite              sql.NullString
 }
 
-type SwSwahiliDbAdjective struct {
+type SwAdjective struct {
 	Wdlexemeid   sql.NullString
+	Lastmodified sql.NullString
 	Positive     sql.NullString
-	Lastmodified sql.NullString
 }
 
-type SwSwahiliDbNoun struct {
+type SwNoun struct {
 	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
 	Indicative   sql.NullString
+	Lastmodified sql.NullString
 }
 
-type SwSwahiliDbPersonalPronoun struct {
+type SwPersonalPronoun struct {
 	Wdlexemeid         sql.NullString
 	Lastmodified       sql.NullString
 	Secondpersonplural sql.NullString
 }
 
-type SwSwahiliDbPreposition struct {
+type SwPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type SwSwahiliDbProperNoun struct {
+type SwProperNoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type SwSwahiliDbVerb struct {
+type SwVerb struct {
 	Wdlexemeid                     sql.NullString
 	Indicative                     sql.NullString
-	Imperativesecondpersonsingular sql.NullString
-	Imperativesecondpersonplural   sql.NullString
 	Lastmodified                   sql.NullString
 	Subjunctive                    sql.NullString
+	Indicativepresent              sql.NullString
 	Passive                        sql.NullString
-	Infinitive                     sql.NullString
 	Imperativefirstpersonsingular  sql.NullString
+	Infinitive                     sql.NullString
+	Imperativesecondpersonsingular sql.NullString
+	Imperativesecondpersonplural   sql.NullString
 	Presentindicative              sql.NullString
 	Indicativepresentindicative    sql.NullString
-	Indicativepresent              sql.NullString
 }
 
-type TaTamilDbAdjective struct {
+type TaAdjective struct {
 	Wdlexemeid   sql.NullString
-	Nominative   sql.NullString
 	Lastmodified sql.NullString
+	Nominative   sql.NullString
 }
 
-type TaTamilDbAdverb struct {
+type TaAdverb struct {
 	Wdlexemeid   sql.NullString
-	Nominative   sql.NullString
 	Lastmodified sql.NullString
 	Vocative     sql.NullString
+	Nominative   sql.NullString
 }
 
-type TaTamilDbConjunction struct {
+type TaConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type TaTamilDbNoun struct {
+type TaNoun struct {
 	Wdlexemeid           sql.NullString
-	Femininesingular     sql.NullString
-	Genitivesingular     sql.NullString
-	Nominativesingular   sql.NullString
-	Dative               sql.NullString
-	Vocativeplural       sql.NullString
-	Vocativesingular     sql.NullString
-	Dativeplural         sql.NullString
-	Instrumentalsingular sql.NullString
-	Accusativesingular   sql.NullString
-	Nominativeplural     sql.NullString
-	Lastmodified         sql.NullString
-	Accusative           sql.NullString
-	Accusativeplural     sql.NullString
 	Instrumentalplural   sql.NullString
-	Vocative             sql.NullString
-	Instrumental         sql.NullString
-	Ablative             sql.NullString
+	Genitivesingular     sql.NullString
 	Allativesingular     sql.NullString
-	Locative             sql.NullString
-	Terminative          sql.NullString
-	Adessive             sql.NullString
-	Locativesingular     sql.NullString
-	Abessive             sql.NullString
-	Locativeplural       sql.NullString
-	Allativeplural       sql.NullString
-	Nominative           sql.NullString
-	Plural               sql.NullString
 	Genitive             sql.NullString
-	Dativesingular       sql.NullString
-	Ablativesingular     sql.NullString
-	Ablativeplural       sql.NullString
-	Singular             sql.NullString
-	Allative             sql.NullString
+	Adessive             sql.NullString
 	Genitiveplural       sql.NullString
+	Vocative             sql.NullString
+	Allative             sql.NullString
+	Ablative             sql.NullString
+	Accusativeplural     sql.NullString
+	Vocativesingular     sql.NullString
+	Femininesingular     sql.NullString
+	Terminative          sql.NullString
+	Ablativeplural       sql.NullString
+	Dativeplural         sql.NullString
+	Locativesingular     sql.NullString
+	Lastmodified         sql.NullString
+	Locativeplural       sql.NullString
+	Plural               sql.NullString
+	Instrumental         sql.NullString
+	Dativesingular       sql.NullString
+	Instrumentalsingular sql.NullString
+	Ablativesingular     sql.NullString
+	Vocativeplural       sql.NullString
+	Nominativesingular   sql.NullString
+	Accusative           sql.NullString
+	Nominativeplural     sql.NullString
+	Singular             sql.NullString
+	Accusativesingular   sql.NullString
+	Dative               sql.NullString
+	Abessive             sql.NullString
+	Locative             sql.NullString
+	Nominative           sql.NullString
+	Allativeplural       sql.NullString
 }
 
-type TaTamilDbPersonalPronoun struct {
+type TaPersonalPronoun struct {
 	Wdlexemeid   sql.NullString
-	Locative     sql.NullString
 	Lastmodified sql.NullString
 	Accusative   sql.NullString
-	Vocative     sql.NullString
-	Singular     sql.NullString
-	Dative       sql.NullString
-	Allative     sql.NullString
-	Nominative   sql.NullString
-	Genitive     sql.NullString
 	Instrumental sql.NullString
+	Singular     sql.NullString
+	Vocative     sql.NullString
+	Dative       sql.NullString
+	Genitive     sql.NullString
+	Locative     sql.NullString
+	Nominative   sql.NullString
+	Allative     sql.NullString
 }
 
-type TaTamilDbPronoun struct {
+type TaPronoun struct {
 	Wdlexemeid         sql.NullString
-	Nominativeplural   sql.NullString
 	Lastmodified       sql.NullString
-	Accusative         sql.NullString
-	Vocative           sql.NullString
-	Dativesingular     sql.NullString
 	Nominativesingular sql.NullString
-	Dative             sql.NullString
-	Allative           sql.NullString
-	Nominative         sql.NullString
-	Genitive           sql.NullString
+	Accusative         sql.NullString
+	Nominativeplural   sql.NullString
 	Instrumental       sql.NullString
+	Dativesingular     sql.NullString
+	Vocative           sql.NullString
+	Dative             sql.NullString
+	Genitive           sql.NullString
+	Nominative         sql.NullString
+	Allative           sql.NullString
 	Dativeplural       sql.NullString
 }
 
-type TaTamilDbProperNoun struct {
+type TaProperNoun struct {
 	Wdlexemeid           sql.NullString
-	Genitivesingular     sql.NullString
-	Nominativesingular   sql.NullString
-	Dative               sql.NullString
-	Vocativeplural       sql.NullString
-	Vocativesingular     sql.NullString
-	Dativeplural         sql.NullString
-	Instrumentalsingular sql.NullString
-	Accusativesingular   sql.NullString
-	Nominativeplural     sql.NullString
-	Lastmodified         sql.NullString
-	Accusative           sql.NullString
-	Accusativeplural     sql.NullString
 	Instrumentalplural   sql.NullString
-	Vocative             sql.NullString
-	Instrumental         sql.NullString
-	Ablative             sql.NullString
+	Genitivesingular     sql.NullString
 	Allativesingular     sql.NullString
-	Locative             sql.NullString
-	Locativesingular     sql.NullString
-	Locativeplural       sql.NullString
-	Allativeplural       sql.NullString
-	Nominative           sql.NullString
 	Genitive             sql.NullString
-	Plural               sql.NullString
-	Dativesingular       sql.NullString
-	Ablativesingular     sql.NullString
-	Ablativeplural       sql.NullString
-	Singular             sql.NullString
-	Allative             sql.NullString
 	Genitiveplural       sql.NullString
+	Vocative             sql.NullString
+	Allative             sql.NullString
+	Ablative             sql.NullString
+	Vocativesingular     sql.NullString
+	Accusativeplural     sql.NullString
+	Ablativeplural       sql.NullString
+	Dativeplural         sql.NullString
+	Locativesingular     sql.NullString
+	Lastmodified         sql.NullString
+	Locativeplural       sql.NullString
+	Plural               sql.NullString
+	Instrumental         sql.NullString
+	Dativesingular       sql.NullString
+	Instrumentalsingular sql.NullString
+	Ablativesingular     sql.NullString
+	Vocativeplural       sql.NullString
+	Nominativesingular   sql.NullString
+	Accusative           sql.NullString
+	Nominativeplural     sql.NullString
+	Singular             sql.NullString
+	Accusativesingular   sql.NullString
+	Dative               sql.NullString
+	Locative             sql.NullString
+	Nominative           sql.NullString
+	Allativeplural       sql.NullString
 }
 
-type TaTamilDbVerb struct {
+type TaVerb struct {
 	Wdlexemeid                                sql.NullString
-	Simplefuturesecondpersonsingular          sql.NullString
-	Masculinesimplepresentthirdperson         sql.NullString
-	Neutersimplepresentthirdpersonplural      sql.NullString
-	Secondpersonsingular                      sql.NullString
-	Femininesingular                          sql.NullString
-	Femininesimplepresentthirdperson          sql.NullString
-	Future                                    sql.NullString
-	Infinitive                                sql.NullString
-	Masculinefuturethirdperson                sql.NullString
-	Imperativepluralsingular                  sql.NullString
-	Masculinepastsingular                     sql.NullString
-	Simplepresent                             sql.NullString
-	Neutersimplepresent                       sql.NullString
-	Masculinesimplefuturethirdperson          sql.NullString
-	Simplepresentfirstpersonsingular          sql.NullString
-	Simplepresentsingular                     sql.NullString
-	Masculine                                 sql.NullString
-	Masculinefuture                           sql.NullString
-	Simplepresentthirdpersonsingular          sql.NullString
-	Masculinesimplepresentsingular            sql.NullString
-	Lastmodified                              sql.NullString
-	Femininesimplepresentsingular             sql.NullString
-	Simplepresentsecondpersonsingular         sql.NullString
-	Neutersimplepresentthirdpersonsingular    sql.NullString
-	Femininesimplefuturethirdperson           sql.NullString
-	Masculinepresentcontinuousthirdperson     sql.NullString
-	Masculinesimplepast                       sql.NullString
-	Conditional                               sql.NullString
-	Femininefuture                            sql.NullString
-	Simplepresentfirstpersonplural            sql.NullString
-	Femininesimplepastthirdperson             sql.NullString
-	Masculinesimplepastthirdperson            sql.NullString
-	Masculinesimplepastthirdpersonsingular    sql.NullString
-	Femininesimplepresentthirdpersonsingular  sql.NullString
 	Masculinesimplefuturethirdpersonsingular  sql.NullString
-	Presentcontinuous                         sql.NullString
-	Imperativeplural                          sql.NullString
-	Neutersimplepast                          sql.NullString
-	Masculinesimplepresent                    sql.NullString
-	Simplepresentthirdpersonplural            sql.NullString
-	Past                                      sql.NullString
-	Neutersimplepastthirdpersonsingular       sql.NullString
-	Simplefuturesingular                      sql.NullString
-	Simplepastthirdpersonsingular             sql.NullString
-	Neuterthirdpersonsingular                 sql.NullString
-	Femininesimplepast                        sql.NullString
-	Simplefuturethirdpersonsingular           sql.NullString
-	Masculinepresentsingular                  sql.NullString
-	Imperativesimplepresentplural             sql.NullString
-	Imperative                                sql.NullString
+	Masculinesimplepastthirdperson            sql.NullString
+	Neutersimplepresent                       sql.NullString
+	Masculine                                 sql.NullString
 	Masculinefuturesingular                   sql.NullString
-	Neutersingular                            sql.NullString
-	Nominative                                sql.NullString
-	Imperativesingular                        sql.NullString
-	Plural                                    sql.NullString
-	Femininesimplefuturethirdpersonsingular   sql.NullString
-	Femininesimplepastthirdpersonsingular     sql.NullString
-	Present                                   sql.NullString
-	Simplepresentsecondpersonplural           sql.NullString
-	Neutersimplefuturethirdpersonsingular     sql.NullString
-	Simplepastsecondpersonsingular            sql.NullString
-	Masculinepresentcontinuous                sql.NullString
-	Simplefuturefirstpersonsingular           sql.NullString
-	Simplefuture                              sql.NullString
-	Neuterplural                              sql.NullString
-	Simplepastfirstpersonsingular             sql.NullString
-	Femininesimplepresent                     sql.NullString
-	Singular                                  sql.NullString
-	Simplepast                                sql.NullString
-	Masculinesimplepresentthirdpersonsingular sql.NullString
-	Femininefuturethirdperson                 sql.NullString
-	Neuterfuture                              sql.NullString
-	Gerund                                    sql.NullString
-	Simplepastsingular                        sql.NullString
+	Simplepresentthirdpersonplural            sql.NullString
 	Masculinesingular                         sql.NullString
+	Simplepastfirstpersonsingular             sql.NullString
+	Masculinesimplepresentsingular            sql.NullString
+	Femininesimplepresentsingular             sql.NullString
+	Neutersimplepresentthirdpersonsingular    sql.NullString
+	Masculinepresentcontinuousthirdperson     sql.NullString
+	Neutersimplefuturethirdpersonsingular     sql.NullString
+	Masculinepresentsingular                  sql.NullString
+	Imperative                                sql.NullString
+	Simplefuturethirdpersonsingular           sql.NullString
+	Simplepresent                             sql.NullString
+	Masculinesimplepresentthirdpersonsingular sql.NullString
+	Masculinesimplefuturethirdperson          sql.NullString
+	Femininesimplefuturethirdpersonsingular   sql.NullString
+	Simplepresentsecondpersonplural           sql.NullString
+	Femininesimplepastthirdpersonsingular     sql.NullString
+	Femininesimplepastthirdperson             sql.NullString
+	Femininesingular                          sql.NullString
+	Neutersimplepresentthirdpersonplural      sql.NullString
+	Masculinesimplepresent                    sql.NullString
+	Simplepast                                sql.NullString
+	Past                                      sql.NullString
+	Imperativesingular                        sql.NullString
+	Femininesimplepresentthirdperson          sql.NullString
+	Neuterfuture                              sql.NullString
+	Masculinepastsingular                     sql.NullString
+	Masculinepresentcontinuous                sql.NullString
+	Imperativepluralsingular                  sql.NullString
+	Simplefuturesingular                      sql.NullString
+	Simplepastsingular                        sql.NullString
+	Masculinesimplepresentthirdperson         sql.NullString
+	Lastmodified                              sql.NullString
+	Masculinefuturethirdperson                sql.NullString
+	Masculinesimplepastthirdpersonsingular    sql.NullString
+	Imperativesimplepresentplural             sql.NullString
+	Femininesimplepresentthirdpersonsingular  sql.NullString
+	Simplepresentfirstpersonsingular          sql.NullString
+	Plural                                    sql.NullString
+	Simplefuturefirstpersonsingular           sql.NullString
+	Femininesimplefuturethirdperson           sql.NullString
+	Femininesimplepresent                     sql.NullString
+	Presentcontinuous                         sql.NullString
+	Conditional                               sql.NullString
+	Neutersingular                            sql.NullString
+	Masculinefuture                           sql.NullString
+	Neuterthirdpersonsingular                 sql.NullString
+	Simplefuturesecondpersonsingular          sql.NullString
+	Simplepastsecondpersonsingular            sql.NullString
+	Femininefuturethirdperson                 sql.NullString
+	Femininefuture                            sql.NullString
+	Neuterplural                              sql.NullString
+	Simplepresentsecondpersonsingular         sql.NullString
+	Future                                    sql.NullString
+	Present                                   sql.NullString
+	Simplepastthirdpersonsingular             sql.NullString
+	Simplepresentfirstpersonplural            sql.NullString
+	Secondpersonsingular                      sql.NullString
+	Infinitive                                sql.NullString
+	Singular                                  sql.NullString
+	Masculinesimplepast                       sql.NullString
+	Femininesimplepast                        sql.NullString
+	Simplefuture                              sql.NullString
+	Neutersimplepast                          sql.NullString
+	Simplepresentthirdpersonsingular          sql.NullString
+	Imperativeplural                          sql.NullString
+	Nominative                                sql.NullString
+	Gerund                                    sql.NullString
+	Simplepresentsingular                     sql.NullString
+	Neutersimplepastthirdpersonsingular       sql.NullString
 }
 
-type TgTajikDbAdjective struct {
+type TgAdjective struct {
 	Wdlexemeid              sql.NullString
-	Femininesuperlative     sql.NullString
-	Positive                sql.NullString
-	Animatepositive         sql.NullString
-	Animatefeminine         sql.NullString
-	Definite                sql.NullString
-	Lastmodified            sql.NullString
-	Femininecomparative     sql.NullString
-	Animatecomparative      sql.NullString
-	Feminine                sql.NullString
-	Indefinite              sql.NullString
-	Plural                  sql.NullString
-	Comparative             sql.NullString
 	Animate                 sql.NullString
-	Singular                sql.NullString
-	Femininepositive        sql.NullString
-	Animateplural           sql.NullString
-	Animatefemininepositive sql.NullString
 	Animatesuperlative      sql.NullString
 	Superlative             sql.NullString
+	Femininesuperlative     sql.NullString
+	Comparative             sql.NullString
+	Animatepositive         sql.NullString
+	Feminine                sql.NullString
+	Lastmodified            sql.NullString
+	Femininecomparative     sql.NullString
+	Animateplural           sql.NullString
+	Animatefeminine         sql.NullString
+	Plural                  sql.NullString
+	Animatefemininepositive sql.NullString
+	Femininepositive        sql.NullString
+	Definite                sql.NullString
+	Singular                sql.NullString
+	Positive                sql.NullString
+	Animatecomparative      sql.NullString
+	Indefinite              sql.NullString
 }
 
-type TgTajikDbAdverb struct {
+type TgAdverb struct {
 	Wdlexemeid   sql.NullString
-	Positive     sql.NullString
 	Lastmodified sql.NullString
 	Comparative  sql.NullString
 	Superlative  sql.NullString
+	Positive     sql.NullString
 }
 
-type TgTajikDbConjunction struct {
+type TgConjunction struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type TgTajikDbNoun struct {
+type TgNoun struct {
 	Wdlexemeid                                   sql.NullString
-	Accusativethirdpersondefiniteplural          sql.NullString
-	Secondpersondefinitepluralsingular           sql.NullString
-	Accusativesecondpersondefiniteplural         sql.NullString
-	Secondpersonsingular                         sql.NullString
-	Thirdperson                                  sql.NullString
 	Indefinitesingular                           sql.NullString
-	Nominativesingular                           sql.NullString
-	Positive                                     sql.NullString
-	Animatepositive                              sql.NullString
-	Accusativesecondpersondefinitepluralsingular sql.NullString
-	Nominativedefinitesingular                   sql.NullString
-	Accusativethirdpersondefinitesingular        sql.NullString
-	Accusativesingular                           sql.NullString
-	Nominativeindefiniteplural                   sql.NullString
-	Definitesingular                             sql.NullString
-	Nominativeplural                             sql.NullString
-	Thirdpersondefinitepluralsingular            sql.NullString
-	Secondpersondefinitesingular                 sql.NullString
-	Lastmodified                                 sql.NullString
-	Thirdpersonplural                            sql.NullString
-	Secondpersonplural                           sql.NullString
-	Accusative                                   sql.NullString
+	Accusativefirstpersondefiniteplural          sql.NullString
+	Thirdpersondefinitesingular                  sql.NullString
+	Nominativedefiniteplural                     sql.NullString
+	Superlative                                  sql.NullString
+	Thirdperson                                  sql.NullString
+	Accusativesecondpersondefinitesingular       sql.NullString
+	Comparative                                  sql.NullString
+	Firstpersondefiniteplural                    sql.NullString
+	Accusativeindefinitesingular                 sql.NullString
+	Accusativethirdpersondefinitepluralsingular  sql.NullString
 	Accusativefirstpersondefinitesingular        sql.NullString
 	Accusativeplural                             sql.NullString
-	Firstpersonsingular                          sql.NullString
-	Accusativeindefiniteplural                   sql.NullString
-	Secondpersondefiniteplural                   sql.NullString
-	Accusativethirdpersondefinitepluralsingular  sql.NullString
-	Accusativedefiniteplural                     sql.NullString
-	Thirdpersondefiniteplural                    sql.NullString
-	Indefiniteplural                             sql.NullString
-	Accusativeindefinitesingular                 sql.NullString
-	Accusativesecondpersondefinitesingular       sql.NullString
-	Definiteplural                               sql.NullString
-	Nominative                                   sql.NullString
-	Firstpersondefinitepluralsingular            sql.NullString
-	Plural                                       sql.NullString
-	Comparative                                  sql.NullString
-	Accusativefirstpersondefiniteplural          sql.NullString
-	Firstpersondefiniteplural                    sql.NullString
-	Nominativedefiniteplural                     sql.NullString
 	Firstpersonplural                            sql.NullString
-	Thirdpersondefinitesingular                  sql.NullString
-	Accusativefirstpersondefinitepluralsingular  sql.NullString
-	Nominativeindefinitesingular                 sql.NullString
-	Singular                                     sql.NullString
-	Accusativedefinitesingular                   sql.NullString
-	Animateplural                                sql.NullString
-	Firstpersondefinitesingular                  sql.NullString
+	Accusativethirdpersondefiniteplural          sql.NullString
 	Dual                                         sql.NullString
-	Superlative                                  sql.NullString
+	Animatepositive                              sql.NullString
+	Secondpersondefinitesingular                 sql.NullString
+	Firstpersondefinitepluralsingular            sql.NullString
+	Accusativefirstpersondefinitepluralsingular  sql.NullString
+	Accusativesecondpersondefinitepluralsingular sql.NullString
+	Thirdpersondefiniteplural                    sql.NullString
+	Nominativeindefinitesingular                 sql.NullString
+	Nominativedefinitesingular                   sql.NullString
+	Firstpersonsingular                          sql.NullString
+	Indefiniteplural                             sql.NullString
+	Lastmodified                                 sql.NullString
+	Animateplural                                sql.NullString
+	Plural                                       sql.NullString
+	Definiteplural                               sql.NullString
+	Firstpersondefinitesingular                  sql.NullString
+	Secondpersondefinitepluralsingular           sql.NullString
+	Accusativedefiniteplural                     sql.NullString
+	Thirdpersondefinitepluralsingular            sql.NullString
+	Accusativethirdpersondefinitesingular        sql.NullString
+	Nominativesingular                           sql.NullString
+	Accusativeindefiniteplural                   sql.NullString
+	Accusativedefinitesingular                   sql.NullString
+	Accusative                                   sql.NullString
+	Secondpersonsingular                         sql.NullString
+	Nominativeplural                             sql.NullString
+	Secondpersonplural                           sql.NullString
+	Thirdpersonplural                            sql.NullString
+	Singular                                     sql.NullString
+	Accusativesingular                           sql.NullString
+	Positive                                     sql.NullString
+	Nominativeindefiniteplural                   sql.NullString
+	Secondpersondefiniteplural                   sql.NullString
+	Nominative                                   sql.NullString
+	Accusativesecondpersondefiniteplural         sql.NullString
+	Definitesingular                             sql.NullString
 }
 
-type TgTajikDbPersonalPronoun struct {
+type TgPersonalPronoun struct {
 	Wdlexemeid    sql.NullString
+	Singular      sql.NullString
 	Lastmodified  sql.NullString
 	Plural        sql.NullString
 	Animateplural sql.NullString
-	Singular      sql.NullString
 }
 
-type TgTajikDbPostposition struct {
+type TgPostposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type TgTajikDbPreposition struct {
+type TgPreposition struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type TgTajikDbPronoun struct {
+type TgPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type TgTajikDbProperNoun struct {
+type TgProperNoun struct {
 	Wdlexemeid                 sql.NullString
-	Definitesingular           sql.NullString
 	Lastmodified               sql.NullString
-	Accusative                 sql.NullString
-	Indefinitesingular         sql.NullString
-	Singular                   sql.NullString
 	Accusativedefinitesingular sql.NullString
+	Indefinitesingular         sql.NullString
 	Nominativesingular         sql.NullString
 	Animateplural              sql.NullString
-	Nominative                 sql.NullString
+	Accusative                 sql.NullString
 	Plural                     sql.NullString
+	Singular                   sql.NullString
+	Nominative                 sql.NullString
+	Definitesingular           sql.NullString
 }
 
-type TgTajikDbVerb struct {
+type TgVerb struct {
 	Wdlexemeid                             sql.NullString
-	Presentparticiple                      sql.NullString
-	Presentsecondpersonsingularsubjunctive sql.NullString
-	Indicativepastsecondpersonsingular     sql.NullString
-	Indicativepastsecondpersonplural       sql.NullString
-	Pastwordstem                           sql.NullString
-	Pastparticiple                         sql.NullString
-	Indicativepastthirdpersonplural        sql.NullString
-	Secondpersonsingular                   sql.NullString
-	Imperativepresentsecondpersonsingular  sql.NullString
-	Presentperfectfirstpersonsingular      sql.NullString
-	Infinitive                             sql.NullString
-	Perfectpresentfirstpersonplural        sql.NullString
-	Presentthirdpersonsingularsubjunctive  sql.NullString
-	Indicativepastthirdpersonsingular      sql.NullString
-	Indicativeaoristsecondpersonplural     sql.NullString
-	Presentsecondpersonpluralsubjunctive   sql.NullString
-	Presentindicativesecondpersonplural    sql.NullString
-	Presentwordstem                        sql.NullString
-	Imperativesecondpersonplural           sql.NullString
-	Lastmodified                           sql.NullString
-	Thirdpersonplural                      sql.NullString
-	Secondpersonplural                     sql.NullString
-	Indicativeaoristfirstpersonplural      sql.NullString
-	Perfectpresentsecondpersonsingular     sql.NullString
-	Perfectpresentsecondpersonplural       sql.NullString
-	Imperativepresentsecondpersonplural    sql.NullString
-	Indicativepastfirstpersonsingular      sql.NullString
-	Firstpersonsingular                    sql.NullString
-	Perfectpresentfirstpersonsingular      sql.NullString
 	Thirdpersonsingular                    sql.NullString
-	Indicativeaoristsecondpersonsingular   sql.NullString
-	Presentindicativefirstpersonplural     sql.NullString
-	Imperativesecondpersonsingular         sql.NullString
-	Presentperfectfirstpersonplural        sql.NullString
-	Indicativepastfirstpersonplural        sql.NullString
-	Indicativeaoristfirstpersonsingular    sql.NullString
-	Imperative                             sql.NullString
-	Perfectpresentthirdpersonplural        sql.NullString
-	Presentperfectsecondpersonplural       sql.NullString
-	Pastparticiple1                        sql.NullString
-	Firstpersonplural                      sql.NullString
-	Presentthirdpersonpluralsubjunctive    sql.NullString
-	Perfectpresentthirdpersonsingular      sql.NullString
-	Presentperfectthirdpersonplural        sql.NullString
+	Imperativepresentsecondpersonplural    sql.NullString
 	Presentindicativethirdpersonplural     sql.NullString
-	Indicativeaoristthirdpersonsingular    sql.NullString
-	Indicativeaoristthirdpersonplural      sql.NullString
-	Presentfirstpersonpluralsubjunctive    sql.NullString
-	Gerund                                 sql.NullString
+	Presentperfectsecondpersonplural       sql.NullString
 	Presentperfectthirdpersonsingular      sql.NullString
-	Presentperfectsecondpersonsingular     sql.NullString
+	Indicativepastfirstpersonplural        sql.NullString
+	Imperative                             sql.NullString
+	Pastwordstem                           sql.NullString
 	Presentfirstpersonsingularsubjunctive  sql.NullString
+	Firstpersonplural                      sql.NullString
+	Presentindicativefirstpersonplural     sql.NullString
+	Presentindicativesecondpersonplural    sql.NullString
+	Presentparticiple                      sql.NullString
+	Perfectpresentsecondpersonplural       sql.NullString
+	Presentsecondpersonpluralsubjunctive   sql.NullString
+	Perfectpresentthirdpersonsingular      sql.NullString
+	Indicativeaoristthirdpersonsingular    sql.NullString
+	Indicativepastsecondpersonsingular     sql.NullString
+	Presentperfectsecondpersonsingular     sql.NullString
+	Indicativeaoristsecondpersonplural     sql.NullString
+	Indicativeaoristthirdpersonplural      sql.NullString
+	Indicativeaoristfirstpersonsingular    sql.NullString
+	Indicativeaoristfirstpersonplural      sql.NullString
+	Lastmodified                           sql.NullString
+	Indicativepastthirdpersonplural        sql.NullString
+	Presentthirdpersonsingularsubjunctive  sql.NullString
+	Presentperfectthirdpersonplural        sql.NullString
+	Firstpersonsingular                    sql.NullString
+	Presentwordstem                        sql.NullString
+	Presentperfectfirstpersonplural        sql.NullString
+	Presentthirdpersonpluralsubjunctive    sql.NullString
+	Presentperfectfirstpersonsingular      sql.NullString
+	Imperativesecondpersonsingular         sql.NullString
+	Perfectpresentthirdpersonplural        sql.NullString
+	Pastparticiple                         sql.NullString
+	Indicativepastthirdpersonsingular      sql.NullString
+	Pastparticiple1                        sql.NullString
+	Secondpersonsingular                   sql.NullString
+	Presentfirstpersonpluralsubjunctive    sql.NullString
+	Indicativeaoristsecondpersonsingular   sql.NullString
+	Secondpersonplural                     sql.NullString
+	Perfectpresentfirstpersonplural        sql.NullString
+	Infinitive                             sql.NullString
+	Imperativepresentsecondpersonsingular  sql.NullString
+	Indicativepastsecondpersonplural       sql.NullString
+	Indicativepastfirstpersonsingular      sql.NullString
+	Imperativesecondpersonplural           sql.NullString
+	Presentsecondpersonsingularsubjunctive sql.NullString
+	Thirdpersonplural                      sql.NullString
+	Perfectpresentfirstpersonsingular      sql.NullString
+	Perfectpresentsecondpersonsingular     sql.NullString
+	Gerund                                 sql.NullString
 }
 
 type TranslationdataArabic struct {
@@ -8270,27 +8270,27 @@ type TranslationdataYoruba struct {
 	Yo           sql.NullString
 }
 
-type YoYorubaDbAdjective struct {
+type YoAdjective struct {
 	Wdlexemeid   sql.NullString
-	Lastmodified sql.NullString
 	Singular     sql.NullString
+	Lastmodified sql.NullString
 }
 
-type YoYorubaDbNoun struct {
+type YoNoun struct {
 	Wdlexemeid        sql.NullString
-	Presentcontinuous sql.NullString
-	Past              sql.NullString
 	Lastmodified      sql.NullString
-	Singular          sql.NullString
 	Future            sql.NullString
+	Singular          sql.NullString
+	Past              sql.NullString
+	Presentcontinuous sql.NullString
 }
 
-type YoYorubaDbPronoun struct {
+type YoPronoun struct {
 	Wdlexemeid   sql.NullString
 	Lastmodified sql.NullString
 }
 
-type YoYorubaDbVerb struct {
+type YoVerb struct {
 	Wdlexemeid         sql.NullString
 	Lastmodified       sql.NullString
 	Pastpastparticiple sql.NullString
