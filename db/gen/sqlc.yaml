@@ -1,11 +1,9 @@
 version: "2"
 sql:
   -
-    # There is no specific "mariadb" engine option for sqlc.
-    # Though in theory, for the most part "mysql" should function the same.
     engine: "mysql"
-    schema: "../schema"
-    queries: "../queries"
+    schema: "../schema/schema.sql"
+    queries: "../queries/query.sql"
     gen:
       go:
         package: "db"
