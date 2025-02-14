@@ -1,14 +1,12 @@
 package api
 
 import (
- 
 	"fmt"
 	"log"
 	"net/http"
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
-
 	"github.com/spf13/viper"
 )
 
@@ -24,7 +22,7 @@ func HandleRequests() {
 	http.HandleFunc("/", hello)
 
 	// Setup tables endpoint with /api prefix
-	http.HandleFunc("/api/tables", getTables)
+	http.HandleFunc("/api/tables", queryTables)
 
 	// Setup /packs handler.
 	fileSystem := viper.GetString("fileSystem")
@@ -37,8 +35,8 @@ func HandleRequests() {
 
 	http.Handle("/packs/", http.StripPrefix("/packs/", http.FileServer(http.Dir(fileSystem))))
 
-	// Setup /ar/adjective endpoint
-	http.HandleFunc("/ar/adjective", getarabicadjectives)
+	// Setup dynamic language data endpoint
+	http.HandleFunc("/lang/", handleLanguageData)
 
 	// Start serving requests.
 	hostPort := fmt.Sprintf(":%s", viper.GetString("hostPort"))
