@@ -34,7 +34,7 @@ func main() {
 	defer mariaDB.Close()
 
 	// SQLite files directory
-	sqliteDir := "/media/asif/Mahbub1/test-scribe-server/packs/sqlite"
+	sqliteDir := "./packs/sqlite"
 
 	// Process each SQLite file
 	files, err := filepath.Glob(filepath.Join(sqliteDir, "*.sqlite"))
