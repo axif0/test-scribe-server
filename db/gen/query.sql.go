@@ -10,172 +10,18 @@ import (
 )
 
 const aR_arabic_db_adjectives = `-- name: AR_arabic_db_adjectives :many
-SELECT 
-    COALESCE(wdLexemeId, '') AS wdLexemeId,
-    COALESCE(pausalFeminineSingular, '') AS pausalFeminineSingular,
-    COALESCE(genitiveMasculineDefinitePlural, '') AS genitiveMasculineDefinitePlural,
-    COALESCE(nominativeMasculineSingular, '') AS nominativeMasculineSingular,
-    COALESCE(genitiveMasculineIndefiniteSingular, '') AS genitiveMasculineIndefiniteSingular,
-    COALESCE(nominativeMasculineIndefiniteDual, '') AS nominativeMasculineIndefiniteDual,
-    COALESCE(feminineSingular, '') AS feminineSingular,
-    COALESCE(nominativeFeminineDefiniteSingular, '') AS nominativeFeminineDefiniteSingular,
-    COALESCE(pausalMasculineIndefinitePlural, '') AS pausalMasculineIndefinitePlural,
-    COALESCE(feminineDual, '') AS feminineDual,
-    COALESCE(genitiveMasculineIndefiniteDual, '') AS genitiveMasculineIndefiniteDual,
-    COALESCE(pausalFeminine, '') AS pausalFeminine,
-    COALESCE(pausalMasculinePlural, '') AS pausalMasculinePlural,
-    COALESCE(accusativeMasculinePlural, '') AS accusativeMasculinePlural,
-    COALESCE(accusativeMasculineIndefinitePlural, '') AS accusativeMasculineIndefinitePlural,
-    COALESCE(pausalFeminineIndefiniteSingular, '') AS pausalFeminineIndefiniteSingular,
-    COALESCE(masculineDual, '') AS masculineDual,
-    COALESCE(accusativeFeminineIndefiniteSingular, '') AS accusativeFeminineIndefiniteSingular,
-    COALESCE(pausalFeminineDefinitePlural, '') AS pausalFeminineDefinitePlural,
-    COALESCE(genitiveFeminineDefinitePlural, '') AS genitiveFeminineDefinitePlural,
-    COALESCE(lastModified, '') AS lastModified,
-    COALESCE(genitiveMasculinePlural, '') AS genitiveMasculinePlural,
-    COALESCE(masculine, '') AS masculine,
-    COALESCE(accusativeMasculineDefinitePlural, '') AS accusativeMasculineDefinitePlural,
-    COALESCE(genitiveFeminineIndefinitePlural, '') AS genitiveFeminineIndefinitePlural,
-    COALESCE(accusativeMasculineDefiniteDual, '') AS accusativeMasculineDefiniteDual,
-    COALESCE(accusativeMasculineIndefiniteDual, '') AS accusativeMasculineIndefiniteDual,
-    COALESCE(accusativeMasculineIndefiniteSingular, '') AS accusativeMasculineIndefiniteSingular,
-    COALESCE(genitiveFeminineDefiniteSingular, '') AS genitiveFeminineDefiniteSingular,
-    COALESCE(accusativeFemininePlural, '') AS accusativeFemininePlural,
-    COALESCE(nominativeMasculineIndefinitePlural, '') AS nominativeMasculineIndefinitePlural,
-    COALESCE(genitiveFeminineSingular, '') AS genitiveFeminineSingular,
-    COALESCE(genitiveFeminineIndefiniteDual, '') AS genitiveFeminineIndefiniteDual,
-    COALESCE(accusativeMasculineSingular, '') AS accusativeMasculineSingular,
-    COALESCE(pausalMasculineSingular, '') AS pausalMasculineSingular,
-    COALESCE(masculinePlural, '') AS masculinePlural,
-    COALESCE(genitiveFemininePlural, '') AS genitiveFemininePlural,
-    COALESCE(nominativeFeminineIndefinitePlural, '') AS nominativeFeminineIndefinitePlural,
-    COALESCE(accusativeFeminineIndefinitePlural, '') AS accusativeFeminineIndefinitePlural,
-    COALESCE(pausalFemininePlural, '') AS pausalFemininePlural,
-    COALESCE(accusativeMasculineDefiniteSingular, '') AS accusativeMasculineDefiniteSingular,
-    COALESCE(feminine, '') AS feminine,
-    COALESCE(nominativeMasculineIndefiniteSingular, '') AS nominativeMasculineIndefiniteSingular,
-    COALESCE(femininePlural, '') AS femininePlural,
-    COALESCE(nominativeMasculineDefinitePlural, '') AS nominativeMasculineDefinitePlural,
-    COALESCE(nominativeFeminineIndefiniteSingular, '') AS nominativeFeminineIndefiniteSingular,
-    COALESCE(genitiveFeminineDefiniteDual, '') AS genitiveFeminineDefiniteDual,
-    COALESCE(accusativeFeminineIndefiniteDual, '') AS accusativeFeminineIndefiniteDual,
-    COALESCE(nominativeMasculineDefiniteSingular, '') AS nominativeMasculineDefiniteSingular,
-    COALESCE(genitiveMasculineDefiniteSingular, '') AS genitiveMasculineDefiniteSingular,
-    COALESCE(pausalFeminineDefiniteSingular, '') AS pausalFeminineDefiniteSingular,
-    COALESCE(genitiveFeminineIndefiniteSingular, '') AS genitiveFeminineIndefiniteSingular,
-    COALESCE(pausalMasculineDefinitePlural, '') AS pausalMasculineDefinitePlural,
-    COALESCE(accusativeFeminineSingular, '') AS accusativeFeminineSingular,
-    COALESCE(plural, '') AS plural,
-    COALESCE(accusativeFeminineDefiniteDual, '') AS accusativeFeminineDefiniteDual,
-    COALESCE(pausalIndefinitePlural, '') AS pausalIndefinitePlural,
-    COALESCE(pausalMasculineIndefiniteSingular, '') AS pausalMasculineIndefiniteSingular,
-    COALESCE(pausalMasculineIndefiniteDual, '') AS pausalMasculineIndefiniteDual,
-    COALESCE(pausalFeminineIndefinitePlural, '') AS pausalFeminineIndefinitePlural,
-    COALESCE(accusativeFeminineDefinitePlural, '') AS accusativeFeminineDefinitePlural,
-    COALESCE(nominativeFemininePlural, '') AS nominativeFemininePlural,
-    COALESCE(nominativeFeminineIndefiniteDual, '') AS nominativeFeminineIndefiniteDual,
-    COALESCE(nominativeFeminineDefinitePlural, '') AS nominativeFeminineDefinitePlural,
-    COALESCE(pausalMasculineDefiniteSingular, '') AS pausalMasculineDefiniteSingular,
-    COALESCE(nominativeFeminineSingular, '') AS nominativeFeminineSingular,
-    COALESCE(genitiveMasculineIndefinitePlural, '') AS genitiveMasculineIndefinitePlural,
-    COALESCE(nominativeMasculinePlural, '') AS nominativeMasculinePlural,
-    COALESCE(pausalFeminineIndefiniteDual, '') AS pausalFeminineIndefiniteDual,
-    COALESCE(genitiveMasculineDefiniteDual, '') AS genitiveMasculineDefiniteDual,
-    COALESCE(gerund, '') AS gerund,
-    COALESCE(accusativeFeminineDefiniteSingular, '') AS accusativeFeminineDefiniteSingular,
-    COALESCE(masculineSingular, '') AS masculineSingular,
-    COALESCE(genitiveMasculineSingular, '') AS genitiveMasculineSingular,
-    COALESCE(pausalMasculine, '') AS pausalMasculine
-FROM AR_arabic_db_adjectives
+SELECT wdlexemeid, pausalfemininesingular, genitivemasculinedefiniteplural, nominativemasculinesingular, genitivemasculineindefinitesingular, nominativemasculineindefinitedual, femininesingular, nominativefemininedefinitesingular, pausalmasculineindefiniteplural, femininedual, genitivemasculineindefinitedual, pausalfeminine, pausalmasculineplural, accusativemasculineplural, accusativemasculineindefiniteplural, pausalfeminineindefinitesingular, masculinedual, accusativefeminineindefinitesingular, pausalfemininedefiniteplural, genitivefemininedefiniteplural, lastmodified, genitivemasculineplural, masculine, accusativemasculinedefiniteplural, genitivefeminineindefiniteplural, accusativemasculinedefinitedual, accusativemasculineindefinitedual, accusativemasculineindefinitesingular, genitivefemininedefinitesingular, accusativefeminineplural, nominativemasculineindefiniteplural, genitivefemininesingular, genitivefeminineindefinitedual, accusativemasculinesingular, pausalmasculinesingular, masculineplural, genitivefeminineplural, nominativefeminineindefiniteplural, accusativefeminineindefiniteplural, pausalfeminineplural, accusativemasculinedefinitesingular, feminine, nominativemasculineindefinitesingular, feminineplural, nominativemasculinedefiniteplural, nominativefeminineindefinitesingular, genitivefemininedefinitedual, accusativefeminineindefinitedual, nominativemasculinedefinitesingular, genitivemasculinedefinitesingular, pausalfemininedefinitesingular, genitivefeminineindefinitesingular, pausalmasculinedefiniteplural, accusativefemininesingular, plural, accusativefemininedefinitedual, pausalindefiniteplural, pausalmasculineindefinitesingular, pausalmasculineindefinitedual, pausalfeminineindefiniteplural, accusativefemininedefiniteplural, nominativefeminineplural, nominativefeminineindefinitedual, nominativefemininedefiniteplural, pausalmasculinedefinitesingular, nominativefemininesingular, genitivemasculineindefiniteplural, nominativemasculineplural, pausalfeminineindefinitedual, genitivemasculinedefinitedual, gerund, accusativefemininedefinitesingular, masculinesingular, genitivemasculinesingular, pausalmasculine FROM AR_arabic_db_adjectives
 `
 
-type AR_arabic_db_adjectivesRow struct {
-	Wdlexemeid                            string
-	Pausalfemininesingular                string
-	Genitivemasculinedefiniteplural       string
-	Nominativemasculinesingular           string
-	Genitivemasculineindefinitesingular   string
-	Nominativemasculineindefinitedual     string
-	Femininesingular                      string
-	Nominativefemininedefinitesingular    string
-	Pausalmasculineindefiniteplural       string
-	Femininedual                          string
-	Genitivemasculineindefinitedual       string
-	Pausalfeminine                        string
-	Pausalmasculineplural                 string
-	Accusativemasculineplural             string
-	Accusativemasculineindefiniteplural   string
-	Pausalfeminineindefinitesingular      string
-	Masculinedual                         string
-	Accusativefeminineindefinitesingular  string
-	Pausalfemininedefiniteplural          string
-	Genitivefemininedefiniteplural        string
-	Lastmodified                          string
-	Genitivemasculineplural               string
-	Masculine                             string
-	Accusativemasculinedefiniteplural     string
-	Genitivefeminineindefiniteplural      string
-	Accusativemasculinedefinitedual       string
-	Accusativemasculineindefinitedual     string
-	Accusativemasculineindefinitesingular string
-	Genitivefemininedefinitesingular      string
-	Accusativefeminineplural              string
-	Nominativemasculineindefiniteplural   string
-	Genitivefemininesingular              string
-	Genitivefeminineindefinitedual        string
-	Accusativemasculinesingular           string
-	Pausalmasculinesingular               string
-	Masculineplural                       string
-	Genitivefeminineplural                string
-	Nominativefeminineindefiniteplural    string
-	Accusativefeminineindefiniteplural    string
-	Pausalfeminineplural                  string
-	Accusativemasculinedefinitesingular   string
-	Feminine                              string
-	Nominativemasculineindefinitesingular string
-	Feminineplural                        string
-	Nominativemasculinedefiniteplural     string
-	Nominativefeminineindefinitesingular  string
-	Genitivefemininedefinitedual          string
-	Accusativefeminineindefinitedual      string
-	Nominativemasculinedefinitesingular   string
-	Genitivemasculinedefinitesingular     string
-	Pausalfemininedefinitesingular        string
-	Genitivefeminineindefinitesingular    string
-	Pausalmasculinedefiniteplural         string
-	Accusativefemininesingular            string
-	Plural                                string
-	Accusativefemininedefinitedual        string
-	Pausalindefiniteplural                string
-	Pausalmasculineindefinitesingular     string
-	Pausalmasculineindefinitedual         string
-	Pausalfeminineindefiniteplural        string
-	Accusativefemininedefiniteplural      string
-	Nominativefeminineplural              string
-	Nominativefeminineindefinitedual      string
-	Nominativefemininedefiniteplural      string
-	Pausalmasculinedefinitesingular       string
-	Nominativefemininesingular            string
-	Genitivemasculineindefiniteplural     string
-	Nominativemasculineplural             string
-	Pausalfeminineindefinitedual          string
-	Genitivemasculinedefinitedual         string
-	Gerund                                string
-	Accusativefemininedefinitesingular    string
-	Masculinesingular                     string
-	Genitivemasculinesingular             string
-	Pausalmasculine                       string
-}
-
-func (q *Queries) AR_arabic_db_adjectives(ctx context.Context) ([]AR_arabic_db_adjectivesRow, error) {
+func (q *Queries) AR_arabic_db_adjectives(ctx context.Context) ([]ArArabicDbAdjective, error) {
 	rows, err := q.db.QueryContext(ctx, aR_arabic_db_adjectives)
 	if err != nil {
 		return nil, err
 	}
 	defer rows.Close()
-	var items []AR_arabic_db_adjectivesRow
+	var items []ArArabicDbAdjective
 	for rows.Next() {
-		var i AR_arabic_db_adjectivesRow
+		var i ArArabicDbAdjective
 		if err := rows.Scan(
 			&i.Wdlexemeid,
 			&i.Pausalfemininesingular,
