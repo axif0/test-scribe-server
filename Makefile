@@ -22,7 +22,8 @@ run:
 
 # Format the project source code.
 fmt:
-	go fmt
+	go fmt ./...
+	gofmt -s -w .
 
 # Sync the 'go.mod' file with dependencies in source code.
 tidy:

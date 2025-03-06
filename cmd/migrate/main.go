@@ -12,19 +12,11 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-
-
-
-
-
-
-
-
-
-
-
-
 func main() {
+
+
+
+	
 	mariaDB, err := sql.Open("mysql", "root:1234@tcp(localhost:3306)/")
 	if err != nil {
 		log.Fatal("Failed to connect to MariaDB:", err)
@@ -62,9 +54,9 @@ func main() {
 		wg.Add(1)
 		go func(filepath string) {
 			defer wg.Done()
-			semaphore <- struct{}{} // Acquire
+			semaphore <- struct{}{}        // Acquire
 			defer func() { <-semaphore }() // Release
-			
+
 			if err := processSQLiteFile(filepath, mariaDB); err != nil {
 				errChan <- fmt.Errorf("error processing %s: %v", filepath, err)
 			}
@@ -83,39 +75,39 @@ func main() {
 }
 
 func processSQLiteFile(filePath string, mariaDB *sql.DB) error {
-    log.Printf("Processing file: %s", filePath)
+	log.Printf("Processing file: %s", filePath)
 
-    // Extract language code from the filename.
-    // For a filename like "BNLanguageData_adjectives.sqlite", we want "BN".
-    base := filepath.Base(filePath)
-    var langCode string
-    if idx := strings.Index(base, "LanguageData"); idx > 0 {
-        langCode = base[:idx]
-    } else {
-        langCode = strings.TrimSuffix(strings.TrimPrefix(base, "TranslationData.sqlite_"), ".sqlite")
-    }
-    
-    // Connect to SQLite database
-    sqlite, err := sql.Open("sqlite3", filePath)
-    if err != nil {
-        return fmt.Errorf("failed to open SQLite file: %v", err)
-    }
-    defer sqlite.Close()
+	// Extract language code from the filename.
+	// For a filename like "BNLanguageData_adjectives.sqlite", we want "BN".
+	base := filepath.Base(filePath)
+	var langCode string
+	if idx := strings.Index(base, "LanguageData"); idx > 0 {
+		langCode = base[:idx]
+	} else {
+		langCode = strings.TrimSuffix(strings.TrimPrefix(base, "TranslationData.sqlite_"), ".sqlite")
+	}
 
-    // Get list of tables
-    tables, err := getTables(sqlite)
-    if err != nil {
-        return fmt.Errorf("failed to get tables: %v", err)
-    }
+	// Connect to SQLite database
+	sqlite, err := sql.Open("sqlite3", filePath)
+	if err != nil {
+		return fmt.Errorf("failed to open SQLite file: %v", err)
+	}
+	defer sqlite.Close()
 
-    // Process each table
-    for _, table := range tables {
-        if err := migrateTable(sqlite, mariaDB, langCode, table); err != nil {
-            log.Printf("Error migrating table %s: %v", table, err)
-        }
-    }
+	// Get list of tables
+	tables, err := getTables(sqlite)
+	if err != nil {
+		return fmt.Errorf("failed to get tables: %v", err)
+	}
 
-    return nil
+	// Process each table
+	for _, table := range tables {
+		if err := migrateTable(sqlite, mariaDB, langCode, table); err != nil {
+			log.Printf("Error migrating table %s: %v", table, err)
+		}
+	}
+
+	return nil
 }
 func getTables(db *sql.DB) ([]string, error) {
 	rows, err := db.Query(`
@@ -139,107 +131,107 @@ func getTables(db *sql.DB) ([]string, error) {
 }
 
 func migrateTable(sqlite *sql.DB, mariaDB *sql.DB, langCode, tableName string) error {
-    log.Printf("Migrating table %s for language %s", tableName, langCode)
+	log.Printf("Migrating table %s for language %s", tableName, langCode)
 
-    // Get table schema
-    schema, err := getTableSchema(sqlite, tableName)
-    if err != nil {
-        return fmt.Errorf("failed to get schema: %v", err)
-    }
+	// Get table schema
+	schema, err := getTableSchema(sqlite, tableName)
+	if err != nil {
+		return fmt.Errorf("failed to get schema: %v", err)
+	}
 
-    // Determine the table suffix by removing "LanguageData" if it exists.
-    var tableSuffix string
-    if strings.Contains(tableName, "LanguageData") {
-        parts := strings.SplitN(tableName, "LanguageData", 2)
-        tableSuffix = parts[1] // e.g., "_adjectives"
-    } else {
-        tableSuffix = strings.TrimPrefix(tableName, "sqlite_")
-    }
-    // Ensure tableSuffix starts with an underscore for correct joining.
-    if !strings.HasPrefix(tableSuffix, "_") {
-        tableSuffix = "_" + tableSuffix
-    }
-    // Construct final table name: langCode + tableSuffix (e.g., "BN" + "_adjectives" => "BN_adjectives")
-    mariaTableName := langCode + tableSuffix
+	// Determine the table suffix by removing "LanguageData" if it exists.
+	var tableSuffix string
+	if strings.Contains(tableName, "LanguageData") {
+		parts := strings.SplitN(tableName, "LanguageData", 2)
+		tableSuffix = parts[1] // e.g., "_adjectives"
+	} else {
+		tableSuffix = strings.TrimPrefix(tableName, "sqlite_")
+	}
+	// Ensure tableSuffix starts with an underscore for correct joining.
+	if !strings.HasPrefix(tableSuffix, "_") {
+		tableSuffix = "_" + tableSuffix
+	}
+	// Construct final table name: langCode + tableSuffix (e.g., "BN" + "_adjectives" => "BN_adjectives")
+	mariaTableName := langCode + tableSuffix
 
-    createSQL := generateCreateTableSQL(mariaTableName, schema)
-    if _, err := mariaDB.Exec(createSQL); err != nil {
-        return fmt.Errorf("failed to create table: %v", err)
-    }
+	createSQL := generateCreateTableSQL(mariaTableName, schema)
+	if _, err := mariaDB.Exec(createSQL); err != nil {
+		return fmt.Errorf("failed to create table: %v", err)
+	}
 
-    // Get data from SQLite
-    columns := "`" + strings.Join(schema.columnNames, "`, `") + "`"
-    rows, err := sqlite.Query(fmt.Sprintf("SELECT %s FROM `%s`", columns, tableName))
-    if err != nil {
-        return fmt.Errorf("failed to select data: %v", err)
-    }
-    defer rows.Close()
+	// Get data from SQLite
+	columns := "`" + strings.Join(schema.columnNames, "`, `") + "`"
+	rows, err := sqlite.Query(fmt.Sprintf("SELECT %s FROM `%s`", columns, tableName))
+	if err != nil {
+		return fmt.Errorf("failed to select data: %v", err)
+	}
+	defer rows.Close()
 
-    // Start a transaction
-    tx, err := mariaDB.Begin()
-    if err != nil {
-        return fmt.Errorf("failed to start transaction: %v", err)
-    }
-    defer tx.Rollback() // Will be ignored if transaction is committed
+	// Start a transaction
+	tx, err := mariaDB.Begin()
+	if err != nil {
+		return fmt.Errorf("failed to start transaction: %v", err)
+	}
+	defer tx.Rollback() // Will be ignored if transaction is committed
 
-    placeholders := strings.Repeat("?,", len(schema.columnNames))
-    placeholders = placeholders[:len(placeholders)-1]
-    stmt, err := tx.Prepare(fmt.Sprintf("INSERT IGNORE INTO `%s` (%s) VALUES (%s)",
-        mariaTableName, columns, placeholders))
-    if err != nil {
-        return fmt.Errorf("failed to prepare statement: %v", err)
-    }
-    defer stmt.Close()
+	placeholders := strings.Repeat("?,", len(schema.columnNames))
+	placeholders = placeholders[:len(placeholders)-1]
+	stmt, err := tx.Prepare(fmt.Sprintf("INSERT IGNORE INTO `%s` (%s) VALUES (%s)",
+		mariaTableName, columns, placeholders))
+	if err != nil {
+		return fmt.Errorf("failed to prepare statement: %v", err)
+	}
+	defer stmt.Close()
 
-    // Batch processing
-    batchSize := 5000
-    batch := make([][]interface{}, 0, batchSize)
-    count := 0
+	// Batch processing
+	batchSize := 5000
+	batch := make([][]interface{}, 0, batchSize)
+	count := 0
 
-    for rows.Next() {
-        scanArgs := make([]interface{}, len(schema.columnNames))
-        for i := range scanArgs {
-            var value interface{}
-            scanArgs[i] = &value
-        }
+	for rows.Next() {
+		scanArgs := make([]interface{}, len(schema.columnNames))
+		for i := range scanArgs {
+			var value interface{}
+			scanArgs[i] = &value
+		}
 
-        if err := rows.Scan(scanArgs...); err != nil {
-            return fmt.Errorf("failed to scan row: %v", err)
-        }
+		if err := rows.Scan(scanArgs...); err != nil {
+			return fmt.Errorf("failed to scan row: %v", err)
+		}
 
-        values := make([]interface{}, len(scanArgs))
-        for i, arg := range scanArgs {
-            values[i] = *arg.(*interface{})
-        }
+		values := make([]interface{}, len(scanArgs))
+		for i, arg := range scanArgs {
+			values[i] = *arg.(*interface{})
+		}
 
-        batch = append(batch, values)
+		batch = append(batch, values)
 
-        // Execute batch insert when batch is full
-        if len(batch) >= batchSize {
-            if err := executeBatch(stmt, batch); err != nil {
-                return fmt.Errorf("failed to execute batch: %v", err)
-            }
-            count += len(batch)
-            batch = batch[:0] // Clear batch
-            log.Printf("Migrated %d rows for table %s", count, mariaTableName)
-        }
-    }
+		// Execute batch insert when batch is full
+		if len(batch) >= batchSize {
+			if err := executeBatch(stmt, batch); err != nil {
+				return fmt.Errorf("failed to execute batch: %v", err)
+			}
+			count += len(batch)
+			batch = batch[:0] // Clear batch
+			log.Printf("Migrated %d rows for table %s", count, mariaTableName)
+		}
+	}
 
-    // Insert remaining rows
-    if len(batch) > 0 {
-        if err := executeBatch(stmt, batch); err != nil {
-            return fmt.Errorf("failed to execute final batch: %v", err)
-        }
-        count += len(batch)
-    }
+	// Insert remaining rows
+	if len(batch) > 0 {
+		if err := executeBatch(stmt, batch); err != nil {
+			return fmt.Errorf("failed to execute final batch: %v", err)
+		}
+		count += len(batch)
+	}
 
-    // Commit transaction
-    if err := tx.Commit(); err != nil {
-        return fmt.Errorf("failed to commit transaction: %v", err)
-    }
+	// Commit transaction
+	if err := tx.Commit(); err != nil {
+		return fmt.Errorf("failed to commit transaction: %v", err)
+	}
 
-    log.Printf("Completed migration of %d rows for table %s", count, mariaTableName)
-    return nil
+	log.Printf("Completed migration of %d rows for table %s", count, mariaTableName)
+	return nil
 }
 
 func executeBatch(stmt *sql.Stmt, batch [][]interface{}) error {
