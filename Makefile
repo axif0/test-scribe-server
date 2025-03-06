@@ -25,6 +25,7 @@ fmt:
 	go fmt ./...
 	gofmt -s -w .
 	@$(MAKE) fmt-check
+	@$(MAKE) tidy
 
 # Check if code is properly formatted
 fmt-check:
