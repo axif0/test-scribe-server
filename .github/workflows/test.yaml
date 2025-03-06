@@ -12,3 +12,14 @@ jobs:
 
       - name: Check code formatting using gofmt
         uses: Jerome1337/gofmt-action@v1.0.5
+        with:
+          gofmt-fix: true
+          
+      - name: Commit changes
+        if: failure()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Fix code formatting using gofmt"
+          git push
