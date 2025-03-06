@@ -15,6 +15,9 @@ import (
 func main() {
 
 	mariaDB, err := sql.Open("mysql", "root:1234@tcp(localhost:3306)/")
+	
+	
+	
 	if err != nil {
 		log.Fatal("Failed to connect to MariaDB:", err)
 	}
