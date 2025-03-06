@@ -21,5 +21,11 @@ jobs:
       - name: Install dependencies
         run: go get .
 
+      - name: Lint with golangci-lint
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: v1.60
+          only-new-issues: true
+
       - name: Run tests
         run: make test

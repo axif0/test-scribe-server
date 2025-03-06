@@ -22,18 +22,7 @@ run:
 
 # Format the project source code.
 fmt:
-	go fmt ./...
-	gofmt -s -w .
-	@$(MAKE) fmt-check
-	@$(MAKE) tidy
-
-# Check if code is properly formatted
-fmt-check:
-	@if [ -n "$$(gofmt -l .)" ]; then \
-		echo "The following files are not formatted correctly:"; \
-		gofmt -l .; \
-		exit 1; \
-	fi
+	go fmt
 
 # Sync the 'go.mod' file with dependencies in source code.
 tidy:
