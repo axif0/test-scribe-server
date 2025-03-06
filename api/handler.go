@@ -1,15 +1,13 @@
 package api
 
 import (
- 
 	"fmt"
 	"log"
 	"net/http"
 	"os"
-	 
 
 	_ "github.com/go-sql-driver/mysql"
-	 
+
 	"github.com/spf13/viper"
 )
 
@@ -17,7 +15,6 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello, I'm Scribe!")
 }
 
- 
 // HandleRequests handles incoming HTTP requests.
 func HandleRequests() {
 
@@ -46,4 +43,3 @@ func HandleRequests() {
 	log.Printf("Listening on port %s", hostPort)
 	log.Fatal(http.ListenAndServe(hostPort, nil))
 }
- 

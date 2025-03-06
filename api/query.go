@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	 
+
 	"reflect"
 
 	_ "github.com/go-sql-driver/mysql"
 	db "github.com/scribe-org/scribe-server/db/gen"
-	 
 )
+
 func getTables(w http.ResponseWriter, r *http.Request) {
 	// ctx := context.Background()
 	mariaDB, err := sql.Open("mysql", "root:1234@tcp(localhost:3306)/scribe_server")
