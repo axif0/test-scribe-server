@@ -1,5 +1,5 @@
 build:
-  image: golang:latest
+  image: docker-registry.toolforge.org/sendtoolforge-golang-sssd-web:latest
   command: go build -o server .
 
 service:
