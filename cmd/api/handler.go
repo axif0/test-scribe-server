@@ -14,7 +14,6 @@ func hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello, I'm Scribe!")
 }
 
-
 // HandleRequests handles incoming HTTP requests.
 func HandleRequests() {
 
@@ -39,8 +38,7 @@ func HandleRequests() {
 	http.HandleFunc("/lang/", handleLanguageData)
 
 	// Start serving requests.
-	hostPort := fmt.Sprintf(":%s", viper.GetString("hostPort"))
-	log.Printf("Listening on port %s", hostPort)
+	hostPort := fmt.Sprintf("0.0.0.0:%s", viper.GetString("hostPort"))
+	log.Printf("Listening on %s", hostPort)
 	log.Fatal(http.ListenAndServe(hostPort, nil))
 }
- 

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/scribe-org/scribe-server/cmd/api"
 
@@ -33,6 +34,9 @@ func main() {
 			panic(fmt.Errorf("fatal error config file: %w", err))
 		}
 	}
+
+	log.Printf("Starting server on port %s", viper.GetString("hostPort"))
+	log.Printf("Serving files from: %s", viper.GetString("fileSystem"))
 
 	api.HandleRequests()
 }
