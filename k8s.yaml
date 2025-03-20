@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-scribe-server
+spec:
+  ports:
+    - port: 8000
+      targetPort: 8000
+  selector:
+    name: test-scribe-server
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-scribe-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: test-scribe-server
+  template:
+    metadata:
+      labels:
+        name: test-scribe-server
+    spec:
+      containers:
+        - name: test-scribe-server
+          image: docker-registry.tools.wmflabs.org/toolforge-golang-sssd-web:latest
+          ports:
+            - containerPort: 8000
+          command: ["./server"] 

@@ -1,4 +1,4 @@
-.PHONY: clean build test run fmt tidy install-tools generate generate-api generate-db execute-binary dev
+.PHONY: clean build test run fmt tidy install-tools generate generate-api generate-db execute-binary dev toolforge-build
 
 BINARY_NAME=./bin/scribe-server
 MIGRATE_BINARY=./bin/migrate
@@ -67,3 +67,9 @@ build-migrate:
 # Run the migration tool
 migrate: build-migrate
 	${MIGRATE_BINARY}
+
+# Add a new target for Toolforge deployment
+toolforge-build:
+	go build -o server .
+	chmod +x server
+	chmod +x .webservice

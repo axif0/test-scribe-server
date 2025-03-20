@@ -3,7 +3,7 @@ php:
 go:
   version: "1.23"
 webservice:
-  backend: kubernetes
+  backend: gridengine
   type: golang
   ports:
     - name: http
