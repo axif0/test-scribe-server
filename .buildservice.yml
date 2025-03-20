@@ -1,0 +1,7 @@
+build:
+  image: golang:latest
+  command: go build -o server .
+
+service:
+  command: ./server
+  port: 8000
