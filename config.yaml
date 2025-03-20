@@ -1,0 +1,11 @@
+# Server configuration
+hostPort: 8080
+fileSystem: "./packs"
+
+# Database configuration
+database:
+  user: root
+  password: 1234
+  host: localhost
+  port: "3306"
+  name: scribe_server 
