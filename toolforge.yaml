@@ -4,7 +4,4 @@ go:
   version: "1.23"
 webservice:
   backend: gridengine
-  type: golang
-  ports:
-    - name: http
-      targetPort: 8000 
+  type: golang 
