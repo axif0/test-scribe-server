@@ -38,10 +38,7 @@ func main() {
 	// Toolforge specific port handling
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = viper.GetString("hostPort")
-		if port == "" {
-			port = "8000" // Default fallback
-		}
+		port = "8000" // Default fallback for Toolforge
 	}
 
 	log.Printf("Starting server on port %s", port)
