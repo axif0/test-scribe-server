@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-
-	"github.com/scribe-org/scribe-server/cmd/api"
+	"net/http"
+	"os"
 
 	"github.com/spf13/viper"
 )
@@ -35,8 +35,23 @@ func main() {
 		}
 	}
 
-	log.Printf("Starting server on port %s", viper.GetString("hostPort"))
+	// Toolforge specific port handling
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = viper.GetString("hostPort")
+		if port == "" {
+			port = "8000" // Default fallback
+		}
+	}
+
+	log.Printf("Starting server on port %s", port)
 	log.Printf("Serving files from: %s", viper.GetString("fileSystem"))
 
-	api.HandleRequests()
+	log.Printf("Environment PORT: %s", os.Getenv("PORT"))
+	log.Printf("Viper hostPort: %s", viper.GetString("hostPort"))
+
+	// Use the dynamically determined port
+	hostPort := fmt.Sprintf("0.0.0.0:%s", port)
+	log.Printf("Listening on %s", hostPort)
+	log.Fatal(http.ListenAndServe(hostPort, nil))
 }
