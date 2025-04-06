@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
       - name: scribe-server
-        image: docker-registry.tools.wmflabs.org/toolforge-golang-sssd-base:latest
-        command: ["./main"]  # Replace with your actual executable
+        image: scribe-server:latest  # Change to match your image name
+        imagePullPolicy: Always  # Ensures latest image is pulled
         ports:
         - containerPort: 8080
         env:
