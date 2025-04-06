@@ -103,7 +103,7 @@ func main() {
 		log.Fatalf("Failed to load config: %v", err)
 	}
 
-	log.Printf("Loaded configuration: %+v", config)
+	// log.Printf("Loaded configuration: %+v", config)
 
 	// MariaDB connection setup with config
 	mariaDB, err := db.SetupMariaDB(config.Database)

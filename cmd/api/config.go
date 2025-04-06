@@ -16,5 +16,5 @@ func InitConfig() {
 	}
 
 	// Optional: Print loaded configuration for debugging
-	log.Printf("Loaded Configuration: %+v", viper.AllSettings())
+	// log.Printf("Loaded Configuration: %+v", viper.AllSettings())
 } 
