@@ -1,7 +1,0 @@
-php:
-  version: "8.1"
-go:
-  version: "1.23"
-webservice:
-  backend: gridengine
-  type: golang 
