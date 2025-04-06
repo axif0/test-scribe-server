@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: scribe-server
-        image: docker-registry.tools.wmflabs.org/toolforge-golang1.21-sssd-base:latest
+        image: docker-registry.tools.wmflabs.org/toolforge-golang-sssd-base:latest
         command: ["./main"]  # Replace with your actual executable
         ports:
         - containerPort: 8080
