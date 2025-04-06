@@ -16,7 +16,7 @@ spec:
       - name: test-scribe-server
         image: tools-harbor.wmcloud.org/tool-testserver-scribe/test-scribe-server:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
 ---
 apiVersion: v1
 kind: Service
@@ -24,7 +24,7 @@ metadata:
   name: test-scribe-server-service
 spec:
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 8000
+    targetPort: 8000
   selector:
     app: test-scribe-server

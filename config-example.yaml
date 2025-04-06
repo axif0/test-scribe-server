@@ -1,2 +1,2 @@
-hostPort: # 8080
+hostPort: # 8000
 fileSystem: # "./some-directory"
