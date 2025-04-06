@@ -10,7 +10,7 @@ clean:
 
 # Build a binary for the project.
 build:
-	go build -o ${BINARY_NAME} *.go
+	go build -o ./bin/scribe-server *.go
 
 # Run tests for the project.
 test:
@@ -74,14 +74,14 @@ toolforge-build:
 	chmod +x server
 	chmod +x .webservice
 
-# Add this to your existing Makefile
+# Replace docker commands with podman
 docker-build:
-	docker build -t scribe-server:latest --build-arg GO_VERSION=1.23rc1 .
+	podman build -t scribe-server:latest --build-arg GO_VERSION=1.23rc1 .
 
 docker-push:
-	# Replace with your actual docker registry
-	docker tag scribe-server:latest docker-registry.tools.wmflabs.org/scribe-server:latest
-	docker push docker-registry.tools.wmflabs.org/scribe-server:latest
+	# Replace with your actual registry
+	podman tag scribe-server:latest docker-registry.tools.wmflabs.org/scribe-server:latest
+	podman push docker-registry.tools.wmflabs.org/scribe-server:latest
 
 deploy: docker-build docker-push
 	kubectl apply -f deployment.yaml
