@@ -14,7 +14,7 @@ import (
 
 func queryTables(w http.ResponseWriter, r *http.Request) {
 	// ctx := context.Background()
-	mariaDB, err := sql.Open("mysql", "root:1234@tcp(localhost:3306)/scribe_server")
+	mariaDB, err := sql.Open("mysql", "s56601:NjpPw0wYFUI1q7lx@tcp(tools-db.tools.eqiad1.wikimedia.cloud:3306)/s56601__scribe_server")
 	if err != nil {
 		log.Fatal("Failed to connect to scribe_server database:", err)
 	}
@@ -60,7 +60,7 @@ func handleLanguageData(w http.ResponseWriter, r *http.Request) {
 	// Skip the "/lang/" prefix to get the remaining path
 	path := r.URL.Path[6:]
 	parts := strings.Split(path, "/")
-	
+
 	if len(parts) != 2 && len(parts) != 4 {
 		http.Error(w, "Invalid path. Use format: /lang/{iso}/{datatype} or /lang/{iso}/{datatype}/{from_date}/{to_date}", http.StatusBadRequest)
 		return
@@ -73,7 +73,7 @@ func handleLanguageData(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 
 	// Open database connection
-	mariaDB, err := sql.Open("mysql", "root:1234@tcp(localhost:3306)/scribe_server")
+	mariaDB, err := sql.Open("mysql", "s56601:NjpPw0wYFUI1q7lx@tcp(tools-db.tools.eqiad1.wikimedia.cloud:3306)/s56601__scribe_server")
 	if err != nil {
 		http.Error(w, "Database connection error", http.StatusInternalServerError)
 		log.Printf("Failed to connect to scribe_server database: %v", err)
@@ -92,7 +92,7 @@ func handleLanguageData(w http.ResponseWriter, r *http.Request) {
 		// Date range filtering
 		fromDate := parts[2]
 		toDate := parts[3]
-		
+
 		// Validate date format
 		_, err := time.Parse("2006-01-02", fromDate)
 		if err != nil {

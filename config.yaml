@@ -4,8 +4,8 @@ fileSystem: "./packs"
 
 # Database configuration
 database:
-  user: root
-  password: 1234
-  host: localhost
+  user: s56601
+  password: NjpPw0wYFUI1q7lx
+  host: tools-db.tools.eqiad1.wikimedia.cloud
   port: "3306"
-  name: scribe_server 
+  name: s56601__scribe_server 
