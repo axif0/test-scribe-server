@@ -16,28 +16,34 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 // HandleRequests handles incoming HTTP requests.
 func HandleRequests() {
+	// Initialize configuration
+	InitConfig()
 
-	// Setup root handler.
-	http.HandleFunc("/", hello)
+	// More explicit routing
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path == "/" {
+			hello(w, r)
+			return
+		}
+		http.NotFound(w, r)
+	})
 
-	// Setup tables endpoint with /api prefix
+	// Existing routes
 	http.HandleFunc("/api/tables", queryTables)
+	http.HandleFunc("/lang/", handleLanguageData)
 
-	// Setup /packs handler.
+	// File server setup
 	fileSystem := viper.GetString("fileSystem")
 	log.Printf("Serving files from: %s", fileSystem)
 
-	// Check if the directory exists.
+	// Check if the directory exists
 	if _, err := os.Stat(fileSystem); os.IsNotExist(err) {
 		log.Fatalf("Directory %s does not exist", fileSystem)
 	}
 
 	http.Handle("/packs/", http.StripPrefix("/packs/", http.FileServer(http.Dir(fileSystem))))
 
-	// Setup dynamic language data endpoint
-	http.HandleFunc("/lang/", handleLanguageData)
-
-	// Start serving requests.
+	// Start server
 	hostPort := fmt.Sprintf("0.0.0.0:%s", viper.GetString("hostPort"))
 	log.Printf("Listening on %s", hostPort)
 	log.Fatal(http.ListenAndServe(hostPort, nil))
