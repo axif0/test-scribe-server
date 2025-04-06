@@ -1,1 +1,1 @@
-web: make execute-binary
+web: ./bin/scribe-server
