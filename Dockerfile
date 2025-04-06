@@ -1,24 +1,17 @@
-FROM golang:1.23rc1-alpine
+# Use an official Go runtime as the base image
+FROM golang:1.22-bookworm
 
+# Set the working directory inside the container
 WORKDIR /app
 
-# Install dependencies
-RUN apk add --no-cache git
+# Copy your Go binary into the container
+COPY test-scribe-server .
 
-# Copy go mod and sum files
-COPY go.mod go.sum ./
+# Ensure the packs directory is available (if your app needs it)
+COPY packs ./packs
 
-# Download dependencies
-RUN go mod download
-
-# Copy the entire project
-COPY . .
-
-# Build the application
-RUN go build -o main .
-
-# Expose the port
+# Expose the port your app listens on
 EXPOSE 8080
 
-# Run the executable
-CMD ["./main"] 
+# Command to run your application
+CMD ["./test-scribe-server"]
