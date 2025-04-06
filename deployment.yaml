@@ -1,56 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: scribe-server
-  namespace: tool-testserver-scribe  # Replace with your actual tool namespace
+  name: test-scribe-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: scribe-server
+      app: test-scribe-server
   template:
     metadata:
       labels:
-        app: scribe-server
+        app: test-scribe-server
     spec:
       containers:
-      - name: scribe-server
-        image: scribe-server:latest  # Change to match your image name
-        imagePullPolicy: Always  # Ensures latest image is pulled
+      - name: test-scribe-server
+        image: tools-harbor.wmcloud.org/tool-testserver-scribe/test-scribe-server:latest
         ports:
         - containerPort: 8080
-        env:
-        - name: PORT
-          value: "8080"
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: scribe-server-service
-  namespace: tool-testserver-scribe  # Replace with your actual tool namespace
+  name: test-scribe-server-service
 spec:
-  selector:
-    app: scribe-server
   ports:
   - port: 8080
     targetPort: 8080
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: scribe-server-ingress
-  namespace: tool-testserver-scribe  # Replace with your actual tool namespace
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-spec:
-  rules:
-  - host: testserver-scribe.toolforge.org # Replace with your tool name
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: scribe-server-service
-            port:
-              number: 8080
+  selector:
+    app: test-scribe-server
