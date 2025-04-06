@@ -3,6 +3,11 @@
 BINARY_NAME=./bin/scribe-server
 MIGRATE_BINARY=./bin/migrate
 
+# Run the project.
+run:
+	go run .
+
+
 # Clean any build artifacts.
 clean:
 	go clean
@@ -16,9 +21,6 @@ build:
 test:
 	go test ./... -v
 
-# Run the project.
-run:
-	go run .
 
 # Format the project source code.
 fmt:
