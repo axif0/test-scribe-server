@@ -1,5 +1,5 @@
 # Server configuration
-hostPort: 8000
+hostPort: 8080
 fileSystem: "./packs"
 
 # Database configuration

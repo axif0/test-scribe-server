@@ -4,8 +4,8 @@ metadata:
   name: test-scribe-server
 spec:
   ports:
-    - port: 8000
-      targetPort: 8000
+    - port: 8080
+      targetPort: 8080
   selector:
     name: test-scribe-server
 ---
@@ -27,5 +27,5 @@ spec:
         - name: test-scribe-server
           image: docker-registry.tools.wmflabs.org/toolforge-golang-sssd-web:latest
           ports:
-            - containerPort: 8000
+            - containerPort: 8080
           command: ["./server"] 

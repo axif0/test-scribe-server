@@ -4,5 +4,5 @@ build:
 
 service:
   command: ./server
-  port: 8000
+  port: 8080
   backend: gridengine
