@@ -16,7 +16,7 @@ func GetTables(db *sql.DB) ([]string, error) {
         WHERE type='table' AND name NOT LIKE 'sqlite_%'
     `)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("query failed: %v", err)
 	}
 	defer rows.Close()
 
@@ -24,10 +24,15 @@ func GetTables(db *sql.DB) ([]string, error) {
 	for rows.Next() {
 		var name string
 		if err := rows.Scan(&name); err != nil {
-			return nil, err
+			return nil, fmt.Errorf("scan failed: %v", err)
 		}
 		tables = append(tables, name)
 	}
+
+	if len(tables) == 0 {
+		return nil, fmt.Errorf("no tables found in database")
+	}
+
 	return tables, nil
 }
 
@@ -35,7 +40,7 @@ func GetTables(db *sql.DB) ([]string, error) {
 func GetTableSchema(db *sql.DB, tableName string) (*types.TableSchema, error) {
 	rows, err := db.Query(fmt.Sprintf("PRAGMA table_info(`%s`)", tableName))
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("PRAGMA query failed for table %s: %v", tableName, err)
 	}
 	defer rows.Close()
 
@@ -54,10 +59,14 @@ func GetTableSchema(db *sql.DB, tableName string) (*types.TableSchema, error) {
 			pk       bool
 		)
 		if err := rows.Scan(&cid, &name, &typ, &notNull, &defValue, &pk); err != nil {
-			return nil, err
+			return nil, fmt.Errorf("scan failed for table %s: %v", tableName, err)
 		}
 		schema.ColumnNames = append(schema.ColumnNames, name)
 		schema.ColumnTypes = append(schema.ColumnTypes, utils.MapSQLiteTypeToMariaDB(typ))
+	}
+
+	if len(schema.ColumnNames) == 0 {
+		return nil, fmt.Errorf("no columns found in table %s", tableName)
 	}
 
 	return schema, nil

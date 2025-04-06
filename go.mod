@@ -6,9 +6,9 @@ require (
 	github.com/getkin/kin-openapi v0.123.0
 	github.com/go-chi/chi/v5 v5.0.12
 	github.com/go-sql-driver/mysql v1.8.1
-	github.com/mattn/go-sqlite3 v1.14.24
 	github.com/oapi-codegen/runtime v1.1.1
 	github.com/spf13/viper v1.16.0
+	modernc.org/sqlite v1.29.5
 )
 
 require (
