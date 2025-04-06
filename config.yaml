@@ -8,4 +8,13 @@ database:
   password: NjpPw0wYFUI1q7lx
   host: tools-db.tools.eqiad1.wikimedia.cloud
   port: "3306"
-  name: s56601__scribe_server 
+  name: scribe_server 
+
+
+# local 
+# database:
+#   user: asif
+#   password: newpassword
+#   host: localhost
+#   port: "3306"
+#   name: scribe_server 

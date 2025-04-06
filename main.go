@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/spf13/viper"
+	_ "modernc.org/sqlite" // Use the pure Go SQLite driver
 )
 
 func main() {
