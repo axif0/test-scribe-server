@@ -44,7 +44,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - host: testserver-scribe.toolforge.org/ # Replace with your tool name
+  - host: testserver-scribe.toolforge.org # Replace with your tool name
     http:
       paths:
       - path: /
