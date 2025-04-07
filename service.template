@@ -4,4 +4,4 @@ type: jdk17
 cpu: 500m
 mem: 512Mi
 extra_args:
-  - start-server.sh
+  - /data/project/testserver-scribe/test-scribe-server/start-server.sh
