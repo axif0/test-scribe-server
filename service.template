@@ -1,0 +1,7 @@
+# Alternative approach using jdk17 as a generic runner
+backend: kubernetes
+type: jdk17 
+cpu: 500m
+mem: 512Mi
+extra_args:
+  - start-server.sh
