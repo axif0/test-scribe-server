@@ -64,7 +64,7 @@ dev:
 
 # Build the migration tool
 build-migrate:
-	go build -o ${MIGRATE_BINARY} ./cmd/migrate
+	go build -o ./bin/migrate ./cmd/migrate
 
 # Run the migration tool
 migrate: build-migrate

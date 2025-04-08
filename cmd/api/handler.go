@@ -45,6 +45,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 			"/languages",
 			"/languages/{iso}",
 			"/languages/{iso}/count",
+			"/packs"
 		
 		]
 	}`)
@@ -140,61 +141,79 @@ func GetLanguageDataCount(w http.ResponseWriter, r *http.Request) {
 	}
 	defer mariaDB.Close()
 
-	// Prepare table names
-	tables := []string{
-		"`" + iso + "_NOUNS`",
-		"`" + iso + "_VERBS`",
-		"`" + iso + "_PREPOSITIONS`",
-		"`" + iso + "_EMOJI_KEYWORDS`",
+	// Prepare table names with additional types
+	tableTypes := []string{
+		"nouns",
+		"verbs",
+		"prepositions",
+		"emoji_keywords",
+		"conjunctions",
+		"personal_pronouns",
+		"adjectives",
+		"proper_nouns",
+		"pronouns",
+	}
+	dataCount := LanguageDataCount{}
+
+	// Function to safely get table count
+	getTableCount := func(tableType string) *int64 {
+		tableName := fmt.Sprintf("%sLanguageData_%s", iso, tableType)
+
+		// Check if table exists
+		var exists int
+		err := mariaDB.QueryRow(`
+			SELECT 1 
+			FROM information_schema.TABLES 
+			WHERE TABLE_SCHEMA = DATABASE() 
+			AND TABLE_NAME = ?
+		`, tableName).Scan(&exists)
+
+		if err != nil {
+			log.Printf("Table %s does not exist", tableName)
+			return nil
+		}
+
+		// Get count
+		var count int64
+		err = mariaDB.QueryRow(fmt.Sprintf("SELECT COUNT(*) FROM `%s`", tableName)).Scan(&count)
+		if err != nil {
+			log.Printf("Error counting rows in %s: %v", tableName, err)
+			return nil
+		}
+
+		return &count
 	}
 
-	// Check if any of the tables exist
-	existsQuery := `
-		SELECT COUNT(*) FROM information_schema.TABLES 
-		WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME IN (?, ?, ?, ?)
-	`
-
-	var tableCount int
-	err = mariaDB.QueryRow(
-		existsQuery,
-		iso+"_NOUNS",
-		iso+"_VERBS",
-		iso+"_PREPOSITIONS",
-		iso+"_EMOJI_KEYWORDS",
-	).Scan(&tableCount)
-
-	if err != nil {
-		http.Error(w, "Error checking language tables", http.StatusInternalServerError)
-		log.Printf("Error checking tables for %s: %v", iso, err)
-		return
+	// Populate data counts using the tableTypes slice
+	for _, tableType := range tableTypes {
+		switch tableType {
+		case "nouns":
+			dataCount.TotalNouns = getTableCount(tableType)
+		case "verbs":
+			dataCount.TotalVerbs = getTableCount(tableType)
+		case "prepositions":
+			dataCount.TotalPrepositions = getTableCount(tableType)
+		case "emoji_keywords":
+			dataCount.TotalEmojiKeywords = getTableCount(tableType)
+		case "conjunctions":
+			dataCount.TotalConjunctions = getTableCount(tableType)
+		case "personal_pronouns":
+			dataCount.TotalPersonalPronouns = getTableCount(tableType)
+		case "adjectives":
+			dataCount.TotalAdjectives = getTableCount(tableType)
+		case "proper_nouns":
+			dataCount.TotalProperNouns = getTableCount(tableType)
+		case "pronouns":
+			dataCount.TotalPronouns = getTableCount(tableType)
+		}
 	}
 
-	if tableCount == 0 {
-		http.Error(w, "Language not found", http.StatusNotFound)
-		return
-	}
-
-	// Query to get data counts
-	query := fmt.Sprintf(`
-		SELECT 
-			(SELECT COUNT(*) FROM %s) as total_nouns,
-			(SELECT COUNT(*) FROM %s) as total_verbs,
-			(SELECT COUNT(*) FROM %s) as total_prepositions,
-			(SELECT COUNT(*) FROM %s) as total_emoji_keywords
-	`,
-		tables[0], tables[1], tables[2], tables[3],
-	)
-
-	var dataCount LanguageDataCount
-	err = mariaDB.QueryRow(query).Scan(
-		&dataCount.TotalNouns,
-		&dataCount.TotalVerbs,
-		&dataCount.TotalPrepositions,
-		&dataCount.TotalEmojiKeywords,
-	)
-	if err != nil {
-		http.Error(w, "Failed to retrieve language data count", http.StatusInternalServerError)
-		log.Printf("Error getting data count for %s: %v", iso, err)
+	// Check if all counts are nil
+	if dataCount.TotalNouns == nil &&
+		dataCount.TotalVerbs == nil &&
+		dataCount.TotalPrepositions == nil &&
+		dataCount.TotalEmojiKeywords == nil {
+		http.Error(w, "No data found for this language", http.StatusNotFound)
 		return
 	}
 

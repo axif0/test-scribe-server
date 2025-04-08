@@ -17,11 +17,16 @@ type Language struct {
 
 // LanguageDataCount defines model for LanguageDataCount.
 type LanguageDataCount struct {
-	TotalEmojiKeywords *int64               `json:"totalEmojiKeywords,omitempty"`
-	TotalNouns         *int64               `json:"totalNouns,omitempty"`
-	TotalPrepositions  *int64               `json:"totalPrepositions,omitempty"`
-	TotalVerbs         *int64               `json:"totalVerbs,omitempty"`
-	Translations       *[]TranslationsCount `json:"translations,omitempty"`
+	TotalEmojiKeywords     *int64               `json:"totalEmojiKeywords,omitempty"`
+	TotalNouns             *int64               `json:"totalNouns,omitempty"`
+	TotalVerbs             *int64               `json:"totalVerbs,omitempty"`
+	TotalPrepositions      *int64               `json:"totalPrepositions,omitempty"`
+	TotalConjunctions      *int64               `json:"totalConjunctions,omitempty"`
+	TotalPersonalPronouns  *int64               `json:"totalPersonalPronouns,omitempty"`
+	TotalAdjectives        *int64               `json:"totalAdjectives,omitempty"`
+	TotalProperNouns       *int64               `json:"totalProperNouns,omitempty"`
+	TotalPronouns          *int64               `json:"totalPronouns,omitempty"`
+	Translations           *[]TranslationsCount `json:"translations,omitempty"`
 }
 
 // LatestUpdateTime defines model for LatestUpdateTime.
