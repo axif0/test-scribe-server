@@ -12,8 +12,8 @@ import (
 
 func queryTables(w http.ResponseWriter, r *http.Request) {
 	// ctx := context.Background()
-	// mariaDB, err := sql.Open("mysql", "asif:newpassword@tcp(localhost:3306)/scribe_server")
-	mariaDB, err := sql.Open("mysql", "s56601:NjpPw0wYFUI1q7lx@tcp(tools-db.tools.eqiad1.wikimedia.cloud:3306)/s56601__scribe_server")
+	mariaDB, err := sql.Open("mysql", "asif:newpassword@tcp(localhost:3306)/")
+	// mariaDB, err := sql.Open("mysql", "s56601:NjpPw0wYFUI1q7lx@tcp(tools-db.tools.eqiad1.wikimedia.cloud:3306)/s56601__scribe_server")
 	if err != nil {
 		log.Fatal("Failed to connect to scribe_server database:", err)
 	}

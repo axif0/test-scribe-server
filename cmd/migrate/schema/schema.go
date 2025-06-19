@@ -1,4 +1,5 @@
-package queries
+// SPDX-License-Identifier: GPL-3.0-or-later
+package schema
 
 import (
 	"database/sql"
@@ -16,7 +17,7 @@ func GetTables(db *sql.DB) ([]string, error) {
         WHERE type='table' AND name NOT LIKE 'sqlite_%'
     `)
 	if err != nil {
-		return nil, fmt.Errorf("query failed: %v", err)
+		return nil, err
 	}
 	defer rows.Close()
 
@@ -24,15 +25,10 @@ func GetTables(db *sql.DB) ([]string, error) {
 	for rows.Next() {
 		var name string
 		if err := rows.Scan(&name); err != nil {
-			return nil, fmt.Errorf("scan failed: %v", err)
+			return nil, err
 		}
 		tables = append(tables, name)
 	}
-
-	if len(tables) == 0 {
-		return nil, fmt.Errorf("no tables found in database")
-	}
-
 	return tables, nil
 }
 
@@ -40,7 +36,7 @@ func GetTables(db *sql.DB) ([]string, error) {
 func GetTableSchema(db *sql.DB, tableName string) (*types.TableSchema, error) {
 	rows, err := db.Query(fmt.Sprintf("PRAGMA table_info(`%s`)", tableName))
 	if err != nil {
-		return nil, fmt.Errorf("PRAGMA query failed for table %s: %v", tableName, err)
+		return nil, err
 	}
 	defer rows.Close()
 
@@ -59,14 +55,10 @@ func GetTableSchema(db *sql.DB, tableName string) (*types.TableSchema, error) {
 			pk       bool
 		)
 		if err := rows.Scan(&cid, &name, &typ, &notNull, &defValue, &pk); err != nil {
-			return nil, fmt.Errorf("scan failed for table %s: %v", tableName, err)
+			return nil, err
 		}
 		schema.ColumnNames = append(schema.ColumnNames, name)
-		schema.ColumnTypes = append(schema.ColumnTypes, utils.MapSQLiteTypeToMariaDB(typ))
-	}
-
-	if len(schema.ColumnNames) == 0 {
-		return nil, fmt.Errorf("no columns found in table %s", tableName)
+		schema.ColumnTypes = append(schema.ColumnTypes, utils.MapColumnTypeToMariaDB(name, typ))
 	}
 
 	return schema, nil
@@ -83,4 +75,4 @@ func GenerateCreateTableSQL(tableName string, schema *types.TableSchema) string 
 		"CREATE TABLE IF NOT EXISTS `%s` (\n    %s\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;",
 		tableName, strings.Join(columns, ",\n    "),
 	)
-} 
+}

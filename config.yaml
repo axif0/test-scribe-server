@@ -3,18 +3,18 @@ hostPort: 8000
 fileSystem: "./packs"
 
 # Database configuration
-database:
-  user: s56601
-  password: NjpPw0wYFUI1q7lx
-  host: tools-db.tools.eqiad1.wikimedia.cloud
-  port: "3306"
-  name: s56601__scribe_server  
+# database:
+#   user: s56601
+#   password: NjpPw0wYFUI1q7lx
+#   host: tools-db.tools.eqiad1.wikimedia.cloud
+#   port: "3306"
+#   name: s56601__scribe_server  
 
 
 # local 
-# database:
-#   user: asif
-#   password: newpassword
-#   host: localhost
-#   port: "3306"
-#   name: scribe_server 
+database:
+  user: asif
+  password: newpassword
+  host: localhost
+  port: "3306"
+  name: scribe_server 

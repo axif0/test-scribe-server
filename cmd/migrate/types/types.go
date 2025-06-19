@@ -1,8 +1,9 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
 package types
 
 import "database/sql"
 
-// TableSchema represents the structure of a database table
+// TableSchema represents the structure of a database table.
 type TableSchema struct {
 	ColumnNames []string
 	ColumnTypes []string
