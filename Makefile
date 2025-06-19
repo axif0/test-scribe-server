@@ -37,7 +37,7 @@ install-tools:
 	go install ariga.io/atlas/cmd/atlas@latest
 	go install github.com/air-verse/air@latest
 	go get github.com/go-sql-driver/mysql
-	go get github.com/mattn/go-sqlite3
+	go get github.com/glebarez/sqlite
 
 # Create or update the generated source code.
 generate:
